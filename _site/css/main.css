@@ -32,7 +32,7 @@ ul, ol, dl, figure,
  * Images
  */
 img {
-  max-width: 100%;
+  max-width: 40%;
   vertical-align: middle; }
 
 /**
@@ -447,3 +447,14 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+.projectDiscription{
+/*  background-color: blue;*/
+/*  display: flex;
+  flex-direction: row;*/
+}
+.projectDiscription p {
+  max-width: 45%;
+  float: left;
+  margin-right: 5%;
+}

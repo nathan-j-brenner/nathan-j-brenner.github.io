@@ -1,0 +1,3 @@
+write the domain of where you want the github page to be redirected
+
+update dns: A record that points the domain, in hosting provider

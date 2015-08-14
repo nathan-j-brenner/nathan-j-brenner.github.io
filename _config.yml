@@ -6,7 +6,7 @@ description: A sample of my work and thoughts
 url: "http://jekyllSample.com" # the base hostname & protocol for your site
 twitter_username: njbrenner
 github_username:  nathan-j-brenner
-paginate: 1
+paginate: 3
 
 # Build settings
 markdown: kramdown
