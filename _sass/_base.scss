@@ -41,7 +41,7 @@ ul, ol, dl, figure,
  * Images
  */
 img {
-    max-width: 100%;
+    max-width: 40%;
     vertical-align: middle;
 }
 
@@ -201,4 +201,14 @@ pre {
             fill: $grey-color;
         }
     }
+}
+.projectDiscription{
+    margin-bottom: 5%;
+}
+.projectDiscription p{
+    width: 40%;
+    float: right;
+}
+.wrapper div div h2{
+    text-align: center;
 }

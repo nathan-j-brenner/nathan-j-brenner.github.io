@@ -142,6 +142,16 @@ pre {
   .icon > svg path {
     fill: #828282; }
 
+.projectDiscription {
+  margin-bottom: 5%; }
+
+.projectDiscription p {
+  width: 40%;
+  float: right; }
+
+.wrapper div div h2 {
+  text-align: center; }
+
 /**
  * Site header
  */
@@ -447,14 +457,3 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
-
-.projectDiscription{
-/*  background-color: blue;*/
-/*  display: flex;
-  flex-direction: row;*/
-}
-.projectDiscription p {
-  max-width: 45%;
-  float: left;
-  margin-right: 5%;
-}
