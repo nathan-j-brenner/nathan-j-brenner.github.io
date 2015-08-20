@@ -14,6 +14,8 @@ Resilient full stack web developer, passionate about creatitivity and collaborat
 *	collaboration: git/gitHub, harvest, slack, basecamp, trello
 *	qa: mocha.js, chai.js
 
+***
+
 Work History
 ============
 
@@ -52,6 +54,8 @@ August 2009 – June 2012
 Substitute Teacher, Greater Albany Public School District 8J, Albany, OR
 
 *	I filled in for absent teachers on a short term basis in  several of the school districts surrounding Albany.
+
+***
 
 Professional Development
 ========================
