@@ -73,11 +73,12 @@ Professional Development
 *	[TeamTreehouse](https://teamtreehouse.com/nathanbrenner)
 	*	November 2014-current
 	*	Completed tracks: Web Design, Front End Development, PHP Development, Learn WordPress, Full-Stack JavaScript
+	*	Achievements: JavaScript, CSS, Design, HTML, Develoment Tools, Business, WordPress, Python, Java, Digital Literacy
 	*	Currently, I focus on JavaScript, CSS, and HTML courses.  I've found this to be a powerful resource that's more engaging but limited in scope.  Often, I'll start with a new topic here to serve as a purpose of introduction to that topic.
 
 *	[Codecademy](https://www.codecademy.com/nathan.j.brenner)
 	*	December 2014-current
-	*	Completed Skills: Make an interactive Website, JavaScript, YouTube API, Learn the Command Line, jQuery, Make a Website, HTML and CSS
+	*	Completed Skills: Make an interactive Website, JavaScript, YouTube API, Learn the Command Line, jQuery, Make a Website, HTML and CSS, Learn AngularJS
 	*	This is another site that I've found less engaging than Treehouse, but more involved.  With each tutorial, I end up coding in similar exercises over several times.
 
 *	MS Education
