@@ -14,6 +14,8 @@ Resilient full stack web developer, passionate about creatitivity and collaborat
 *	collaboration: git/gitHub, harvest, slack, basecamp, trello
 *	qa: mocha.js, chai.js
 
+[Download this document](resume2015.docx)
+
 ***
 
 Work History
@@ -80,6 +82,9 @@ Professional Development
 	*	December 2014-current
 	*	Completed Skills: Make an interactive Website, JavaScript, YouTube API, Learn the Command Line, jQuery, Make a Website, HTML and CSS, Learn AngularJS
 	*	This is another site that I've found less engaging than Treehouse, but more involved.  With each tutorial, I end up coding in similar exercises over several times.
+
+*	[Node School](http://nodeschool.io/)
+	*	Completed tutorials: javascripting, git-it
 
 *	MS Education
 	*	Portland State University
