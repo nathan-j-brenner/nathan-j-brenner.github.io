@@ -5,9 +5,53 @@
     <description>A sample of my work and thoughts</description>
     <link>http://jekyllSample.com/</link>
     <atom:link href="http://jekyllSample.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 26 Aug 2015 20:41:52 -0700</pubDate>
-    <lastBuildDate>Wed, 26 Aug 2015 20:41:52 -0700</lastBuildDate>
+    <pubDate>Sun, 06 Sep 2015 10:45:26 -0700</pubDate>
+    <lastBuildDate>Sun, 06 Sep 2015 10:45:26 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>The times when noise cancelling headphones would be nice</title>
+        <description>&lt;p&gt;It’s labor day weekend, at least I think that’s the three day holiday weekend that gives employees an excuss to get a Monday off work, especially if they work for the government (I can never keep track of the names of these holidays.  They should change all their names to “3 day vacation on your tight budget”), and my parents from Vegas are visiting.&lt;/p&gt;
+
+&lt;p&gt;I just wrapped up a 3 week stint with the army.  Every year, I have to do two weeks of active duty, and this year I was able to do 3 weeks with another unit in place so I could stay local since my wife was about due to give birth to our first kid.  Without getting too specific, I was really appreciative of the nco’s that let me do this, but a lot of it seemed unnecessary.  A lot of it came down to sitting in a room killing time by playing stupid games on my cell phone since I the security on the building was too tight for me to do anything productive.  Bottom line, I was able to do very little coding in the last two weeks, and I got up at 7 am hopeful to work out some bugs that have been driving me crazy in my dreams.&lt;/p&gt;
+
+&lt;p&gt;I was able to eat breakfast in silence, but by the time I started looking at documentation, and testing out code, there was too much conversation in the room to be able to do anything more than just write a blog post and play stupid cell phone games.  They’re family, and they’re visiting, and it’s great that they’re here…I just have these bugs that are itching the crap out of me and I can’t get the space to do anything about it. I’d love to have some time for vacation, but it’s like I’m at the last bit of a day long hike and I’ve got the question to stop and all I really want to do is hike faster.  And now the wife is still sleeping, breakfast is brewing in the house, and it’s a half hour from when I’d like to leave to make it to church.  My parents used to indulge, and I got back into it when my wife got pregnunt, so I want to force my way but I’m pretty sure I’ll be waiting around all day for other people to tell me what I’m doing today.&lt;/p&gt;
+
+&lt;p&gt;The express.js class just came out on treehouse, so I’m eager to work on it as a review.  I spent a bunch of time with express in javascript immersion mostly from trial and error.  Treehouse is great for me because it’s so sequential, and I feel like I’ve got a bunch of potholes on my understanding of the server side code.  There’s a bunch of tutorials on node that I want to dig into for the same reason.&lt;/p&gt;
+
+&lt;p&gt;I’m also at the point with Angular.js that I can do enough to break things.  Collaboration would be really helpful at this point.  I really like the front end stack of working with angular and bootstrap, and I’d love to work on enough projects to the point where I don’t have to dig through the documentation every time I write something.&lt;/p&gt;
+
+&lt;p&gt;I’ve also got a meeting with a potential client this week and I’m really eager to prep for that project.  There’s also a tone of little errends I need to take care of, so I’m eager to get started on those and more importantly get started on a project I can make some money on. &lt;/p&gt;
+</description>
+        <pubDate>Sun, 06 Sep 2015 00:00:00 -0700</pubDate>
+        <link>http://jekyllSample.com/distractions</link>
+        <guid isPermaLink="true">http://jekyllSample.com/distractions</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>The Flatlanders have a store...</title>
+        <description>&lt;p&gt;A few weeks ago, I started exploring Angular.  I started with the Treehouse course, with didn’t make a ton of sense and wasn’t very motivating to work through, but it was something.  Intially I wanted to find how Angular fit into the mvc framework that backbone existed into, and they really don’t fit together at all, and in some cases angular makes more sense to me than backbone has.  So I was struggling thorugh this tutorial the week after my wife gave birth.  Henry James Brenner was born on August 8, and he’s doing great, but dad definatelly needs to start bringing home enough money so mom can spend more time relaxing.&lt;/p&gt;
+
+&lt;p&gt;Next stop was the tutorial on codecademy, which I thought was definately one of their better tutorials. A few days ago, I did their php tutorial, and I don’t think it really got beyond the very syntax basics, which is understandable since it’s a server side language.  In any case, the codecademy angular tutorial had a lot of user interaction, and I spent a lot of time searching for my syntax errors and looking at the forum.&lt;/p&gt;
+
+&lt;p&gt;Finally, I got to the code school tutorial and I’m pretty sure I’m going to have that song stuck in my head for a while.  At this point, I’ve lost whatever I gained from the treehouse course, and interestingly the code in the codecademy and code school were different and complimentary of eachother.&lt;/p&gt;
+
+&lt;p&gt;In the middle of this sequence, I started talking to a few people at networking events and I became relieved as mentioning Angular seemed to have more traction than any of the other tools I had worked with. About a week ago, I had a potential employer send me a project.  I had 24 hours, and since I was working for the army, I had the time I spent from when I got home that evening to when I stopped working that evening.  I could have easily stayed up all night, but I stopped when I had something functional.  The code was messy and I think it was a strong reflection of the sort of work I can produce when left to my devices without anyone to review my code and under a tight deadline.  The code would have looked a lot different if I had worked on it for the next day, and had asked someone to look at it before I sent it off.  &lt;/p&gt;
+
+&lt;p&gt;I actually started this project with the intent of writing it with backbone since I had spent more time and worked at greater depth with that framework.  I switched gears when I asked myself what the employer would want to see, along with acknowledging how much time it would take to get refamiliar with backbone after looking at angular for the last couple weeks.  &lt;/p&gt;
+
+&lt;p&gt;I read a recent blog post that mentioned their understaning of backbone and angular.  Backbone has a really stiff learning curve, but once you’ve understood everything about it, you can be able to write up some code.  Angular, on the other hand, is very approachable from the beginning but when you want to start creating an app, the documentation becomes less helpful along with the tutorial sites, and basically the programmer needs to look at other angular developers code to find best practices.&lt;/p&gt;
+
+&lt;p&gt;From the time I’ve spent with angular, I’m really intrigued, and I’d love to get to know the framework with greater depth.  With JavaScript Harmony out, Angular 2 is around the corners, and I’m seeing the connections that have been made with typescript, angular, and javaScript Harmony.  &lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Sep 2015 00:00:00 -0700</pubDate>
+        <link>http://jekyllSample.com/flatlanders</link>
+        <guid isPermaLink="true">http://jekyllSample.com/flatlanders</guid>
+        
+        
+      </item>
     
       <item>
         <title>PDX TechCrawl 2015</title>
