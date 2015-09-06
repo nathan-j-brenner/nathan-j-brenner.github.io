@@ -16,4 +16,8 @@ I actually started this project with the intent of writing it with backbone sinc
 
 I read a recent blog post that mentioned their understaning of backbone and angular.  Backbone has a really stiff learning curve, but once you've understood everything about it, you can be able to write up some code.  Angular, on the other hand, is very approachable from the beginning but when you want to start creating an app, the documentation becomes less helpful along with the tutorial sites, and basically the programmer needs to look at other angular developers code to find best practices.
 
+<<<<<<< HEAD
 From the time I've spent with angular, I'm really intrigued, and I'd love to get to know the framework with greater depth.  With JavaScript Harmony out, Angular 2 is around the corners, and I'm seeing the connections that have been made with typescript, angular, and javaScript Harmony.  
+=======
+From the time I've spent with angular, I'm really intrigued, and I'd love to get to know the framework with greater depth.  With JavaScript Harmony out, Angular 2 is around the corners, and I'm seeing the connections that have been made with typescript, angular, and javaScript Harmony.  
+>>>>>>> sidetrack
