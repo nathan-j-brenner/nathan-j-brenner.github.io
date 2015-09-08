@@ -3,7 +3,7 @@ title: Nathan Brenner
 email: nathan.j.brenner@gmail.com
 description: A sample of my work and thoughts
 # baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jekyllSample.com" # the base hostname & protocol for your site
+url: "http://nathan-j-brenner.github.io/" # the base hostname & protocol for your site
 twitter_username: njbrenner
 github_username:  nathan-j-brenner
 paginate: 3
