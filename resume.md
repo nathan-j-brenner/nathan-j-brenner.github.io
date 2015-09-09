@@ -8,7 +8,7 @@ Professional Profile
 
 Resilient full stack web developer, passionate about creatitivity and collaboration, and interested in solving client-focused problems. 
 
-*	Front-end: html 5, css 3, sass, gulp.js, backbone.js, bootstrap, foundation, mobile first/responsive web design, jQuery, underscrore.js
+*	Front-end: html 5, css 3, sass, gulp.js, angular.js, backbone.js, bootstrap, foundation, mobile first/responsive web design, jQuery, underscrore.js
 *	server: node.js, npm, express.js, jade, json
 *	database: postgresql, knex.js, mongoDB, orchestrate.io, third-party api’s
 *	collaboration: git/gitHub, harvest, slack, basecamp, trello
