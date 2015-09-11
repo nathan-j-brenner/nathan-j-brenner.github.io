@@ -13,6 +13,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://github.com/nathan-j-brenner/weatherForecastApp",
 			"age": 1,
 			"lastCommit": 2015-09-09,
+			"tags": ['angular.js', 'bootstrap', 'css', 'html', 'weather underground api']
 		},
 		{
 			"name" : "SnapOR",
@@ -23,7 +24,7 @@ app.controller('portfolioCtrl', function($scope){
 			"site": "http://snaporegon.herokuapp.com/",
 			"lastCommit": 2015-08-11,
 			"age": 2,
-			"tags": ['html 5', 'css 3', 'sass', 'gulp.js', 'backbone.js', 'foundation', 'responsive web design', 'jQuery', 'underscrore.js', 'node.js', 'npm', 'express.js', 'json', 'orchestrate.io', 'Oregon State Parks api', 'flickr api', 'google maps api']
+			"tags": ['html 5', 'css 3', 'sass', 'gulp.js', 'backbone.js', 'foundation', 'responsive web design', 'jQuery', 'underscrore.js', 'node.js', 'npm', 'express.js', 'json', 'orchestrate.io', 'Oregon State Parks api', 'flickr api', 'google maps api', 'gitHub', 'trello', 'slack']
 
 		},
 		{
@@ -34,6 +35,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://github.com/nathan-j-brenner/calendarApp",
 			"age": 3,
 			"lastCommit": 2015-07-05,
+			"tags": ['backbone.js', 'css', 'html', 'jQuery', 'underscore.js', 'node.js', 'express.js']
 		},
 		{
 			"name": "AuthMe",
@@ -43,6 +45,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://github.com/nathan-j-brenner/authMe",
 			"age": 4,
 			"lastCommit": 2015-07-01,
+			"tags": ['html', 'ccs', 'node.js', 'express.js', 'jade', 'json', 'postgresql', 'knex.js']
 		},
 		{
 			"name": "StaticCharge",
@@ -52,6 +55,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://github.com/nathan-j-brenner/static-charge",
 			"age": 5,
 			"lastCommit": 2015-05-28,
+			"tags":['html', 'css', 'javaScript', 'express.js', 'node.js']
 		},
 		{
 			"name": "Git Ping-Pong",
@@ -61,6 +65,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://github.com/nathan-j-brenner/ping_pong",
 			"age": 6,
 			"lastCommit": 2015-05-14,
+			"tags": ['markdown', 'git']
 		},
 		{
 			"name": "JavaScript Mad-Libs",
@@ -70,6 +75,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://github.com/nathan-j-brenner/mad_libs_in_console",
 			"age": 7,
 			"lastCommit": 2015-06-02,
+			"tags": ['markdown', 'javaScript']
 		},
 		{
 			"name": "234th Army Band",
@@ -79,6 +85,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://github.com/nathan-j-brenner/234",
 			"age": 8,
 			"lastCommit": 2015-05-04,
+			"tags": ['bootstrap', 'html', 'css', 'jQuery', 'javaScript']
 		},
 		{
 			"name": "Previous Portfolio",
@@ -88,6 +95,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://github.com/nathan-j-brenner/portfolioWithFoundation",
 			"age": 9,
 			"lastCommit": 2015-08-02,
+			"tags": ['html', 'css', 'foundation', 'javaScript']
 		},
 		{
 			"name": "Primal Touch Massage 2.0",
@@ -97,6 +105,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://github.com/nathan-j-brenner/porcali3",
 			"age": 10,
 			"lastCommit": 2015-03-05,
+			"tags": ['html', 'css', 'jQuery', 'bootstrap']
 		},
 		{
 			"name": "Primal Touch Massage 1.0",
@@ -106,6 +115,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://github.com/nathan-j-brenner/porcali2",
 			"age": 11,
 			"lastCommit": 2015-02-07,
+			"tags": ['html', 'css']
 		},
 		{
 			"name": "PCS Curriculum",
@@ -115,6 +125,7 @@ app.controller('portfolioCtrl', function($scope){
 			"gitHub": "https://portlandcodeschool.github.io/primer//course/",
 			"age": 12,
 			"lastCommit": 2015-05-26,
+			"tags": ['jekyll', 'markdown', 'html', 'css', 'javaScript']
 		}
 
 	];
