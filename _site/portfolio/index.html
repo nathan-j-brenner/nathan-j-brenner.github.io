@@ -6,14 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>My recent work</title>
+  <title>Portfolio</title>
   <meta name="description" content="A sample of my work and thoughts">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/my.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="canonical" href="http://jekyllSample.com/portfolio/">
-  <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://jekyllSample.com/feed.xml" />
+  <link rel="canonical" href="http://nathan-j-brenner.github.io//portfolio/">
+  <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://nathan-j-brenner.github.io//feed.xml" />
+  <script type="text/javascript" src="/javaScripts/vendor/angular.min.js"></script>
+  <script type="text/javascript" src="/javaScripts/app.js"></script>
 </head>
 
   <body>
@@ -50,7 +51,7 @@
           
         
           
-          <a class="page-link" href="/portfolio/">My recent work</a>
+          <a class="page-link" href="/portfolio/">Portfolio</a>
           
         
           
@@ -69,135 +70,14 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="container-fluid">
+        <div class="container-fluid" ng-app="portfolio" ng-controller="portfolioCtrl">
 	<div class="row">
-		<div class="col-sm-6 col-md-6">
+		<div class="col-sm-6 col-md-6" ng-repeat="project in projects">
 			<div class="thumbnail">
-				<img src="/imgs/snapOR/index.png" alt="snapOR">
+				<img ng-src="[[project.img]]" alt="[[project.alt]]">
 				<div class="caption">
-					<h3>SnapOR</h3>
-					<p>Single page application geared toward users that like to photograph the outdoors, specifically in the Oregon State Parks. Project timeframe to complete mvp: July  6 – July 31. I worked with two other developers on this project.</p>
-					<p><a href="http://snaporegon.herokuapp.com/" class="btn btn-default" role="button">Visit the site</a> <a href="https://github.com/nathan-j-brenner/snapOR" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/weatherApp.png" alt="weatherForecastApp">
-				<div class="caption">
-					<h3>weatherForecastApp</h3>
-					<p>First project with Angular. Started on August 25 with features to be added possibly with testing through Protractor and adding geolocation. The user can put in a zip code and get a three day forecast.</p>
-					<p><a href="https://github.com/nathan-j-brenner/weatherForecastApp" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/calendarApp/example1.png" alt="calendarApp">
-				<div class="caption">
-					<h3>CalendarApp</h3>
-					<p>First project with an mvc, primary attention between July 20-24.  The user can create a day, or a group of days, and add events individually to each event.</p>
-					<p><a href="https://github.com/nathan-j-brenner/calendarApp" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/authme/index.png" alt="AuthMe">
-				<div class="caption">
-					<h3>AuthMe</h3>
-					<p>Twitter clone: user can register and log in.  After log-in, a cookie is saved until the user logs out. The user can submit comments.</p>
-					<p><a href="https://github.com/nathan-j-brenner/authMe" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/static-charge/index.png" alt="StaticCharge">
-				<div class="caption">
-					<h3>Static Charge</h3>
-					<p>This is a static site generator I worked on in late May 2015</p>
-					<p><a href="https://github.com/nathan-j-brenner/static-charge" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/pingPong.png" alt="Git Ping-Pong">
-				<div class="caption">
-					<h3>Git Ping-Pong</h3>
-					<p>While I was in JavaScript Immersion during the day, I was teaching the Web Foundations. This repo was an activity I created for the intent that the students would be able to get their hands dirty with git.  In previous versions, the instructor would demonstate this process while the students watched</p>
-					<p><a href="https://github.com/nathan-j-brenner/ping_pong" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/mad.png" alt="JavaScript Mad-Libs">
-				<div class="caption">
-					<h3>JavaScript Mad-Libs</h3>
-					<p>This is another teaching asset with the intent that the students would start to apply some very basic javaScript elements such as functions, arrays, and objects.</p>
-					<p><a href="https://github.com/nathan-j-brenner/mad_libs_in_console" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/armyBand.png" alt="234th Army Band">
-				<div class="caption">
-					<h3>234th Army Band</h3>
-					<p>This bootstrap website took me about 8 hours to write. The client really liked it, but it hasn't gone live yet.</p>
-					<p><a href="https://github.com/nathan-j-brenner/234" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/foundation.png" alt="Portfolio with Foundation framework">
-				<div class="caption">
-					<h3>Outdated Portfolio</h3>
-					<p>I wrote this right before JavaScript Immersion started and the picture takes forever to load.  It's a single static page with the help of the <a href="http://foundation.zurb.com/">Foundation</a> front-end framework.  Over the course of JavaScript, there seemed to be too much that I wanted to change that I decided not to fight this.  I was also writing in a wordPress blog, so this jekyll site fits both of those needs</p>
-					<p><a href="https://github.com/nathan-j-brenner/portfolioWithFoundation" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/porcali3.png" alt="Primal Touch Massage 2.0">
-				<div class="caption">
-					<h3>Primal Touch 2.0</h3>
-					<p>This was the final project of the web foudnations I took as a student.  This is a boostrap site refactored from a previous site without any framework. Turn on your speakers.  Can you name that composer?</p>
-					<p><a href="https://github.com/nathan-j-brenner/porcali3" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/porcali2.png" alt="Primal Touch Massage 1.0">
-				<div class="caption">
-					<h3>Primal Touch 1.0</h3>
-					<p>All hand typed css and html, along with the first oppertunity to collaborate with git.  I had a hand in the gradient and I was also the defacto-git expert</p>
-					<p><a href="https://github.com/nathan-j-brenner/porcali2" class="btn btn-default" role="button">View in gitHub</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-6">
-			<div class="thumbnail">
-				<img src="/imgs/pcs.png" alt="Portland Code School Web Foundations Curriculum">
-				<div class="caption">
-					<h3>PCS Curriculum</h3>
-					<p>This was my first published content: lesson plans for each class, with the hope that more web developers could teach this course by following along.  I had no idea what a static site generator was, and I wrote in markdown a lot like I would write in Microsoft Word and add some syntax later.</p>
-					<p><a href="https://portlandcodeschool.github.io/primer//course/" class="btn btn-default" role="button">View the site</a></p>
+					<h3>[[project.name]]</h3>
+					<p><a href="[[project.gitHub]]" class="btn btn-default" role="button">View in gitHub</a></p>
 				</div>
 			</div>
 		</div>
@@ -260,7 +140,6 @@
   </div>
 
 </footer>
-
 
   </body>
 
