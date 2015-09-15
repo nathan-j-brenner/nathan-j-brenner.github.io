@@ -11,28 +11,18 @@ Sort by:
   <option value="age">Newest</option>
   <option value="tags">Tools used</option>
 </select>
-	<div class="row">
-		<div class="col-sm-6 col-md-6" ng-repeat="project in projects | filter:query | orderBy:orderProp">
+	<div class="row" ng-repeat="project in projects | filter:query | orderBy:orderProp">
+		<div class="col-sm-6 col-md-6">
 			<div class="thumbnail">
 				<img ng-src="[[project.img]]" alt="[[project.alt]]">
 				<div class="caption">
 					<h3>[[project.name]]</h3>
-					<p><a href="[[project.gitHub]]" class="btn btn-default" role="button">View in gitHub</a> <button type="button" class="btn btn-default" ng-click="open('lg')">View Description</button></p>
+					<p><a href="[[project.gitHub]]" class="btn btn-default" role="button">View in gitHub</a></p>
 				</div>
 			</div>
 		</div>
-		<!--<script type="text/ng-template" id="myModalContent.html">
-        	<div class="modal-header">
-            	<h3 class="modal-title">[[project.name]]</h3>
-        	</div>
-        	<div class="modal-body">
-        		<img ng-src="[[project.img]]" alt="[[project.alt]]">
-        		<p>[[project.description]]</p>
-        	</div>
-        	<div class="modal-footer">
-            	<button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-            	<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-        	</div>
-    	</script>-->
+        <div class="col-sm-6 col-md-6">
+            <p>[[project.description]]</p>
+        </div>
 	</div>
 </div>
