@@ -73,13 +73,17 @@
     <div class="page-content">
       <div class="wrapper">
         <div class="container-fluid" ng-app="portfolio" ng-controller="portfolioCtrl">
-Search: <input ng-model="query">
-Sort by:
-<select ng-model="orderProp">
-  <option value="name">Alphabetical</option>
-  <option value="age">Newest</option>
-  <option value="tags">Tools used</option>
-</select>
+	<div class="row">
+		<div class="col-md-5">
+			Search: <input ng-model="query"><br>
+			Sort by:
+			<select ng-model="orderProp">
+	  			<option value="name">Alphabetical</option>
+	  			<option value="age">Newest</option>
+	  			<option value="tags">Tools used</option>
+			</select>
+		</div>
+	</div>
 	<div class="row" ng-repeat="project in projects | filter:query | orderBy:orderProp">
 		<div class="col-sm-6 col-md-6">
 			<div class="thumbnail">

@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Getting paid to write"
+date : 2015-09-19
+---
+
+As I was driving to Portland this morning, there was an article on NPR about the Writer's Guild of America.  If you author a book, should you get paid for it? Should you get paid enough that you can make a living off of your writing?  And who should publish your work: You or a company?
+
+I can't relate directly.  Indirectly, I understand how frustrating it can sometimes be when you have a project in mind but you're limited on how much time you can put into that project due to seemingly silly external variables, like the cost of living.  If you can't make a living off of the work, then maybe you're investing your time in activity that can't provide the basic necessities of life and you should reevaluate what you're doing with the little bit of time you have.  
+
+By doing something that you want to do may actually be a waste of your time.  Maybe it's better to do something that you don't want to do for a little while so that with the time left over you can do the things you like to do, like take on new projects or write another book.  
+
+When I was growing up, I earned an allowance.  I think it was a dollar a week for which in turn I'd do chores around the house that I'd probably would have done anyway because I was too young to question my parents.  I didn't have a need for that money; my parents gave me everything I needed.  The point was to gain a respect for my time so that at some point, I would be able to easily make the decision to trade my time for money at a rate that would let me spend the rest of my time how I choose.  
+
+Ironically, as I idolized my father who is a public school teacher, I got the silly idea that my time wasn't worth very much, so I followed that path of doing work that I was really passionate about.  Another bit of irony was how he was just telling me recently that if you pay people more, then they'll be more motivated to do a good job.  If people can pay for the basic necessities, then their financial stress will hinder their job performance.
+
+Bottom line, if you're an artist and you want to be paid more, do work that is considered valueable.  If you're a broke writer, teach kids how to read. That's a terrible example, and there's a lot of writers that turn to teaching and unfortunately, that'll probably mean you need to learn the art of teaching, but there's commonality.  That begs the question: Is art universal?  This depends on the definition of the word art, just like how writers define language.  It's my perception that launguage requires a dynamic, and organized flow of communication between more than one party.
+
+Better yet, if you're a writer, I'd be you know a lot about communication so why not communicate to others through a different type of language such as html or even JavaScript?  The leap from writing novels to programs is quite a bit.  Programming isn't something that's easy to figure out, but there's a deep rooted level of connection between every different form of art.
+
+Enough of this vague ramble.  Lately, I've been working through the D3.js course on Treehouse, and it's tough.  I can't wait to finish it so I can dive into the documentation and start doing some more engaged form of learning, which is actually writing code.  
+
+I'm at that point with Angular. I'm in the middle of another spa.  It's called taskManager.  Imagine [trello](https://trello.com/).  Your boss has a bunch of stuff that needs to get done, so he creates a list, and then he assigns those items to team members.  I didn't intend to create a trello clone; I wanted to get better at creating programs with Angular so of course the code is probably messier than it needs to be.  I got the idea from [50 Angular examples](https://www.youtube.com/watch?v=TRrL5j3MIvo).  I stopped midway to do some applicable coding and got sidetracked. [Firebase](http://ionicframework.com/) might get added on to give it a backend. I also added Angular into the [portfolio](http://nathan-j-brenner.github.io/portfolio/) page of this site.  It made it much easier to maintain, and I'll probably add in some [AngularUI](https://angular-ui.github.io/) after I have a more solid grasp of Angular.
+
+I've got another project underway that involves [Ionic](http://ionicframework.com/). Ionic is a framework that lets you build native apps out of web based apps. So create the web based app with HTML, CSS, and JavaScript, specifically with Angular, and you Ionic will generate the native version so no need to learn Objective-C or Android.
+
+I write for free and code for free willingly as means to promote a product.  That product's ability to learn is more valueable than what that product already knows.  Coding for free is really just the vehicle to develop that product further. I've been paid to write, which for the web is hard because there's always room for revision.  The easiest thing to do is stop when the money stops coming in.  I got into coding a year ago because I wanted to get paid more.  Right now that means starting with less than what I used to make.  I'm a little bit nervous for October 9th. Any coding for free projects will be cut back and I'll take on the role to raise my son.  The goal is to get to the point where I can make enough money so that my wife can cut back more on her work. Minimum wage jobs don't make that possible, and neither does artistic endevors like teaching, even if you have more education and training in that field than most of the people in the world.
