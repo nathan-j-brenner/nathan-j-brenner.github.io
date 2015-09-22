@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>The Flatlanders have a store...</title>
-  <meta name="description" content="A few weeks ago, I started exploring Angular. Angular is a model-view-controller.  I had worked with Backbone.js, which is another mvc.  ">
+  <title>Multi-dimentional Todo List part 1</title>
+  <meta name="description" content="When starting with an unfamiliar mvc, an example of creating a todo list seems to be fairly common way to see what is so different from that framework.  My c...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="canonical" href="http://nathan-j-brenner.github.io//flatlanders">
+  <link rel="canonical" href="http://nathan-j-brenner.github.io//multidimentional-todo-list">
   <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://nathan-j-brenner.github.io//feed.xml" />
   <script type="text/javascript" src="/javaScripts/vendor/angular-1.4.5/angular.min.js"></script>
   <script type="text/javascript" src="/javaScripts/vendor/angular-1.4.5/angular-animate.min.js"></script>
@@ -77,28 +77,29 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">The Flatlanders have a store...</h1>
-    <p class="post-meta">Sep 5, 2015 • Nathan</p>
+    <h1 class="post-title">Multi-dimentional Todo List part 1</h1>
+    <p class="post-meta">Sep 21, 2015 • Nathan</p>
   </header>
 
   <article class="post-content">
-    <p>A few weeks ago, I started exploring Angular. Angular is a model-view-controller.  I had worked with Backbone.js, which is another mvc.  </p>
+    <p>When starting with an unfamiliar mvc, an example of creating a todo list seems to be fairly common way to see what is so different from that framework.  My calendarApp is basically just that with backbone, and lately I’ve been working on an Angular version.</p>
 
-<p>I started with the Treehouse course, then worked through the tutorial on codecademy.</p>
+<p>If you take a look at either of those, or on my portfolio in general, you’ll probably come to the conclusions that I’m not that flashy on the front-end.  My projects typically don’t show off my ability to use great fonts or amazing css layouts. I like writting css and sass, but the idea of how to make something look great eludes me.  If someone came up to me and gave me a wireframe, then I’d be all over interpreting their idea into the browser as closely as possible.  But even more interesting, when I get an idea for an app, I become absorbed into the functionality of it and you can let me loose and I’ll iterate over and over to create functioning code.</p>
 
-<p>The treehouse course gave some interesting definitions, but there seemed to be several gaps.  I’ve heard that Treehouse is working on a new course to replace this older version.</p>
+<p>The taskManager app had the following iterations: Basic todo app, objects in a todo app, integrating the first iteration into the second, debugging and revising the ui, then integrating the backend.</p>
 
-<p>CodeCademy course was helpful because there was a lot of practical coding exercises.  I would like to see more specific feedback when I wrote errors.  Currently, there are forums where users post questions when they get stuck.  This lends to spending a lot of time looking at my code and other peoples code to debug the error.</p>
+<h2 id="basic-angular-todo-app">Basic Angular todo App</h2>
+<p>On a side note, as I was coming to a stopping point with this project today also happens to be the first day the current Portland Code School JavaScript Immersion course is working with their first mvc, which again is backbone.</p>
 
-<p>Finally, I got to the code school tutorial and I’m pretty sure I’m going to have that song stuck in my head for a while.  At this point, I haven’t retained anything specific from the treehouse course, but it served as a foundation. Code School is equally valuable as codecademy, and their pedagogic sense is a little different.</p>
+<p>About a week ago, I started watching <a href="https://www.youtube.com/watch?v=TRrL5j3MIvo">Angular.js in 50 examples</a>. From the beginning, it looked like a poor video recording of a meetup, but I really liked how Curran Kelleher presented his incredibly well documented <a href="http://curran.github.io/screencasts/introToAngular/exampleViewer/#/">gitHub repo</a>.  I also really liked how he starts with basic javaScript and moves through the history of adding in jQuery, then Backbone, and finally Angular.  He made the case that with each of those iterations, javaScript was becoming more powerful by becoming easier to write.  Case in point, I’ve been reading JavaScript: The Good Parts lately.  Most of the time, I feel like I’m actively writing in Angular or Node, but there’s not a whole lot of the book that’s surprising or new.  To write in some of these more recent frameworks requires a depth of understanding of core javascript, which makes me about as excited as nervous with the advent of Angular 2.0 and ES6.</p>
 
-<p>Code School has more courses on Angular, and their first course is free because Google paid for it.  About this time, I dove into a small project.  The WeatherForecastApp repo on gitHub is the result.  It still needs some work and cleaning up.  I’ve been looking at the tutorial on the angularjs.org, with the hope of filling in gaps.  I’ve also integrated angular into the portfolio page on this site.  </p>
+<p>By the time I got to Example 15, I gave in and started coding as a departure from the video.  By this point, the directives ng-app and ng-controller are written into the index.html.  Ng-app is typically written in the html tag, and the controller can be written in the div where you want the model to have access to the view.  I haven’t written a project yet where I’ve needed more than one model, so the ng-app and ng-controller directives can be in the same html tag.  In the head, I have the Angular cdn downloading into the page, and just before the closing body tag, I have app.js and the mainCtrl.js loading into the page. The only other tags in the page is form tag with the directive ng-submit, which has the value to add a task (a method written into the controller). Within that form are two input tags: The first is to take text and has an ng-model as an attribute.  The second has a <code>type="submit"</code>.  When the submit input tag is clicked, the form fires the <code>addTask()</code> method within the $scope. Directly below this tag is an unordered list, with a single list element that has the ng-repeat directive to loop through the ‘task in tasks’.  When the user clicks on the submit input, the task that the user typed into the other input tag is pushed into the $scope.tasks array, and the user sees that new task moved from the input into the unordered list with a bullet point.</p>
 
-<p>So what makes Angular different from Backbone? Backbone doesn’t have a controller.  If you’re familiar with classical inheritance, the jump is easier to write in Backbone.  The model contains the data, and the view displays the data and can have events, which act like controllers.  This is all written in javaScript files.  Another key difference is that Backbone doesn’t have a strong opinion on how you create your app.  It’s suitable to work with underscore.js and jQuery, and you can get away with a lot of different approaches to problems.</p>
+<p>Also within the ng-repeat are input tags to edit and delete the tasks.  I picked up the function syntax for these methods from the youtube video.  They’re not my favorite, as I’ve seen these functions in different ways, but I went with it for today.  The edit method is an extension of the delete method.  When the delete method is applied, due to an ng-click event, that element (due to the way Angular handles data binding) is spliced from the array that is lives in, so it doesn’t appear in the ng-repeat element. The difference with edit is that the element is set to the ng-model of the input tag where it originally came from, so when the user clicks on the create task with the edited task, the task is again appended to the $scope.tasks array, so it appears in the view under the ng-repeat directive.</p>
 
-<p>Angular is a little more opinionated, and it turns html into something quite different.  Angular uses directives to extend javaScript into expressions in the html.  A couple examples of directives would be ng-app, ng-controller, and ng-model.  A controller has to be specified to access the data from the model.   Angular has two-way data binding, so if data appears on the DOM and there is an input tag, the input tag can change the data by specifying ng-model. </p>
+<p>BWT, it’d probably make a lot of sense by now if you could see snippets of the code.  Instead, you can if you visit the portfolio page and find this app.  Person.html and public/js/controllers/personCtrl.js has the code I’m referencing.</p>
 
-<p>Angular 2.0 is around the corner, and there seems to be a lot of hesitation about it.  React seems to be picking up steem.  It will be interesting to see what happens in the next year.</p>
+<p>Like I mentioned earlier, this is where I started itching to move beyond the videos.  Stay tuned for the next iteration.</p>
 
   </article>
   

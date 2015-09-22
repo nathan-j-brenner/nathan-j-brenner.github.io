@@ -5,9 +5,37 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Sep 2015 18:21:47 -0700</pubDate>
-    <lastBuildDate>Mon, 21 Sep 2015 18:21:47 -0700</lastBuildDate>
+    <pubDate>Mon, 21 Sep 2015 19:29:15 -0700</pubDate>
+    <lastBuildDate>Mon, 21 Sep 2015 19:29:15 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Multi-dimentional Todo List part 1</title>
+        <description>&lt;p&gt;When starting with an unfamiliar mvc, an example of creating a todo list seems to be fairly common way to see what is so different from that framework.  My calendarApp is basically just that with backbone, and lately I’ve been working on an Angular version.&lt;/p&gt;
+
+&lt;p&gt;If you take a look at either of those, or on my portfolio in general, you’ll probably come to the conclusions that I’m not that flashy on the front-end.  My projects typically don’t show off my ability to use great fonts or amazing css layouts. I like writting css and sass, but the idea of how to make something look great eludes me.  If someone came up to me and gave me a wireframe, then I’d be all over interpreting their idea into the browser as closely as possible.  But even more interesting, when I get an idea for an app, I become absorbed into the functionality of it and you can let me loose and I’ll iterate over and over to create functioning code.&lt;/p&gt;
+
+&lt;p&gt;The taskManager app had the following iterations: Basic todo app, objects in a todo app, integrating the first iteration into the second, debugging and revising the ui, then integrating the backend.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-angular-todo-app&quot;&gt;Basic Angular todo App&lt;/h2&gt;
+&lt;p&gt;On a side note, as I was coming to a stopping point with this project today also happens to be the first day the current Portland Code School JavaScript Immersion course is working with their first mvc, which again is backbone.&lt;/p&gt;
+
+&lt;p&gt;About a week ago, I started watching &lt;a href=&quot;https://www.youtube.com/watch?v=TRrL5j3MIvo&quot;&gt;Angular.js in 50 examples&lt;/a&gt;. From the beginning, it looked like a poor video recording of a meetup, but I really liked how Curran Kelleher presented his incredibly well documented &lt;a href=&quot;http://curran.github.io/screencasts/introToAngular/exampleViewer/#/&quot;&gt;gitHub repo&lt;/a&gt;.  I also really liked how he starts with basic javaScript and moves through the history of adding in jQuery, then Backbone, and finally Angular.  He made the case that with each of those iterations, javaScript was becoming more powerful by becoming easier to write.  Case in point, I’ve been reading JavaScript: The Good Parts lately.  Most of the time, I feel like I’m actively writing in Angular or Node, but there’s not a whole lot of the book that’s surprising or new.  To write in some of these more recent frameworks requires a depth of understanding of core javascript, which makes me about as excited as nervous with the advent of Angular 2.0 and ES6.&lt;/p&gt;
+
+&lt;p&gt;By the time I got to Example 15, I gave in and started coding as a departure from the video.  By this point, the directives ng-app and ng-controller are written into the index.html.  Ng-app is typically written in the html tag, and the controller can be written in the div where you want the model to have access to the view.  I haven’t written a project yet where I’ve needed more than one model, so the ng-app and ng-controller directives can be in the same html tag.  In the head, I have the Angular cdn downloading into the page, and just before the closing body tag, I have app.js and the mainCtrl.js loading into the page. The only other tags in the page is form tag with the directive ng-submit, which has the value to add a task (a method written into the controller). Within that form are two input tags: The first is to take text and has an ng-model as an attribute.  The second has a &lt;code&gt;type=&quot;submit&quot;&lt;/code&gt;.  When the submit input tag is clicked, the form fires the &lt;code&gt;addTask()&lt;/code&gt; method within the $scope. Directly below this tag is an unordered list, with a single list element that has the ng-repeat directive to loop through the ‘task in tasks’.  When the user clicks on the submit input, the task that the user typed into the other input tag is pushed into the $scope.tasks array, and the user sees that new task moved from the input into the unordered list with a bullet point.&lt;/p&gt;
+
+&lt;p&gt;Also within the ng-repeat are input tags to edit and delete the tasks.  I picked up the function syntax for these methods from the youtube video.  They’re not my favorite, as I’ve seen these functions in different ways, but I went with it for today.  The edit method is an extension of the delete method.  When the delete method is applied, due to an ng-click event, that element (due to the way Angular handles data binding) is spliced from the array that is lives in, so it doesn’t appear in the ng-repeat element. The difference with edit is that the element is set to the ng-model of the input tag where it originally came from, so when the user clicks on the create task with the edited task, the task is again appended to the $scope.tasks array, so it appears in the view under the ng-repeat directive.&lt;/p&gt;
+
+&lt;p&gt;BWT, it’d probably make a lot of sense by now if you could see snippets of the code.  Instead, you can if you visit the portfolio page and find this app.  Person.html and public/js/controllers/personCtrl.js has the code I’m referencing.&lt;/p&gt;
+
+&lt;p&gt;Like I mentioned earlier, this is where I started itching to move beyond the videos.  Stay tuned for the next iteration.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 21 Sep 2015 00:00:00 -0700</pubDate>
+        <link>http://nathan-j-brenner.github.io//multidimentional-todo-list</link>
+        <guid isPermaLink="true">http://nathan-j-brenner.github.io//multidimentional-todo-list</guid>
+        
+        
+      </item>
     
       <item>
         <title>Getting paid to write</title>
