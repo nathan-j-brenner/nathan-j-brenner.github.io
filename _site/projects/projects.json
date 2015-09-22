@@ -1,13 +1,23 @@
 [
 	{
+		"name": "taskManager",
+		"img": "/imgs/taskManager.png",
+		"alt": "taskManager",
+		"description": "This project stared as a simple todo app with Angular, like my backbone calendarApp.  The user is a manager of employees and regularly has a different set of tasks to complete, but has a hard time tracking who is doing those tasks and when or if they are completed.  With this app, the user can first create their list of tasks to complete, clock in employees as they arrive for work, and assign those employees tasks from the main list.  When the employee reports completion of a task, the task is moved off of the employee list and into the completion list with the employee's name and time of completion.  Server side code is very basic and was only added at the end.  Angular side has one controller and has a filter on the date object.  Several conditional statements were added into the $scope methods for testing purposes.",
+		"gitHub":"https://github.com/nathan-j-brenner/taskManager",
+		"age": 1,
+		"lastCommit": "2015-09-21",
+		"tags": ["angular.js", "bootstrap", "node.js", "express", "css", "html", "full-stack", "spa", "javaScript"]
+	},
+	{
 		"name": "weatherForecastApp",
 		"img": "/imgs/weatherApp.png",
 		"alt": "weatherForecastApp",
 		"description": "First project with Angular. Started on August 25 with features to be added possibly with testing through Protractor and adding geolocation. The user can put in a zip code and get a three day forecast.",
 		"gitHub": "https://github.com/nathan-j-brenner/weatherForecastApp",
-		"age": 1,
+		"age": 2,
 		"lastCommit": "2015-09-09",
-		"tags": ["angular.js", "bootstrap", "css", "html", "weather underground api"]
+		"tags": ["angular.js", "bootstrap", "css", "html", "weather underground api", "front-end", "spa", "javaScript"]
 	},
 	{
 		"name" : "SnapOR",
@@ -17,8 +27,8 @@
 		"gitHub": "https://github.com/nathan-j-brenner/snapOR",
 		"site": "http://snaporegon.herokuapp.com/",
 		"lastCommit": "2015-08-11",
-		"age": 2,
-		"tags": ["html", "css", "sass", "gulp.js", "backbone.js", "foundation", "responsive web design", "jQuery", "underscrore.js", "node.js", "npm", "express.js", "json", "orchestrate.io", "Oregon State Parks api", "flickr api", "google maps api", "gitHub", "trello", "slack"]
+		"age": 3,
+		"tags": ["html", "css", "sass", "gulp.js", "backbone.js", "foundation", "responsive web design", "jQuery", "underscrore.js", "node.js", "npm", "express.js", "json", "orchestrate.io", "Oregon State Parks api", "flickr api", "google maps api", "gitHub", "trello", "slack", "full-stack", "javaScript"]
 
 	},
 	{
@@ -27,9 +37,9 @@
 		"alt": "CalendarApp",
 		"description": "First project with an mvc, primary attention between July 20-24.  The user can create a day, or a group of days, and add events individually to each event.",
 		"gitHub": "https://github.com/nathan-j-brenner/calendarApp",
-		"age": 3,
+		"age": 4,
 		"lastCommit": "2015-07-05",
-		"tags": ["backbone.js", "css", "html", "jQuery", "underscore.js", "node.js", "express.js"]
+		"tags": ["backbone.js", "css", "html", "jQuery", "underscore.js", "node.js", "express.js", "full-stack", "javaScript"]
 	},
 	{
 		"name": "AuthMe",
@@ -37,9 +47,9 @@
 		"alt": "AuthMe",
 		"description": "Twitter clone: user can register and log in.  After log-in, a cookie is saved until the user logs out. The user can submit comments.",
 		"gitHub": "https://github.com/nathan-j-brenner/authMe",
-		"age": 4,
+		"age": 5,
 		"lastCommit": "2015-07-01",
-		"tags": ["html", "ccs", "node.js", "express.js", "jade", "json", "postgresql", "knex.js"]
+		"tags": ["html", "ccs", "node.js", "express.js", "jade", "json", "postgresql", "knex.js", "back-end", "javaScript"]
 	},
 	{
 		"name": "StaticCharge",
@@ -47,9 +57,9 @@
 		"alt": "StaticCharge",
 		"description": "This is a static site generator I worked on in late May 2015",
 		"gitHub": "https://github.com/nathan-j-brenner/static-charge",
-		"age": 5,
+		"age": 6,
 		"lastCommit": "2015-05-28",
-		"tags":["html", "css", "javaScript", "express.js", "node.js"]
+		"tags":["html", "css", "javaScript", "express.js", "node.js", "back-end"]
 	},
 	{
 		"name": "Git Ping-Pong",
@@ -57,7 +67,7 @@
 		"alt": "Git Ping-Pong",
 		"description": "While I was in JavaScript Immersion during the day, I was teaching the Web Foundations. This repo was an activity I created for the intent that the students would be able to get their hands dirty with git.  In previous versions, the instructor would demonstate this process while the students watched",
 		"gitHub": "https://github.com/nathan-j-brenner/ping_pong",
-		"age": 6,
+		"age": 7,
 		"lastCommit": "2015-05-14",
 		"tags": ["markdown", "git"]
 	},
@@ -67,7 +77,7 @@
 		"alt": "JavaScript Mad-Libs",
 		"description": "This is another teaching asset with the intent that the students would start to apply some very basic javaScript elements such as functions, arrays, and objects.",
 		"gitHub": "https://github.com/nathan-j-brenner/mad_libs_in_console",
-		"age": 7,
+		"age": 8,
 		"lastCommit": "2015-06-02",
 		"tags": ["markdown", "javaScript"]
 	},
@@ -77,9 +87,9 @@
 		"alt": "234th Army Band",
 		"description": "This bootstrap website took me about 8 hours to write. The client really liked it, but it hasn't gone live yet.",
 		"gitHub": "https://github.com/nathan-j-brenner/234",
-		"age": 8,
+		"age": 9,
 		"lastCommit": "2015-05-04",
-		"tags": ["bootstrap", "html", "css", "jQuery", "javaScript"]
+		"tags": ["bootstrap", "html", "css", "jQuery", "javaScript", "front-end"]
 	},
 	{
 		"name": "Previous Portfolio",
@@ -87,9 +97,9 @@
 		"alt": "Portfolio with Foundation framework",
 		"description": "I wrote this right before JavaScript Immersion started and the picture takes forever to load.  It's a single static page with the help of the <a href='http://foundation.zurb.com/'>Foundation</a> front-end framework.  Over the course of JavaScript, there seemed to be too much that I wanted to change that I decided not to fight this.  I was also writing in a wordPress blog, so this jekyll site fits both of those needs",
 		"gitHub": "https://github.com/nathan-j-brenner/portfolioWithFoundation",
-		"age": 9,
+		"age": 10,
 		"lastCommit": "2015-08-02",
-		"tags": ["html", "css", "foundation", "javaScript"]
+		"tags": ["html", "css", "foundation", "javaScript", "front-end"]
 	},
 	{
 		"name": "Primal Touch Massage 2.0",
@@ -97,9 +107,9 @@
 		"alt": "Primal Touch Massage 2.0",
 		"description": "This was the final project of the web foudnations I took as a student.  This is a boostrap site refactored from a previous site without any framework. Turn on your speakers.  Can you name that composer?",
 		"gitHub": "https://github.com/nathan-j-brenner/porcali3",
-		"age": 10,
+		"age": 11,
 		"lastCommit": "2015-03-05",
-		"tags": ["html", "css", "jQuery", "bootstrap"]
+		"tags": ["html", "css", "jQuery", "bootstrap", "javaScript", "front-end"]
 	},
 	{
 		"name": "Primal Touch Massage 1.0",
@@ -107,9 +117,9 @@
 		"alt": "Primal Touch Massage 1.0",
 		"description": "All hand typed css and html, along with the first oppertunity to collaborate with git.  I had a hand in the gradient and I was also the defacto-git expert",
 		"gitHub": "https://github.com/nathan-j-brenner/porcali2",
-		"age": 11,
+		"age": 12,
 		"lastCommit": "2015-02-07",
-		"tags": ["html", "css"]
+		"tags": ["html", "css", "javaScript", "front-end"]
 	},
 	{
 		"name": "PCS Curriculum",
@@ -117,7 +127,7 @@
 		"alt": " Portland Code School Web Foundations Curriculum",
 		"description": "This was my first published content: lesson plans for each class, with the hope that more web developers could teach this course by following along.  I had no idea what a static site generator was, and I wrote in markdown a lot like I would write in Microsoft Word and add some syntax later.",
 		"gitHub": "https://portlandcodeschool.github.io/primer//course/",
-		"age": 12,
+		"age": 13,
 		"lastCommit": "2015-05-26",
 		"tags": ["jekyll", "markdown", "html", "css", "javaScript"]
 	}

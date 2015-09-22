@@ -5,8 +5,8 @@ permalink: /portfolio/
 ---
 <div class="container-fluid" ng-app="portfolio" ng-controller="portfolioCtrl">
 	<div class="row">
-		<div class="col-md-5">
-			Search: <input ng-model="query"><br>
+		<div class="col-md-6">
+			Search by tag: <input ng-model="query"><br>
 			Sort by:
 			<select ng-model="orderProp">
 	  			<option value="name">Alphabetical</option>
@@ -14,8 +14,11 @@ permalink: /portfolio/
 	  			<option value="tags">Tools used</option>
 			</select>
 		</div>
+		<div class="col-md-6">
+			<p>Possible tags: front-end, back-end, full-stack, database, angular, backbone, html, css, bootstrap, node.js, express, weather underground api, spa, foundation, orchestrate, google maps api, flickr api, trello, slack, gitHub, json, underscore, jQuery, responsive web design, jade, postgresql, knex.js, markdown, jekyll, javascript, sass</p>
+		</div>
 	</div>
-	<div class="row" ng-repeat="project in projects | filter:query | orderBy:orderProp">
+	<div class="row" style="border: 1 px solid black;" ng-repeat="project in projects | filter:query | orderBy:orderProp">
 		<div class="col-sm-6 col-md-6">
 			<div class="thumbnail">
 				<img ng-src="[[project.img]]" alt="[[project.alt]]">
