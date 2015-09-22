@@ -3,7 +3,7 @@ title: Portfolio
 layout: portfolio
 permalink: /portfolio/
 ---
-<div class="container-fluid" ng-app="portfolio" ng-controller="portfolioCtrl">
+<!-- <div class="container-fluid" ng-app="portfolio" ng-controller="portfolioCtrl">
 	<div class="row">
 		<div class="col-md-6">
 			Search by tag: <input ng-model="query"><br>
@@ -32,4 +32,7 @@ permalink: /portfolio/
             <p>[[project.description]]</p>
         </div>
 	</div>
+</div> -->
+<div ng-app="portfolio">
+	<div ng-view></div>
 </div>

@@ -13,12 +13,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="canonical" href="http://nathan-j-brenner.github.io//portfolio/">
   <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://nathan-j-brenner.github.io//feed.xml" />
-  <script type="text/javascript" src="/javaScripts/vendor/angular-1.4.5/angular.min.js"></script>
+</head>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.js"></script>
+  <script type="text/javascript" src="https://code.angularjs.org/1.4.6/angular-route.min.js"></script>
   <script type="text/javascript" src="/javaScripts/vendor/angular-1.4.5/angular-animate.min.js"></script>
   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
   <script type="text/javascript" src="/javaScripts/app.js"></script>
-</head>
-
   <body>
 
     <header class="site-header">
@@ -74,7 +75,7 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="container-fluid" ng-app="portfolio" ng-controller="portfolioCtrl">
+        <!-- <div class="container-fluid" ng-app="portfolio" ng-controller="portfolioCtrl">
 	<div class="row">
 		<div class="col-md-6">
 			Search by tag: <input ng-model="query"><br>
@@ -103,6 +104,9 @@
             <p>[[project.description]]</p>
         </div>
 	</div>
+</div> -->
+<div ng-app="portfolio">
+	<div ng-view></div>
 </div>
       </div>
     </div>
