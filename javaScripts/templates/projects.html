@@ -1,0 +1,29 @@
+
+<div class="row">
+	<div class="col-md-6">
+		Search by tag: <input ng-model="query"><br>
+		Sort by:
+		<select ng-model="orderProp">
+			<option value="name">Alphabetical</option>
+			<option value="age">Newest</option>
+			<option value="tags">Tools used</option>
+		</select>
+	</div>
+	<div class="col-md-6">
+		<p>Possible tags: front-end, back-end, full-stack, database, angular, backbone, html, css, bootstrap, node.js, express, weather underground api, spa, foundation, orchestrate, google maps api, flickr api, trello, slack, gitHub, json, underscore, jQuery, responsive web design, jade, postgresql, knex.js, markdown, jekyll, javascript, sass</p>
+	</div>
+</div>
+<div class="row" style="border: 1 px solid black;">
+	<div class="col-sm-6 col-md-6" ng-repeat="project in projects | filter:query | orderBy:orderProp">
+		<div class="thumbnail">
+			<img ng-src="[[project.img]]" alt="[[project.alt]]">
+			<div class="caption">
+				<h3>[[project.name]]</h3>
+				<p><a href="[[project.gitHub]]" class="btn btn-default" role="button">View in gitHub</a><a href="/portfolio/#/[[project.name]]" class="btn btn-default">View details</a></p>
+			</div>
+		</div>
+	</div>
+<!-- 	<div class="col-sm-6 col-md-6">
+		<p>[[project.description]]</p>
+	</div> -->
+</div>

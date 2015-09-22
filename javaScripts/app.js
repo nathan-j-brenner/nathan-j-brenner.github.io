@@ -32,28 +32,28 @@ var app = angular.module('portfolio', ['ngRoute'], function($interpolateProvider
   $interpolateProvider.endSymbol(']]');
 });
 
-app.config(function($routeProvider){
-	$routeProvider.
-		when('/', {
-			template: '<ul><li ng-repeat="project in projects"><a href="http://localhost:4000/portfolio/#/[[project.name]]">[[project.name]]</a></li></ul>',
-			controller: 'portfolioCtrl'
-		}).
-		when('/:projectName', {
-			template: '<h1>Project Name</h1><a href="http://localhost:4000/portfolio/#/">back</a>',
-			controller: 'projectDetailCtrl'
-		}).
-		otherwise({
-			redirectTo: '/'
-		});
-});
+// app.config(function($routeProvider){
+// 	$routeProvider.
+// 		when('/', {
+// 			template: '<ul><li ng-repeat="project in projects"><a href="http://localhost:4000/portfolio/#/[[project.name]]">[[project.name]]</a></li></ul>',
+// 			controller: 'portfolioCtrl'
+// 		}).
+// 		when('/:projectName', {
+// 			template: '<h1>Project Name</h1><a href="http://localhost:4000/portfolio/#/">back</a>',
+// 			controller: 'projectDetailCtrl'
+// 		}).
+// 		otherwise({
+// 			redirectTo: '/'
+// 		});
+// });
 
-app.controller('portfolioCtrl', ['$scope', '$http', function($scope, $http){
-	$http.get('../projects/projects.json').success(function(data) {
-		$scope.projects = data;
-	});
-	$scope.orderProp = '-age';
-}]);
+// app.controller('portfolioCtrl', ['$scope', '$http', function($scope, $http){
+// 	$http.get('../projects/projects.json').success(function(data) {
+// 		$scope.projects = data;
+// 	});
+// 	$scope.orderProp = '-age';
+// }]);
 
-app.controller('projectDetailCtrl', ['$scope', '$routeParams', function($scope, $routeParams){
-	console.log($routeParams);
-}]);
+// app.controller('projectDetailCtrl', ['$scope', '$routeParams', function($scope, $routeParams){
+// 	console.log($routeParams);
+// }]);

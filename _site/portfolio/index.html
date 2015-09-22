@@ -19,7 +19,6 @@
   <script type="text/javascript" src="https://code.angularjs.org/1.4.6/angular-route.min.js"></script>
   <script type="text/javascript" src="/javaScripts/vendor/angular-1.4.5/angular-animate.min.js"></script>
   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
-  <script type="text/javascript" src="/javaScripts/app.js"></script>
   <body>
 
     <header class="site-header">
@@ -105,7 +104,7 @@
         </div>
 	</div>
 </div> -->
-<div ng-app="portfolio">
+<div class="container-fluid" ng-app="portfolio">
 	<div ng-view></div>
 </div>
       </div>
@@ -166,6 +165,10 @@
 
 </footer>
 
+    <script type="text/javascript" src="/javaScripts/app.js"></script>
+    <script type="text/javascript" src="/javaScripts/routes/routes.js"></script>
+    <script type="text/javascript" src='/javaScripts/controllers/portfolioCtrl.js'></script>
+    <script type="text/javascript" src='/javaScripts/controllers/projectDetailsCtrl.js'></script>
   </body>
 
 </html>
