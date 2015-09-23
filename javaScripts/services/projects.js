@@ -1,15 +1,10 @@
 app.factory('projects', ['$http', function($http){
-	var cachedData;
-	
 	function getData(callback){
-		if(cachedData){
-			callback(cachedData);
-		} else{
-			$http.get('../projects/projects.json').success(function(data){
-				cachedData = data;
-				callback(data);
-			});
-		}
+		$http({
+			method: 'GET',
+			url: '../projects/projects.json',
+			cache: true
+		}).success(callback);
 	}
 	return {
 		list: getData,
