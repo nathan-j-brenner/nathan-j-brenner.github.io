@@ -1,6 +1,6 @@
-app.controller('portfolioCtrl', ['$scope', '$http', function($scope, $http){
-	$http.get('../projects/projects.json').success(function(data) {
-		$scope.projects = data;
+app.controller('portfolioCtrl', ['$scope', 'projects', function($scope, projects){
+	projects.list(function(projects){
+		$scope.projects = projects;
 	});
 	$scope.orderProp = '-age';
 }]);
