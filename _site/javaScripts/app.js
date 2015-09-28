@@ -6,7 +6,7 @@ var app = angular.module('portfolio', ['ngRoute', 'projectControllers', 'project
 app.config(function($routeProvider){
 	$routeProvider.
 		when('/', {
-			templateUrl: '../javaScripts/templates/projects.html',
+			templateUrl: '../javaScripts/templates/test.html',
 			controller: 'portfolioCtrl'
 		}).
 		when('/:projectName', {
