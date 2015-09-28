@@ -5,9 +5,51 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Sep 2015 13:42:10 -0700</pubDate>
-    <lastBuildDate>Wed, 23 Sep 2015 13:42:10 -0700</lastBuildDate>
+    <pubDate>Sun, 27 Sep 2015 21:10:44 -0700</pubDate>
+    <lastBuildDate>Sun, 27 Sep 2015 21:10:44 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Learn WordPress in a Day</title>
+        <description>&lt;p&gt;Today made me really appreciate the depth of knowledge I have in software programming and proud of what I can do if the only tools I had were a text editor and a terminal.&lt;/p&gt;
+
+&lt;p&gt;I participated in a local event, the first of it’s kind, with the goal to teach people with no experience with WordPress how to create a site.  This was something the community asked for in the last WordCamp, and a few volunteers decided to make it happen.  It started as an event serving 25 people, and grew to 100 split between two days.  Also, most of the people at the event had little to no experience writing html and were much older than the tech savy Milenial generation.  My grandma, who is in her 70’s and has a smart phone but hates the internet, could have been at this event and would be able to make a site.&lt;/p&gt;
+
+&lt;p&gt;The presentators were really straight forward, and stuck to their objectives.  They would show how to do something, asking the participants to just watch first, then would join and make the changes.  &lt;/p&gt;
+
+&lt;p&gt;The definition of front-end and back-end was really interesting.  When I think of backend, I think of communicating with a server with http requests and communicating with a database. Today, any changes that were made was considered the back-end and the front-end was how the changes appeared in the browser.&lt;/p&gt;
+
+&lt;p&gt;Outside of this class, I’m teaching myself how to create custom themes.  The code is on my local apache server, and I’m applying wordpress php functions to fit the needs of the site I want to make.  Before I made the wordpress version, I created the static version, so a lot of the php work is looking at the codex to find the function that will cause the effect I’m looking for.  &lt;/p&gt;
+
+&lt;p&gt;There’s an amazing community out there creating pluggins, and it kinda makes me sad at how easy it is to add something that the person creating the site has so little knowledge of what code is causing that behavior. It also makes me realize how easy it would be for me to create websites with wordpress. When I see the DOM, I can visualize how the html.&lt;/p&gt;
+
+&lt;p&gt;The day long presentation went really well with the participants.  We started with a theme that didn’t have any posts and pages, and created pages for home, about, blog, services, and contact.  We were provided the content for those pages, so we created those pages and posts and added the content.  As far as pluggins, we created a contact form on the contact page, we added a titled mosaic set of pictures that are reordered each time the user visits the page, we added a google map, and at the end we viewed the finished website with another theme.  &lt;/p&gt;
+
+&lt;p&gt;There were a couple things I picked up on, like a great explanation between wordpress.com and wordpress.org.  The .com site provides oppertunities for people to create free sites with limited control, and .org provides the codex and is a connection to the wordpress community.  I hope a lot of those new to wordpress go to the Portland WordCamp in October.  I bet I’d get a lot out of it as far as networking and some knowledge with the more advanced topics.  Unfortunately, I have to work for the Army that day.  In any case, I’ll continue learning how to manipulate this content management system.  Developers, like me, are able to create client based solutions by creating or revising themes in a very short timeframe, and are able to bring business owners a lot of power to bring their products to the web while being able to manage their own content of that site.  I hope I can find some work doing this.  It’s less involved than creating javascript webapps, but if writing php can give me the oppertunity to provide for my family and time to add more to my professional development, then I’d love the oppertunity.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Sep 2015 00:00:00 -0700</pubDate>
+        <link>http://nathan-j-brenner.github.io//wordpress-in-a-day</link>
+        <guid isPermaLink="true">http://nathan-j-brenner.github.io//wordpress-in-a-day</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Broadening Horizons</title>
+        <description>&lt;p&gt;A lot has happened in the last week.&lt;/p&gt;
+
+&lt;p&gt;I switched text editors.  I have been using Sublime Text for the last year, and I’m working on Visual Studio Code.  I had briefly used Brackets and Atom, but each time I found myself losing coding time to figure out the new tool.  I’ve committed to switching to Code because I want to follow what CSG Pro is doing.  Ken Howard is a developer I’ve been talking to over the last few months.  He’s a front-end developer with Angular, and he loves Code and TypeScript.  TypeScript is going hand in hand with Angular 2, so I want to put myself in the position to be competite for that kind of work.  I’ve looked into TypeScript a little bit, and it works really well with Code, so I’ll probably be refactoring some of the Angular projects with TypeScript soon.  I also want to start building Angular apps with express and gulp just so I can keep up on the full stack side of the development.&lt;/p&gt;
+
+&lt;p&gt;I’ve also realized that looking for front-end work as a junior level dev isn’t going to get me anywhere, and that I need to be expanding into more backend work.  In the last day, I’ve thrown myself into WordPress, again relying on Treehouse as a start. It’s hard to watch so many videos but I’m a lot like my son right now: just taking it all in.  I completed the php track months ago, before JS Immersion, so recognizing the code is coming back, and I’m starting to see the benifits of cms’s.&lt;/p&gt;
+
+&lt;p&gt;I’ve also started looking for different forms of work.  My wife and I are workaholics, and personally, it drives me insane, even with a young child at home, to not have work to do.  It’s the intrinsic motivation, and we’re going to be those parents that would rather spend the majority of their time working than with our family.  Bad news for the kids, good news for the boss.  I talked to some salesmen at a meetup, and he told me Comcast is hiring, so I applied for a technitian job.  I’d love to be able to write full stack javascript apps, or even just code all day but I’m at the point where I’d rather have a job that I hate and be looking for another job than to be struggling with looking for the job I want.  It’s basically like I’m back where I was a year ago when I left education.  I wasn’t thrilled about coding, I just wanted a job where I could make a good living and if I got to like the work a little, that would  be great.  This is an interesting mindset, since I’m in the military and I could have been working for them this week but that’s an area that I really don’t want to be.  It’s like I’ll do anything…but work in education and work for the military.  I have a lot of respect for that work and for those that do that work, but it’s not for me and at least I know what it’s like to have been there.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Sep 2015 00:00:00 -0700</pubDate>
+        <link>http://nathan-j-brenner.github.io//broadening-horizons</link>
+        <guid isPermaLink="true">http://nathan-j-brenner.github.io//broadening-horizons</guid>
+        
+        
+      </item>
     
       <item>
         <title>Multi-dimentional Todo List part 1</title>
