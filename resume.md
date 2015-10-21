@@ -14,7 +14,7 @@ Resilient full stack web developer, passionate about creatitivity and collaborat
 *	collaboration: git/gitHub, harvest, slack, basecamp, trello
 *	qa: mocha.js, chai.js
 
-[Download this document](resume2015.docx)
+<a href="resume2015.docx" class="btn btn-success active" role="button">Download</a>
 
 ***
 
