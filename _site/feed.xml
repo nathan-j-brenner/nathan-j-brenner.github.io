@@ -5,9 +5,50 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Oct 2015 10:55:07 -0700</pubDate>
-    <lastBuildDate>Wed, 21 Oct 2015 10:55:07 -0700</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Wed, 02 Dec 2015 14:41:17 -0800</pubDate>
+    <lastBuildDate>Wed, 02 Dec 2015 14:41:17 -0800</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Takeaways from Mongo University</title>
+        <description>&lt;p&gt;Over the last 7 weeks, I worked through the MongoDB course for Node.js developers.  This is a free course offered online, and I learned a lot more than I expected.&lt;/p&gt;
+
+&lt;p&gt;Before I started the course, I knew that MongoDB was a NoSQL database system.  SQL databases, such as MySQL and PostgreSQL, use tables much like how Microsoft Excel appears, to represent and maintain persistent data.  MongoDB doesn’t use that table system, and instead builds records based on JSON, or javasript Obect Notation. I could start a mongoD and mongo shell on my computer, and I had used Orchestrate on some projects. Orchestrate.io is a cloud based database system similar to Mongo, and is fairly easy to use. More of my time with databases had been spent with Postgresql, so I could insert data into a document, and configure a schema.&lt;/p&gt;
+
+&lt;p&gt;What I was hopeing to get out of the course was to become much more familiar and comfortable with crud operations.  CRUD are the operations for databases.  Create, Read, Update, Delete: Create a new record, query that record, make changes to that record, and remove that record from the database.  I really wanted to have a strong understanding on how to do something like create a user login, and over the period of the course I realized that I wanted to know more about Node.js and writing backend code.&lt;/p&gt;
+
+&lt;p&gt;Each week, at 9am on Tuesday, a slew of videos (ranging from 1 minute long to 12 minutes long) with short quizzes, and a few homework assignments (between 3 and 5) were made available on their learning management system.  The videos were on youtube, and there was a discussion view for students to post questions.  With most of the homework, there was evidence if the answer would be valid, and all the quizz answers were explained in detail.  On the final week, 10 questions were posted .  Throughout the course, some of the assessment was multiple choice, some used MongoProc (which ran tests on your database), and some required an answer or a validation code.&lt;/p&gt;
+
+&lt;p&gt;The first week was introduction.  Topics covered were installation, starting the MongoD instance, the Mongo shell, and an introducion to the Node Express server.&lt;/p&gt;
+
+&lt;p&gt;The second week covered CRUD.  With MongoDB, a query is called by the db.collection followed by an opperation.  From the shell, db is already specified since you are already in a database, which you can specify.  Collections are a group of records, or documents for Mongo.  A query searched through a collection and returns the documents that meet the query.  Documents can be Read with the find or findOne method, which works basically the same as the delete, or for Mongo the remove method.  Create (or the insert method for mongo) also works similar to the read method.  Updates a little more complicated, since a single update will remove the document and replace it with the fields that you specify.  To avoid this, the update query takes two parameters: the document you’re querying, followed by the $set operator with the fields you want to change.  That’s CRUD in a nutshell.&lt;/p&gt;
+
+&lt;p&gt;The third week covered schema design principals. Mongo has been considered schema-less, which means multiple documents in the same collection don’t necessarily have to have the same columns like a sql db would.  Documents are javascript objects, so the properties of a document retain whatever values as desired, even embedded documents, such as arrays or other objects.  For example, in a collection that maintains blog posts, a single post can have an embedded property for comments made to that array with objects that contain properties such as the author of that comment on that post, the date the comment was made, and the contents of the post.  A lot has to be considered for the design of a schema.  Since schema’s don’t have to match, it’s usually best if they don’t match for a specific reason.&lt;/p&gt;
+
+&lt;p&gt;Week 4 covered performance.  This has to do with the time it takes for a query to return a given object or set of obects.  The time spent on a query, as indicated by how many documents the query looks at, can be reduced if indexes are approapriately used.  Every document has an _id field, and if not specified with one, is provided with one.  That field is indexed, meaning it’s sorted in a specific way.  Other indexes can be created, and should resemble the types of queries the end user might make.  &lt;/p&gt;
+
+&lt;p&gt;Week 5 covered the aggregation pipeline.  Aggregation finds information relevate to the entire collection, such as the average grade a class has over a group of classes. The pipeline resembles more chaining, which in this case are objects with query opperators built on top of eachother.  &lt;/p&gt;
+
+&lt;p&gt;Week 6 covered application engineering, such as replication and sharding.  These are concerns for working with a large database system in the event that a database goes down and how collections recover from those failures.&lt;/p&gt;
+
+&lt;p&gt;In the 7th week, along with the final exam, there was content on Mongoose.  Mongoose is an ODB, and Object-Record-Mapper, which provides a layer on top from Mongo and Node and has some added functionality. These videos quickly walked through some code on how to crewate the same blog that the earlier weeks had done without the additional layer.&lt;/p&gt;
+
+&lt;p&gt;Since this course was for node developers, so there was code examples represented in an application, and I was really happy I had worked with node before because there were some huge leaps in what the homework expected students to do.  The quizzes that went with the vides checked for understanding at a very basic level, and the final examp mirrored the homework questions.  As for the discussion, I wish I had gotten more out of it.  I’m a fan of collaboration, so when I get stuck on a problem for a while, I’d like to be able to seek help without getting the answer.  If I get the answer without a lot of stuggle on my own, I’ll probably forget what I learned. But some help is necessary.  There was some collaboration in the discussion board, but the Mongo Unversity doesn’t want any code sharing, and the ta often came across defensive instead of helpful.  Still, the course was very interesting, and it kept my engagement even on the topics like indexes, sharding, and agggregation where I didn’t feel like I had somewhere directly to apply what I had learned outside of the course.&lt;/p&gt;
+
+&lt;p&gt;For now, I want to get better at working with node.  I’m working through a course on &lt;a href=&quot;https://www.edx.org/course/introduction-mongodb-using-mean-stack-mongodbx-m101x&quot;&gt;MEAN&lt;/a&gt;, which I hope to get a better understanding of how angular connects with node. This is a little ironic, since I’m working on an app with another developer and I’ve figured out where this happens.  Data is stored on the database, which is accessed from a service that connects to the backend api.  &lt;/p&gt;
+
+&lt;p&gt;Also, since I’ve expanded my understanding of NoSQL, I’m interested in SQL.  Codecademy has a tutorial on the subject, which I’ll probably work through soon. I’d also like to read &lt;a href=&quot;http://www.amazon.com/MongoDB-Definitive-Guide-Kristina-Chodorow/dp/1449344682/ref=sr_1_1?ie=UTF8&amp;amp;qid=1448932247&amp;amp;sr=8-1&amp;amp;keywords=mongodb&quot;&gt;MongoDB: The Definitive Guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I also recently found a new learning source. &lt;a href=&quot;http://www.freecodecamp.com/&quot;&gt;Free Code Camp&lt;/a&gt; has a fairly extensive sequence on stuff I should know, so I started working through it.  I’m finding gaps in my learning and doing a lot of review.  It’s keeping me busy since I can’t be as aggresive about looking for work now that I’m watching my son all day.  If a job comes my way, I’d love to work all day.  Until then, it’s not so bad raising him.  Thanksgiving was a couple days ago.  I took a few days off from the computer and visited family in Las Vegas.&lt;/p&gt;
+
+&lt;p&gt;I got a lot out of this free course, and I would probably pay for it since it had the feedback.  If you want to take some time, I’d definately check it out.  They have courses specific to other languages as well.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 30 Nov 2015 00:00:00 -0800</pubDate>
+        <link>http://nathan-j-brenner.github.io//m101JS</link>
+        <guid isPermaLink="true">http://nathan-j-brenner.github.io//m101JS</guid>
+        
+        
+      </item>
     
       <item>
         <title>Why are you passionate about coding?</title>
@@ -87,7 +128,7 @@
 
 &lt;p&gt;About a week ago, I started watching &lt;a href=&quot;https://www.youtube.com/watch?v=TRrL5j3MIvo&quot;&gt;Angular.js in 50 examples&lt;/a&gt;. From the beginning, it looked like a poor video recording of a meetup, but I really liked how Curran Kelleher presented his incredibly well documented &lt;a href=&quot;http://curran.github.io/screencasts/introToAngular/exampleViewer/#/&quot;&gt;gitHub repo&lt;/a&gt;.  I also really liked how he starts with basic javaScript and moves through the history of adding in jQuery, then Backbone, and finally Angular.  He made the case that with each of those iterations, javaScript was becoming more powerful by becoming easier to write.  Case in point, I’ve been reading JavaScript: The Good Parts lately.  Most of the time, I feel like I’m actively writing in Angular or Node, but there’s not a whole lot of the book that’s surprising or new.  To write in some of these more recent frameworks requires a depth of understanding of core javascript, which makes me about as excited as nervous with the advent of Angular 2.0 and ES6.&lt;/p&gt;
 
-&lt;p&gt;By the time I got to Example 15, I gave in and started coding as a departure from the video.  By this point, the directives ng-app and ng-controller are written into the index.html.  Ng-app is typically written in the html tag, and the controller can be written in the div where you want the model to have access to the view.  I haven’t written a project yet where I’ve needed more than one model, so the ng-app and ng-controller directives can be in the same html tag.  In the head, I have the Angular cdn downloading into the page, and just before the closing body tag, I have app.js and the mainCtrl.js loading into the page. The only other tags in the page is form tag with the directive ng-submit, which has the value to add a task (a method written into the controller). Within that form are two input tags: The first is to take text and has an ng-model as an attribute.  The second has a &lt;code&gt;type=&quot;submit&quot;&lt;/code&gt;.  When the submit input tag is clicked, the form fires the &lt;code&gt;addTask()&lt;/code&gt; method within the $scope. Directly below this tag is an unordered list, with a single list element that has the ng-repeat directive to loop through the ‘task in tasks’.  When the user clicks on the submit input, the task that the user typed into the other input tag is pushed into the $scope.tasks array, and the user sees that new task moved from the input into the unordered list with a bullet point.&lt;/p&gt;
+&lt;p&gt;By the time I got to Example 15, I gave in and started coding as a departure from the video.  By this point, the directives ng-app and ng-controller are written into the index.html.  Ng-app is typically written in the html tag, and the controller can be written in the div where you want the model to have access to the view.  I haven’t written a project yet where I’ve needed more than one model, so the ng-app and ng-controller directives can be in the same html tag.  In the head, I have the Angular cdn downloading into the page, and just before the closing body tag, I have app.js and the mainCtrl.js loading into the page. The only other tags in the page is form tag with the directive ng-submit, which has the value to add a task (a method written into the controller). Within that form are two input tags: The first is to take text and has an ng-model as an attribute.  The second has a &lt;code class=&quot;highlighter-rouge&quot;&gt;type=&quot;submit&quot;&lt;/code&gt;.  When the submit input tag is clicked, the form fires the &lt;code class=&quot;highlighter-rouge&quot;&gt;addTask()&lt;/code&gt; method within the $scope. Directly below this tag is an unordered list, with a single list element that has the ng-repeat directive to loop through the ‘task in tasks’.  When the user clicks on the submit input, the task that the user typed into the other input tag is pushed into the $scope.tasks array, and the user sees that new task moved from the input into the unordered list with a bullet point.&lt;/p&gt;
 
 &lt;p&gt;Also within the ng-repeat are input tags to edit and delete the tasks.  I picked up the function syntax for these methods from the youtube video.  They’re not my favorite, as I’ve seen these functions in different ways, but I went with it for today.  The edit method is an extension of the delete method.  When the delete method is applied, due to an ng-click event, that element (due to the way Angular handles data binding) is spliced from the array that is lives in, so it doesn’t appear in the ng-repeat element. The difference with edit is that the element is set to the ng-model of the input tag where it originally came from, so when the user clicks on the create task with the edited task, the task is again appended to the $scope.tasks array, so it appears in the view under the ng-repeat directive.&lt;/p&gt;
 
@@ -228,22 +269,6 @@
         <pubDate>Thu, 30 Jul 2015 00:00:00 -0700</pubDate>
         <link>http://nathan-j-brenner.github.io//learning</link>
         <guid isPermaLink="true">http://nathan-j-brenner.github.io//learning</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll</title>
-        <description>&lt;p&gt;This story, like others to come, started with a treehouse badge.  Actually, it started a few months ago when a guy I was working with was complaining about Jekyll.  Somewhere after that, I built a static-site generator and I saw how easy it was to post blogs…if you’re comfortable typing in a text-editor.  I’ve been coding since November 2014, so I’m more confortable with a text-editor than a word processor.  I’ve tried Atom and Brackets, but I started with Sublime so it never seems worth the learning curve.&lt;/p&gt;
-
-&lt;p&gt;Treehouse came out with a course on Jekyll.  As I was learning about Jekyll, I had a client in mind.  Their site was slow and unresponsive, and it was a wordpress site.  Lots of pages, lots of difficult to read text and small pictures.  A possible solution seemed like a static site generator so that they could have more control over their content without depending on finding the right wordpress plugin.  I’ve got nothing against wordpress, I just came from the school of thought that thinks JavaScript can do everything and more than what php does.&lt;/p&gt;
-
-&lt;p&gt;So this is the crud beginnings of my updated portfolio site.  I created a similar site with Foundation back in April, but enough has changed in how I think about programming that I didn’t want to fight that site any more.  It was an oppertunity to learn Foundation, and it was really helpful when I used Foundation on my SnapOR site.  Anyway, this site is live and there’s not much to it but at least it loads faster than the other site and it has my programming projects in the prospective of a historical context.  All that means is the first project is the most recent, and each one before that site shows you a glimpse at how I was thinking a few days or months ago. &lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 30 Jul 2015 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//first-post</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//first-post</guid>
         
         
       </item>
