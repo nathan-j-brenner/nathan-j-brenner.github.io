@@ -9,10 +9,10 @@ Professional Profile
 Resilient full stack web developer, passionate about creatitivity and collaboration, and interested in solving client-focused problems. 
 
 *	Front-end: html 5, css 3, sass, gulp.js, angular.js, backbone.js, bootstrap, foundation, mobile first/responsive web design, jQuery, underscrore.js
-*	server: node.js, npm, express.js, jade, json
+*	server: node.js, npm, express.js, jade, json, mongoose
 *	database: postgresql, knex.js, mongoDB, orchestrate.io, third-party api’s
 *	collaboration: git/gitHub, harvest, slack, basecamp, trello
-*	qa: mocha.js, chai.js
+*	qa: mocha.js, chai.js, jasmine
 
 <a href="resume2015.docx" class="btn btn-success active" role="button">Download</a>
 
@@ -99,6 +99,19 @@ Professional Development
 
 Certifications
 ==============
+*   [Mongo University](MongoUniversityNode.pdf) M101JS: MongoDB for Node.js Developers
+    *   CRUD
+    *   Mongo shema design
+    *   Performance (using indexes and sharded environments)
+    *   Aggregation
+    *   Application Engineering: Drivers, Replication, Sharding
+    *   Mongoose ODM
+*   [EdX MEAN Stack](https://courses.edx.org/certificates/user/8782411/course/course-v1:MongoDBx+M101x+3T2015)
+    *   MongoDB with Mongoose and Node.js
+    *   Mongo shema design
+    *   Node.js REST API with Express 
+    *   Angular Client
+    *   Ionic Client
 *	[National Career Readiness Cerfiticate](https://myworkkeys.act.org/mwk/emCertDetails.do?event=go&realm=17740116&certId=FRJ7C628V0HT)
 	*	Level: Gold
 	*	ISSUE DATE: Aug 21, 2015
