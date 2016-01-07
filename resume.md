@@ -21,6 +21,12 @@ Resilient full stack web developer, passionate about creatitivity and collaborat
 Work History
 ============
 
+October 2015 - current
+------------------------
+Freelance, front-end developer
+
+*   The product is a cross platform app built with Ionic.  I've been writing Angular controllers, services, views, and tests in TypeScript with a backend developer.
+
 January 2015 – July 2015
 ------------------------
 Web Foundations Instructor, teacher assistant, Instructional Designer, Portland Code School, Portland, OR.
