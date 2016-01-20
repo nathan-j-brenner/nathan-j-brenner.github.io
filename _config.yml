@@ -6,6 +6,8 @@ description: A sample of my work and thoughts
 url: "http://nathan-j-brenner.github.io/" # the base hostname & protocol for your site
 twitter_username: njbrenner
 github_username:  nathan-j-brenner
+# Gems
+gems: [jekyll-paginate]
 paginate: 3
 
 # Build settings
@@ -28,3 +30,4 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+      

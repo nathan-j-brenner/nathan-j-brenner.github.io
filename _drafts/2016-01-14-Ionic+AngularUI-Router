@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Ionic + Angular-UI Router"
+date : 2016-01-14
+---
+
+Since roughly October, I've had some contract work on a hybrid app and it's been really exciting.  If you're not familiar with Ionic, and you're into Angular, I'd check out [Ionic](http://ionicframework.com/) or even better my slides from their presentation from this [github repo](https://github.com/nathan-j-brenner/ionic-present/tree/brenner).
+
+I'm a huge fan of Angular.  It's very opinionated, which for me works.  I'm ok with being limited on how to do something.  At some point in the future, that might change, but for now I just want to get the gist of how to make apps with clean code.
+
+Ionic also likes Angular, but they also really like [Cordova](https://cordova.apache.org/).  Cordova maps javascript to native code (either ios or android).  Angular is a front end framework for mapping user interaction with a server api.  
