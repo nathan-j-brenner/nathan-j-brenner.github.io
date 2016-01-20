@@ -6,7 +6,7 @@ layout: default
 Professional Profile
 ====================
 
-Resilient full stack web developer, passionate about creatitivity and collaboration, and interested in solving client-focused problems. 
+Looking for work as a front end or full stack JavaScript developer for web and or hybrid applications, on salary or contract status, remotely or near the Portland, Oregon area.
 
 *	Front-end: html 5, css 3, sass, gulp.js, angular.js, backbone.js, bootstrap, foundation, mobile first/responsive web design, jQuery, underscrore.js
 *	server: node.js, npm, express.js, jade, json, mongoose
