@@ -15,7 +15,7 @@ Looking for work as a front end or full stack JavaScript developer for web and o
 *	qa: mocha.js, chai.js, jasmine, karma
 *   mobile development: ionic
 
-<a href="resume2015.docx" class="btn btn-success active" role="button">Download</a>
+<a href="resume2015.pdf" class="btn btn-success active" role="button">Download</a>
 
 ***
 
