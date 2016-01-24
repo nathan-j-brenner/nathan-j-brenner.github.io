@@ -8,11 +8,12 @@ Professional Profile
 
 Looking for work as a front end or full stack JavaScript developer for web and or hybrid applications, on salary or contract status, remotely or near the Portland, Oregon area.
 
-*	Front-end: html 5, css 3, sass, gulp.js, angular.js, backbone.js, bootstrap, foundation, mobile first/responsive web design, jQuery, underscrore.js
-*	server: node.js, npm, express.js, jade, json, mongoose
-*	database: postgresql, knex.js, mongoDB, orchestrate.io, third-party api’s
-*	collaboration: git/gitHub, harvest, slack, basecamp, trello
-*	qa: mocha.js, chai.js, jasmine
+*	Front-end: html 5, css 3, sass, gulp.js, angular.js, typescript, es6, backbone.js, bootstrap, foundation, mobile first/responsive web design, jQuery, underscrore.js
+*	server: node.js, npm, express.js, hapi.js, jade, json, mongoose
+*	database: postgresql, sequelize.js, knex.js, mongoDB, orchestrate.io, third-party api’s
+*	collaboration: git/gitHub, harvest, slack, basecamp, trello, asana
+*	qa: mocha.js, chai.js, jasmine, karma
+*   mobile development: ionic
 
 <a href="resume2015.docx" class="btn btn-success active" role="button">Download</a>
 
