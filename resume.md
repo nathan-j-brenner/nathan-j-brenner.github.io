@@ -22,9 +22,16 @@ Looking for work as a front end or full stack JavaScript developer for web and o
 Work History
 ============
 
+February 2016 - current
+------------------------
+Web Developer, CMD Agency
+
+*   I write HTML emails for a variety of clients, and occasionally inhouse projects that involve front end work like angular.  I collaborate with QA, designers, producers, and technical directors
+*   HTML, CSS, Jira, Photoshop, Litmus
+
 October 2015 - current
 ------------------------
-Freelance, front-end developer
+Front-end developer, freelance
 
 *   The product is a cross platform app built with Ionic.  I've been writing Angular controllers, services, views, and tests in TypeScript with a backend developer.
 
