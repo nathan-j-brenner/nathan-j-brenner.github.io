@@ -5,9 +5,113 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Feb 2016 14:31:41 -0800</pubDate>
-    <lastBuildDate>Sat, 06 Feb 2016 14:31:41 -0800</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <pubDate>Sun, 01 May 2016 18:20:25 -0700</pubDate>
+    <lastBuildDate>Sun, 01 May 2016 18:20:25 -0700</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>ExpressWorks with Typescript</title>
+        <description>&lt;p&gt;Typescript is a superset of Javascript. It’s a transpiler and offers typechecking, which you don’t get with Babel.  However, there’s some configuration and some weird vocabulary. It’s easy for me to forget some of this stuff, so I like to use the node school workshops as an oppertunity to expand my understanding, which is a bonus: I get to learn the content in the workshops, and I get to learn and practice es6.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-do-i-like-writing-typescript-instead-of-plain-javascript&quot;&gt;Why do I like writing typescript instead of plain javascript?&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Code completion: As soon as I start typing a reference to an object, such as jQuery &lt;code class=&quot;highlighter-rouge&quot;&gt;$.&lt;/code&gt;, I get a modal window with the list of possible methods or properties I can use with helpful information like the definition and the parameters. I can select any of them and get tab completion.&lt;/li&gt;
+  &lt;li&gt;Code-smart spell checking: If I misspell something, if I assign a property or method to the wrong type, or if I give the wrong type, such as providing a number instead of a string as an argument to a function, I get feedback in the editor just like I do with the red lines in word processors.&lt;/li&gt;
+  &lt;li&gt;I get to write State-of-the art code instead of state-of-the-web, which means I’m also learning more about es6 syntax and learning more about javascript.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;heres-the-steps-read-on-for-the-explantion&quot;&gt;Here’s the steps, read on for the explantion.&lt;/h2&gt;
+
+&lt;h4 id=&quot;complete-before-you-start-a-node-school-workshop&quot;&gt;Complete before you start a node school workshop:&lt;/h4&gt;
+&lt;p&gt;install node/npm&lt;br /&gt;
+npm install -g typescript&lt;br /&gt;
+npm install -g tsd  &lt;/p&gt;
+
+&lt;h4 id=&quot;specifics-for-everyworkshop-but-more-specific-for-express&quot;&gt;Specifics for everyworkshop, but more specific for Express:&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir expressworks&lt;/code&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir dist&lt;/code&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm init&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;, add in &lt;code class=&quot;highlighter-rouge&quot;&gt;scripts&lt;/code&gt;:   &lt;br /&gt;
+ “tsc”: “tsc”,
+ “tsc:w”: “tsc -w –outDir dist”,
+ “test”: “echo &quot;Error: no test specified&quot; &amp;amp;&amp;amp; exit 1”,
+ “start”: “npm run tsc:w”&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;touch tsconfig.json&lt;/code&gt;¸&lt;/li&gt;
+  &lt;li&gt;Add in your compiler options, such as:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+ &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;compilerOptions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+     &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;module&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;commonjs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+     &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;noImplicitAny&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+     &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;removeComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+ &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nsd install express -S&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install express -S&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install -g expressworks&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tsd rebundle&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;touch 1-hello-world.ts&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;First line of 1-hello-world.ts: &lt;code class=&quot;highlighter-rouge&quot;&gt;/// &amp;lt;reference path=&quot;typings/tsd.d.ts&quot; /&amp;gt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Write the solution&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm start&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;create another tab in your terminal, &lt;code class=&quot;highlighter-rouge&quot;&gt;cd dist&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;expressworks 1-hello-world.js&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;the-why&quot;&gt;The why:&lt;/h2&gt;
+&lt;p&gt;before: Installing &lt;code class=&quot;highlighter-rouge&quot;&gt;typescript&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;tsd&lt;/code&gt; globally lets you run the &lt;code class=&quot;highlighter-rouge&quot;&gt;tsc&lt;/code&gt; commands in the terminal.  &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;With nodeschool courses, I like to write the course name as the directory.  All of the courses I’ve worked on are in the &lt;code class=&quot;highlighter-rouge&quot;&gt;node_school&lt;/code&gt; directory, and they serve as code examples for future reference. I don’t get a lot of time to work on these, it’s usually a couple minutes in the middle of the day when I’m waiting on feedback from qa or I’ve got some time in the weekend when my son is napping.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dist is the directory for all javascript files.  Call it what you want, I like the idea of &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;src&lt;/code&gt; directories, but the only thing in it is &lt;code class=&quot;highlighter-rouge&quot;&gt;*.js&lt;/code&gt;.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I’m going to be using npm modules, so every module I install, I do this first, then add the &lt;code class=&quot;highlighter-rouge&quot;&gt;-S&lt;/code&gt; flag so it get’s saved into &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This seems to be a realiable way for me accomplish two things: The &lt;code class=&quot;highlighter-rouge&quot;&gt;*.ts&lt;/code&gt; files are separated from the &lt;code class=&quot;highlighter-rouge&quot;&gt;*.js&lt;/code&gt; files, and the &lt;code class=&quot;highlighter-rouge&quot;&gt;*.ts&lt;/code&gt; files get compiled in the background to &lt;code class=&quot;highlighter-rouge&quot;&gt;*.js&lt;/code&gt; so I don’t have to run &lt;code class=&quot;highlighter-rouge&quot;&gt;tsc *.js&lt;/code&gt; over and over.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; keeps your configuration on how you want typescript to work.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This installs a typed definition file of the express framework, so you get access to all those methods and properties when you want them in the ts files. This creates a &lt;code class=&quot;highlighter-rouge&quot;&gt;typings&lt;/code&gt; directory.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Look at &lt;code class=&quot;highlighter-rouge&quot;&gt;./typings/express.d.ts&lt;/code&gt; for which version of express has been defined.  Npm install that version.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install the node school workshop. This can be done at any time, I just like doing it here because I’m about to start working on the workshop.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Any time you add new module definitons, you’ll need to rebundle tds so your ts files will know where to look for references of definitions.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;So I can get tab completion, I like to name my workshop exercises as &lt;code class=&quot;highlighter-rouge&quot;&gt;number-workshop_expercise.ts&lt;/code&gt;, so when I’m ready to verify it, I can just hit &lt;code class=&quot;highlighter-rouge&quot;&gt;workshop verify number tab&lt;/code&gt;. Since the exercises scaffold upon eachother, this is an easy way to keep them appearing in order in the directory.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The first line of every ts file needs to have this text, otherwise when you complile the ts, you’ll get an error that says that typescript doesn’t know about these external files, even though it works fine in the editor and the js files will pass if you have the correct solution.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sorry, no freebes, but you wouldn’t have to look hard for them.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This starts the compiler  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Keep the compiler running, and move into the js files directory so you can check the solutions.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sun, 17 Apr 2016 00:00:00 -0700</pubDate>
+        <link>http://nathan-j-brenner.github.io//TS_expressworks</link>
+        <guid isPermaLink="true">http://nathan-j-brenner.github.io//TS_expressworks</guid>
+        
+        
+      </item>
     
       <item>
         <title>Takeaways from Mongo University</title>
@@ -123,8 +227,8 @@
 
 &lt;p&gt;The taskManager app had the following iterations: Basic todo app, objects in a todo app, integrating the first iteration into the second, debugging and revising the ui, then integrating the backend.&lt;/p&gt;
 
-&lt;h2 id=&quot;basic-angular-todo-app&quot;&gt;Basic Angular todo App&lt;/h2&gt;
-&lt;p&gt;On a side note, as I was coming to a stopping point with this project today also happens to be the first day the current Portland Code School JavaScript Immersion course is working with their first mvc, which again is backbone.&lt;/p&gt;
+&lt;p&gt;##Basic Angular todo App
+On a side note, as I was coming to a stopping point with this project today also happens to be the first day the current Portland Code School JavaScript Immersion course is working with their first mvc, which again is backbone.&lt;/p&gt;
 
 &lt;p&gt;About a week ago, I started watching &lt;a href=&quot;https://www.youtube.com/watch?v=TRrL5j3MIvo&quot;&gt;Angular.js in 50 examples&lt;/a&gt;. From the beginning, it looked like a poor video recording of a meetup, but I really liked how Curran Kelleher presented his incredibly well documented &lt;a href=&quot;http://curran.github.io/screencasts/introToAngular/exampleViewer/#/&quot;&gt;gitHub repo&lt;/a&gt;.  I also really liked how he starts with basic javaScript and moves through the history of adding in jQuery, then Backbone, and finally Angular.  He made the case that with each of those iterations, javaScript was becoming more powerful by becoming easier to write.  Case in point, I’ve been reading JavaScript: The Good Parts lately.  Most of the time, I feel like I’m actively writing in Angular or Node, but there’s not a whole lot of the book that’s surprising or new.  To write in some of these more recent frameworks requires a depth of understanding of core javascript, which makes me about as excited as nervous with the advent of Angular 2.0 and ES6.&lt;/p&gt;
 
@@ -238,37 +342,6 @@
         <pubDate>Thu, 20 Aug 2015 00:00:00 -0700</pubDate>
         <link>http://nathan-j-brenner.github.io//pdx-tech-crawl</link>
         <guid isPermaLink="true">http://nathan-j-brenner.github.io//pdx-tech-crawl</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Learning to code</title>
-        <description>&lt;p&gt;How did I learn to code? That’s probably not so much as important as how should you go about learning to code, but maybe my experience can give you some directions or it can give you an indication on what I know and how I think.&lt;/p&gt;
-
-&lt;p&gt;I had prior experience with Khan Academy.  I used their app to refresh myself on public education mathamatics.  I didn’t spend very much time there because I got the feeling like the audience was targeted to children.&lt;/p&gt;
-
-&lt;p&gt;I found Portland Code School, and they had a partnership with Treehouse.  Treehouse is an incredible resource, and from what I’ve seen in other online education platform, treehouse does much more than anything I’ve seen before.  Treehouse has courses on an incredible range of topics across multiple languages.  I’ve focused on html, css, and javaScript but I’ve completed some courses in php, python, design, development tools, business, wordPress, java, and digital literacy.  I haven’t touched Ruby, Android, and iOS yet.&lt;/p&gt;
-
-&lt;p&gt;Each course has subtopics, which make up badges that you can earn.  Within a badge, there are a series of videos and assessments.  Watching a video earns a user one point, completing an assessment (like a quiz or code challenge) earns you more points, and completing a badge and later a course earns you more points.  As of this post, I’m at 24,640 points, which seems like a lot but it’s just an indication really of how eager I am to learn.&lt;/p&gt;
-
-&lt;p&gt;Treehouse also has tracks, which group a series of courses between sometimes one language to mulitple langauges.  For example, the front end web development track has courses on html, css, and javaScript.  Often the tracks overlap a little bit, so completing additional tracks becomes less work due to the work previously completed.  For example, the Full Stack JavaScript track had a lot of duplicate courses in their front end javascript track.  When I had completed a couple of tracks, I queried the remaining courses in languages like html, css, and javaScript and I complete those as I come to them or when new courses are added, in the case with the Gulp.js. Also, the tracks do an incredible job at scaffolding my learning curve.  The sequence is great because each course builds on previous courses.  &lt;/p&gt;
-
-&lt;p&gt;But treehouse is not a one stop solution to learning every thing you need to learn to code.  As engaging the videos are and how well the courses are scaffolded, and even with code challenges, there’s still a gap that online learning cannot fill, and there’s gaps in learning.&lt;/p&gt;
-
-&lt;p&gt;As far as getting a more complete understanding on some topics, I’ve spent time on other free education sites like codecademy.  They’ve got a Commandline course in the works and it’s meshing really well with what I can already do in the terminal. Code wars is another interactive site, but I’ve had a hard time getting into it because I find it easy to get stuck without any support. But code wars really pushes me on javascript fundamentals.  NodeSchool.io has also a bunch of tutorials that run through the terminal, and I’m hoping to get into that more since I’m done with PCS.  That resource can be pretty challenging.  &lt;/p&gt;
-
-&lt;p&gt;Beyond interactive sites, really the place I find myself dug into the most is in the documentation, which can be challenging because it comes down to how well the documentation is written and what experience the author intends the reader to have. A spectrum would span between jQuery (which I think is really easy to read) and nodejs.org (which I find difficult to read).  Intially, I also looked at w3schools but eventually switched to mdn.  These sites have core concepts with definitions and usually multiple examples for different cases.&lt;/p&gt;
-
-&lt;p&gt;Even with all of these resources, they can only go so far without an oppertunity to be creative (where you have a goal to work towards) and an oppertunity to work with someone else. I’ve found that when I’ve pair programmed, in either role I learn a lot.  I suppose I would rather be the person that’s not stuck: I often feel like the other person that’s trying to help takes a while to figure out where I’m at, which is a lot of work.  That helper has to really figure out what and how you’re thinking to make a suggestion that the stuck person is looking for.  &lt;/p&gt;
-
-&lt;p&gt;By and large, code bootcamps like Portland Code School provided the oppertunity to get that realistic exposure to working on projects.  I can’t imagine learning the full stack without their help, but I think they could do more in the role of recruiter if they continue to sell themselves to clients as a vehicle to get into a job in tech.  Often what makes pedagogical sense often conflicts with the realities of what the industry is like.  A good example of this is how students come out of college and how they stuggle when they get a job.  That in turn reinforces employers a bias that learning in a school is not equivelent to the actual experience of having a job.  The flipped classroom is supposed to ignore some of that pedagogy a little so that students do the job as they are learning, but that means the students have to experience a lot of failure and makes the teacher feel useless.&lt;/p&gt;
-
-&lt;p&gt;At this point, I’ve wandering on sites like treehouse and codecademy along with meeting people in the tech industry with the hopes to find a place to work on a team on some new projects.  My wife just gave birth to our first child, so I’m trying to spend time at home and I’ve got to complete 2 more weeks of orders in a couple weeks from now.  When that’s done, I really hope I’ve got some projects that can also bring in some income.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 30 Jul 2015 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//learning</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//learning</guid>
         
         
       </item>
