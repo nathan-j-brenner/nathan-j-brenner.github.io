@@ -13,6 +13,8 @@ Typescript is a superset of Javascript. It's a transpiler and offers typecheckin
 
 ## Here's the steps, read on for the explantion.
 
+[git directory](https://github.com/nathan-j-brenner/node_school/tree/master/ts_expressworks)
+
 #### Complete before you start a node school workshop:
 install node/npm  
 npm install -g typescript  
