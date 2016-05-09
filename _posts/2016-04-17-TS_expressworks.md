@@ -4,7 +4,7 @@ title: "ExpressWorks with Typescript"
 date : 2016-04-17
 ---
 
-Typescript is a superset of Javascript. It's a transpiler and offers typechecking, which you don't get with Babel.  However, there's some configuration and some weird vocabulary. It's easy for me to forget some of this stuff, so I like to use the node school workshops as an oppertunity to expand my understanding, which is a bonus: I get to learn the content in the workshops, and I get to learn and practice es6.
+Typescript is a superset of Javascript. It's a transpiler for es6 to es5 and offers typechecking, which you don't get with Babel.  However, there's some configuration and some weird terminology. It's easy for me to forget some of this stuff, so I like to use the node school workshops as an oppertunity to expand my understanding, which is a bonus: I get to learn the content in the workshops, and I get to learn and practice es6.
 
 ## Why do I like writing typescript instead of plain javascript?
 1. Code completion: As soon as I start typing a reference to an object, such as jQuery `$.`, I get a modal window with the list of possible methods or properties I can use with helpful information like the definition and the parameters. I can select any of them and get tab completion.
@@ -27,18 +27,18 @@ npm install -g tsd
 4. In `package.json`, add in `scripts`:     
 	"tsc": "tsc",
     "tsc:w": "tsc -w --outDir dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run tsc:w"
 5. `touch tsconfig.json`¸
 6. Add in your compiler options, such as:  
 `{  
 	"compilerOptions": {  
-		"module": "commonjs",  
+		"module": "commonjs",
+		"target": "es5",  
 		"noImplicitAny": true,  
 		"removeComments": true  
 	}  
 }`
-6. `nsd install express -S`
+6. `tsd install express -S`
 7. `npm install express -S`
 8. `npm install -g expressworks`
 9. `tsd rebundle`
