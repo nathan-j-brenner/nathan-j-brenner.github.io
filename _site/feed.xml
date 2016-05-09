@@ -5,9 +5,42 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 May 2016 20:19:38 -0700</pubDate>
-    <lastBuildDate>Sun, 08 May 2016 20:19:38 -0700</lastBuildDate>
+    <pubDate>Sun, 08 May 2016 21:20:14 -0700</pubDate>
+    <lastBuildDate>Sun, 08 May 2016 21:20:14 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Multi-step Forms</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/nathan-j-brenner/multipage-form&quot; class=&quot;btn btn-info&quot; role=&quot;button&quot;&gt;See the code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I got hired a couple months ago as a contractor for an advertising agency to write responsive html emails. Not exciting work, no javascript, and table based layout, but I get to write code all day so what’s to complain?&lt;/p&gt;
+
+&lt;p&gt;I’ve gotten a lot better at writting css, to the point where I can get emails done fairly quickly in part because a lot of the templates were built by me.  When I have time to spare, I’ve enjoyed refactoring an internal app, and in the last few days I made a breakthrough.&lt;/p&gt;
+
+&lt;p&gt;For some backstory, the app was created by a senior dev, and there was a note in code that said “To future developer, I’m learning angular, so if this doesn’t look that great, sorry, enjoy fixing it”.  That’s not verbatim, but it was kinda the point, and after working on an ionic app with ng1.4.x in TypeScript, I had gotten used to some conventions and what some may call writing the angular way, like not using jQuery in an Angular app, or keeping a clearly defined line between server side code and client side code.  This blog will focus on how I drafted a solution to that separation, which in large part was made through using services.&lt;/p&gt;
+
+&lt;p&gt;So imagine an angular app, perhaps one that you’ve written, and you’ve only got one controller.  You’re not really sure what the situation would look like to justify multiple controllers, so you’re single controller has a lot of code in it.  In my case, the app is a multipage form, and after digging around at some blogs, I found where the author got his inspiration: &lt;a href=&quot;https://scotch.io/tutorials/angularjs-multi-step-form-using-ui-router&quot;&gt;https://scotch.io/tutorials/angularjs-multi-step-form-using-ui-router&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wasn’t a big fan of this approach, and recently I’ve been thinking about some significant conventions such as how controllers should be kept slim, controllers should be limited to a single view, and services should be used to handle data.  In this case, I wanted to take the existing app, and create an individual controller per view, and to pass along the data in each controller along each step.  More specifically, the submit button on each page would send the data of that controller to a service, along with navigating to the next state.&lt;/p&gt;
+
+&lt;p&gt;If you want to see the demo of where the app currently stands, clone &lt;a href=&quot;https://github.com/nathan-j-brenner/multipage-form&quot;&gt;this repo&lt;/a&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;npm run dev&lt;/code&gt;.  Sorry, nothing live yet, I kinda forgot how to generate it on GitHub, and this might be a good oppertunity to play with &lt;a href=&quot;https://zeit.co/now&quot;&gt;Now&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;At this point, I found this blog: &lt;a href=&quot;https://thinkster.io/a-better-way-to-learn-angularjs/services&quot;&gt;https://thinkster.io/a-better-way-to-learn-angularjs/services&lt;/a&gt;, and I put it together so I could see it in practice and reference as I refactored the app in the office from my gitHub repo &lt;a href=&quot;https://github.com/nathan-j-brenner/sharedData&quot;&gt;sharedData&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I hardly slept that night because I was so excited to finally slim down the massive single controller, but when I got to work, I remembered that the author was using &lt;code class=&quot;highlighter-rouge&quot;&gt;angular-ui-router&lt;/code&gt;, more specifically embedded routes.  There was the main route: &lt;code class=&quot;highlighter-rouge&quot;&gt;form&lt;/code&gt;, with a controller, then all the sub-routes.  I had played with the ui-router before, but taking something existing, and refactoring to this extent required some time to look at the documentation, play around with it, and build a small version of what I wanted to do.  Unfortunately, that was partly Saturday afternoon (after brewing beer), and Sunday afternoon. The result was this app: &lt;a href=&quot;https://github.com/nathan-j-brenner/multipage-form&quot;&gt;multipage-form&lt;/a&gt;.  It’s all front-end, and I used John Papa’s &lt;code class=&quot;highlighter-rouge&quot;&gt;lite-server&lt;/code&gt; (on npm), so I could debug with &lt;code class=&quot;highlighter-rouge&quot;&gt;ng-inspector&lt;/code&gt;.  It really came out of taking the &lt;a href=&quot;https://angular-ui.github.io/ui-router/&quot;&gt;Getting Started&lt;/a&gt; guide for the UI-router, and combining it  with the thinkster blog. A lot of it was piece by piece refactoring from the services app and unit testing (going to the browser and seeing if the tiny change gave me what I expected, and debugging when it didn’t.  When I had the behavior I wanted, I tried thinking of something fun to integrate it with, and somehow Monty Python came to mind.  That brought in an additional service for the questions, and I used the &lt;code class=&quot;highlighter-rouge&quot;&gt;Math&lt;/code&gt; object to randomly generate the third question, along with slimming down the &lt;code class=&quot;highlighter-rouge&quot;&gt;Responses&lt;/code&gt; Service, and the Controllers so they each basically had the same code, but were bound to separate views.&lt;/p&gt;
+
+&lt;p&gt;So there were two huge gains in writting this app that took about 4 hours: I gained a stronger understanding of how to implement services and how to write slim controllers, which I’ll directly apply on a larger app tomorrow, and how to use use some other conventions, like not using &lt;code class=&quot;highlighter-rouge&quot;&gt;$scope&lt;/code&gt; at all (I think one of the two apps I started with used it.  But the biggest take-away that I was lacking from Friday morning was…Each state not only required it’s own controller, but the states couldn’t be embedded.  Each state had to be it’s own separate form that had it’s own properties, and when you’re ready to move onto the next state of the form, you had to do two things: Change state with &lt;code class=&quot;highlighter-rouge&quot;&gt;$tate.go()&lt;/code&gt;, and define the properties on the service that was being used in each state of the form.  After all the questions of the form, there’s a view that shows all the data that was collected (which is retrieved with a controller), and has a submit function, at which point the Service would make a post request to the API, but in this case it just shoots out an alert box with an appropriate response. Next is a Submittion state, which just verifies that you’ve completed the form and requests that you start the process all over again, where the data is reset and the state goes back to the first page of the form.&lt;/p&gt;
+
+&lt;p&gt;Where to next? The goal was to make a small app, basically a prototype, so I can debug myself on the larger app, and more sequentially move through this refactoring.  But there’s other improvements I’d like to do with this app: I’ve been playing with the ng Form validation, so that’ll probably be the next thing I add into this app before I put it in every state of the app at work.  I’d like to bring in Webpack, and I think I’ll probably use a &lt;a href=&quot;http://blog.teamtreehouse.com/26017-2&quot;&gt;blog&lt;/a&gt;from a developer I’ve worked with in the past.  Adding unit tests would be good, and so would trying out the navigating from ng1 to ng2 through ngForward.  I’d love to look at the ng1 version next to the ng2, especially with the good things I’ve been hearing about forms.  And rewriting the same app with Typescript as also been on my mind.  I started doing that on Friday, but there was too much about Typescript that I wasn’t used to, so I kept the focus in on what I would need to do to refactor that app as it currently stands.&lt;/p&gt;
+
+&lt;p&gt;All in all, this was a project I created so I could create more form-apps in the future without reinventing the wheel.  Using paper forms, like at the dmv or doctor’s offices, or at restraunts drives me nuts.  I’d love to walk down the street frommy house to the small-business sushi restraunt and offer them something like this so I can order sushi easier, and maybe they can see a roi.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
+        <link>http://nathan-j-brenner.github.io//multipage-form</link>
+        <guid isPermaLink="true">http://nathan-j-brenner.github.io//multipage-form</guid>
+        
+        
+      </item>
     
       <item>
         <title>Refactoring from $scope to vm in ng1.x</title>
@@ -385,33 +418,6 @@ On a side note, as I was coming to a stopping point with this project today also
         <pubDate>Sun, 06 Sep 2015 00:00:00 -0700</pubDate>
         <link>http://nathan-j-brenner.github.io//distractions</link>
         <guid isPermaLink="true">http://nathan-j-brenner.github.io//distractions</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>The Flatlanders have a store...</title>
-        <description>&lt;p&gt;A few weeks ago, I started exploring Angular. Angular is a model-view-controller.  I had worked with Backbone.js, which is another mvc.  &lt;/p&gt;
-
-&lt;p&gt;I started with the Treehouse course, then worked through the tutorial on codecademy.&lt;/p&gt;
-
-&lt;p&gt;The treehouse course gave some interesting definitions, but there seemed to be several gaps.  I’ve heard that Treehouse is working on a new course to replace this older version.&lt;/p&gt;
-
-&lt;p&gt;CodeCademy course was helpful because there was a lot of practical coding exercises.  I would like to see more specific feedback when I wrote errors.  Currently, there are forums where users post questions when they get stuck.  This lends to spending a lot of time looking at my code and other peoples code to debug the error.&lt;/p&gt;
-
-&lt;p&gt;Finally, I got to the code school tutorial and I’m pretty sure I’m going to have that song stuck in my head for a while.  At this point, I haven’t retained anything specific from the treehouse course, but it served as a foundation. Code School is equally valuable as codecademy, and their pedagogic sense is a little different.&lt;/p&gt;
-
-&lt;p&gt;Code School has more courses on Angular, and their first course is free because Google paid for it.  About this time, I dove into a small project.  The WeatherForecastApp repo on gitHub is the result.  It still needs some work and cleaning up.  I’ve been looking at the tutorial on the angularjs.org, with the hope of filling in gaps.  I’ve also integrated angular into the portfolio page on this site.  &lt;/p&gt;
-
-&lt;p&gt;So what makes Angular different from Backbone? Backbone doesn’t have a controller.  If you’re familiar with classical inheritance, the jump is easier to write in Backbone.  The model contains the data, and the view displays the data and can have events, which act like controllers.  This is all written in javaScript files.  Another key difference is that Backbone doesn’t have a strong opinion on how you create your app.  It’s suitable to work with underscore.js and jQuery, and you can get away with a lot of different approaches to problems.&lt;/p&gt;
-
-&lt;p&gt;Angular is a little more opinionated, and it turns html into something quite different.  Angular uses directives to extend javaScript into expressions in the html.  A couple examples of directives would be ng-app, ng-controller, and ng-model.  A controller has to be specified to access the data from the model.   Angular has two-way data binding, so if data appears on the DOM and there is an input tag, the input tag can change the data by specifying ng-model. &lt;/p&gt;
-
-&lt;p&gt;Angular 2.0 is around the corner, and there seems to be a lot of hesitation about it.  React seems to be picking up steem.  It will be interesting to see what happens in the next year.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 05 Sep 2015 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//flatlanders</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//flatlanders</guid>
         
         
       </item>
