@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Why are you passionate about coding?</title>
-  <meta name="description" content="This is a common interview question. From a look at my resume, the question might even be asked in a way like “You’ve obviously passionate about the work you...">
+  <title>Refactoring from $scope to vm in ng1.x</title>
+  <meta name="description" content="Using $scope brings on some issues, which is evident as it’s been taken out of Angular2.  With your existing Angular 1.x apps, one of the ways you can refact...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="canonical" href="http://nathan-j-brenner.github.io//why-coding">
+  <link rel="canonical" href="http://nathan-j-brenner.github.io//$scope-to-vm">
   <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://nathan-j-brenner.github.io//feed.xml" />
 </head>
 
@@ -77,22 +77,91 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Why are you passionate about coding?</h1>
-    <p class="post-meta">Oct 12, 2015 • Nathan</p>
+    <h1 class="post-title">Refactoring from $scope to vm in ng1.x</h1>
+    <p class="post-meta">May 8, 2016 • Nathan</p>
   </header>
 
   <article class="post-content">
-    <p>This is a common interview question. From a look at my resume, the question might even be asked in a way like “You’ve obviously passionate about the work you did in this other area, so what drives you in programming?”</p>
+    <p>Using <code class="highlighter-rouge">$scope</code> brings on some issues, which is evident as it’s been taken out of Angular2.  With your existing Angular 1.x apps, one of the ways you can refactor is to strip out all instances of <code class="highlighter-rouge">$scope</code>.</p>
 
-<p>I love programming because it can be a very abstract way to create some pretty amazing solutions.  For example, say I want to know immediately I get a new email.  When I was in high school, I used to obsessively get on the computer, which involved dialing up the server, log into yahoo, only to be disappointed that there was nothing new.  Now I’ve got a device that sits in my pocket and I get a push notification for a bunch of different apps, including gmail.  </p>
+<p>There’s three steps you need to take for this to work:  </p>
 
-<p>How does stuff like that work? Did the demand cause the solution or did some computer geek realize the potential of a device that can store data? I love taking things appart, learning how the individual pieces work together, and put the thing back together.  If I can add in some functionality, or clean up how the piece is put together, then even better. I’m not ok with going along with the status quo.  I want to ask why questions like “Why are we doing it this way”, or “How can we make this better”?  </p>
+<h4 id="first">First</h4>
 
-<p>As far as work goes, I started a course on MongoDB today, and I started working on a mobile app a few days ago.</p>
+<p>Change the declarations of your controllers from the name they have to <code class="highlighter-rouge">vm</code>.  VM represents view-model, and is a convention that’s a part of the John Papa Angular styleguide.  </p>
 
-<p>MongoDB offers free online courses, which have a weekly series of videos, quizzes, and homework assignments.  I thought this would be a good way to get more in depth knowledge of a non-relational database.</p>
+<p>For example, within an app, where you have a controller such as  </p>
 
-<p>The mobile app is a project another developer included me into.  It uses the ionic framework, which empowers angular web developers to create mobile apps without writing any ios or android native code.  This project is also great because it’s forcing me to start looking at and writing in TypeScript with the new es6 syntax, and I’m able to see how Angular is currently being written by a more experienced web developer.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div ng-controller="mainController"&gt;&lt;/div&gt;
+</code></pre>
+</div>
+
+<p>change it to </p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div ng-controller="mainController as vm"&gt;&lt;/div&gt;`
+</code></pre>
+</div>
+
+<p>If you declared your routing, such as with the <code class="highlighter-rouge">angular-ui-router</code>, you might have  </p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$routeProvider.state( "main", {
+	url: "/main",
+	templateUrl: "./templates/main.html",
+	controller: "mainController"
+	});
+</code></pre>
+</div>
+
+<p>Change the last line to <code class="highlighter-rouge">controller: mainController as vm</code>.  </p>
+
+<h4 id="second">Second</h4>
+
+<p>Within your views, every time you have a property, such as  </p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ng-model = "name" 
+</code></pre>
+</div>
+
+<p>reference the property as part of vm, which in this case would look like </p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ng-model= "vm.name"
+</code></pre>
+</div>
+
+<h4 id="third">Third</h4>
+
+<p>Within the controller, declare <code class="highlighter-rouge">vm</code> as a variable set to <code class="highlighter-rouge">this</code>, then replace <code class="highlighter-rouge">vm</code> everywhere you have <code class="highlighter-rouge">$scope</code>.  </p>
+
+<p>For example, given this:  </p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>angular.module('app').controller('MainController', MainController);
+
+function MainController($scope) {
+	$scope.numb = 5;
+	$scope.add = function(){ 
+		$scope.numb += 1;
+	}
+}
+</code></pre>
+</div>
+
+<p>Change to:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>angular.module('app').controller('MainController', MainController);
+
+function MainController() {
+	var vm = this;
+	vm.numb = 5;
+	vm.add = function(){
+		vm.numb += 1;
+	}
+</code></pre>
+</div>
+
+<p>There’s plenty of blogs about why you should get off the habit of using <code class="highlighter-rouge">$scope</code>, and there’s justifications for using <code class="highlighter-rouge">ctlr</code> in place of <code class="highlighter-rouge">vm</code> for the controller as syntax.  Bottom line, it looks cleaner, it’s easier to use, and you don’t have to work with embedded scopes.</p>
+
+<p>I had heard of using <code class="highlighter-rouge">controllerAs</code> syntax before, and how John Papa was a strong advocate for it, but it took me figuring out on my own how to effectively make this shift. Ironically, here’s a blog he did that looks like it covers the same premise, and proably goes into more depth: <a href="http://johnpapa.net/angularjss-controller-as-and-the-vm-variable/">http://johnpapa.net/angularjss-controller-as-and-the-vm-variable/</a>
+Also, if you’re learning angular 1, interested in learning angular2 and trying to see the connective glue between ng1 and ng2, or have some existing apps and you’re trying to find work but you keep getting told you’re code isn’t good enough, try refactoring some of it to these conventions: <a href="https://github.com/johnpapa/angular-styleguide">https://github.com/johnpapa/angular-styleguide</a></p>
 
   </article>
   

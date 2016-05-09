@@ -1,33 +1,63 @@
 ---
 layout: post
 title: "Refactoring from $scope to vm in ng1.x"
-date : 2016-04-17
+date : 2016-05-08
 ---
 
-Using $scope brings on some issues, which is evident as it's been taken out of Angular2.  With your existing Angular 1.x apps, one of the ways you can refactor is to strip out all instances of `$scope`.
+Using `$scope` brings on some issues, which is evident as it's been taken out of Angular2.  With your existing Angular 1.x apps, one of the ways you can refactor is to strip out all instances of `$scope`.
 
-There's three steps you need to take for this to work:
-1. Change the declarations of your controllers from the name they have to `vm`.  VM represents view-model, and is a convention that's a part of the John Papa Angular styleguide.
-For example, within an app, where you have a controller such as `<div ng-controller="mainController"></div>`, change it to `<div ng-controller="mainController as vm"></div>`.
-If you declared your routing, such as with the `angular-ui-router`, you might have 
-	`$routeProvider.state( "main", {
+There's three steps you need to take for this to work:  
+
+#### First
+
+Change the declarations of your controllers from the name they have to `vm`.  VM represents view-model, and is a convention that's a part of the John Papa Angular styleguide.  
+
+For example, within an app, where you have a controller such as  
+
+	<div ng-controller="mainController"></div>
+	
+change it to 
+	
+	<div ng-controller="mainController as vm"></div>`
+	
+If you declared your routing, such as with the `angular-ui-router`, you might have  
+
+	$routeProvider.state( "main", {
 		url: "/main",
 		templateUrl: "./templates/main.html",
 		controller: "mainController"
-	`
-Change the last line to `controller: mainController as vm`.
-2. Within your views, every time you have a property, such as `ng-model = "name"`, reference the property as part of vm, which in this case would look like `ng-model= "vm.name"
-3. Within the controller, declare `vm` as a variable set to `this`, then replace `vm` everywhere you have `$scope`.
-For example, given this:
+		});
+		
+Change the last line to `controller: mainController as vm`.  
+
+#### Second
+
+Within your views, every time you have a property, such as  
+
+	ng-model = "name" 
+	
+reference the property as part of vm, which in this case would look like 
+
+	ng-model= "vm.name"
+
+#### Third
+
+Within the controller, declare `vm` as a variable set to `this`, then replace `vm` everywhere you have `$scope`.  
+ 
+
+For example, given this:  
+
 	angular.module('app').controller('MainController', MainController);
 	
-	function MainController($scope){
+	function MainController($scope) {
 		$scope.numb = 5;
 		$scope.add = function(){ 
 			$scope.numb += 1;
 		}
 	}
+
 Change to:
+
 	angular.module('app').controller('MainController', MainController);
 	
 	function MainController() {
