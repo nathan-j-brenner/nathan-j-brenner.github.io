@@ -3,6 +3,13 @@ layout: post
 title: "Multi-step Forms"
 date : 2016-05-08
 ---
+
+How do you create a form where you can navigate to multiple pages, and are able to submit the data only once?
+
+Should you have a single controller connected to multiple views?
+
+What's an approach that takes advantage of the best parts of Angular 1.x?
+
 <a href="https://github.com/nathan-j-brenner/multipage-form" class="btn btn-info" role="button">See the code</a>
 
 I got hired a couple months ago as a contractor for an advertising agency to write responsive html emails. Not exciting work, no javascript, and table based layout, but I get to write code all day so what's to complain?
