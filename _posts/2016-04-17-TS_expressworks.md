@@ -30,14 +30,14 @@ npm install -g tsd
     "start": "npm run tsc:w"
 5. `touch tsconfig.json`¸
 6. Add in your compiler options, such as:  
-`{  
-	"compilerOptions": {  
-		"module": "commonjs",
-		"target": "es5",  
-		"noImplicitAny": true,  
-		"removeComments": true  
-	}  
-}`
+	`{  
+		"compilerOptions": {  
+			"module": "commonjs",
+			"target": "es5",  
+			"noImplicitAny": true,  
+			"removeComments": true  
+		}  
+	}`
 6. `tsd install express -S`
 7. `npm install express -S`
 8. `npm install -g expressworks`

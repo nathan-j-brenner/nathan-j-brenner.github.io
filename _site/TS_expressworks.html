@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>ExpressWorks with Typescript</title>
-  <meta name="description" content="Typescript is a superset of Javascript. It’s a transpiler and offers typechecking, which you don’t get with Babel.  However, there’s some configuration and s...">
+  <meta name="description" content="Typescript is a superset of Javascript. It’s a transpiler for es6 to es5 and offers typechecking, which you don’t get with Babel.  However, there’s some conf...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -80,7 +80,7 @@
   </header>
 
   <article class="post-content">
-    <p>Typescript is a superset of Javascript. It’s a transpiler and offers typechecking, which you don’t get with Babel.  However, there’s some configuration and some weird vocabulary. It’s easy for me to forget some of this stuff, so I like to use the node school workshops as an oppertunity to expand my understanding, which is a bonus: I get to learn the content in the workshops, and I get to learn and practice es6.</p>
+    <p>Typescript is a superset of Javascript. It’s a transpiler for es6 to es5 and offers typechecking, which you don’t get with Babel.  However, there’s some configuration and some weird terminology. It’s easy for me to forget some of this stuff, so I like to use the node school workshops as an oppertunity to expand my understanding, which is a bonus: I get to learn the content in the workshops, and I get to learn and practice es6.</p>
 
 <h2 id="why-do-i-like-writing-typescript-instead-of-plain-javascript">Why do I like writing typescript instead of plain javascript?</h2>
 <ol>
@@ -106,18 +106,18 @@ npm install -g tsd  </p>
   <li>In <code class="highlighter-rouge">package.json</code>, add in <code class="highlighter-rouge">scripts</code>:   <br />
  “tsc”: “tsc”,
  “tsc:w”: “tsc -w –outDir dist”,
- “test”: “echo "Error: no test specified" &amp;&amp; exit 1”,
  “start”: “npm run tsc:w”</li>
   <li><code class="highlighter-rouge">touch tsconfig.json</code>¸</li>
   <li>Add in your compiler options, such as:<br />
-<code class="highlighter-rouge"><span class="p">{</span><span class="w">  
- </span><span class="nt">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-     </span><span class="nt">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"commonjs"</span><span class="p">,</span><span class="w">  
-     </span><span class="nt">"noImplicitAny"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">  
-     </span><span class="nt">"removeComments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">  
- </span><span class="p">}</span><span class="w">  
-</span><span class="p">}</span></code></li>
-  <li><code class="highlighter-rouge">nsd install express -S</code></li>
+ <code class="highlighter-rouge"><span class="p">{</span><span class="w">  
+     </span><span class="nt">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"commonjs"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"target"</span><span class="p">:</span><span class="w"> </span><span class="s2">"es5"</span><span class="p">,</span><span class="w">  
+         </span><span class="nt">"noImplicitAny"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">  
+         </span><span class="nt">"removeComments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">  
+     </span><span class="p">}</span><span class="w">  
+ </span><span class="p">}</span></code></li>
+  <li><code class="highlighter-rouge">tsd install express -S</code></li>
   <li><code class="highlighter-rouge">npm install express -S</code></li>
   <li><code class="highlighter-rouge">npm install -g expressworks</code></li>
   <li><code class="highlighter-rouge">tsd rebundle</code></li>
