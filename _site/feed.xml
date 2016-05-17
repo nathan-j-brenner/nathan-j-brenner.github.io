@@ -5,9 +5,77 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 May 2016 21:25:22 -0700</pubDate>
-    <lastBuildDate>Sun, 08 May 2016 21:25:22 -0700</lastBuildDate>
+    <pubDate>Mon, 16 May 2016 22:40:03 -0700</pubDate>
+    <lastBuildDate>Mon, 16 May 2016 22:40:03 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Recipe for starting MongoD</title>
+        <description>&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A couple posts ago, I made a ‘recipe’ for creating a typescript project with node.js.  I’ve actually used that a few times, and I’ve gotten some feedback from other devs that liked it, so this is another one.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I’m a ta for a MongoDB University course with node.js that starts soon.  Part of that means I’ll be previewing the materials before the students have access so I can offer suggestions to the instructors, and the other part means I’ll be closely watching the forum so I can break blockers as they come up.  So I’m taking notes as I watch the video as an adjudictor to the course materials, to guess possible student questions, and to expand my understanding of MongoDB.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;format&quot;&gt;Format&lt;/h2&gt;
+&lt;p&gt;The first few steps involve the browser, then they switch to a lot of bash commands in the terminal.  I’ve gotten MongoDB running on PCs, I’ve used Bash with some luck althrough I haven’t tried it on Windows 10 yet, and I’ve used Mac default Terminal (which I prefur), and iTerm.  I’m now using iTerm on my day job computer, and I haven’t tried that (maybe tomorrow, fingers crossed some fires stay out), so this post will get updated. &lt;/p&gt;
+
+&lt;p&gt;Basically Bash command will be followed by brief explanation.  Bash commands are the code snippets, assume you have to type enter after you type in the command.  This isn’t a post for learning Bash.  Check out &lt;a href=&quot;http://nodeschool.io/&quot;&gt;learnyoubash at node school&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;steps-for-mac-users&quot;&gt;Steps for Mac users&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;google &lt;code class=&quot;highlighter-rouge&quot;&gt;download mongodb&lt;/code&gt;, click on second link to the &lt;span style=&quot;font-weight: 700&quot;&gt;MongoDB Download Center | MongoDB&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;Scroll down, click on the green button that says &lt;strong&gt;DOWNLOAD (tzg)&lt;/strong&gt;.  This will download the Current Stable Release, which it says if you search the page for that text. As of the first draft of this post, it was 3.2.6.  This mongo/node course uses 3.0.0.&lt;/li&gt;
+  &lt;li&gt;Open up a command prompt.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/Downloads&lt;/code&gt; : Move into your Downloads directory&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls -lt&lt;/code&gt; List all the contents of the Downloads directory, look at what gets printed first.  It should say something like &lt;strong&gt;mongodb-osx-x86_64-3.2.6.tgz&lt;/strong&gt;.  It might be different depending on your mac, but it should definately end with &lt;strong&gt;.tgz&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tar xvf mongobd-osx-x86_64-3.2.6.tgz&lt;/code&gt; Hint: use code completion.  Type the first few letters of the tgz file and hit the tab key.  This is un-tarring the file.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd mongodb-osx-x86_64-3.2.6&lt;/code&gt; Move into the file you just expanded. Notice no tar ball extention.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls&lt;/code&gt; List all the contents of that mongodb directory.  Notice the &lt;strong&gt;bin&lt;/strong&gt; directory.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd bin&lt;/code&gt; Move into the &lt;strong&gt;bin&lt;/strong&gt; directory.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls -l&lt;/code&gt; List all the contents of the &lt;strong&gt;bin&lt;/strong&gt; directory. Notice &lt;strong&gt;mongo&lt;/strong&gt; and &lt;strong&gt;mongod&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo root&lt;/code&gt; You need to become root so you can do the next step.  This is going to let you write/read mongodb documents.  You’ll probably need to type in your password.  Don’t expect to see any characters as you type it in.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir -p /data/db&lt;/code&gt; Create the directory that mongodb by default saves its data.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;chmod 777 /data&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;chmod 777 /data/db&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls -ld /data/db&lt;/code&gt; You should see something like &lt;strong&gt;root&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exit&lt;/code&gt; Get out of root&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;whoami&lt;/code&gt; You should see your computer’s username that you’re logged into.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./monngod&lt;/code&gt; This starts the MongoDB server. Notice &lt;strong&gt;on port 27017&lt;/strong&gt;.  That’s the default port, and will be more useful later when you connect the MongoDB Server through a driver.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;control + t&lt;/code&gt; or open a new tab (top menu=&amp;gt;Shell=&amp;gt;New Tab), and move into that tab for the next few commands.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pwd&lt;/code&gt; You should still be in &lt;strong&gt;bin&lt;/strong&gt;.  If you’re not, like if you’re using &lt;strong&gt;iTerm&lt;/strong&gt;, move back into it with &lt;code class=&quot;highlighter-rouge&quot;&gt;~/Downloads/mongodb-osx-x86_64-3.2.6/bin&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./mongo&lt;/code&gt; This starts the Mongo shell.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;db.names.insert({name: &quot;Your name&quot;})&lt;/code&gt;.  All this does is write to the server.  Expect to see &lt;code class=&quot;highlighter-rouge&quot;&gt;WriteResult({ &quot;nInserted&quot; : 1 })&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;db.names.find()&lt;/code&gt; You should see a json object with 2 fields: an _id field with an ObjectId, and a name field with the value you just typed.&lt;/li&gt;
+  &lt;li&gt;Switch back to the tab that has the mongod server running&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;control c&lt;/code&gt; This stops the server&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo root&lt;/code&gt; Become root again&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cp * /user/local/bin&lt;/code&gt; You’re copying the contents of the mongo bin directory to the &lt;strong&gt;/user/local/bin directory&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exit&lt;/code&gt; exit root&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;which mongod&lt;/code&gt; You should see &lt;strong&gt;/usr/local/bin/mongod&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; switch back to your home directory&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt; You just started the mongod server from your home directory, which you’ll do from now on.&lt;/li&gt;
+  &lt;li&gt;Switch into another tab. Run &lt;code class=&quot;highlighter-rouge&quot;&gt;control c&lt;/code&gt; if you moved back to the tab where you had the mongo shell running before. &lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; so you move to home directory. &lt;code class=&quot;highlighter-rouge&quot;&gt;mongo&lt;/code&gt;. You can start a mongo shell now.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Conclusion: To use the mongo shell, open command line, run &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt;, open another command line window, run &lt;code class=&quot;highlighter-rouge&quot;&gt;mongo&lt;/code&gt;. You can do this from any directory&lt;/p&gt;
+
+&lt;h3 id=&quot;additional-feedback-based-off-of-setting-up-on-mac-with-iterm&quot;&gt;Additional feedback based off of setting up on Mac with iTerm:&lt;/h3&gt;
+&lt;p&gt;Comming soon…&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-for-pc-users&quot;&gt;Setting up for PC Users&lt;/h2&gt;
+&lt;p&gt;Comming soon…&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
+        <link>http://nathan-j-brenner.github.io//recipe-for-starting-mongod</link>
+        <guid isPermaLink="true">http://nathan-j-brenner.github.io//recipe-for-starting-mongod</guid>
+        
+        
+      </item>
     
       <item>
         <title>Multi-step Forms</title>
@@ -405,25 +473,6 @@ On a side note, as I was coming to a stopping point with this project today also
         <pubDate>Sat, 19 Sep 2015 00:00:00 -0700</pubDate>
         <link>http://nathan-j-brenner.github.io//writing-for-free</link>
         <guid isPermaLink="true">http://nathan-j-brenner.github.io//writing-for-free</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Sleeping with bugs</title>
-        <description>&lt;p&gt;Hey, it’s Labor Day Weekend.  My parents from Vegas are visiting, and it’s their first time to see their other grandchild.&lt;/p&gt;
-
-&lt;p&gt;I just wrapped up a 3 week stint with the army.  Every year, I have to do two weeks of active duty.  My unit travels around the state and gives free concerts.  The due date for our kid was right in the middle of it, and my chain of command gave my the opportunity to stay home and work for another unit in place so I could stay close to home.   This didn’t leave much brain space for coding, and this morning I woke up eagerly to work out some bugs.&lt;/p&gt;
-
-&lt;p&gt;A lot of my days start out like this.  In most cases, I leave the code broken or messy to rush off to do something else or without knowing how to fix it.  Through the night, my brain dreams up possible solutions.&lt;/p&gt;
-
-&lt;p&gt;The express.js class just came out on treehouse, so I’m eager to work on it as a review.  I spent a bunch of time with express servers in javascript immersion.  By the nature of the class, a lot of learning takes place through chaos.  Treehouse is great for me because it’s so sequential, and I feel like I’ve got a bunch of potholes on my understanding of the server side code.  There’s a bunch of tutorials on node that I want to dig into for the same reason.&lt;/p&gt;
-
-&lt;p&gt;I’m also at the point with Angular.js that I can do enough to break things.  Collaboration would be helpful at this point. I’m noticing a pattern of combining Angular with Bootstrap.  Angular extends html with directives and expressions. A lot of directives look like html attributes, such as ng-app or ng-controller.  With bootstrap, I have to figure out what classes I need to make the DOM look a particular way.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 06 Sep 2015 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//distractions</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//distractions</guid>
         
         
       </item>
