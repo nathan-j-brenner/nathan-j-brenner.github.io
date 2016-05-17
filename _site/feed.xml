@@ -5,8 +5,8 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 May 2016 22:40:03 -0700</pubDate>
-    <lastBuildDate>Mon, 16 May 2016 22:40:03 -0700</lastBuildDate>
+    <pubDate>Mon, 16 May 2016 23:01:19 -0700</pubDate>
+    <lastBuildDate>Mon, 16 May 2016 23:01:19 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -29,7 +29,7 @@
 &lt;h2 id=&quot;steps-for-mac-users&quot;&gt;Steps for Mac users&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;google &lt;code class=&quot;highlighter-rouge&quot;&gt;download mongodb&lt;/code&gt;, click on second link to the &lt;span style=&quot;font-weight: 700&quot;&gt;MongoDB Download Center | MongoDB&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;Scroll down, click on the green button that says &lt;strong&gt;DOWNLOAD (tzg)&lt;/strong&gt;.  This will download the Current Stable Release, which it says if you search the page for that text. As of the first draft of this post, it was 3.2.6.  This mongo/node course uses 3.0.0.&lt;/li&gt;
+  &lt;li&gt;Scroll down, click on the green button that says &lt;strong&gt;DOWNLOAD (tzg)&lt;/strong&gt;.  This will download the Current Stable Release, which it says if you search the page for that text. As of the first draft of this post, it was 3.2.6.  This mongo/node course uses 3.2.x&lt;/li&gt;
   &lt;li&gt;Open up a command prompt.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/Downloads&lt;/code&gt; : Move into your Downloads directory&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls -lt&lt;/code&gt; List all the contents of the Downloads directory, look at what gets printed first.  It should say something like &lt;strong&gt;mongodb-osx-x86_64-3.2.6.tgz&lt;/strong&gt;.  It might be different depending on your mac, but it should definately end with &lt;strong&gt;.tgz&lt;/strong&gt;&lt;/li&gt;
