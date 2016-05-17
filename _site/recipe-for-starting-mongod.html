@@ -145,7 +145,14 @@ date : 2016-05-08
 <p>When I tried ths on iTerm, I got stuck on step 11.  My work computer is a little older than my personal mac (2011 vs. 2014), and is running OS X 10.11.5  <code class="highlighter-rouge">sudo root</code> wouldn’t work on my work computer.  This didn’t matter if it was on Terminal or iTerm.  I digged around a little bit: I enabled root user from this <a href="https://www.youtube.com/watch?v=qTtVhAEAs2Q">youtube video</a> but couldn’t figure out how to become root user, then I read into how El Capitan is ‘rootless’ from this blog post: <a href="http://apple.stackexchange.com/questions/193368/what-is-the-rootless-feature-in-el-capitan-really">http://apple.stackexchange.com/questions/193368/what-is-the-rootless-feature-in-el-capitan-really</a>, but then I found the solution that was a lot easier than going through the 31 steps above: <strong>Use homebrew</strong>.  Follow the steps on <a href="http://www.hacksparrow.com/how-to-install-mongodb-on-mac-os-x.html">this blog</a> for a much faster approach to getting going with mongo. Otherwise, no significant insites on using iTerm.  I just need to dig into the documentation and get it working as well as my personal set up on Terminal with <a href="https://github.com/robbyrussell/oh-my-zsh">oh my zsh</a>.</p>
 
 <h2 id="setting-up-for-pc-users">Setting up for PC Users</h2>
-<p>Coming soon…</p>
+<ol>
+  <li>Google <code class="highlighter-rouge">download mongo</code> just like for mac, select the same website.  The site detects if you’re on a Mac or PC, so locate the most recent stable release and download the 64 bit version.</li>
+  <li>Switch to explorer and open into Downloads.  Unzip the MongoDB file.</li>
+  <li>Create a new directory and move the mongodb file from Downloads into that file.</li>
+  <li><code class="highlighter-rouge">mkdir data</code></li>
+  <li><code class="highlighter-rouge">mkdir data/db</code></li>
+  <li>From the folder you moved the mongodb contents, you should be able to start the mongo server with <code class="highlighter-rouge">mongod</code> and in a separate bash window, run <code class="highlighter-rouge">mongo</code> to start the shell.  That’s it.  Test out the shell with a write and read.</li>
+</ol>
 
   </article>
   
