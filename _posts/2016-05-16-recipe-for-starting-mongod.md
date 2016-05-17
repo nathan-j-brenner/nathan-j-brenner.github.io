@@ -16,7 +16,7 @@ Basically Bash command will be followed by brief explanation.  Bash commands are
 
 ## Steps for Mac users
 1. google `download mongodb`, click on second link to the <span style="font-weight: 700">MongoDB Download Center | MongoDB</span>
-2. Scroll down, click on the green button that says __DOWNLOAD (tzg)__.  This will download the Current Stable Release, which it says if you search the page for that text. As of the first draft of this post, it was 3.2.6.  This mongo/node course uses 3.0.0.
+2. Scroll down, click on the green button that says __DOWNLOAD (tzg)__.  This will download the Current Stable Release, which it says if you search the page for that text. As of the first draft of this post, it was 3.2.6.  This mongo/node course uses 3.2.x
 3.  Open up a command prompt.
 4. `cd ~/Downloads` : Move into your Downloads directory
 5. `ls -lt` List all the contents of the Downloads directory, look at what gets printed first.  It should say something like __mongodb-osx-x86_64-3.2.6.tgz__.  It might be different depending on your mac, but it should definately end with __.tgz__
