@@ -98,12 +98,12 @@
 <h4 id="complete-before-you-start-a-node-school-workshop">Complete before you start a node school workshop:</h4>
 <p>install node/npm<br />
 npm install -g typescript<br />
-npm install -g tsd  </p>
+npm install -g tsd</p>
 
 <h4 id="specifics-for-everyworkshop-but-more-specific-for-express">Specifics for everyworkshop, but more specific for Express:</h4>
 <ol>
-  <li><code class="highlighter-rouge">mkdir expressworks</code>  </li>
-  <li><code class="highlighter-rouge">mkdir dist</code>  </li>
+  <li><code class="highlighter-rouge">mkdir expressworks</code></li>
+  <li><code class="highlighter-rouge">mkdir dist</code></li>
   <li><code class="highlighter-rouge">npm init</code></li>
   <li>In <code class="highlighter-rouge">package.json</code>, add in <code class="highlighter-rouge">scripts</code>:   <br />
  “tsc”: “tsc”,
@@ -132,47 +132,47 @@ npm install -g tsd  </p>
 </ol>
 
 <h2 id="the-why">The why:</h2>
-<p>before: Installing <code class="highlighter-rouge">typescript</code> and <code class="highlighter-rouge">tsd</code> globally lets you run the <code class="highlighter-rouge">tsc</code> commands in the terminal.  </p>
+<p>before: Installing <code class="highlighter-rouge">typescript</code> and <code class="highlighter-rouge">tsd</code> globally lets you run the <code class="highlighter-rouge">tsc</code> commands in the terminal.</p>
 
 <ol>
   <li>
-    <p>With nodeschool courses, I like to write the course name as the directory.  All of the courses I’ve worked on are in the <code class="highlighter-rouge">node_school</code> directory, and they serve as code examples for future reference. I don’t get a lot of time to work on these, it’s usually a couple minutes in the middle of the day when I’m waiting on feedback from qa or I’ve got some time in the weekend when my son is napping.  </p>
+    <p>With nodeschool courses, I like to write the course name as the directory.  All of the courses I’ve worked on are in the <code class="highlighter-rouge">node_school</code> directory, and they serve as code examples for future reference. I don’t get a lot of time to work on these, it’s usually a couple minutes in the middle of the day when I’m waiting on feedback from qa or I’ve got some time in the weekend when my son is napping.</p>
   </li>
   <li>
-    <p>Dist is the directory for all javascript files.  Call it what you want, I like the idea of <code class="highlighter-rouge">dist</code> and <code class="highlighter-rouge">src</code> directories, but the only thing in it is <code class="highlighter-rouge">*.js</code>.  </p>
+    <p>Dist is the directory for all javascript files.  Call it what you want, I like the idea of <code class="highlighter-rouge">dist</code> and <code class="highlighter-rouge">src</code> directories, but the only thing in it is <code class="highlighter-rouge">*.js</code>.</p>
   </li>
   <li>
-    <p>I’m going to be using npm modules, so every module I install, I do this first, then add the <code class="highlighter-rouge">-S</code> flag so it get’s saved into <code class="highlighter-rouge">package.json</code>.  </p>
+    <p>I’m going to be using npm modules, so every module I install, I do this first, then add the <code class="highlighter-rouge">-S</code> flag so it get’s saved into <code class="highlighter-rouge">package.json</code>.</p>
   </li>
   <li>
-    <p>This seems to be a realiable way for me accomplish two things: The <code class="highlighter-rouge">*.ts</code> files are separated from the <code class="highlighter-rouge">*.js</code> files, and the <code class="highlighter-rouge">*.ts</code> files get compiled in the background to <code class="highlighter-rouge">*.js</code> so I don’t have to run <code class="highlighter-rouge">tsc *.js</code> over and over.  </p>
+    <p>This seems to be a realiable way for me accomplish two things: The <code class="highlighter-rouge">*.ts</code> files are separated from the <code class="highlighter-rouge">*.js</code> files, and the <code class="highlighter-rouge">*.ts</code> files get compiled in the background to <code class="highlighter-rouge">*.js</code> so I don’t have to run <code class="highlighter-rouge">tsc *.js</code> over and over.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">tsconfig.json</code> keeps your configuration on how you want typescript to work.  </p>
+    <p><code class="highlighter-rouge">tsconfig.json</code> keeps your configuration on how you want typescript to work.</p>
   </li>
   <li>
-    <p>This installs a typed definition file of the express framework, so you get access to all those methods and properties when you want them in the ts files. This creates a <code class="highlighter-rouge">typings</code> directory.  </p>
+    <p>This installs a typed definition file of the express framework, so you get access to all those methods and properties when you want them in the ts files. This creates a <code class="highlighter-rouge">typings</code> directory.</p>
   </li>
   <li>
-    <p>Look at <code class="highlighter-rouge">./typings/express.d.ts</code> for which version of express has been defined.  Npm install that version.  </p>
+    <p>Look at <code class="highlighter-rouge">./typings/express.d.ts</code> for which version of express has been defined.  Npm install that version.</p>
   </li>
   <li>
-    <p>Install the node school workshop. This can be done at any time, I just like doing it here because I’m about to start working on the workshop.  </p>
+    <p>Install the node school workshop. This can be done at any time, I just like doing it here because I’m about to start working on the workshop.</p>
   </li>
   <li>
-    <p>Any time you add new module definitons, you’ll need to rebundle tds so your ts files will know where to look for references of definitions.  </p>
+    <p>Any time you add new module definitons, you’ll need to rebundle tds so your ts files will know where to look for references of definitions.</p>
   </li>
   <li>
-    <p>So I can get tab completion, I like to name my workshop exercises as <code class="highlighter-rouge">number-workshop_expercise.ts</code>, so when I’m ready to verify it, I can just hit <code class="highlighter-rouge">workshop verify number tab</code>. Since the exercises scaffold upon eachother, this is an easy way to keep them appearing in order in the directory.  </p>
+    <p>So I can get tab completion, I like to name my workshop exercises as <code class="highlighter-rouge">number-workshop_expercise.ts</code>, so when I’m ready to verify it, I can just hit <code class="highlighter-rouge">workshop verify number tab</code>. Since the exercises scaffold upon eachother, this is an easy way to keep them appearing in order in the directory.</p>
   </li>
   <li>
-    <p>The first line of every ts file needs to have this text, otherwise when you complile the ts, you’ll get an error that says that typescript doesn’t know about these external files, even though it works fine in the editor and the js files will pass if you have the correct solution.  </p>
+    <p>The first line of every ts file needs to have this text, otherwise when you complile the ts, you’ll get an error that says that typescript doesn’t know about these external files, even though it works fine in the editor and the js files will pass if you have the correct solution.</p>
   </li>
   <li>
-    <p>Sorry, no freebes, but you wouldn’t have to look hard for them.  </p>
+    <p>Sorry, no freebes, but you wouldn’t have to look hard for them.</p>
   </li>
   <li>
-    <p>This starts the compiler  </p>
+    <p>This starts the compiler</p>
   </li>
   <li>
     <p>Keep the compiler running, and move into the js files directory so you can check the solutions.</p>

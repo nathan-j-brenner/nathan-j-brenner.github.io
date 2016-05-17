@@ -5,36 +5,42 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 May 2016 23:01:19 -0700</pubDate>
-    <lastBuildDate>Mon, 16 May 2016 23:01:19 -0700</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
+    <pubDate>Tue, 17 May 2016 14:54:42 -0700</pubDate>
+    <lastBuildDate>Tue, 17 May 2016 14:54:42 -0700</lastBuildDate>
+    <generator>Jekyll v3.1.3</generator>
     
       <item>
-        <title>Recipe for starting MongoD</title>
-        <description>&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
+        <title>Recipe For Starting Mongod</title>
+        <description>&lt;hr /&gt;
+&lt;p&gt;layout: post
+title: “Recipe for starting MongoD”
+date : 2016-05-08
+—&lt;/p&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;A couple posts ago, I made a ‘recipe’ for creating a typescript project with node.js.  I’ve actually used that a few times, and I’ve gotten some feedback from other devs that liked it, so this is another one.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;I’m a ta for a MongoDB University course with node.js that starts soon.  Part of that means I’ll be previewing the materials before the students have access so I can offer suggestions to the instructors, and the other part means I’ll be closely watching the forum so I can break blockers as they come up.  So I’m taking notes as I watch the video as an adjudictor to the course materials, to guess possible student questions, and to expand my understanding of MongoDB.&lt;/p&gt;
+    &lt;p&gt;I’m a ta for a MongoDB University course with node.js that starts soon.  Part of that means I’ll be previewing the materials before the students have access so I can offer suggestions to the instructors, and the other part means I’ll be closely watching the forum so I can break blockers as they come up.  So I’m taking notes as I watch the video as an adjudicator to the course materials, to guess possible student questions, and to expand my understanding of MongoDB.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;format&quot;&gt;Format&lt;/h2&gt;
-&lt;p&gt;The first few steps involve the browser, then they switch to a lot of bash commands in the terminal.  I’ve gotten MongoDB running on PCs, I’ve used Bash with some luck althrough I haven’t tried it on Windows 10 yet, and I’ve used Mac default Terminal (which I prefur), and iTerm.  I’m now using iTerm on my day job computer, and I haven’t tried that (maybe tomorrow, fingers crossed some fires stay out), so this post will get updated. &lt;/p&gt;
+&lt;p&gt;The first few steps involve the browser, then they switch to a lot of bash commands in the terminal.  I’ve gotten MongoDB running on PCs, I’ve used Bash with some luck although I haven’t tried it on Windows 10 yet, and I’ve used Mac default Terminal (which I prefer), and iTerm.  I’m now using iTerm on my day job computer, and I haven’t tried that (maybe tomorrow, fingers crossed some fires stay out), so this post will get updated.&lt;/p&gt;
 
 &lt;p&gt;Basically Bash command will be followed by brief explanation.  Bash commands are the code snippets, assume you have to type enter after you type in the command.  This isn’t a post for learning Bash.  Check out &lt;a href=&quot;http://nodeschool.io/&quot;&gt;learnyoubash at node school&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;steps-for-mac-users&quot;&gt;Steps for Mac users&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;google &lt;code class=&quot;highlighter-rouge&quot;&gt;download mongodb&lt;/code&gt;, click on second link to the &lt;span style=&quot;font-weight: 700&quot;&gt;MongoDB Download Center | MongoDB&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;google &lt;code class=&quot;highlighter-rouge&quot;&gt;download mongodb&lt;/code&gt;, click on the link near the top that says &lt;span style=&quot;font-weight: 700&quot;&gt;MongoDB Download Center | MongoDB&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;Scroll down, click on the green button that says &lt;strong&gt;DOWNLOAD (tzg)&lt;/strong&gt;.  This will download the Current Stable Release, which it says if you search the page for that text. As of the first draft of this post, it was 3.2.6.  This mongo/node course uses 3.2.x&lt;/li&gt;
   &lt;li&gt;Open up a command prompt.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/Downloads&lt;/code&gt; : Move into your Downloads directory&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls -lt&lt;/code&gt; List all the contents of the Downloads directory, look at what gets printed first.  It should say something like &lt;strong&gt;mongodb-osx-x86_64-3.2.6.tgz&lt;/strong&gt;.  It might be different depending on your mac, but it should definately end with &lt;strong&gt;.tgz&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tar xvf mongobd-osx-x86_64-3.2.6.tgz&lt;/code&gt; Hint: use code completion.  Type the first few letters of the tgz file and hit the tab key.  This is un-tarring the file.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd mongodb-osx-x86_64-3.2.6&lt;/code&gt; Move into the file you just expanded. Notice no tar ball extention.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls -lt&lt;/code&gt; List all the contents of the Downloads directory, look at what gets printed first.  It should say something like &lt;strong&gt;mongodb-osx-ssl-x86_64-3.2.6.tgz&lt;/strong&gt;.  It might be different depending on your mac, but it should definitely end with &lt;strong&gt;.tgz&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tar xvf mongobd-osx-ssl-x86_64-3.2.6.tgz&lt;/code&gt; Hint: use code completion.  Type the first few letters of the tgz file and hit the tab key.  This is un-tarring the file.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd mongodb-osx-x86_64-3.2.6&lt;/code&gt; Move into the file you just expanded. Notice no tar ball extension.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls&lt;/code&gt; List all the contents of that mongodb directory.  Notice the &lt;strong&gt;bin&lt;/strong&gt; directory.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd bin&lt;/code&gt; Move into the &lt;strong&gt;bin&lt;/strong&gt; directory.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls -l&lt;/code&gt; List all the contents of the &lt;strong&gt;bin&lt;/strong&gt; directory. Notice &lt;strong&gt;mongo&lt;/strong&gt; and &lt;strong&gt;mongod&lt;/strong&gt;&lt;/li&gt;
@@ -65,12 +71,12 @@
 &lt;p&gt;Conclusion: To use the mongo shell, open command line, run &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt;, open another command line window, run &lt;code class=&quot;highlighter-rouge&quot;&gt;mongo&lt;/code&gt;. You can do this from any directory&lt;/p&gt;
 
 &lt;h3 id=&quot;additional-feedback-based-off-of-setting-up-on-mac-with-iterm&quot;&gt;Additional feedback based off of setting up on Mac with iTerm:&lt;/h3&gt;
-&lt;p&gt;Comming soon…&lt;/p&gt;
+&lt;p&gt;When I tried ths on iTerm, I got stuck on step 11.  My work computer is a little older than my personal mac (2011 vs. 2014), and is running OS X 10.11.5  &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo root&lt;/code&gt; wouldn’t work on my work computer.  This didn’t matter if it was on Terminal or iTerm.  I digged around a little bit: I enabled root user from this &lt;a href=&quot;https://www.youtube.com/watch?v=qTtVhAEAs2Q&quot;&gt;youtube video&lt;/a&gt; but couldn’t figure out how to become root user, then I read into how El Capitan is ‘rootless’ from this blog post: &lt;a href=&quot;http://apple.stackexchange.com/questions/193368/what-is-the-rootless-feature-in-el-capitan-really&quot;&gt;http://apple.stackexchange.com/questions/193368/what-is-the-rootless-feature-in-el-capitan-really&lt;/a&gt;, but then I found the solution that was a lot easier than going through the 31 steps above: Use homebrew.  Follow the steps on &lt;a href=&quot;http://www.hacksparrow.com/how-to-install-mongodb-on-mac-os-x.html&quot;&gt;this blog&lt;/a&gt; for a much faster approach to getting going with mongo. Otherwise, no significant insites on using iTerm.  I just need to dig into the documentation and get it working as well as my personal set up on Terminal with &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;oh my zsh&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;setting-up-for-pc-users&quot;&gt;Setting up for PC Users&lt;/h2&gt;
-&lt;p&gt;Comming soon…&lt;/p&gt;
+&lt;p&gt;Coming soon…&lt;/p&gt;
 </description>
-        <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 16 May 2016 00:00:00 -0700</pubDate>
         <link>http://nathan-j-brenner.github.io//recipe-for-starting-mongod</link>
         <guid isPermaLink="true">http://nathan-j-brenner.github.io//recipe-for-starting-mongod</guid>
         
@@ -120,25 +126,25 @@
         <title>Refactoring from $scope to vm in ng1.x</title>
         <description>&lt;p&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;$scope&lt;/code&gt; brings on some issues, which is evident as it’s been taken out of Angular2.  With your existing Angular 1.x apps, one of the ways you can refactor is to strip out all instances of &lt;code class=&quot;highlighter-rouge&quot;&gt;$scope&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;There’s three steps you need to take for this to work:  &lt;/p&gt;
+&lt;p&gt;There’s three steps you need to take for this to work:&lt;/p&gt;
 
 &lt;h4 id=&quot;first&quot;&gt;First&lt;/h4&gt;
 
-&lt;p&gt;Change the declarations of your controllers from the name they have to &lt;code class=&quot;highlighter-rouge&quot;&gt;vm&lt;/code&gt;.  VM represents view-model, and is a convention that’s a part of the John Papa Angular styleguide.  &lt;/p&gt;
+&lt;p&gt;Change the declarations of your controllers from the name they have to &lt;code class=&quot;highlighter-rouge&quot;&gt;vm&lt;/code&gt;.  VM represents view-model, and is a convention that’s a part of the John Papa Angular styleguide.&lt;/p&gt;
 
-&lt;p&gt;For example, within an app, where you have a controller such as  &lt;/p&gt;
+&lt;p&gt;For example, within an app, where you have a controller such as&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div ng-controller=&quot;mainController&quot;&amp;gt;&amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;change it to &lt;/p&gt;
+&lt;p&gt;change it to&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div ng-controller=&quot;mainController as vm&quot;&amp;gt;&amp;lt;/div&amp;gt;`
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;If you declared your routing, such as with the &lt;code class=&quot;highlighter-rouge&quot;&gt;angular-ui-router&lt;/code&gt;, you might have  &lt;/p&gt;
+&lt;p&gt;If you declared your routing, such as with the &lt;code class=&quot;highlighter-rouge&quot;&gt;angular-ui-router&lt;/code&gt;, you might have&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$routeProvider.state( &quot;main&quot;, {
 	url: &quot;/main&quot;,
@@ -148,17 +154,17 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Change the last line to &lt;code class=&quot;highlighter-rouge&quot;&gt;controller: mainController as vm&lt;/code&gt;.  &lt;/p&gt;
+&lt;p&gt;Change the last line to &lt;code class=&quot;highlighter-rouge&quot;&gt;controller: mainController as vm&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;second&quot;&gt;Second&lt;/h4&gt;
 
-&lt;p&gt;Within your views, every time you have a property, such as  &lt;/p&gt;
+&lt;p&gt;Within your views, every time you have a property, such as&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng-model = &quot;name&quot; 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;reference the property as part of vm, which in this case would look like &lt;/p&gt;
+&lt;p&gt;reference the property as part of vm, which in this case would look like&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng-model= &quot;vm.name&quot;
 &lt;/code&gt;&lt;/pre&gt;
@@ -166,9 +172,9 @@
 
 &lt;h4 id=&quot;third&quot;&gt;Third&lt;/h4&gt;
 
-&lt;p&gt;Within the controller, declare &lt;code class=&quot;highlighter-rouge&quot;&gt;vm&lt;/code&gt; as a variable set to &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt;, then replace &lt;code class=&quot;highlighter-rouge&quot;&gt;vm&lt;/code&gt; everywhere you have &lt;code class=&quot;highlighter-rouge&quot;&gt;$scope&lt;/code&gt;.  &lt;/p&gt;
+&lt;p&gt;Within the controller, declare &lt;code class=&quot;highlighter-rouge&quot;&gt;vm&lt;/code&gt; as a variable set to &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt;, then replace &lt;code class=&quot;highlighter-rouge&quot;&gt;vm&lt;/code&gt; everywhere you have &lt;code class=&quot;highlighter-rouge&quot;&gt;$scope&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;For example, given this:  &lt;/p&gt;
+&lt;p&gt;For example, given this:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;angular.module(&#39;app&#39;).controller(&#39;MainController&#39;, MainController);
 
@@ -224,12 +230,12 @@ Also, if you’re learning angular 1, interested in learning angular2 and trying
 &lt;h4 id=&quot;complete-before-you-start-a-node-school-workshop&quot;&gt;Complete before you start a node school workshop:&lt;/h4&gt;
 &lt;p&gt;install node/npm&lt;br /&gt;
 npm install -g typescript&lt;br /&gt;
-npm install -g tsd  &lt;/p&gt;
+npm install -g tsd&lt;/p&gt;
 
 &lt;h4 id=&quot;specifics-for-everyworkshop-but-more-specific-for-express&quot;&gt;Specifics for everyworkshop, but more specific for Express:&lt;/h4&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir expressworks&lt;/code&gt;  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir dist&lt;/code&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir expressworks&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir dist&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm init&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;, add in &lt;code class=&quot;highlighter-rouge&quot;&gt;scripts&lt;/code&gt;:   &lt;br /&gt;
  “tsc”: “tsc”,
@@ -258,47 +264,47 @@ npm install -g tsd  &lt;/p&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;the-why&quot;&gt;The why:&lt;/h2&gt;
-&lt;p&gt;before: Installing &lt;code class=&quot;highlighter-rouge&quot;&gt;typescript&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;tsd&lt;/code&gt; globally lets you run the &lt;code class=&quot;highlighter-rouge&quot;&gt;tsc&lt;/code&gt; commands in the terminal.  &lt;/p&gt;
+&lt;p&gt;before: Installing &lt;code class=&quot;highlighter-rouge&quot;&gt;typescript&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;tsd&lt;/code&gt; globally lets you run the &lt;code class=&quot;highlighter-rouge&quot;&gt;tsc&lt;/code&gt; commands in the terminal.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;With nodeschool courses, I like to write the course name as the directory.  All of the courses I’ve worked on are in the &lt;code class=&quot;highlighter-rouge&quot;&gt;node_school&lt;/code&gt; directory, and they serve as code examples for future reference. I don’t get a lot of time to work on these, it’s usually a couple minutes in the middle of the day when I’m waiting on feedback from qa or I’ve got some time in the weekend when my son is napping.  &lt;/p&gt;
+    &lt;p&gt;With nodeschool courses, I like to write the course name as the directory.  All of the courses I’ve worked on are in the &lt;code class=&quot;highlighter-rouge&quot;&gt;node_school&lt;/code&gt; directory, and they serve as code examples for future reference. I don’t get a lot of time to work on these, it’s usually a couple minutes in the middle of the day when I’m waiting on feedback from qa or I’ve got some time in the weekend when my son is napping.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Dist is the directory for all javascript files.  Call it what you want, I like the idea of &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;src&lt;/code&gt; directories, but the only thing in it is &lt;code class=&quot;highlighter-rouge&quot;&gt;*.js&lt;/code&gt;.  &lt;/p&gt;
+    &lt;p&gt;Dist is the directory for all javascript files.  Call it what you want, I like the idea of &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;src&lt;/code&gt; directories, but the only thing in it is &lt;code class=&quot;highlighter-rouge&quot;&gt;*.js&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;I’m going to be using npm modules, so every module I install, I do this first, then add the &lt;code class=&quot;highlighter-rouge&quot;&gt;-S&lt;/code&gt; flag so it get’s saved into &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;.  &lt;/p&gt;
+    &lt;p&gt;I’m going to be using npm modules, so every module I install, I do this first, then add the &lt;code class=&quot;highlighter-rouge&quot;&gt;-S&lt;/code&gt; flag so it get’s saved into &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;This seems to be a realiable way for me accomplish two things: The &lt;code class=&quot;highlighter-rouge&quot;&gt;*.ts&lt;/code&gt; files are separated from the &lt;code class=&quot;highlighter-rouge&quot;&gt;*.js&lt;/code&gt; files, and the &lt;code class=&quot;highlighter-rouge&quot;&gt;*.ts&lt;/code&gt; files get compiled in the background to &lt;code class=&quot;highlighter-rouge&quot;&gt;*.js&lt;/code&gt; so I don’t have to run &lt;code class=&quot;highlighter-rouge&quot;&gt;tsc *.js&lt;/code&gt; over and over.  &lt;/p&gt;
+    &lt;p&gt;This seems to be a realiable way for me accomplish two things: The &lt;code class=&quot;highlighter-rouge&quot;&gt;*.ts&lt;/code&gt; files are separated from the &lt;code class=&quot;highlighter-rouge&quot;&gt;*.js&lt;/code&gt; files, and the &lt;code class=&quot;highlighter-rouge&quot;&gt;*.ts&lt;/code&gt; files get compiled in the background to &lt;code class=&quot;highlighter-rouge&quot;&gt;*.js&lt;/code&gt; so I don’t have to run &lt;code class=&quot;highlighter-rouge&quot;&gt;tsc *.js&lt;/code&gt; over and over.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; keeps your configuration on how you want typescript to work.  &lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; keeps your configuration on how you want typescript to work.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;This installs a typed definition file of the express framework, so you get access to all those methods and properties when you want them in the ts files. This creates a &lt;code class=&quot;highlighter-rouge&quot;&gt;typings&lt;/code&gt; directory.  &lt;/p&gt;
+    &lt;p&gt;This installs a typed definition file of the express framework, so you get access to all those methods and properties when you want them in the ts files. This creates a &lt;code class=&quot;highlighter-rouge&quot;&gt;typings&lt;/code&gt; directory.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Look at &lt;code class=&quot;highlighter-rouge&quot;&gt;./typings/express.d.ts&lt;/code&gt; for which version of express has been defined.  Npm install that version.  &lt;/p&gt;
+    &lt;p&gt;Look at &lt;code class=&quot;highlighter-rouge&quot;&gt;./typings/express.d.ts&lt;/code&gt; for which version of express has been defined.  Npm install that version.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Install the node school workshop. This can be done at any time, I just like doing it here because I’m about to start working on the workshop.  &lt;/p&gt;
+    &lt;p&gt;Install the node school workshop. This can be done at any time, I just like doing it here because I’m about to start working on the workshop.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Any time you add new module definitons, you’ll need to rebundle tds so your ts files will know where to look for references of definitions.  &lt;/p&gt;
+    &lt;p&gt;Any time you add new module definitons, you’ll need to rebundle tds so your ts files will know where to look for references of definitions.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;So I can get tab completion, I like to name my workshop exercises as &lt;code class=&quot;highlighter-rouge&quot;&gt;number-workshop_expercise.ts&lt;/code&gt;, so when I’m ready to verify it, I can just hit &lt;code class=&quot;highlighter-rouge&quot;&gt;workshop verify number tab&lt;/code&gt;. Since the exercises scaffold upon eachother, this is an easy way to keep them appearing in order in the directory.  &lt;/p&gt;
+    &lt;p&gt;So I can get tab completion, I like to name my workshop exercises as &lt;code class=&quot;highlighter-rouge&quot;&gt;number-workshop_expercise.ts&lt;/code&gt;, so when I’m ready to verify it, I can just hit &lt;code class=&quot;highlighter-rouge&quot;&gt;workshop verify number tab&lt;/code&gt;. Since the exercises scaffold upon eachother, this is an easy way to keep them appearing in order in the directory.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;The first line of every ts file needs to have this text, otherwise when you complile the ts, you’ll get an error that says that typescript doesn’t know about these external files, even though it works fine in the editor and the js files will pass if you have the correct solution.  &lt;/p&gt;
+    &lt;p&gt;The first line of every ts file needs to have this text, otherwise when you complile the ts, you’ll get an error that says that typescript doesn’t know about these external files, even though it works fine in the editor and the js files will pass if you have the correct solution.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Sorry, no freebes, but you wouldn’t have to look hard for them.  &lt;/p&gt;
+    &lt;p&gt;Sorry, no freebes, but you wouldn’t have to look hard for them.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;This starts the compiler  &lt;/p&gt;
+    &lt;p&gt;This starts the compiler&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Keep the compiler running, and move into the js files directory so you can check the solutions.&lt;/p&gt;
@@ -328,9 +334,9 @@ npm install -g tsd  &lt;/p&gt;
 
 &lt;p&gt;The third week covered schema design principals. Mongo has been considered schema-less, which means multiple documents in the same collection don’t necessarily have to have the same columns like a sql db would.  Documents are javascript objects, so the properties of a document retain whatever values as desired, even embedded documents, such as arrays or other objects.  For example, in a collection that maintains blog posts, a single post can have an embedded property for comments made to that array with objects that contain properties such as the author of that comment on that post, the date the comment was made, and the contents of the post.  A lot has to be considered for the design of a schema.  Since schema’s don’t have to match, it’s usually best if they don’t match for a specific reason.&lt;/p&gt;
 
-&lt;p&gt;Week 4 covered performance.  This has to do with the time it takes for a query to return a given object or set of obects.  The time spent on a query, as indicated by how many documents the query looks at, can be reduced if indexes are approapriately used.  Every document has an _id field, and if not specified with one, is provided with one.  That field is indexed, meaning it’s sorted in a specific way.  Other indexes can be created, and should resemble the types of queries the end user might make.  &lt;/p&gt;
+&lt;p&gt;Week 4 covered performance.  This has to do with the time it takes for a query to return a given object or set of obects.  The time spent on a query, as indicated by how many documents the query looks at, can be reduced if indexes are approapriately used.  Every document has an _id field, and if not specified with one, is provided with one.  That field is indexed, meaning it’s sorted in a specific way.  Other indexes can be created, and should resemble the types of queries the end user might make.&lt;/p&gt;
 
-&lt;p&gt;Week 5 covered the aggregation pipeline.  Aggregation finds information relevate to the entire collection, such as the average grade a class has over a group of classes. The pipeline resembles more chaining, which in this case are objects with query opperators built on top of eachother.  &lt;/p&gt;
+&lt;p&gt;Week 5 covered the aggregation pipeline.  Aggregation finds information relevate to the entire collection, such as the average grade a class has over a group of classes. The pipeline resembles more chaining, which in this case are objects with query opperators built on top of eachother.&lt;/p&gt;
 
 &lt;p&gt;Week 6 covered application engineering, such as replication and sharding.  These are concerns for working with a large database system in the event that a database goes down and how collections recover from those failures.&lt;/p&gt;
 
@@ -338,7 +344,7 @@ npm install -g tsd  &lt;/p&gt;
 
 &lt;p&gt;Since this course was for node developers, so there was code examples represented in an application, and I was really happy I had worked with node before because there were some huge leaps in what the homework expected students to do.  The quizzes that went with the vides checked for understanding at a very basic level, and the final examp mirrored the homework questions.  As for the discussion, I wish I had gotten more out of it.  I’m a fan of collaboration, so when I get stuck on a problem for a while, I’d like to be able to seek help without getting the answer.  If I get the answer without a lot of stuggle on my own, I’ll probably forget what I learned. But some help is necessary.  There was some collaboration in the discussion board, but the Mongo Unversity doesn’t want any code sharing, and the ta often came across defensive instead of helpful.  Still, the course was very interesting, and it kept my engagement even on the topics like indexes, sharding, and agggregation where I didn’t feel like I had somewhere directly to apply what I had learned outside of the course.&lt;/p&gt;
 
-&lt;p&gt;For now, I want to get better at working with node.  I’m working through a course on &lt;a href=&quot;https://www.edx.org/course/introduction-mongodb-using-mean-stack-mongodbx-m101x&quot;&gt;MEAN&lt;/a&gt;, which I hope to get a better understanding of how angular connects with node. This is a little ironic, since I’m working on an app with another developer and I’ve figured out where this happens.  Data is stored on the database, which is accessed from a service that connects to the backend api.  &lt;/p&gt;
+&lt;p&gt;For now, I want to get better at working with node.  I’m working through a course on &lt;a href=&quot;https://www.edx.org/course/introduction-mongodb-using-mean-stack-mongodbx-m101x&quot;&gt;MEAN&lt;/a&gt;, which I hope to get a better understanding of how angular connects with node. This is a little ironic, since I’m working on an app with another developer and I’ve figured out where this happens.  Data is stored on the database, which is accessed from a service that connects to the backend api.&lt;/p&gt;
 
 &lt;p&gt;Also, since I’ve expanded my understanding of NoSQL, I’m interested in SQL.  Codecademy has a tutorial on the subject, which I’ll probably work through soon. I’d also like to read &lt;a href=&quot;http://www.amazon.com/MongoDB-Definitive-Guide-Kristina-Chodorow/dp/1449344682/ref=sr_1_1?ie=UTF8&amp;amp;qid=1448932247&amp;amp;sr=8-1&amp;amp;keywords=mongodb&quot;&gt;MongoDB: The Definitive Guide&lt;/a&gt;.&lt;/p&gt;
 
@@ -357,9 +363,9 @@ npm install -g tsd  &lt;/p&gt;
         <title>Why are you passionate about coding?</title>
         <description>&lt;p&gt;This is a common interview question. From a look at my resume, the question might even be asked in a way like “You’ve obviously passionate about the work you did in this other area, so what drives you in programming?”&lt;/p&gt;
 
-&lt;p&gt;I love programming because it can be a very abstract way to create some pretty amazing solutions.  For example, say I want to know immediately I get a new email.  When I was in high school, I used to obsessively get on the computer, which involved dialing up the server, log into yahoo, only to be disappointed that there was nothing new.  Now I’ve got a device that sits in my pocket and I get a push notification for a bunch of different apps, including gmail.  &lt;/p&gt;
+&lt;p&gt;I love programming because it can be a very abstract way to create some pretty amazing solutions.  For example, say I want to know immediately I get a new email.  When I was in high school, I used to obsessively get on the computer, which involved dialing up the server, log into yahoo, only to be disappointed that there was nothing new.  Now I’ve got a device that sits in my pocket and I get a push notification for a bunch of different apps, including gmail.&lt;/p&gt;
 
-&lt;p&gt;How does stuff like that work? Did the demand cause the solution or did some computer geek realize the potential of a device that can store data? I love taking things appart, learning how the individual pieces work together, and put the thing back together.  If I can add in some functionality, or clean up how the piece is put together, then even better. I’m not ok with going along with the status quo.  I want to ask why questions like “Why are we doing it this way”, or “How can we make this better”?  &lt;/p&gt;
+&lt;p&gt;How does stuff like that work? Did the demand cause the solution or did some computer geek realize the potential of a device that can store data? I love taking things appart, learning how the individual pieces work together, and put the thing back together.  If I can add in some functionality, or clean up how the piece is put together, then even better. I’m not ok with going along with the status quo.  I want to ask why questions like “Why are we doing it this way”, or “How can we make this better”?&lt;/p&gt;
 
 &lt;p&gt;As far as work goes, I started a course on MongoDB today, and I started working on a mobile app a few days ago.&lt;/p&gt;
 
@@ -380,15 +386,15 @@ npm install -g tsd  &lt;/p&gt;
 
 &lt;p&gt;I participated in a local event, the first of it’s kind, with the goal to teach people with no experience with WordPress how to create a site.  This was something the community asked for in the last WordCamp, and a few volunteers decided to make it happen.  It started as an event serving 25 people, and grew to 100 split between two days.  Also, most of the people at the event had little to no experience writing html and were much older than the tech savy Milenial generation.  My grandma, who is in her 70’s and has a smart phone but hates the internet, could have been at this event and would be able to make a site.&lt;/p&gt;
 
-&lt;p&gt;The presentators were really straight forward, and stuck to their objectives.  They would show how to do something, asking the participants to just watch first, then would join and make the changes.  &lt;/p&gt;
+&lt;p&gt;The presentators were really straight forward, and stuck to their objectives.  They would show how to do something, asking the participants to just watch first, then would join and make the changes.&lt;/p&gt;
 
 &lt;p&gt;The definition of front-end and back-end was really interesting.  When I think of backend, I think of communicating with a server with http requests and communicating with a database. Today, any changes that were made was considered the back-end and the front-end was how the changes appeared in the browser.&lt;/p&gt;
 
-&lt;p&gt;Outside of this class, I’m teaching myself how to create custom themes.  The code is on my local apache server, and I’m applying wordpress php functions to fit the needs of the site I want to make.  Before I made the wordpress version, I created the static version, so a lot of the php work is looking at the codex to find the function that will cause the effect I’m looking for.  &lt;/p&gt;
+&lt;p&gt;Outside of this class, I’m teaching myself how to create custom themes.  The code is on my local apache server, and I’m applying wordpress php functions to fit the needs of the site I want to make.  Before I made the wordpress version, I created the static version, so a lot of the php work is looking at the codex to find the function that will cause the effect I’m looking for.&lt;/p&gt;
 
 &lt;p&gt;There’s an amazing community out there creating pluggins, and it kinda makes me sad at how easy it is to add something that the person creating the site has so little knowledge of what code is causing that behavior. It also makes me realize how easy it would be for me to create websites with wordpress. When I see the DOM, I can visualize how the html.&lt;/p&gt;
 
-&lt;p&gt;The day long presentation went really well with the participants.  We started with a theme that didn’t have any posts and pages, and created pages for home, about, blog, services, and contact.  We were provided the content for those pages, so we created those pages and posts and added the content.  As far as pluggins, we created a contact form on the contact page, we added a titled mosaic set of pictures that are reordered each time the user visits the page, we added a google map, and at the end we viewed the finished website with another theme.  &lt;/p&gt;
+&lt;p&gt;The day long presentation went really well with the participants.  We started with a theme that didn’t have any posts and pages, and created pages for home, about, blog, services, and contact.  We were provided the content for those pages, so we created those pages and posts and added the content.  As far as pluggins, we created a contact form on the contact page, we added a titled mosaic set of pictures that are reordered each time the user visits the page, we added a google map, and at the end we viewed the finished website with another theme.&lt;/p&gt;
 
 &lt;p&gt;There were a couple things I picked up on, like a great explanation between wordpress.com and wordpress.org.  The .com site provides oppertunities for people to create free sites with limited control, and .org provides the codex and is a connection to the wordpress community.  I hope a lot of those new to wordpress go to the Portland WordCamp in October.  I bet I’d get a lot out of it as far as networking and some knowledge with the more advanced topics.  Unfortunately, I have to work for the Army that day.  In any case, I’ll continue learning how to manipulate this content management system.  Developers, like me, are able to create client based solutions by creating or revising themes in a very short timeframe, and are able to bring business owners a lot of power to bring their products to the web while being able to manage their own content of that site.  I hope I can find some work doing this.  It’s less involved than creating javascript webapps, but if writing php can give me the oppertunity to provide for my family and time to add more to my professional development, then I’d love the oppertunity.&lt;/p&gt;
 
@@ -450,11 +456,11 @@ On a side note, as I was coming to a stopping point with this project today also
         <title>Getting paid to write</title>
         <description>&lt;p&gt;As I was driving to Portland this morning, there was an article on NPR about the Writer’s Guild of America.  If you author a book, should you get paid for it? Should you get paid enough that you can make a living off of your writing?  And who should publish your work: You or a company?&lt;/p&gt;
 
-&lt;p&gt;I can’t relate directly.  Indirectly, I understand how frustrating it can sometimes be when you have a project in mind but you’re limited on how much time you can put into that project due to seemingly silly external variables, like the cost of living.  If you can’t make a living off of the work, then maybe you’re investing your time in activity that can’t provide the basic necessities of life and you should reevaluate what you’re doing with the little bit of time you have.  &lt;/p&gt;
+&lt;p&gt;I can’t relate directly.  Indirectly, I understand how frustrating it can sometimes be when you have a project in mind but you’re limited on how much time you can put into that project due to seemingly silly external variables, like the cost of living.  If you can’t make a living off of the work, then maybe you’re investing your time in activity that can’t provide the basic necessities of life and you should reevaluate what you’re doing with the little bit of time you have.&lt;/p&gt;
 
-&lt;p&gt;By doing something that you want to do may actually be a waste of your time.  Maybe it’s better to do something that you don’t want to do for a little while so that with the time left over you can do the things you like to do, like take on new projects or write another book.  &lt;/p&gt;
+&lt;p&gt;By doing something that you want to do may actually be a waste of your time.  Maybe it’s better to do something that you don’t want to do for a little while so that with the time left over you can do the things you like to do, like take on new projects or write another book.&lt;/p&gt;
 
-&lt;p&gt;When I was growing up, I earned an allowance.  I think it was a dollar a week for which in turn I’d do chores around the house that I’d probably would have done anyway because I was too young to question my parents.  I didn’t have a need for that money; my parents gave me everything I needed.  The point was to gain a respect for my time so that at some point, I would be able to easily make the decision to trade my time for money at a rate that would let me spend the rest of my time how I choose.  &lt;/p&gt;
+&lt;p&gt;When I was growing up, I earned an allowance.  I think it was a dollar a week for which in turn I’d do chores around the house that I’d probably would have done anyway because I was too young to question my parents.  I didn’t have a need for that money; my parents gave me everything I needed.  The point was to gain a respect for my time so that at some point, I would be able to easily make the decision to trade my time for money at a rate that would let me spend the rest of my time how I choose.&lt;/p&gt;
 
 &lt;p&gt;Ironically, as I idolized my father who is a public school teacher, I got the silly idea that my time wasn’t worth very much, so I followed that path of doing work that I was really passionate about.  Another bit of irony was how he was just telling me recently that if you pay people more, then they’ll be more motivated to do a good job.  If people can pay for the basic necessities, then their financial stress will hinder their job performance.&lt;/p&gt;
 
@@ -462,7 +468,7 @@ On a side note, as I was coming to a stopping point with this project today also
 
 &lt;p&gt;Better yet, if you’re a writer, I’d be you know a lot about communication so why not communicate to others through a different type of language such as html or even JavaScript?  The leap from writing novels to programs is quite a bit.  Programming isn’t something that’s easy to figure out, but there’s a deep rooted level of connection between every different form of art.&lt;/p&gt;
 
-&lt;p&gt;Enough of this vague ramble.  Lately, I’ve been working through the D3.js course on Treehouse, and it’s tough.  I can’t wait to finish it so I can dive into the documentation and start doing some more engaged form of learning, which is actually writing code.  &lt;/p&gt;
+&lt;p&gt;Enough of this vague ramble.  Lately, I’ve been working through the D3.js course on Treehouse, and it’s tough.  I can’t wait to finish it so I can dive into the documentation and start doing some more engaged form of learning, which is actually writing code.&lt;/p&gt;
 
 &lt;p&gt;I’m at that point with Angular. I’m in the middle of another spa.  It’s called taskManager.  Imagine &lt;a href=&quot;https://trello.com/&quot;&gt;trello&lt;/a&gt;.  Your boss has a bunch of stuff that needs to get done, so he creates a list, and then he assigns those items to team members.  I didn’t intend to create a trello clone; I wanted to get better at creating programs with Angular so of course the code is probably messier than it needs to be.  I got the idea from &lt;a href=&quot;https://www.youtube.com/watch?v=TRrL5j3MIvo&quot;&gt;50 Angular examples&lt;/a&gt;.  I stopped midway to do some applicable coding and got sidetracked. &lt;a href=&quot;http://ionicframework.com/&quot;&gt;Firebase&lt;/a&gt; might get added on to give it a backend. I also added Angular into the &lt;a href=&quot;http://nathan-j-brenner.github.io/portfolio/&quot;&gt;portfolio&lt;/a&gt; page of this site.  It made it much easier to maintain, and I’ll probably add in some &lt;a href=&quot;https://angular-ui.github.io/&quot;&gt;AngularUI&lt;/a&gt; after I have a more solid grasp of Angular.&lt;/p&gt;
 
