@@ -8,35 +8,41 @@ Professional Profile
 
 Looking for work as a front end or full stack JavaScript developer for web and or hybrid applications, on salary or contract status, remotely or near the Portland, Oregon area.
 
-*	Front-end: html 5, css 3, sass, gulp.js, angular.js, typescript, es6, backbone.js, bootstrap, foundation, mobile first/responsive web design, jQuery, underscrore.js
-*	server: node.js, npm, express.js, hapi.js, jade, json, mongoose
+*	Front-end: html5, css3, sass, gulp.js, backbone.js, angular.js, typescript, es6, bootstrap, foundation, mobile first/responsive web design, jQuery, underscrore.js, responsive email design, photoshop
+*	server: node.js, express.js, hapi.js, jade, json, mongoose, body-parser, command-line-args, lite-server
 *	database: postgresql, sequelize.js, knex.js, mongoDB, orchestrate.io, third-party api’s
-*	collaboration: git/gitHub, harvest, slack, basecamp, trello, asana
-*	qa: mocha.js, chai.js, jasmine, karma
+*	collaboration: git/gitHub, harvest, slack, basecamp, trello, asana, Jira
+*	qa: mocha.js, chai.js, jasmine, karma, litmus
 *   mobile development: ionic
 
-<a href="resume2015.pdf" class="btn btn-success active" role="button">Download</a>
+<a href="resume2015.pdf" class="btn btn-success active" role="button">Download the PDF</a>
 
 ***
 
-Work History
-============
+# Work History
 
-February 2016 - current
-------------------------
+
+### May 2016
+TA, contractor, MongoDB for M101JS: MongoDB for Node.js Developers
+
+*	I provide teaching assistance for this online course by answering student questions in the forum, proof lectures, quizzes, homework and exam materials for errors. 
+
+### February 2nd, 2016 - May 27th, 2016
 Web Developer, CMD Agency
 
-*   I write HTML emails for a variety of clients, and occasionally inhouse projects that involve front end work like angular.  I collaborate with QA, designers, producers, and technical directors
-*   HTML, CSS, Jira, Photoshop, Litmus
+*	I wrote responsive HTML emails for a variety of clients while collaborating with QA, designers, producers, and technical directors
+*	I refactored an internal form that is used to create Jira epics for the email development team.  The form was built with Angular 1.4.x and php, and prior to my involvement used a lot of jQuery, vanilla type validation, 1 controller per 5 views, 0 services, $scope, and angular ui-router.  My contributions included: A service for handling the data, a controller per view, controller as vm, angular form validation, and some angular ui-bootstrap directives in place of jQuery. 
+*	I initiated buiding a ui library of html/css of common components to html emails as a way to improve consistent code quality and reduce time to production.
+*	I was hired on as a contractor through Aquent/Vitamin T and my contract was ended under good terms due to lack of work coming in for the email development team.
+*	HTML, CSS, Javascript, Angular, Jira, Jira REST Api, Photoshop, Litmus
 
-October 2015 - current
-------------------------
+
+### October 2015 - February 2016
 Front-end developer, freelance
 
 *   The product is a cross platform app built with Ionic.  I've been writing Angular controllers, services, views, and tests in TypeScript with a backend developer.
 
-January 2015 – July 2015
-------------------------
+### January 2015 – July 2015
 Web Foundations Instructor, teacher assistant, Instructional Designer, Portland Code School, Portland, OR.
 
 *	Web Foundations is a 8 week class  that meets twice a week in the evening for 3 hours.  Topics include html 5, css 3, jquery, and basic javaScript. By the end of the class, students are able to create a static web site with some minimal ui interaction.
@@ -47,26 +53,12 @@ Web Foundations Instructor, teacher assistant, Instructional Designer, Portland 
 
 *	As an instructor, I introduced new concepts and topics, along with monitering gitHub activity, and activity with external resources such as treehouse and codecademy.
 
-November 2010 – December 2015
-------------------------
-Musician, 234th Army Band, Oregon National Guard, Clackamas, OR
-
-*	I perform regularly for military ceremonies and community events, such as the Starlight Parade.  I play clarinet and saxophone for this organization, along with serving other duties as an noncommissioned officer.
-
-August 2014 – October 2014
-------------------------
-Orchestra Teacher, Alice Ott Middle School, David Douglas School District, Portland, OR
-
-*	I taught beginning orchestra to 5th  and 6th graders, intermediate orchestra to 7th and 8th graders, advanced orchestra for 8th graders, and yearbook to 8th graders.
-
-August 2012 – June 2013
-------------------------
+### August 2012 – June 2013
 Music Teacher, Pine Eagle School District 61, Halfway, OR
 
 *	I taught general music to k-4th grade, beginning band, intermediate band, high school band, high school choir, high school algebra, and yearbook.
 
-August 2009 – June 2012
-------------------------
+### August 2009 – June 2012
 Substitute Teacher, Greater Albany Public School District 8J, Albany, OR
 
 *	I filled in for absent teachers on a short term basis in  several of the school districts surrounding Albany.
