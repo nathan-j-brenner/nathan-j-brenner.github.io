@@ -82,19 +82,85 @@
     
       <li class="post__item">
         <h2>
-          <a class="post-link" href="/recipe-for-starting-mongod">Recipe for starting MongoD</a>
+          <a class="post-link" href="/recipe-for-starting-mongod">Recipe For Starting Mongod</a>
         </h2>
         <div class="post_meta">
           <b class="post__author">Nathan</b>
           <b class="post__sep">.</b>
-          <b class="post__date">May 8, 2016 </b>
+          <b class="post__date">May 16, 2016 </b>
         </div>
 
-        <h2 id="why">Why</h2>
+        <hr />
+<p>layout: post
+title: “Recipe for starting MongoD”
+date : 2016-05-08
+—</p>
+
+<h2 id="why">Why</h2>
 <ol>
-  <li>A couple posts ago, I made a ‘recipe’ for creating a typescript project with node.js.  I’ve actually used that a few times, and I’ve gotten some feedback from other devs that liked it, so this is another one.</li>
+  <li>
+    <p>A couple posts ago, I made a ‘recipe’ for creating a typescript project with node.js.  I’ve actually used that a few times, and I’ve gotten some feedback from other devs that liked it, so this is another one.</p>
+  </li>
+  <li>
+    <p>I’m a ta for a MongoDB University course with node.js that starts soon.  Part of that means I’ll be previewing the materials before the students have access so I can offer suggestions to the instructors, and the other part means I’ll be closely watching the forum so I can break blockers as they come up.  So I’m taking notes as I watch the video as an adjudicator to the course materials, to guess possible student questions, and to expand my understanding of MongoDB.</p>
+  </li>
 </ol>
 
+<h2 id="format">Format</h2>
+<p>The first few steps involve the browser, then they switch to a lot of bash commands in the terminal.  I’ve gotten MongoDB running on PCs, I’ve used Bash with some luck although I haven’t tried it on Windows 10 yet, and I’ve used Mac default Terminal (which I prefer), and iTerm.  I’m now using iTerm on my day job computer, and I haven’t tried that (maybe tomorrow, fingers crossed some fires stay out), so this post will get updated.</p>
+
+<p>Basically Bash command will be followed by brief explanation.  Bash commands are the code snippets, assume you have to type enter after you type in the command.  This isn’t a post for learning Bash.  Check out <a href="http://nodeschool.io/">learnyoubash at node school</a>.</p>
+
+<h2 id="steps-for-mac-users">Steps for Mac users</h2>
+<ol>
+  <li>google <code class="highlighter-rouge">download mongodb</code>, click on the link near the top that says <span style="font-weight: 700">MongoDB Download Center | MongoDB</span></li>
+  <li>Scroll down, click on the green button that says <strong>DOWNLOAD (tzg)</strong>.  This will download the Current Stable Release, which it says if you search the page for that text. As of the first draft of this post, it was 3.2.6.  This mongo/node course uses 3.2.x</li>
+  <li>Open up a command prompt.</li>
+  <li><code class="highlighter-rouge">cd ~/Downloads</code> : Move into your Downloads directory</li>
+  <li><code class="highlighter-rouge">ls -lt</code> List all the contents of the Downloads directory, look at what gets printed first.  It should say something like <strong>mongodb-osx-ssl-x86_64-3.2.6.tgz</strong>.  It might be different depending on your mac, but it should definitely end with <strong>.tgz</strong></li>
+  <li><code class="highlighter-rouge">tar xvf mongobd-osx-ssl-x86_64-3.2.6.tgz</code> Hint: use code completion.  Type the first few letters of the tgz file and hit the tab key.  This is un-tarring the file.</li>
+  <li><code class="highlighter-rouge">cd mongodb-osx-x86_64-3.2.6</code> Move into the file you just expanded. Notice no tar ball extension.</li>
+  <li><code class="highlighter-rouge">ls</code> List all the contents of that mongodb directory.  Notice the <strong>bin</strong> directory.</li>
+  <li><code class="highlighter-rouge">cd bin</code> Move into the <strong>bin</strong> directory.</li>
+  <li><code class="highlighter-rouge">ls -l</code> List all the contents of the <strong>bin</strong> directory. Notice <strong>mongo</strong> and <strong>mongod</strong></li>
+  <li><code class="highlighter-rouge">sudo root</code> You need to become root so you can do the next step.  This is going to let you write/read mongodb documents.  You’ll probably need to type in your password.  Don’t expect to see any characters as you type it in.</li>
+  <li><code class="highlighter-rouge">mkdir -p /data/db</code> Create the directory that mongodb by default saves its data.</li>
+  <li><code class="highlighter-rouge">chmod 777 /data</code></li>
+  <li><code class="highlighter-rouge">chmod 777 /data/db</code></li>
+  <li><code class="highlighter-rouge">ls -ld /data/db</code> You should see something like <strong>root</strong></li>
+  <li><code class="highlighter-rouge">exit</code> Get out of root</li>
+  <li><code class="highlighter-rouge">whoami</code> You should see your computer’s username that you’re logged into.</li>
+  <li><code class="highlighter-rouge">./monngod</code> This starts the MongoDB server. Notice <strong>on port 27017</strong>.  That’s the default port, and will be more useful later when you connect the MongoDB Server through a driver.</li>
+  <li><code class="highlighter-rouge">control + t</code> or open a new tab (top menu=&gt;Shell=&gt;New Tab), and move into that tab for the next few commands.</li>
+  <li><code class="highlighter-rouge">pwd</code> You should still be in <strong>bin</strong>.  If you’re not, like if you’re using <strong>iTerm</strong>, move back into it with <code class="highlighter-rouge">~/Downloads/mongodb-osx-x86_64-3.2.6/bin</code></li>
+  <li><code class="highlighter-rouge">./mongo</code> This starts the Mongo shell.</li>
+  <li><code class="highlighter-rouge">db.names.insert({name: "Your name"})</code>.  All this does is write to the server.  Expect to see <code class="highlighter-rouge">WriteResult({ "nInserted" : 1 })</code>.</li>
+  <li><code class="highlighter-rouge">db.names.find()</code> You should see a json object with 2 fields: an _id field with an ObjectId, and a name field with the value you just typed.</li>
+  <li>Switch back to the tab that has the mongod server running</li>
+  <li><code class="highlighter-rouge">control c</code> This stops the server</li>
+  <li><code class="highlighter-rouge">sudo root</code> Become root again</li>
+  <li><code class="highlighter-rouge">cp * /user/local/bin</code> You’re copying the contents of the mongo bin directory to the <strong>/user/local/bin directory</strong>.</li>
+  <li><code class="highlighter-rouge">exit</code> exit root</li>
+  <li><code class="highlighter-rouge">which mongod</code> You should see <strong>/usr/local/bin/mongod</strong></li>
+  <li><code class="highlighter-rouge">cd</code> switch back to your home directory</li>
+  <li><code class="highlighter-rouge">mongod</code> You just started the mongod server from your home directory, which you’ll do from now on.</li>
+  <li>Switch into another tab. Run <code class="highlighter-rouge">control c</code> if you moved back to the tab where you had the mongo shell running before. <code class="highlighter-rouge">cd</code> so you move to home directory. <code class="highlighter-rouge">mongo</code>. You can start a mongo shell now.</li>
+</ol>
+
+<p>Conclusion: To use the mongo shell, open command line, run <code class="highlighter-rouge">mongod</code>, open another command line window, run <code class="highlighter-rouge">mongo</code>. You can do this from any directory</p>
+
+<h3 id="additional-feedback-based-off-of-setting-up-on-mac-with-iterm">Additional feedback based off of setting up on Mac with iTerm:</h3>
+<p>When I tried ths on iTerm, I got stuck on step 11.  My work computer is a little older than my personal mac (2011 vs. 2014), and is running OS X 10.11.5  <code class="highlighter-rouge">sudo root</code> wouldn’t work on my work computer.  This didn’t matter if it was on Terminal or iTerm.  I digged around a little bit: I enabled root user from this <a href="https://www.youtube.com/watch?v=qTtVhAEAs2Q">youtube video</a> but couldn’t figure out how to become root user, then I read into how El Capitan is ‘rootless’ from this blog post: <a href="http://apple.stackexchange.com/questions/193368/what-is-the-rootless-feature-in-el-capitan-really">http://apple.stackexchange.com/questions/193368/what-is-the-rootless-feature-in-el-capitan-really</a>, but then I found the solution that was a lot easier than going through the 31 steps above: <strong>Use homebrew</strong>.  Follow the steps on <a href="http://www.hacksparrow.com/how-to-install-mongodb-on-mac-os-x.html">this blog</a> for a much faster approach to getting going with mongo. Otherwise, no significant insites on using iTerm.  I just need to dig into the documentation and get it working as well as my personal set up on Terminal with <a href="https://github.com/robbyrussell/oh-my-zsh">oh my zsh</a>.</p>
+
+<h2 id="setting-up-for-pc-users">Setting up for PC Users</h2>
+<ol>
+  <li>Google <code class="highlighter-rouge">download mongo</code> just like for mac, select the same website.  The site detects if you’re on a Mac or PC, so locate the most recent stable release and download the 64 bit version.</li>
+  <li>Switch to explorer and open into Downloads.  Unzip the MongoDB file.</li>
+  <li>Create a new directory and move the mongodb file from Downloads into that file.</li>
+  <li><code class="highlighter-rouge">mkdir data</code></li>
+  <li><code class="highlighter-rouge">mkdir data/db</code></li>
+  <li>From the folder you moved the mongodb contents, you should be able to start the mongo server with <code class="highlighter-rouge">mongod</code> and in a separate bash window, run <code class="highlighter-rouge">mongo</code> to start the shell.  That’s it.  Test out the shell with a write and read.</li>
+</ol>
 
 
         <a class="btn--default" href="/recipe-for-starting-mongod">Read more</a>

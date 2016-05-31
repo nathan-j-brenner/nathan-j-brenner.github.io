@@ -5,36 +5,42 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 May 2016 10:03:16 -0700</pubDate>
-    <lastBuildDate>Tue, 31 May 2016 10:03:16 -0700</lastBuildDate>
+    <pubDate>Tue, 31 May 2016 10:09:45 -0700</pubDate>
+    <lastBuildDate>Tue, 31 May 2016 10:09:45 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
-        <title>Recipe for starting MongoD</title>
-        <description>&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
+        <title>Recipe For Starting Mongod</title>
+        <description>&lt;hr /&gt;
+&lt;p&gt;layout: post
+title: “Recipe for starting MongoD”
+date : 2016-05-08
+—&lt;/p&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;A couple posts ago, I made a ‘recipe’ for creating a typescript project with node.js.  I’ve actually used that a few times, and I’ve gotten some feedback from other devs that liked it, so this is another one.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;I’m a ta for a MongoDB University course with node.js that starts soon.  Part of that means I’ll be previewing the materials before the students have access so I can offer suggestions to the instructors, and the other part means I’ll be closely watching the forum so I can break blockers as they come up.  So I’m taking notes as I watch the video as an adjudictor to the course materials, to guess possible student questions, and to expand my understanding of MongoDB.&lt;/p&gt;
+    &lt;p&gt;I’m a ta for a MongoDB University course with node.js that starts soon.  Part of that means I’ll be previewing the materials before the students have access so I can offer suggestions to the instructors, and the other part means I’ll be closely watching the forum so I can break blockers as they come up.  So I’m taking notes as I watch the video as an adjudicator to the course materials, to guess possible student questions, and to expand my understanding of MongoDB.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;format&quot;&gt;Format&lt;/h2&gt;
-&lt;p&gt;The first few steps involve the browser, then they switch to a lot of bash commands in the terminal.  I’ve gotten MongoDB running on PCs, I’ve used Bash with some luck althrough I haven’t tried it on Windows 10 yet, and I’ve used Mac default Terminal (which I prefur), and iTerm.  I’m now using iTerm on my day job computer, and I haven’t tried that (maybe tomorrow, fingers crossed some fires stay out), so this post will get updated. &lt;/p&gt;
+&lt;p&gt;The first few steps involve the browser, then they switch to a lot of bash commands in the terminal.  I’ve gotten MongoDB running on PCs, I’ve used Bash with some luck although I haven’t tried it on Windows 10 yet, and I’ve used Mac default Terminal (which I prefer), and iTerm.  I’m now using iTerm on my day job computer, and I haven’t tried that (maybe tomorrow, fingers crossed some fires stay out), so this post will get updated.&lt;/p&gt;
 
 &lt;p&gt;Basically Bash command will be followed by brief explanation.  Bash commands are the code snippets, assume you have to type enter after you type in the command.  This isn’t a post for learning Bash.  Check out &lt;a href=&quot;http://nodeschool.io/&quot;&gt;learnyoubash at node school&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;steps-for-mac-users&quot;&gt;Steps for Mac users&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;google &lt;code class=&quot;highlighter-rouge&quot;&gt;download mongodb&lt;/code&gt;, click on second link to the &lt;span style=&quot;font-weight: 700&quot;&gt;MongoDB Download Center | MongoDB&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;google &lt;code class=&quot;highlighter-rouge&quot;&gt;download mongodb&lt;/code&gt;, click on the link near the top that says &lt;span style=&quot;font-weight: 700&quot;&gt;MongoDB Download Center | MongoDB&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;Scroll down, click on the green button that says &lt;strong&gt;DOWNLOAD (tzg)&lt;/strong&gt;.  This will download the Current Stable Release, which it says if you search the page for that text. As of the first draft of this post, it was 3.2.6.  This mongo/node course uses 3.2.x&lt;/li&gt;
   &lt;li&gt;Open up a command prompt.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/Downloads&lt;/code&gt; : Move into your Downloads directory&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls -lt&lt;/code&gt; List all the contents of the Downloads directory, look at what gets printed first.  It should say something like &lt;strong&gt;mongodb-osx-x86_64-3.2.6.tgz&lt;/strong&gt;.  It might be different depending on your mac, but it should definately end with &lt;strong&gt;.tgz&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tar xvf mongobd-osx-x86_64-3.2.6.tgz&lt;/code&gt; Hint: use code completion.  Type the first few letters of the tgz file and hit the tab key.  This is un-tarring the file.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd mongodb-osx-x86_64-3.2.6&lt;/code&gt; Move into the file you just expanded. Notice no tar ball extention.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls -lt&lt;/code&gt; List all the contents of the Downloads directory, look at what gets printed first.  It should say something like &lt;strong&gt;mongodb-osx-ssl-x86_64-3.2.6.tgz&lt;/strong&gt;.  It might be different depending on your mac, but it should definitely end with &lt;strong&gt;.tgz&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tar xvf mongobd-osx-ssl-x86_64-3.2.6.tgz&lt;/code&gt; Hint: use code completion.  Type the first few letters of the tgz file and hit the tab key.  This is un-tarring the file.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd mongodb-osx-x86_64-3.2.6&lt;/code&gt; Move into the file you just expanded. Notice no tar ball extension.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls&lt;/code&gt; List all the contents of that mongodb directory.  Notice the &lt;strong&gt;bin&lt;/strong&gt; directory.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd bin&lt;/code&gt; Move into the &lt;strong&gt;bin&lt;/strong&gt; directory.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ls -l&lt;/code&gt; List all the contents of the &lt;strong&gt;bin&lt;/strong&gt; directory. Notice &lt;strong&gt;mongo&lt;/strong&gt; and &lt;strong&gt;mongod&lt;/strong&gt;&lt;/li&gt;
@@ -65,12 +71,19 @@
 &lt;p&gt;Conclusion: To use the mongo shell, open command line, run &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt;, open another command line window, run &lt;code class=&quot;highlighter-rouge&quot;&gt;mongo&lt;/code&gt;. You can do this from any directory&lt;/p&gt;
 
 &lt;h3 id=&quot;additional-feedback-based-off-of-setting-up-on-mac-with-iterm&quot;&gt;Additional feedback based off of setting up on Mac with iTerm:&lt;/h3&gt;
-&lt;p&gt;Comming soon…&lt;/p&gt;
+&lt;p&gt;When I tried ths on iTerm, I got stuck on step 11.  My work computer is a little older than my personal mac (2011 vs. 2014), and is running OS X 10.11.5  &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo root&lt;/code&gt; wouldn’t work on my work computer.  This didn’t matter if it was on Terminal or iTerm.  I digged around a little bit: I enabled root user from this &lt;a href=&quot;https://www.youtube.com/watch?v=qTtVhAEAs2Q&quot;&gt;youtube video&lt;/a&gt; but couldn’t figure out how to become root user, then I read into how El Capitan is ‘rootless’ from this blog post: &lt;a href=&quot;http://apple.stackexchange.com/questions/193368/what-is-the-rootless-feature-in-el-capitan-really&quot;&gt;http://apple.stackexchange.com/questions/193368/what-is-the-rootless-feature-in-el-capitan-really&lt;/a&gt;, but then I found the solution that was a lot easier than going through the 31 steps above: &lt;strong&gt;Use homebrew&lt;/strong&gt;.  Follow the steps on &lt;a href=&quot;http://www.hacksparrow.com/how-to-install-mongodb-on-mac-os-x.html&quot;&gt;this blog&lt;/a&gt; for a much faster approach to getting going with mongo. Otherwise, no significant insites on using iTerm.  I just need to dig into the documentation and get it working as well as my personal set up on Terminal with &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;oh my zsh&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;setting-up-for-pc-users&quot;&gt;Setting up for PC Users&lt;/h2&gt;
-&lt;p&gt;Comming soon…&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Google &lt;code class=&quot;highlighter-rouge&quot;&gt;download mongo&lt;/code&gt; just like for mac, select the same website.  The site detects if you’re on a Mac or PC, so locate the most recent stable release and download the 64 bit version.&lt;/li&gt;
+  &lt;li&gt;Switch to explorer and open into Downloads.  Unzip the MongoDB file.&lt;/li&gt;
+  &lt;li&gt;Create a new directory and move the mongodb file from Downloads into that file.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir data&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir data/db&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;From the folder you moved the mongodb contents, you should be able to start the mongo server with &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt; and in a separate bash window, run &lt;code class=&quot;highlighter-rouge&quot;&gt;mongo&lt;/code&gt; to start the shell.  That’s it.  Test out the shell with a write and read.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
-        <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 16 May 2016 00:00:00 -0700</pubDate>
         <link>http://nathan-j-brenner.github.io//recipe-for-starting-mongod</link>
         <guid isPermaLink="true">http://nathan-j-brenner.github.io//recipe-for-starting-mongod</guid>
         
