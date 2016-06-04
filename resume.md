@@ -90,8 +90,7 @@ Professional Development
 	*	This is another site that I've found less engaging than Treehouse, but more involved.  With each tutorial, I end up coding in similar exercises over several times.
 
 *	[Node School](http://nodeschool.io/)
-	*	Completed tutorials: javascripting, git-it
-
+	*	Completed workshops: bug-clinic, count-to-6, elementary-electron, expressworks, git-it, how-to-markdown, how-to-npm, javascripting, learn-sass, learnyoubash, learnyoumongo, learnyounode, stream-adventure, test-anything
 *	MS Education
 	*	Portland State University
 	*	Portland, OR
