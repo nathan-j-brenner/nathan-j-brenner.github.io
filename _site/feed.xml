@@ -5,20 +5,41 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Jun 2016 11:26:20 -0700</pubDate>
-    <lastBuildDate>Sat, 04 Jun 2016 11:26:20 -0700</lastBuildDate>
+    <pubDate>Mon, 06 Jun 2016 11:25:14 -0700</pubDate>
+    <lastBuildDate>Mon, 06 Jun 2016 11:25:14 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
-        <title>Recipe For Starting Mongod</title>
-        <description>&lt;hr /&gt;
-&lt;p&gt;layout: post
-title: “Recipe for starting MongoD”
-date : 2016-05-08
-—&lt;/p&gt;
+        <title>Ready for another contract</title>
+        <description>&lt;p&gt;My contract was ended about a week ago, on good terms.  I was told they didn’t have enough work to keep me on any longer.  It’s not fun losing a steady paycheck, but I was going in everyday expecting it to happen.  There hadn’t been a lot of email development, and there has been a lot of other contractors that had left, so it was my turn. All in all, it was a really good experience.  It was my first, and certainly not last, gig at writing code everyday, all day, as a developer. I wasn’t doing anything exciting, but it was challenging and I honed in on writing html and css.  When I had some spare time, I was able to contribute to a spa and I ended up completely refactoring the application so I can add credit to my resume as far as app development goes.  I created a smaller version of the app that I’m pretty happy with.  It’s on my portfolio page, multipage-form, and it’s up on gitHub.&lt;/p&gt;
 
-&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
-&lt;ol&gt;
+&lt;p&gt;I’m feeling pretty optimistic that I’ll be able to find the next oppertunity without as much stuggle as I did before this contract. The first thing I did last week was contact all the recruiters that I knew and other connections that I had run into, and there’s a few leads out there.  It’d be great if I could be back on the clock in the next week, which is mostly to keep my wife happy.&lt;/p&gt;
+
+&lt;p&gt;This is what I’m looking for: I’m a developer, not a designer, not management, not quality assurance.  I love working with code, the chrome dev tools, and a text editor.  Front-end work that involves Angular or/and backend work that involves node.js. I can build ui layouts from photoshop files, like I did with html emails, or from wireframes with css compilers like Sass and frameworks like Twitter Bootstrap or Angular Material. I’d also welcome the oppertunity to build cross platform apps with Ionic, NativeScript, or Electron. I’d also probably be good with refactoring an Anglar 1.x app over to Angular 2 due to the experience I’ve had with both and TypeScript.  Work with mongoDB would be even better since my skills have greatly improved in that area recently. &lt;/p&gt;
+
+&lt;p&gt;Those are the areas that I can provide the greatest value to an employer. As far as culture, I’m not interested in working with a pc (I had one for the last 3 months.  They’re great in their own ways, but I like working from terminal and I like the touchpad). I’d like to work with a manager that will take the interest in getting to know me and not expect me to be a social butterfly off the bat, and I’ve worked for enough managers that aren’t professional.  I’m not interested in rocking any boats or asking for any degree of changes because I still have dues to pay. I’m fine with working as a contractor for the same reason, but I can’t wait to be a valued permanant member of a team. My wife’s work days don’t have a hard stop time, so I need to be able to pick up my son from daycare. I’m open to working from home and can be just as effective.  I’ve got an office with a window and a Thunderbolt display that can be a little hard to pull me away from.&lt;/p&gt;
+
+&lt;p&gt;I’m definately willing to streach beyond those core areas, and I’d expected to be compensated less and to be supported more.  I’d love it if it were in areas like Angular 2, TypeScript, automated unit testing and other forms of testing. I’m also looking at adding in a module loader like Webpack or JSPM at some point. I’d also welcome working with another mvc like React or Ember.  I’ve heard a lot of support about the Ember community, so that might be worth looking into more, and Portland really seems to be latching on with React over Angular.  I’d like to spend some time with Python or Ruby, but unless I’m getting paid I’m not likely to jump in like I have with Angular or node.js.  I’m less inclined to do CMS work, but I’m sure I’d be successful with it.  I worked with PHP on the angular form, I’ve studied it along with the WordPress Codex.  It feels like I see a lot of job posts looking for experience with Java and asp.net so I’d love it if I could pick up some skills in those areas.  &lt;/p&gt;
+
+&lt;p&gt;I’m also feeling a lot more confident.  I’ve proven that I can write code that can go into production. Html emails was a great stepping stone for that, and I had a great project manager that helped me find my footing so I’m more capable of speaking up for what I can do, what I can’t, when I need help, and what’s realistic in a timeframe. I’ve become comfortable with fixing bugs, refactoring existing code, using JIRA to communicate with other steakholders, and tracking versions even if I’m not expected to. I worked iteratively, and I didn’t push breaking changes. I maintained professional relationships with the people I worked for, and I couldn’t even say a negative thing about anyone that I worked with. &lt;/p&gt;
+
+&lt;p&gt;I was also persistent at pushing myself with professional development.  I found some time to work through some of the workshops on node school, so I feel a lot more confident about what I know and what I should study more.  Stream-adventure was great, and I need to run through it again. I also started looking at rest api’s, and I feel a lot closer to being able to add that layer to small projects with a cloud based database, like &lt;a href=&quot;https://mlab.com/&quot;&gt;mLab&lt;/a&gt; and to start using Mongoose more.  &lt;/p&gt;
+
+&lt;p&gt;I also got involved with the Mongo University program.  They brought me on as a ta to proof their lectures, and to answer student questions on the forum.  It’s a paid contract, and it’s not very time intensive, so with the gap in full time work has given me the time to study MongoDB a lot more, but I can also make a full time gig work with this thing. I also got a discount on the Mongo Developer Certification Exam, so I’m studying a lot for that right now and hope to add that to my resume soon. From answering student’s questions on the forum, it’s also clear that I can mentor less experienced developers, which I had done before as a instructor at Portland Code School.  I was also teaching one of my coworkers at CMD version control with git, and pointing her to resources on javascript with occational clarifications on some of the weird parts.&lt;/p&gt;
+
+&lt;p&gt;Home life is really good right now.  My wife lost her job a few weeks ago. The situation was a little similar: She had worked at that place for a couple years, and had outgrown the clinic.  It was a great first gig but she was relieved when she was let go because it forced her to open herself to new oppertunities, and she had an easy time finding another employer that recognized her talent.  It feels like we’ve hit a stide with balancing work/finances/family.  That looks different for everyone.  For us, we both like our work, and our work compensates us so that we really enjoy the time off work. Our son is now crawling, and we just put him on the back of my bike.  He’s got 4 teeth, and is starting to eat solids beyond pureed food.  It’s hard to believe he’s close to a year old.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 06 Jun 2016 00:00:00 -0700</pubDate>
+        <link>http://nathan-j-brenner.github.io//looking-for-next-contract</link>
+        <guid isPermaLink="true">http://nathan-j-brenner.github.io//looking-for-next-contract</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Recipe for starting MongoD</title>
+        <description>&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;A couple posts ago, I made a ‘recipe’ for creating a typescript project with node.js.  I’ve actually used that a few times, and I’ve gotten some feedback from other devs that liked it, so this is another one.&lt;/p&gt;
   &lt;/li&gt;
@@ -83,7 +104,7 @@ date : 2016-05-08
   &lt;li&gt;From the folder you moved the mongodb contents, you should be able to start the mongo server with &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt; and in a separate bash window, run &lt;code class=&quot;highlighter-rouge&quot;&gt;mongo&lt;/code&gt; to start the shell.  That’s it.  Test out the shell with a write and read.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Mon, 16 May 2016 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
         <link>http://nathan-j-brenner.github.io//recipe-for-starting-mongod</link>
         <guid isPermaLink="true">http://nathan-j-brenner.github.io//recipe-for-starting-mongod</guid>
         
@@ -455,37 +476,6 @@ On a side note, as I was coming to a stopping point with this project today also
         <pubDate>Mon, 21 Sep 2015 00:00:00 -0700</pubDate>
         <link>http://nathan-j-brenner.github.io//multidimentional-todo-list</link>
         <guid isPermaLink="true">http://nathan-j-brenner.github.io//multidimentional-todo-list</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Getting paid to write</title>
-        <description>&lt;p&gt;As I was driving to Portland this morning, there was an article on NPR about the Writer’s Guild of America.  If you author a book, should you get paid for it? Should you get paid enough that you can make a living off of your writing?  And who should publish your work: You or a company?&lt;/p&gt;
-
-&lt;p&gt;I can’t relate directly.  Indirectly, I understand how frustrating it can sometimes be when you have a project in mind but you’re limited on how much time you can put into that project due to seemingly silly external variables, like the cost of living.  If you can’t make a living off of the work, then maybe you’re investing your time in activity that can’t provide the basic necessities of life and you should reevaluate what you’re doing with the little bit of time you have.  &lt;/p&gt;
-
-&lt;p&gt;By doing something that you want to do may actually be a waste of your time.  Maybe it’s better to do something that you don’t want to do for a little while so that with the time left over you can do the things you like to do, like take on new projects or write another book.  &lt;/p&gt;
-
-&lt;p&gt;When I was growing up, I earned an allowance.  I think it was a dollar a week for which in turn I’d do chores around the house that I’d probably would have done anyway because I was too young to question my parents.  I didn’t have a need for that money; my parents gave me everything I needed.  The point was to gain a respect for my time so that at some point, I would be able to easily make the decision to trade my time for money at a rate that would let me spend the rest of my time how I choose.  &lt;/p&gt;
-
-&lt;p&gt;Ironically, as I idolized my father who is a public school teacher, I got the silly idea that my time wasn’t worth very much, so I followed that path of doing work that I was really passionate about.  Another bit of irony was how he was just telling me recently that if you pay people more, then they’ll be more motivated to do a good job.  If people can pay for the basic necessities, then their financial stress will hinder their job performance.&lt;/p&gt;
-
-&lt;p&gt;Bottom line, if you’re an artist and you want to be paid more, do work that is considered valueable.  If you’re a broke writer, teach kids how to read. That’s a terrible example, and there’s a lot of writers that turn to teaching and unfortunately, that’ll probably mean you need to learn the art of teaching, but there’s commonality.  That begs the question: Is art universal?  This depends on the definition of the word art, just like how writers define language.  It’s my perception that launguage requires a dynamic, and organized flow of communication between more than one party.&lt;/p&gt;
-
-&lt;p&gt;Better yet, if you’re a writer, I’d be you know a lot about communication so why not communicate to others through a different type of language such as html or even JavaScript?  The leap from writing novels to programs is quite a bit.  Programming isn’t something that’s easy to figure out, but there’s a deep rooted level of connection between every different form of art.&lt;/p&gt;
-
-&lt;p&gt;Enough of this vague ramble.  Lately, I’ve been working through the D3.js course on Treehouse, and it’s tough.  I can’t wait to finish it so I can dive into the documentation and start doing some more engaged form of learning, which is actually writing code.  &lt;/p&gt;
-
-&lt;p&gt;I’m at that point with Angular. I’m in the middle of another spa.  It’s called taskManager.  Imagine &lt;a href=&quot;https://trello.com/&quot;&gt;trello&lt;/a&gt;.  Your boss has a bunch of stuff that needs to get done, so he creates a list, and then he assigns those items to team members.  I didn’t intend to create a trello clone; I wanted to get better at creating programs with Angular so of course the code is probably messier than it needs to be.  I got the idea from &lt;a href=&quot;https://www.youtube.com/watch?v=TRrL5j3MIvo&quot;&gt;50 Angular examples&lt;/a&gt;.  I stopped midway to do some applicable coding and got sidetracked. &lt;a href=&quot;http://ionicframework.com/&quot;&gt;Firebase&lt;/a&gt; might get added on to give it a backend. I also added Angular into the &lt;a href=&quot;http://nathan-j-brenner.github.io/portfolio/&quot;&gt;portfolio&lt;/a&gt; page of this site.  It made it much easier to maintain, and I’ll probably add in some &lt;a href=&quot;https://angular-ui.github.io/&quot;&gt;AngularUI&lt;/a&gt; after I have a more solid grasp of Angular.&lt;/p&gt;
-
-&lt;p&gt;I’ve got another project underway that involves &lt;a href=&quot;http://ionicframework.com/&quot;&gt;Ionic&lt;/a&gt;. Ionic is a framework that lets you build native apps out of web based apps. So create the web based app with HTML, CSS, and JavaScript, specifically with Angular, and you Ionic will generate the native version so no need to learn Objective-C or Android.&lt;/p&gt;
-
-&lt;p&gt;I write for free and code for free willingly as means to promote a product.  That product’s ability to learn is more valueable than what that product already knows.  Coding for free is really just the vehicle to develop that product further. I’ve been paid to write, which for the web is hard because there’s always room for revision.  The easiest thing to do is stop when the money stops coming in.  I got into coding a year ago because I wanted to get paid more.  Right now that means starting with less than what I used to make.  I’m a little bit nervous for October 9th. Any coding for free projects will be cut back and I’ll take on the role to raise my son.  The goal is to get to the point where I can make enough money so that my wife can cut back more on her work. Minimum wage jobs don’t make that possible, and neither does artistic endevors like teaching, even if you have more education and training in that field than most of the people in the world.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 19 Sep 2015 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//writing-for-free</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//writing-for-free</guid>
         
         
       </item>
