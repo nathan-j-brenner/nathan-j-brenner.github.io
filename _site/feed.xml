@@ -5,9 +5,77 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathan-j-brenner.github.io//</link>
     <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Jun 2016 11:25:14 -0700</pubDate>
-    <lastBuildDate>Mon, 06 Jun 2016 11:25:14 -0700</lastBuildDate>
+    <pubDate>Fri, 24 Jun 2016 13:03:11 -0700</pubDate>
+    <lastBuildDate>Fri, 24 Jun 2016 13:03:11 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Webpacking Simple Angular 1 apps</title>
+        <description>&lt;p&gt;I’ve got a few front-end angular applications on my portfolio, and I’m ready to add on to them.  Originally, my portfolio was intended to show as a historical view point from where I started writing to where I was at the end of the Portland Code School Javascript Immersion program.  In the last year, I wanted to change that so there’s only a couple applications that bring out my strengths.  So that was just going to be some full-stack apps, but over time, it’s now involved angular 1.x written cleanly by John Papa’s styleguide, unit tests, webpack, and a backend with express and mongo.&lt;/p&gt;
+
+&lt;p&gt;I had been putting off looking at Webpack and unit tests for a while, and I’m ready to take what I’ve learned and apply them a few times over in some applications.  This is another recipe type blog that can show how to take an existing angular application and add in webpack.&lt;/p&gt;
+
+&lt;p&gt;I have a todo app with the following structure:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	node_modules
+	todo
+		todo.html
+		todo.controller.js
+	.gitignore
+	app.module.js
+	index.html
+	package.json
+	readme.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Index.html currently has a bunch of scripts in it (I didn’t bother with gulp on this case), and there’s a reference to &lt;code class=&quot;highlighter-rouge&quot;&gt;ui-view&lt;/code&gt; because I’m using angular ui-router.  There’s only one state, but this application was built the same way I would expect larger applications would be built.  That’s also why there’s a component type directory (todo) with it’s view and controller.  &lt;/p&gt;
+
+&lt;p&gt;Recipe:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;npm install webpack –save-dev –save-exact&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install -S angular&lt;/code&gt; along with any other dependancies&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I want to maintain the component type directory structure, so I’m not going to move the js files into a separate app directory.  &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Comment out the script dependencies in index.html&lt;/li&gt;
+  &lt;li&gt;add in: 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;html
+    &amp;lt;script src=&quot;/scripts/vendor.bundle.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script src=&quot;/scripts/app.bundle.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;touch webpack.config.js&lt;/code&gt; in root of the app
+    &lt;ol&gt;
+      &lt;li&gt;require webpack and path modules&lt;/li&gt;
+      &lt;li&gt;Set &lt;code class=&quot;highlighter-rouge&quot;&gt;var config&lt;/code&gt; to an empty object&lt;/li&gt;
+      &lt;li&gt;set &lt;code class=&quot;highlighter-rouge&quot;&gt;config.entry&lt;/code&gt; with two properties: app and vendor.  App should be set to the path to &lt;code class=&quot;highlighter-rouge&quot;&gt;app.module.js&lt;/code&gt;, and vendor should list all of your vendor dependancies, which you installed from npm (in this case, angular, angular-ui-router, angular-animate, ui-boostrap, angular-touch)&lt;/li&gt;
+      &lt;li&gt;Set &lt;code class=&quot;highlighter-rouge&quot;&gt;config.output&lt;/code&gt; to property path to &lt;code class=&quot;highlighter-rouge&quot;&gt;__dirname + /scripts&lt;/code&gt; and property filename to &lt;code class=&quot;highlighter-rouge&quot;&gt;app.bundle.js&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Add in this plugin:
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;
+ plugins: [
+ 	new webpack.optimize.CommonsChunkPlugin(/* chunkName= */&quot;vendor&quot;, /* filename= */&quot;vendor.bundle.js&quot;)
+ 	]
+&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Then set &lt;code class=&quot;highlighter-rouge&quot;&gt;module.exports = config&lt;/code&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;in app.module.js, require angular and the rest of the dependancies (you’ll need to do this with angular for all the app modules)&lt;/li&gt;
+  &lt;li&gt;In app.module.js, require all of the modules (controllers, directives, services)&lt;/li&gt;
+  &lt;li&gt;type &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt; in the terminal (webpack has to be installed globally with npm)&lt;/li&gt;
+  &lt;li&gt;Run webpack in terminal&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This will get you started, and there’s a lot more to webpack than this.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 06 Jun 2016 00:00:00 -0700</pubDate>
+        <link>http://nathan-j-brenner.github.io//webpacking-ng-apps</link>
+        <guid isPermaLink="true">http://nathan-j-brenner.github.io//webpacking-ng-apps</guid>
+        
+        
+      </item>
     
       <item>
         <title>Ready for another contract</title>
@@ -448,34 +516,6 @@ npm install -g tsd  &lt;/p&gt;
         <pubDate>Sat, 26 Sep 2015 00:00:00 -0700</pubDate>
         <link>http://nathan-j-brenner.github.io//broadening-horizons</link>
         <guid isPermaLink="true">http://nathan-j-brenner.github.io//broadening-horizons</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Multi-dimentional Todo List part 1</title>
-        <description>&lt;p&gt;When starting with an unfamiliar mvc, an example of creating a todo list seems to be fairly common way to see what is so different from that framework.  My calendarApp is basically just that with backbone, and lately I’ve been working on an Angular version.&lt;/p&gt;
-
-&lt;p&gt;If you take a look at either of those, or on my portfolio in general, you’ll probably come to the conclusions that I’m not that flashy on the front-end.  My projects typically don’t show off my ability to use great fonts or amazing css layouts. I like writting css and sass, but the idea of how to make something look great eludes me.  If someone came up to me and gave me a wireframe, then I’d be all over interpreting their idea into the browser as closely as possible.  But even more interesting, when I get an idea for an app, I become absorbed into the functionality of it and you can let me loose and I’ll iterate over and over to create functioning code.&lt;/p&gt;
-
-&lt;p&gt;The taskManager app had the following iterations: Basic todo app, objects in a todo app, integrating the first iteration into the second, debugging and revising the ui, then integrating the backend.&lt;/p&gt;
-
-&lt;p&gt;##Basic Angular todo App
-On a side note, as I was coming to a stopping point with this project today also happens to be the first day the current Portland Code School JavaScript Immersion course is working with their first mvc, which again is backbone.&lt;/p&gt;
-
-&lt;p&gt;About a week ago, I started watching &lt;a href=&quot;https://www.youtube.com/watch?v=TRrL5j3MIvo&quot;&gt;Angular.js in 50 examples&lt;/a&gt;. From the beginning, it looked like a poor video recording of a meetup, but I really liked how Curran Kelleher presented his incredibly well documented &lt;a href=&quot;http://curran.github.io/screencasts/introToAngular/exampleViewer/#/&quot;&gt;gitHub repo&lt;/a&gt;.  I also really liked how he starts with basic javaScript and moves through the history of adding in jQuery, then Backbone, and finally Angular.  He made the case that with each of those iterations, javaScript was becoming more powerful by becoming easier to write.  Case in point, I’ve been reading JavaScript: The Good Parts lately.  Most of the time, I feel like I’m actively writing in Angular or Node, but there’s not a whole lot of the book that’s surprising or new.  To write in some of these more recent frameworks requires a depth of understanding of core javascript, which makes me about as excited as nervous with the advent of Angular 2.0 and ES6.&lt;/p&gt;
-
-&lt;p&gt;By the time I got to Example 15, I gave in and started coding as a departure from the video.  By this point, the directives ng-app and ng-controller are written into the index.html.  Ng-app is typically written in the html tag, and the controller can be written in the div where you want the model to have access to the view.  I haven’t written a project yet where I’ve needed more than one model, so the ng-app and ng-controller directives can be in the same html tag.  In the head, I have the Angular cdn downloading into the page, and just before the closing body tag, I have app.js and the mainCtrl.js loading into the page. The only other tags in the page is form tag with the directive ng-submit, which has the value to add a task (a method written into the controller). Within that form are two input tags: The first is to take text and has an ng-model as an attribute.  The second has a &lt;code class=&quot;highlighter-rouge&quot;&gt;type=&quot;submit&quot;&lt;/code&gt;.  When the submit input tag is clicked, the form fires the &lt;code class=&quot;highlighter-rouge&quot;&gt;addTask()&lt;/code&gt; method within the $scope. Directly below this tag is an unordered list, with a single list element that has the ng-repeat directive to loop through the ‘task in tasks’.  When the user clicks on the submit input, the task that the user typed into the other input tag is pushed into the $scope.tasks array, and the user sees that new task moved from the input into the unordered list with a bullet point.&lt;/p&gt;
-
-&lt;p&gt;Also within the ng-repeat are input tags to edit and delete the tasks.  I picked up the function syntax for these methods from the youtube video.  They’re not my favorite, as I’ve seen these functions in different ways, but I went with it for today.  The edit method is an extension of the delete method.  When the delete method is applied, due to an ng-click event, that element (due to the way Angular handles data binding) is spliced from the array that is lives in, so it doesn’t appear in the ng-repeat element. The difference with edit is that the element is set to the ng-model of the input tag where it originally came from, so when the user clicks on the create task with the edited task, the task is again appended to the $scope.tasks array, so it appears in the view under the ng-repeat directive.&lt;/p&gt;
-
-&lt;p&gt;BWT, it’d probably make a lot of sense by now if you could see snippets of the code.  Instead, you can if you visit the portfolio page and find this app.  Person.html and public/js/controllers/personCtrl.js has the code I’m referencing.&lt;/p&gt;
-
-&lt;p&gt;Like I mentioned earlier, this is where I started itching to move beyond the videos.  Stay tuned for the next iteration.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 21 Sep 2015 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//multidimentional-todo-list</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//multidimentional-todo-list</guid>
         
         
       </item>
