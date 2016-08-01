@@ -86,25 +86,25 @@
   <article class="post-content">
     <p>Using <code class="highlighter-rouge">$scope</code> brings on some issues, which is evident as it’s been taken out of Angular2.  With your existing Angular 1.x apps, one of the ways you can refactor is to strip out all instances of <code class="highlighter-rouge">$scope</code>.</p>
 
-<p>There’s three steps you need to take for this to work:  </p>
+<p>There’s three steps you need to take for this to work:</p>
 
 <h4 id="first">First</h4>
 
-<p>Change the declarations of your controllers from the name they have to <code class="highlighter-rouge">vm</code>.  VM represents view-model, and is a convention that’s a part of the John Papa Angular styleguide.  </p>
+<p>Change the declarations of your controllers from the name they have to <code class="highlighter-rouge">vm</code>.  VM represents view-model, and is a convention that’s a part of the John Papa Angular styleguide.</p>
 
-<p>For example, within an app, where you have a controller such as  </p>
+<p>For example, within an app, where you have a controller such as</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>&lt;div ng-controller="mainController"&gt;&lt;/div&gt;
 </code></pre>
 </div>
 
-<p>change it to </p>
+<p>change it to</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>&lt;div ng-controller="mainController as vm"&gt;&lt;/div&gt;`
 </code></pre>
 </div>
 
-<p>If you declared your routing, such as with the <code class="highlighter-rouge">angular-ui-router</code>, you might have  </p>
+<p>If you declared your routing, such as with the <code class="highlighter-rouge">angular-ui-router</code>, you might have</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$routeProvider.state( "main", {
 	url: "/main",
@@ -114,17 +114,17 @@
 </code></pre>
 </div>
 
-<p>Change the last line to <code class="highlighter-rouge">controller: mainController as vm</code>.  </p>
+<p>Change the last line to <code class="highlighter-rouge">controller: mainController as vm</code>.</p>
 
 <h4 id="second">Second</h4>
 
-<p>Within your views, every time you have a property, such as  </p>
+<p>Within your views, every time you have a property, such as</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>ng-model = "name" 
 </code></pre>
 </div>
 
-<p>reference the property as part of vm, which in this case would look like </p>
+<p>reference the property as part of vm, which in this case would look like</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>ng-model= "vm.name"
 </code></pre>
@@ -132,9 +132,9 @@
 
 <h4 id="third">Third</h4>
 
-<p>Within the controller, declare <code class="highlighter-rouge">vm</code> as a variable set to <code class="highlighter-rouge">this</code>, then replace <code class="highlighter-rouge">vm</code> everywhere you have <code class="highlighter-rouge">$scope</code>.  </p>
+<p>Within the controller, declare <code class="highlighter-rouge">vm</code> as a variable set to <code class="highlighter-rouge">this</code>, then replace <code class="highlighter-rouge">vm</code> everywhere you have <code class="highlighter-rouge">$scope</code>.</p>
 
-<p>For example, given this:  </p>
+<p>For example, given this:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>angular.module('app').controller('MainController', MainController);
 
