@@ -8,12 +8,12 @@ Professional Profile
 
 Looking for work as a front end or full stack JavaScript developer for web and or hybrid applications, on salary or contract status, remotely or near the Portland, Oregon area.
 
-*	Front-end: html5, css3, sass, gulp.js, backbone.js, angular.js, typescript, es6, bootstrap, foundation, mobile first/responsive web design, jQuery, underscrore.js, responsive email design, photoshop
-*	server: node.js, express.js, hapi.js, jade, json, mongoose, body-parser, command-line-args, lite-server
+*	Front-end: html5, css3, sass, gulp.js, backbone.js, Angular 1, Angular 2, ngrx, typescript, es6, bootstrap 3 and 4, foundation, mobile first/responsive web design, jQuery, underscrore.js, responsive email design, photoshop
+*	server: node.js, express.js, hapi.js, jade, json, mongoose, body-parser, command-line-args, lite-server, python 2 and 3, Django
 *	database: postgresql, sequelize.js, knex.js, mongoDB, orchestrate.io, third-party api’s
 *	collaboration: git/gitHub, harvest, slack, basecamp, trello, asana, Jira
-*	qa: mocha.js, chai.js, jasmine, karma, litmus
-*   mobile development: ionic
+*	qa: mocha.js, chai.js, jasmine, karma, litmus, CircleCI
+* mobile development: Ionic 1
 
 <a href="resume2015.pdf" class="btn btn-success active" role="button">Download the PDF</a>
 
@@ -23,10 +23,10 @@ Looking for work as a front end or full stack JavaScript developer for web and o
 
 
 ### July 2016 to current
-Full stack web developer, [Mercenary Tech](http://www.mercenarytech.com/), Portland, OR
+Full stack web developer, [Mercenary Tech](http://www.mercenarytech.com/), 220 NW 8Th Ave, Portland, OR 97209
 
-*	As a consultant as part of a remote team, I work with small to mid-size companies to help built their apps
-*	Experience with Angular 1, grunt, Docker, sass, Bootstrap, Python, Django, Postgresql, git/gitHub, Slack
+* October - December: Responsible for the front-end development of [Starphyre](http://starphyre.mercenarytech.com/). I build this app with angular 2, Typescript, the angular cli, webpack, ngrx, Bootstrap 4, ng-bootstrap.  I coordinated the timeline on building all of the features for each week based off of the request from the client.  That involved creating gitHub issues to work from, coordinating with the developer that was responsible for the api (written in Python) on which endpoints I needed and what the data models would need to look like.  I sent a weekly status report to the client, and demoed the application 2 weeks before the mvp deadline.  I also completed the mvp on time. Roughly 32k lines of code, 65 components, 12 services, 22 services.
+*	July - September: [Azure Standard](https://www.azurestandard.com/) Angular 1, grunt, Docker, sass, Bootstrap, Python, Django, Postgresql, git/gitHub, Slack, VirtualBox. This site had been worked on for roughly the last 3 years, and was being deployed in August.
 
 ### May 2016 - June 2016
 TA, contractor, [MongoDB for M101JS: MongoDB for Node.js Developers](https://university.mongodb.com/)
