@@ -12,7 +12,7 @@ Looking for work as a front end or full stack JavaScript developer for web and o
 *	server: node.js, express.js, hapi.js, jade, json, mongoose, body-parser, command-line-args, lite-server, python 2 and 3, Django
 *	database: postgresql, sequelize.js, knex.js, mongoDB, orchestrate.io, third-party api’s
 *	collaboration: git/gitHub, harvest, slack, basecamp, trello, asana, Jira
-*	qa: mocha.js, chai.js, jasmine, karma, litmus, CircleCI
+*	tdd/bdd: mocha.js, chai.js, jasmine, karma, litmus, CircleCI
 * mobile development: Ionic 1
 
 <a href="resume2015.pdf" class="btn btn-success active" role="button">Download the PDF</a>
@@ -22,25 +22,32 @@ Looking for work as a front end or full stack JavaScript developer for web and o
 ## Work History
 
 
-### July 2016 to current
+### July 2016 to December 2016
 Full stack web developer, [Mercenary Tech](http://www.mercenarytech.com/), 220 NW 8Th Ave, Portland, OR 97209
 
-* October - December: Responsible for the front-end development of [Starphyre](http://starphyre.mercenarytech.com/). I build this app with angular 2, Typescript, the angular cli, webpack, ngrx, Bootstrap 4, ng-bootstrap.  I coordinated the timeline on building all of the features for each week based off of the request from the client.  That involved creating gitHub issues to work from, coordinating with the developer that was responsible for the api (written in Python) on which endpoints I needed and what the data models would need to look like.  I sent a weekly status report to the client, and demoed the application 2 weeks before the mvp deadline.  I also completed the mvp on time. Roughly 32k lines of code, 65 components, 12 services, 22 services.
+*	December: Full stack development on PrintingPress, an internal app that would serve as a small content management system.  I took the lessons learned from Starphyre, and built the front-end with Angular 2, webpack, Angular Material, NGRX. I refactored the existing api as needed (Python, Tornado, Postgres)
+
+*	October - December: Responsible for the front-end development of [Starphyre](http://starphyre.mercenarytech.com/). I build this app with angular 2, Typescript, the angular cli, webpack, ngrx, Bootstrap 4, ng-bootstrap.  I coordinated the timeline on building all of the features for each week based off of the request from the client.  That involved creating gitHub issues to work from, coordinating with the developer that was responsible for the api (written in Python) on which endpoints I needed and what the data models would need to look like.  I sent a weekly status report to the client, and demoed the application 2 weeks before the mvp deadline.  I also completed the mvp on time. Roughly 32k lines of code, 65 components, 12 services, 22 services.
+
 *	July - September: [Azure Standard](https://www.azurestandard.com/) Angular 1, grunt, Docker, sass, Bootstrap, Python, Django, Postgresql, git/gitHub, Slack, VirtualBox. This site had been worked on for roughly the last 3 years, and was being deployed in August.
 
 ### May 2016 - June 2016
 TA, contractor, [MongoDB for M101JS: MongoDB for Node.js Developers](https://university.mongodb.com/)
-
 *	I provide teaching assistance for this online course by answering student questions in the forum, proof lectures, quizzes, homework and exam materials for errors. 
 
 ### February 2nd, 2016 - May 27th, 2016
 Web Developer, [CMD Agency](http://www.cmdagency.com/), Portland, OR
 
 *	I wrote responsive HTML emails for a variety of clients while collaborating with QA, designers, producers, and technical directors
+
 *	I refactored an internal form that is used to create Jira epics for the email development team.  The form was built with Angular 1.4.x and php, and prior to my involvement used a lot of jQuery, vanilla type validation, 1 controller per 5 views, 0 services, $scope, and angular ui-router.  My contributions included: A service for handling the data, a controller per view, controller as vm, angular form validation, and some angular ui-bootstrap directives in place of jQuery. 
+
 *	I initiated buiding a ui library of html/css of common components to html emails as a way to improve consistent code quality and reduce time to production.
+
 *	I was hired on as a contractor through Aquent/Vitamin T and my contract was ended under good terms due to lack of work coming in for the email development team.
+
 *	HTML, CSS, Javascript, Angular, Jira, Jira REST Api, Photoshop, litmus
+
 *	I was a contractor through [Aquent](https://aquent.com/)
 
 ### October 2015 - February 2016
