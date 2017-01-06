@@ -15,7 +15,7 @@ Looking for work as a front end or full stack JavaScript developer for web and o
 *	tdd/bdd: mocha.js, chai.js, jasmine, karma, litmus, CircleCI
 * mobile development: Ionic 1
 
-<a href="resume2015.pdf" class="btn btn-success active" role="button">Download the PDF</a>
+<a href="resume.pdf" class="btn btn-success active" role="button">Download the PDF</a>
 
 ***
 
