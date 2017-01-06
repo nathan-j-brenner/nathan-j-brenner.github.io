@@ -3,10 +3,10 @@
   <channel>
     <title>Nathan Brenner</title>
     <description>A sample of my work and thoughts</description>
-    <link>http://nathan-j-brenner.github.io//</link>
-    <atom:link href="http://nathan-j-brenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 06 Jan 2017 11:24:51 -0800</pubDate>
-    <lastBuildDate>Fri, 06 Jan 2017 11:24:51 -0800</lastBuildDate>
+    <link>http://nathanBrenner.github.io//</link>
+    <atom:link href="http://nathanBrenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 06 Jan 2017 11:39:12 -0800</pubDate>
+    <lastBuildDate>Fri, 06 Jan 2017 11:39:12 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -106,8 +106,8 @@
 &lt;p&gt;Oh and I need to revampt this site.  I’ve been thinking about going with something as easy as a wordpress theme that looks more thought-out and just show off a couple projects, like secretSanta.  Not sure if I’ll keep the blogging. So I did the remote thing for 6 months, and the crazy paced startup for the last few months.  Lets see me with a coorporate gig that’s consistent and maybe even some people I don’t like but make it work for a good solid long time…like it would be great to have a job for a solid 12 months.  With all I learned in 2016, from writing es5, es6, python, php, lots of css and some sass, where will I be for 2018?&lt;/p&gt;
 </description>
         <pubDate>Sun, 25 Dec 2016 00:00:00 -0800</pubDate>
-        <link>http://nathan-j-brenner.github.io//2016-retrospective</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//2016-retrospective</guid>
+        <link>http://nathanBrenner.github.io//2016-retrospective</link>
+        <guid isPermaLink="true">http://nathanBrenner.github.io//2016-retrospective</guid>
         
         
       </item>
@@ -174,8 +174,8 @@
 &lt;p&gt;This will get you started, and there’s a lot more to webpack than this.&lt;/p&gt;
 </description>
         <pubDate>Mon, 06 Jun 2016 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//webpacking-ng-apps</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//webpacking-ng-apps</guid>
+        <link>http://nathanBrenner.github.io//webpacking-ng-apps</link>
+        <guid isPermaLink="true">http://nathanBrenner.github.io//webpacking-ng-apps</guid>
         
         
       </item>
@@ -214,8 +214,8 @@
 
 </description>
         <pubDate>Mon, 06 Jun 2016 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//looking-for-next-contract</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//looking-for-next-contract</guid>
+        <link>http://nathanBrenner.github.io//looking-for-next-contract</link>
+        <guid isPermaLink="true">http://nathanBrenner.github.io//looking-for-next-contract</guid>
         
         
       </item>
@@ -288,8 +288,8 @@
 &lt;/ol&gt;
 </description>
         <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//recipe-for-starting-mongod</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//recipe-for-starting-mongod</guid>
+        <link>http://nathanBrenner.github.io//recipe-for-starting-mongod</link>
+        <guid isPermaLink="true">http://nathanBrenner.github.io//recipe-for-starting-mongod</guid>
         
         
       </item>
@@ -327,8 +327,8 @@
 &lt;p&gt;All in all, this was a project I created so I could create more form-apps in the future without reinventing the wheel.  Using paper forms, like at the dmv or doctor’s offices, or at restraunts drives me nuts.  I’d love to walk down the street frommy house to the small-business sushi restraunt and offer them something like this so I can order sushi easier, and maybe they can see a roi.&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//multipage-form</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//multipage-form</guid>
+        <link>http://nathanBrenner.github.io//multipage-form</link>
+        <guid isPermaLink="true">http://nathanBrenner.github.io//multipage-form</guid>
         
         
       </item>
@@ -417,8 +417,8 @@ function MainController() {
 Also, if you’re learning angular 1, interested in learning angular2 and trying to see the connective glue between ng1 and ng2, or have some existing apps and you’re trying to find work but you keep getting told you’re code isn’t good enough, try refactoring some of it to these conventions: &lt;a href=&quot;https://github.com/johnpapa/angular-styleguide&quot;&gt;https://github.com/johnpapa/angular-styleguide&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//$scope-to-vm</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//$scope-to-vm</guid>
+        <link>http://nathanBrenner.github.io//$scope-to-vm</link>
+        <guid isPermaLink="true">http://nathanBrenner.github.io//$scope-to-vm</guid>
         
         
       </item>
@@ -523,8 +523,8 @@ npm install -g tsd&lt;/p&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Sun, 17 Apr 2016 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//TS_expressworks</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//TS_expressworks</guid>
+        <link>http://nathanBrenner.github.io//TS_expressworks</link>
+        <guid isPermaLink="true">http://nathanBrenner.github.io//TS_expressworks</guid>
         
         
       </item>
@@ -564,8 +564,8 @@ npm install -g tsd&lt;/p&gt;
 &lt;p&gt;I got a lot out of this free course, and I would probably pay for it since it had the feedback.  If you want to take some time, I’d definately check it out.  They have courses specific to other languages as well.&lt;/p&gt;
 </description>
         <pubDate>Mon, 30 Nov 2015 00:00:00 -0800</pubDate>
-        <link>http://nathan-j-brenner.github.io//m101JS</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//m101JS</guid>
+        <link>http://nathanBrenner.github.io//m101JS</link>
+        <guid isPermaLink="true">http://nathanBrenner.github.io//m101JS</guid>
         
         
       </item>
@@ -585,8 +585,8 @@ npm install -g tsd&lt;/p&gt;
 &lt;p&gt;The mobile app is a project another developer included me into.  It uses the ionic framework, which empowers angular web developers to create mobile apps without writing any ios or android native code.  This project is also great because it’s forcing me to start looking at and writing in TypeScript with the new es6 syntax, and I’m able to see how Angular is currently being written by a more experienced web developer.&lt;/p&gt;
 </description>
         <pubDate>Mon, 12 Oct 2015 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//why-coding</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//why-coding</guid>
+        <link>http://nathanBrenner.github.io//why-coding</link>
+        <guid isPermaLink="true">http://nathanBrenner.github.io//why-coding</guid>
         
         
       </item>
@@ -612,8 +612,8 @@ npm install -g tsd&lt;/p&gt;
 &lt;p&gt;As I gain experience with wordpress, I’m looking for a place where I could apply what I’ve learned.  Before my son was born, I played with the idea of creating a jekyll site for him that my wife and I could use to communicate with our family and friends, instead of depending on facebook so much.  Maybe instead, I’ll create a wordpress site.  I’m not sure if I’d go as far as creating a custom theme, but I guess if I did, I’d try to make it reflect our lives in the Pacific Northwest.&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 Sep 2015 00:00:00 -0700</pubDate>
-        <link>http://nathan-j-brenner.github.io//wordpress-in-a-day</link>
-        <guid isPermaLink="true">http://nathan-j-brenner.github.io//wordpress-in-a-day</guid>
+        <link>http://nathanBrenner.github.io//wordpress-in-a-day</link>
+        <guid isPermaLink="true">http://nathanBrenner.github.io//wordpress-in-a-day</guid>
         
         
       </item>
