@@ -5,15 +5,15 @@
     <description>A sample of my work and thoughts</description>
     <link>http://nathanBrenner.github.io//</link>
     <atom:link href="http://nathanBrenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Jan 2017 14:35:35 -0800</pubDate>
-    <lastBuildDate>Sat, 21 Jan 2017 14:35:35 -0800</lastBuildDate>
+    <pubDate>Sun, 22 Jan 2017 16:40:33 -0800</pubDate>
+    <lastBuildDate>Sun, 22 Jan 2017 16:40:33 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>Welcome to reactive angular programming</title>
         <description>&lt;p&gt;Ngrx is a library that provides angular 2 developers to build reactive applications.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/nathanBrenner/ngrxDemo&quot;&gt;code for this tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/nathanBrenner/ngrxDemo2&quot;&gt;code for this tutorial&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/SecretSantaNg2Python/secretSanta-api&quot;&gt;rest api&lt;/a&gt; that I used to demo this tutorial.&lt;/p&gt;
 
@@ -37,31 +37,46 @@ Secret Santa but for now it’s a demo and reusable code for the first thing you
 - share it between services?
 - NGRX is a solution to this problem
 What is state?
-- the data in your application, or in your ocmponents&lt;/p&gt;
+- the data in your application, or in your components&lt;/p&gt;
 
 &lt;h4 id=&quot;what&quot;&gt;What?&lt;/h4&gt;
 &lt;p&gt;This is not your classic angular
 Flux =&amp;gt; Redux =&amp;gt; NGRX (redux with rxjs)
-NGRX is a library with sections like 
-1. Store to manage state, 
-2. Effects to handle side effects (like making http requests)
-3. Store-devtools: able to see what is the current state of the app&lt;/p&gt;
+NGRX is a library with sections like&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Store to manage state,&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Effects to handle side effects (like making http requests)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Store-devtools: able to see what is the current state of the app&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;angular-1-pattern&quot;&gt;Angular 1 pattern:&lt;/h4&gt;
-&lt;p&gt;Write the view first, business logic second
-1. Write your static view, 
-2. Bind your controller to your view
-3. Write your service
-3. User events toggle methods on services&lt;/p&gt;
+&lt;p&gt;Write the view first, business logic second&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Write your static view,&lt;/li&gt;
+  &lt;li&gt;Bind your controller to your view&lt;/li&gt;
+  &lt;li&gt;Write your service&lt;/li&gt;
+  &lt;li&gt;User events toggle methods on services&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;ngrx-pattern&quot;&gt;Ngrx pattern:&lt;/h4&gt;
-&lt;p&gt;Write the business logic first, then your views and components
-1. Write your models
-2. Write your events
-3. Write your reducers that select on events
-4. Write your services for your events
-5. Write your effects
-6. Build your dumb and smart componnts&lt;/p&gt;
+&lt;p&gt;Write the business logic first, then your views and components&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Write your models&lt;/li&gt;
+  &lt;li&gt;Write your events&lt;/li&gt;
+  &lt;li&gt;Write your reducers that select on events&lt;/li&gt;
+  &lt;li&gt;Write your services for your events&lt;/li&gt;
+  &lt;li&gt;Write your effects&lt;/li&gt;
+  &lt;li&gt;Build your dumb and smart componnts&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;smart-vs-dumb-components&quot;&gt;Smart vs dumb components&lt;/h4&gt;
 &lt;p&gt;Container vs child
@@ -77,13 +92,18 @@ NGRX abstrats a lot of that heavy lifting of rxjs for you.&lt;/p&gt;
 
 &lt;h6 id=&quot;ng-new-ngrxdemo-create-a-new-angular-cli-project&quot;&gt;1. &lt;code class=&quot;highlighter-rouge&quot;&gt;ng new ngrxDemo&lt;/code&gt;: Create a new angular cli project.&lt;/h6&gt;
 
-&lt;h6 id=&quot;npm-i--s-ngrxcore-ngrxstore-ngrxstore-devtools-ngrxeffects-install-dependancies-for-ngrx&quot;&gt;2. &lt;code class=&quot;highlighter-rouge&quot;&gt;npm i -S @ngrx/core @ngrx/store @ngrx/store-devtools @ngrx/effects&lt;/code&gt;: Install dependancies for ngrx&lt;/h6&gt;
+&lt;h6 id=&quot;install-dependancies-for-ngrx&quot;&gt;2. Install dependancies for ngrx&lt;/h6&gt;
 
-&lt;h6 id=&quot;in-appmodulets-at-the-top&quot;&gt;3. In &lt;code class=&quot;highlighter-rouge&quot;&gt;app.module.ts&lt;/code&gt; at the top:&lt;/h6&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i -S @ngrx/core @ngrx/store @ngrx/store-devtools @ngrx/effects @angular/material
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;app.module.ts&lt;/code&gt; at the top:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { StoreDevtoolsModule } from &#39;@ngrx/store-devtools&#39;;
 import { StoreModule } from &#39;@ngrx/store&#39;;
 import { EffectsModule } from &#39;@ngrx/effects&#39;;
+import { MaterialModule } from &#39;@angular/material&#39;;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -92,7 +112,14 @@ import { EffectsModule } from &#39;@ngrx/effects&#39;;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;imports: [
 	...
 	StoreDevtoolsModule.instrumentOnlyWithExtension(),
+	MaterialModule.forRoot()
 ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and I’ll want the default theme for angular material, so in &lt;code class=&quot;highlighter-rouge&quot;&gt;styles.css&lt;/code&gt;, I’ll add&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@import &#39;~@angular/material/core/theming/prebuilt/purple-green.css&#39;&#39;;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -103,15 +130,16 @@ import { EffectsModule } from &#39;@ngrx/effects&#39;;
 	- The State panel is what I use the most, but this has a lot of additional functionality
 	- Right now, it’ll just show &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h6 id=&quot;create-the-shared-directory-and-in-that-directory-create-dirs-for-effects-models-reducers-and-services&quot;&gt;4. Create the shared directory, and in that directory, create dirs for effects, models, reducers, and services.&lt;/h6&gt;
+&lt;h6 id=&quot;create-the-shared-directory-and-in-that-directory-create-dirs-for-effects-models-reducers-and-services&quot;&gt;3. Create the shared directory, and in that directory, create dirs for effects, models, reducers, and services.&lt;/h6&gt;
 
 &lt;ul&gt;
   &lt;li&gt;In effects: &lt;code class=&quot;highlighter-rouge&quot;&gt;touch session.effects.ts&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;In models: &lt;code class=&quot;highlighter-rouge&quot;&gt;touch user.interface.ts&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;touch session.interface.ts&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;In reducers: &lt;code class=&quot;highlighter-rouge&quot;&gt;touch session.reducer.ts&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;In services: &lt;code class=&quot;highlighter-rouge&quot;&gt;ng g s session&lt;/code&gt;, then move the spec and service into the services dir, and add it as a provider to the module.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h6 id=&quot;next-draft-the-user-interface&quot;&gt;5. Next draft the user interface:&lt;/h6&gt;
+&lt;h6 id=&quot;next-draft-the-user-and-session-interfaces&quot;&gt;4. Next draft the user and session interfaces:&lt;/h6&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export interface User {
 	email?: string;
@@ -135,9 +163,7 @@ export interface Session {
 
 &lt;p&gt;Token is for authentication, and all the properties on the User interface are optional so they don’t have to have a default property.  These data structures mirror the api models. I’ve found building these interfaces helps with the type safety that typescript provides.&lt;/p&gt;
 
-&lt;h6 id=&quot;create-the-sessionservice-with-ng-g-s-session-and-move-the-service-file-and-servicespec-file-into-the-services-dir&quot;&gt;6. Create the &lt;code class=&quot;highlighter-rouge&quot;&gt;SessionService&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;ng g s session&lt;/code&gt; and move the service file and service.spec file into the services dir.&lt;/h6&gt;
-
-&lt;h6 id=&quot;in-sessionreducerts-add&quot;&gt;7. In &lt;code class=&quot;highlighter-rouge&quot;&gt;session.reducer.ts&lt;/code&gt;, add:&lt;/h6&gt;
+&lt;h6 id=&quot;in-sessionreducerts-add&quot;&gt;5. In &lt;code class=&quot;highlighter-rouge&quot;&gt;session.reducer.ts&lt;/code&gt;, add:&lt;/h6&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { ActionReducer, Action } from &#39;@ngrx/store&#39;;
 
@@ -210,7 +236,7 @@ Next, I declare the default session variable.&lt;/p&gt;
 
 &lt;p&gt;The last case is often the first thing you’ll add when you write reducers where the default action is to return the state as it exists.  We’re thinking that this app is goign to get larger and to make are reducer functions slim, we should use flat data structures.  Every time an action is dispatched, every reducer function get’s called and runs through their own cases.  If the case matches, the state on that property of the store is changed, otherwise it just returns the state as it ccurrently exists.  Add on observables that can be subscribed to, and you get some great performance benifits.&lt;/p&gt;
 
-&lt;h6 id=&quot;import-the-sessionreducer-into-the-appmodule-and-provide-the-sessionreducer-to-the-storemodule&quot;&gt;8. Import the SessionReducer into the AppModule and provide the SessionReducer to the StoreModule:&lt;/h6&gt;
+&lt;h6 id=&quot;import-the-sessionreducer-into-the-appmodule-and-provide-the-sessionreducer-to-the-storemodule&quot;&gt;6. Import the SessionReducer into the AppModule and provide the SessionReducer to the StoreModule:&lt;/h6&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { sessionReducer } from &#39;./shared/reducers/session.reducer&#39;;
 
@@ -226,7 +252,7 @@ import: [
 
 &lt;p&gt;Make sure the StoreModule is above the StoreDevtoolsModule&lt;/p&gt;
 
-&lt;h6 id=&quot;so-finally-lets-access-the-store-in-appcomponent&quot;&gt;9. So finally, lets access the store in &lt;code class=&quot;highlighter-rouge&quot;&gt;app.component&lt;/code&gt;:&lt;/h6&gt;
+&lt;h6 id=&quot;so-finally-lets-access-the-store-in-appcomponent&quot;&gt;7. So finally, let’s access the store in &lt;code class=&quot;highlighter-rouge&quot;&gt;app.component&lt;/code&gt;:&lt;/h6&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component } from &#39;@angular/core&#39;;
 import { Store } from &#39;@ngrx/store&#39;
@@ -238,7 +264,6 @@ import { Store } from &#39;@ngrx/store&#39;
   styleUrls: [&#39;./app.component.css&#39;]
 })
 export class AppComponent {
-  title = &#39;app works!&#39;;
   session$;
 
   constructor(private _store: Store&amp;lt;any&amp;gt;){
@@ -253,11 +278,11 @@ export class AppComponent {
 
 &lt;p&gt;If you wanted to display that data, you could change the token property in &lt;code class=&quot;highlighter-rouge&quot;&gt;defaultSession&lt;/code&gt;, then in  your app component template, provide: ``.  This isn’t the only way to get the value, and you’ll likely not be displaying properties of the store in smart components.&lt;/p&gt;
 
-&lt;h6 id=&quot;now-that-our-reducer-is-set-up-lets-demonstrate-the-features-without-using-the-backend-for-that-were-going-to-need-a-router-and-some-additional-components&quot;&gt;10. Now that our reducer is set up, let’s demonstrate the features without using the backend. For that, we’re going to need a router and some additional components:&lt;/h6&gt;
-&lt;ul&gt;
-  &lt;li&gt;container components that the user could route to: home, registration, login, page-not-found&lt;/li&gt;
-  &lt;li&gt;a navbar component to sit in the app component along with the router-outlet directive.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h6 id=&quot;add-router-and-some-components&quot;&gt;8. Add router and some components&lt;/h6&gt;
+
+&lt;p&gt;Now that our reducer is set up, let’s demonstrate the features without using the backend. For that, we’re going to need a router and some additional components: 
+- container components that the user could route to: home, registration, login, page-not-found
+- a navbar component to sit in the app component along with the router-outlet directive.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng g c navbar
 ng g c login
@@ -299,30 +324,12 @@ export class AppRoutingModule {}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Next, we’ll add the template for the navbar component so a user can click on a button for login and registration, and see those approapriate views render.  I’m going to bring in angular material at this point just make it look a little better.&lt;/p&gt;
+&lt;h5 id=&quot;build-the-navbar&quot;&gt;9. Build the navbar&lt;/h5&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i -S @angular/material
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;app.module&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { MaterialModule } from &#39;@angular/material&#39;;
-
-@NgModule({
-  imports: [
-		...
-		MaterialModule.forRoot()
-		],
-}) 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;and I’ll want the default theme, so I’ll have to add &lt;code class=&quot;highlighter-rouge&quot;&gt;@import &#39;~@angular/material/core/theming/prebuilt/deeppurple-amber.css&#39;;&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;styles.css&lt;/code&gt;
-Now I’ll write up the component tempate for the navbar with angular material components:&lt;/p&gt;
+&lt;p&gt;Next, we’ll add the template for the navbar component so a user can click on a button for login and registration, and see those approapriate views render.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;md-toolbar color=&quot;primary&quot;&amp;gt;
-	&amp;lt;a [routerLink]=&quot;[&#39;/&#39;]&quot; md-button&amp;gt;SecretSanta&amp;lt;/a&amp;gt;
+	&amp;lt;a [routerLink]=&quot;[&#39;/&#39;]&quot; md-button&amp;gt;NgrxDemo&amp;lt;/a&amp;gt;
 
   &amp;lt;!-- This fills the remaining space of the current row --&amp;gt;
   &amp;lt;span class=&quot;fill-remaining-space&quot;&amp;gt;&amp;lt;/span&amp;gt;
@@ -364,7 +371,7 @@ Output: Events that can be emitted from this component
 EventEmitter: An instance of an event, basically sends up e (like from vanilla javascript dom events), and any data that you want to send with it
 ChangeDetectionStrategy: Briefly, any dumb components that have Inputs need this to be set to &lt;code class=&quot;highlighter-rouge&quot;&gt;onPush&lt;/code&gt; so that the properties of that component are only changed when an event has changed that property from the store. For a small app, this isn’t important because you don’t care about performance, but when you application scales up, and you find yourself with a lot more event emitters, change detection that’s contantly checking every bit of data in your app is expensive on performance.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from &#39;@angular/core&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from &#39;@angular/core&#39;;
 
 @Component({
   selector: &#39;app-navbar&#39;,
@@ -372,15 +379,13 @@ ChangeDetectionStrategy: Briefly, any dumb components that have Inputs need this
   styleUrls: [&#39;./navbar.component.css&#39;],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   @Input() user;
   @Output() onSignOut = new EventEmitter();
 
   constructor() {
   }
 
-  ngOnInit() {
-  }
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -399,7 +404,10 @@ export class NavbarComponent implements OnInit {
 
 &lt;p&gt;Finally, lets add the &lt;code class=&quot;highlighter-rouge&quot;&gt;navbar&lt;/code&gt; component and &lt;code class=&quot;highlighter-rouge&quot;&gt;router-outlet&lt;/code&gt; directive to our &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; component:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;app-navbar [user]=&quot;(session$ | async)?.user&quot; (onSignOut)=&quot;onSignOut($event)&quot;&amp;gt;&amp;lt;/app-navbar&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;app-navbar 
+	[user]=&quot;(session$ | async)?.user&quot;
+	(onSignOut)=&quot;onSignOut($event)&quot;
+&amp;gt;&amp;lt;/app-navbar&amp;gt;
 &amp;lt;div&amp;gt;
   &amp;lt;router-outlet&amp;gt;&amp;lt;/router-outlet&amp;gt;
 &amp;lt;/div&amp;gt;
@@ -435,23 +443,247 @@ export class NavbarComponent implements OnInit {
 
 &lt;p&gt;Now you can click on any of those buttons, and you should see that the route changes.&lt;/p&gt;
 
-&lt;h6 id=&quot;dynamic-forms&quot;&gt;11. Dynamic forms:&lt;/h6&gt;
+&lt;h6 id=&quot;dynamic-forms&quot;&gt;10. Dynamic forms:&lt;/h6&gt;
 
-&lt;p&gt;So I’m going to cheat a little bit. I don’t want to write a bunch of forms.  I’d rather write one form, and be able to use that form with a set of questions that I’ll provide to it. It keeps my app DRY and consistent.  Conveniently, I found  in the angular docs cookbook section a guide to implement just this.  I would definately encourage you to check out this section and change your instance of it to meet your needs, like I have done so it works with angular material.&lt;/p&gt;
+&lt;p&gt;So I’m going to cheat a little bit. I don’t want to write a bunch of forms.  I’d rather write one form, and be able to use that form with a set of questions that I’ll provide to it. It keeps my app DRY and consistent.  Conveniently, I found in the angular docs cookbook section a guide to implement just this.  I would definately encourage you to check out this section and change your instance of it to meet your needs, like I have done so it works with angular material.&lt;/p&gt;
 
 &lt;p&gt;This section isn’t specific to ngrx, so I’ve added&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;components: &lt;code class=&quot;highlighter-rouge&quot;&gt;dynamicFormComponent&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DynamicFormQuestionComponent&lt;/code&gt;,&lt;/li&gt;
+  &lt;li&gt;components: &lt;code class=&quot;highlighter-rouge&quot;&gt;DynamicFormComponent&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DynamicFormQuestionComponent&lt;/code&gt;,&lt;/li&gt;
   &lt;li&gt;services: &lt;code class=&quot;highlighter-rouge&quot;&gt;QuestionService&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;QuestionControlService&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;classes: &lt;code class=&quot;highlighter-rouge&quot;&gt;QuestionBase&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;QuestionTextbox&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;QuestionBase:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export class QuestionBase&amp;lt;T&amp;gt;{
+	value: T;
+	key: string;
+	label: string;
+	required: boolean;
+	order: number;
+	controlType: string;
+	placeholder: string;
+
+	constructor(options: {
+		value?: T,
+		key?: string,
+		label?: string,
+		required?: boolean,
+		order?: number,
+		controlType?: string,
+		placeholder?: string,
+	} = {}){
+		this.value = options.value;
+		this.key = options.key || &#39;&#39;;
+		this.label = options.label || &#39;&#39;;
+		this.required = !!options.required;
+		this.order = options.order === undefined ? 1 : options.order;
+		this.controlType = options.controlType || &#39;&#39;;
+		this.placeholder = options.placeholder;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;TextboxQuestion:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { QuestionBase } from &#39;./question-base&#39;;
+
+export class TextboxQuestion extends QuestionBase&amp;lt;string&amp;gt; {
+  controlType = &#39;textbox&#39;;
+  type: string;
+
+  constructor(options: {} = {}) {
+    super(options);
+    this.type = options[&#39;type&#39;] || &#39;&#39;;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;QuestionService:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable }       from &#39;@angular/core&#39;;
+
+import { QuestionBase }     from &#39;../question-base&#39;;
+import { TextboxQuestion }  from &#39;../question-textbox&#39;;
+
+@Injectable()
+export class QuestionService {
+  getRegistrationQuestions() {
+    let questions: QuestionBase&amp;lt;any&amp;gt;[] = [
+      new TextboxQuestion({
+        key: &#39;username&#39;,
+        label: &#39;Username&#39;,
+        required: true,
+        type:&#39;text&#39;,
+        order: 1
+      }),
+      new TextboxQuestion({
+        key: &#39;email&#39;,
+        label: &#39;Email&#39;,
+        required: true,
+        type: &#39;text&#39;,
+        order: 2
+      }),
+      new TextboxQuestion({
+        key: &#39;password&#39;,
+        label: &#39;Password&#39;,
+        required: true,
+        type: &quot;password&quot;,
+        order: 3
+      }),
+      new TextboxQuestion({
+        key: &#39;verify_password&#39;,
+        label: &#39;Verify Password&#39;,
+        required: true,
+        type: &#39;password&#39;,
+        order: 4
+      })
+    ];
+    return questions.sort((a, b) =&amp;gt; a.order - b.order);
+  }
+
+  getLoginQuestions() {
+    let questions: QuestionBase&amp;lt;any&amp;gt;[] = [
+      new TextboxQuestion({
+        key: &#39;email&#39;,
+        label: &#39;Email&#39;,
+        required: true,
+        type: &#39;text&#39;,
+        order: 1
+      }),
+      new TextboxQuestion({
+        key: &#39;password&#39;,
+        label: &#39;Password&#39;,
+        required: true,
+        type: &#39;password&#39;,
+        order: 2
+      })
+    ];
+    return questions.sort((a, b) =&amp;gt; a.order - b.order);
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;QuestionControlService:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable }   from &#39;@angular/core&#39;;
+import { FormControl, FormGroup, Validators } from &#39;@angular/forms&#39;;
+
+import { QuestionBase } from &#39;../question-base&#39;;
+
+@Injectable()
+export class QuestionControlService {
+  constructor() { }
+
+  toFormGroup(questions: QuestionBase&amp;lt;any&amp;gt;[] ) {
+    let group: any = {};
+
+    questions.forEach(question =&amp;gt; {
+      group[question.key] = question.required ? new FormControl(question.value || &#39;&#39;, Validators.required)
+                                              : new FormControl(question.value || &#39;&#39;);
+    });
+    return new FormGroup(group);
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;DynamicFormQuestionComponent:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, Input } from &#39;@angular/core&#39;;
+import { FormGroup }        from &#39;@angular/forms&#39;;
+import { QuestionBase }     from &#39;../shared/question-base&#39;;
+
+@Component({
+  selector: &#39;df-question&#39;,
+  templateUrl: &#39;dynamic-form-question.component.html&#39;
+})
+
+export class DynamicFormQuestionComponent {
+  @Input() question: QuestionBase&amp;lt;any&amp;gt;;
+  @Input() form: FormGroup;
+
+  get isValid() { return this.form.controls[this.question.key].valid; }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;DynamicFormQuestion template:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div [formGroup]=&quot;form&quot;&amp;gt;
+  &amp;lt;div [ngSwitch]=&quot;question.controlType&quot;&amp;gt;
+    &amp;lt;md-input-container&amp;gt;
+      &amp;lt;input md-input *ngSwitchCase=&quot;&#39;textbox&#39;&quot; 
+        placeholder=&quot;&quot; 
+        [formControlName]=&quot;question.key&quot;
+        [id]=&quot;question.key&quot; 
+        type=&quot;&quot;
+        required&amp;gt;
+    &amp;lt;/md-input-container&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;DynamicFormComponent:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, Input, OnInit, EventEmitter, Output}  from &#39;@angular/core&#39;;
+import { FormGroup} from &#39;@angular/forms&#39;;
+
+import { QuestionBase }  from &#39;../shared/question-base&#39;;
+import { QuestionControlService } from &#39;../shared/services/question-control.service&#39;;
+
+@Component({
+  selector: &#39;dynamic-form&#39;,
+  templateUrl: &#39;dynamic-form.component.html&#39;,
+  providers: [ QuestionControlService ]
+})
+
+export class DynamicFormComponent implements OnInit {
+  @Input() questions: QuestionBase&amp;lt;any&amp;gt;[] = [];
+  @Output() onSubmit = new EventEmitter();
+  
+  form: FormGroup;
+
+  constructor(private qcs: QuestionControlService) {  }
+
+  ngOnInit() {
+    this.form = this.qcs.toFormGroup(this.questions);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;DynamicFormComponent template:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div&amp;gt;
+  &amp;lt;form (ngSubmit)=&quot;onSubmit.emit(form.value)&quot; [formGroup]=&quot;form&quot;&amp;gt;
+    &amp;lt;div *ngFor=&quot;let question of questions&quot; class=&quot;form-row&quot;&amp;gt;
+      &amp;lt;df-question [question]=&quot;question&quot; [form]=&quot;form&quot;&amp;gt;&amp;lt;/df-question&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&quot;form-row&quot;&amp;gt;
+      &amp;lt;button md-raised-button type=&quot;submit&quot; [disabled]=&quot;!form.valid&quot;&amp;gt;submit&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/form&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;In short, &lt;code class=&quot;highlighter-rouge&quot;&gt;QuestionService&lt;/code&gt; will contain methods that return a list of questions for each form that we’ll need: Questions for registration, and questions for logging in.  We’ll build these forms in the &lt;code class=&quot;highlighter-rouge&quot;&gt;dynamic-form&lt;/code&gt; component, and drop them in their respective smart component.&lt;/p&gt;
 
 &lt;p&gt;We’ll also need to import &lt;code class=&quot;highlighter-rouge&quot;&gt;ReactiveFormsModule&lt;/code&gt; into our module from &lt;code class=&quot;highlighter-rouge&quot;&gt;@angular/forms&lt;/code&gt;, and to add our &lt;code class=&quot;highlighter-rouge&quot;&gt;QuestionService&lt;/code&gt; as a provider to our module.&lt;/p&gt;
 
-&lt;h6 id=&quot;build-the-forms-for-registration-and-login&quot;&gt;12. Build the forms for registration and login:&lt;/h6&gt;
+&lt;h6 id=&quot;build-the-forms-for-registration-and-login&quot;&gt;11. Build the forms for registration and login:&lt;/h6&gt;
 
 &lt;p&gt;registration component template:&lt;/p&gt;
 
@@ -517,18 +749,239 @@ export class RegistrationComponent implements OnInit {
   &lt;li&gt;dispatch the success action to see the store change.  You should see a debugging message in the console, and the redux devtools should show the updated state.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Now when you fill out  the form, the state will change, and you’ll be redirected to the login.  For the sake of time, I’m going to do the same thing for the Login Component.&lt;/p&gt;
+&lt;p&gt;Now when you fill out the form, the state will change, and you’ll be redirected to the login. Now for the login component:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, OnInit } from &#39;@angular/core&#39;;
+import { Router } from &#39;@angular/router&#39;;
+import { Store } from &#39;@ngrx/store&#39;;
+
+import { QuestionService } from &#39;../shared/services/question.service&#39;;
+import { SESSION_ACTIONS } from &#39;../shared/reducers/session.reducer&#39;;
+@Component({
+  selector: &#39;app-login&#39;,
+  templateUrl: &#39;./login.component.html&#39;,
+  styleUrls: [&#39;./login.component.css&#39;],
+})
+export class LoginComponent implements OnInit {
+  questions: any[];
+
+  constructor(
+    private questionService: QuestionService,
+    private _store: Store&amp;lt;any&amp;gt;,
+    private router: Router
+  ) {
+	  this.questions = questionService.getLoginQuestions();
+  }
+
+  ngOnInit() {
+  }
+
+  onSubmitLoginForm(payload){
+    this._store.dispatch({
+      type: SESSION_ACTIONS.LOGIN_USER.ATTEMPT,
+      payload: payload
+    })
+    setTimeout(() =&amp;gt; this.router.navigate([&#39;/&#39;]), 2000);
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;login template:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;md-card&amp;gt;
+	&amp;lt;md-card-title&amp;gt;Login&amp;lt;/md-card-title&amp;gt;
+	&amp;lt;md-card-content&amp;gt;
+		&amp;lt;dynamic-form 
+			[questions]=&quot;questions&quot;
+			(onSubmit)=&quot;onSubmitLoginForm($event)&quot;
+		&amp;gt;&amp;lt;/dynamic-form&amp;gt;
+	&amp;lt;/md-card-content&amp;gt;
+&amp;lt;/md-card&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;– Note: You’ll probably notice that the password field isn’t reflecting it’s type.  That’s a bug on angular material.  I played around with it for a bit on last Saturday and couldn’t get it to work.  Probably need to create an issue.&lt;/p&gt;
 
-&lt;h6 id=&quot;adding-htmlwrapper-service-and-api-endpoint&quot;&gt;13. Adding htmlwrapper service and api endpoint:&lt;/h6&gt;
-&lt;p&gt;For our services, we’re going to user something I’ve written that abstracts away a lot of the repetition in making http requests.  This particular service works with my rest api for handling token based authentication and handling events with ngrx effects, which we’ll do next.&lt;/p&gt;
+&lt;h6 id=&quot;adding-htmlwrapper-service-and-api-endpoint&quot;&gt;12. Adding htmlwrapper service and api endpoint:&lt;/h6&gt;
+&lt;p&gt;For our services, we’re going to use something I’ve written that abstracts away a lot of the repetition in making http requests.  This particular service works with my rest api for handling token based authentication and handling events with ngrx effects, which we’ll do next.&lt;/p&gt;
+
+&lt;p&gt;HttpWrapperService:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable } from &#39;@angular/core&#39;;
+import { Http, Headers, Response, RequestOptions } from &#39;@angular/http&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;
+
+import { API_ENDPOINT } from &#39;../api&#39;;
+import { ERROR_ACTIONS } from &#39;../reducers/error.reducer&#39;;
+import { HttpParams } from &#39;../models/httpParams.interface&#39;;
+
+@Injectable()
+export class HttpWrapperService {
+  /*
+    These are the methods that are used in the additional services, 
+    where otherwise they would require importing angular 2 http module.
+
+    This keeps the services DRY, easier to test, and scalable.
+
+  */
+
+  constructor(private http: Http) { }
+
+  private configRequest(uri: string, authRequired: boolean = false): {apiUrl: string, options: RequestOptions} {
+    let apiUrl = `${API_ENDPOINT()}/${uri}`;
+
+    let headers = authRequired ? 
+      new Headers({
+        &#39;Content-Type&#39;: &#39;application/json&#39;,
+        &#39;Authorization&#39; : `token ${localStorage[&#39;Authorization&#39;]}`
+      }) : 
+      new Headers({&#39;Content-Type&#39;: &#39;application/json&#39;});
+    let options = new RequestOptions({ headers: headers });
+
+    return {apiUrl, options};
+  }
+
+  public delete(params: HttpParams){
+    let {apiUrl, options} = this.configRequest(params.uri, true)
+
+    return this.http.delete(apiUrl, options)
+      .map(res =&amp;gt; ({
+        type: params.successActionType,
+        payload: res.json()[params.responseObject]
+      }))
+      .catch(res =&amp;gt; Observable.of({
+        type: ERROR_ACTIONS.REPORT_ERROR,
+        payload: {
+          action_type: params.errorActionType,
+          message: res.json().error
+        }
+      }));
+  }
+
+  public get(params: HttpParams){
+    let {apiUrl, options} = this.configRequest(params.uri, params.auth)
+
+    return this.http.get(apiUrl, options)
+      .map(res =&amp;gt; ({
+        type: params.successActionType,
+        payload: res.json()[params.responseObject]
+      }))
+      .catch(res =&amp;gt; Observable.of({
+        type: ERROR_ACTIONS.REPORT_ERROR,
+        payload: {
+          action_type: params.errorActionType,
+          message: res.json()
+        }
+      }))
+  }
+
+  public post(params: HttpParams){
+
+    let {apiUrl, options} = this.configRequest(params.uri, params.auth)
+    
+    return this.http.post(apiUrl, params.payload, options)
+      .map(res =&amp;gt; ({
+        type: params.successActionType,
+        payload: res.json()[params.responseObject]
+      }))
+      .catch(res =&amp;gt; Observable.of({
+        type: ERROR_ACTIONS.REPORT_ERROR,
+        payload: {
+          action_type: params.errorActionType,
+          message: res.json().error
+        }
+      }));
+  }
+
+  put(params: HttpParams){
+    let {apiUrl, options} = this.configRequest(params.uri, true)
+
+    return this.http.put(apiUrl, params.payload, options)
+      .map(res =&amp;gt; ({
+        type: params.successActionType,
+        payload: res.json()[params.responseObject]
+      }))
+      .catch(res =&amp;gt; Observable.of({
+        type: ERROR_ACTIONS.REPORT_ERROR,
+        payload: {
+          action_type: params.errorActionType,
+          message: res.json().error
+        }
+      }));
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;I’ve also added an error reducer, an error interface, a api endpoint constant, and a httpParams interface.&lt;/p&gt;
 
+&lt;p&gt;error interface:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export interface Error {
+	action_type: string,
+	id: number,
+	message: string
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;error reducer:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { ActionReducer, Action} from &#39;@ngrx/store&#39;;
+
+import { Error } from &#39;../models/error.interface&#39;;
+
+export const ERROR_ACTIONS = {
+	REPORT_ERROR: &#39;REPORT_ERROR&#39;,
+	REMOVE_ERROR: &#39;REMOVE_ERROR&#39;
+}
+
+export const errorReducer: ActionReducer&amp;lt;Error[]&amp;gt; = (state: Error[] = [], {type, payload}: Action) =&amp;gt; {
+	switch(type){
+		case ERROR_ACTIONS.REPORT_ERROR:
+			let id = Math.floor(Math.random() * 1000);
+			payload.id = id;
+			return [...state, payload]
+		case ERROR_ACTIONS.REMOVE_ERROR:
+			return state.filter(error =&amp;gt; error.id != payload.id);
+		default:
+			return state;
+	}
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;api.ts&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export const API_ENDPOINT = () =&amp;gt; {
+	return document.URL.split(&#39;/&#39;)[2] == &#39;localhost:4200&#39; 
+		? 
+		&#39;http://127.0.0.1:8000/api/v1&#39; 
+		: 
+		&#39;todo: add production server&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;httpParams interface&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export interface HttpParams {
+	auth?: boolean, // on true, then the token will be on the header. Optional (not needed for all post and get requests)
+	errorActionType: string, // the failure action, should look something like `ACTION_TYPES.ACTION_TYPE.FAILURE`
+	payload?: {}, // what you&#39;re sending on the http request, should be data from a form. Optional: not needed for get and delete requests
+	responseObject: string, // this should be a property on the success resposonse body object
+	successActionType: string, // If the http responce is a success, send this action type to the reducer, should be something like `ACTION_TYPES.ACTION_TYPE.SUCCESS`
+	uri: string, // the api endpoint
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;In this case, we only really care about the post method. We have a private method &lt;code class=&quot;highlighter-rouge&quot;&gt;configRequest&lt;/code&gt;, which returns our headers and api uri endpoint, and I’ve used destructuring to return the local variables I would need from the results of the &lt;code class=&quot;highlighter-rouge&quot;&gt;configRequest&lt;/code&gt;.  We’ve also imported Angular Http, which returns an Observable.  On the http.post, there is a success response handled with rxjs &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt; operator, and the error response is handled with rxjs &lt;code class=&quot;highlighter-rouge&quot;&gt;catch&lt;/code&gt; operator. Both send back an observable, which is then handled in the reducer functions.&lt;/p&gt;
 
-&lt;h6 id=&quot;next-we-are-going-to-write-up-the-session-service-to-handle-the-attempt-actions&quot;&gt;14. Next we are going to write up the session service to handle the &lt;code class=&quot;highlighter-rouge&quot;&gt;attempt&lt;/code&gt; actions.&lt;/h6&gt;
+&lt;h6 id=&quot;next-we-are-going-to-write-up-the-session-service-to-handle-the-success-and-failure-actions&quot;&gt;13. Next we are going to write up the session service to handle the &lt;code class=&quot;highlighter-rouge&quot;&gt;success&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;failure&lt;/code&gt; actions.&lt;/h6&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable } from &#39;@angular/core&#39;;
 
@@ -590,7 +1043,8 @@ export class SessionService {
 
 &lt;p&gt;Each wires up an object, and returns a method to the http wrapper with that object as it’s argument.&lt;/p&gt;
 
-&lt;h6 id=&quot;the-last-step-to-make-this-work-is-to-add-in-ngrx-effects-create-sessioneffectsts-in-the-effects-directory&quot;&gt;15. The last step to make this work is to add in ngrx effects. Create &lt;code class=&quot;highlighter-rouge&quot;&gt;session.effects.ts&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;effects&lt;/code&gt; directory:&lt;/h6&gt;
+&lt;h6 id=&quot;the-last-step-to-make-this-work-is-to-add-in-ngrx-effects&quot;&gt;14. The last step to make this work is to add in ngrx effects.&lt;/h6&gt;
+&lt;p&gt;session.effects:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable } from &#39;@angular/core&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
@@ -637,7 +1091,7 @@ export class SessionEffects {
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h6 id=&quot;lets-try-this-out&quot;&gt;16. Let’s try this out:&lt;/h6&gt;
+&lt;p&gt;Let’s try this out:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Make sure the rest api is running as expected with postman:&lt;/li&gt;
@@ -650,12 +1104,60 @@ python app.py
 
 &lt;p&gt;Register a user works! State has been updated, as you can see from the redux devtools, postman, and the ui has changed.&lt;/p&gt;
 
+&lt;h5 id=&quot;persist-the-session&quot;&gt;17 Persist the session&lt;/h5&gt;
+
 &lt;p&gt;To keep going: 
 - onInit in app.component, check if there’s a token in localStorage.  If there is, dispatch an action to get the user.
-- Add a method on app.component to logout the user
+- Add a method on app.component to logout the user&lt;/p&gt;
+
+&lt;p&gt;updated app.component:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, OnInit } from &#39;@angular/core&#39;;
+import { Store } from &#39;@ngrx/store&#39;
+
+import { SESSION_ACTIONS } from &#39;./shared/reducers/session.reducer&#39;;
+
+@Component({
+  selector: &#39;app-root&#39;,
+  templateUrl: &#39;./app.component.html&#39;,
+  styleUrls: [&#39;./app.component.css&#39;]
+})
+export class AppComponent implements OnInit {
+  session$;
+
+  checkLocalStorage(){
+    if (localStorage[&#39;Authorization&#39;]) return this.getUser();
+  }
+
+  constructor(private _store: Store&amp;lt;any&amp;gt;){
+    this.session$ = _store.select(&#39;session&#39;);
+  }
+
+  getUser(){
+    this._store.dispatch({
+      type: SESSION_ACTIONS.GET_USER.ATTEMPT,
+      payload: {}
+    });
+  }
+
+  ngOnInit(){
+    this.checkLocalStorage();
+  }
+
+  onSignOut(){
+    this._store.dispatch({
+      type: SESSION_ACTIONS.LOGOUT_USER.ATTEMPT,
+      payload: {}
+    });
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Further enhancements for you to try:
 - add an dumb component, and subscribe to the error property in the store, pass that data up to the error component which shows any errors that occur and removes them with setTimeout
 - Add a success component that mirrors the error component.
-- Add in testing
+- Write unit tests
 - Add additional features to the specific app&lt;/p&gt;
 
 &lt;h4 id=&quot;resources&quot;&gt;Resources:&lt;/h4&gt;

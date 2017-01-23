@@ -6,7 +6,7 @@ date : 2017-01-21
 
 Ngrx is a library that provides angular 2 developers to build reactive applications.
 
-[code for this tutorial](https://github.com/nathanBrenner/ngrxDemo)
+[code for this tutorial](https://github.com/nathanBrenner/ngrxDemo2)
 
 [rest api](https://github.com/SecretSantaNg2Python/secretSanta-api) that I used to demo this tutorial.
 
@@ -29,25 +29,30 @@ How do you manage state in an angular application?
 - share it between services?
 - NGRX is a solution to this problem
 What is state?
-- the data in your application, or in your ocmponents
+- the data in your application, or in your components
 
 #### What?
 This is not your classic angular
 Flux => Redux => NGRX (redux with rxjs)
 NGRX is a library with sections like 
+
 1. Store to manage state, 
+
 2. Effects to handle side effects (like making http requests)
+
 3. Store-devtools: able to see what is the current state of the app
 
 #### Angular 1 pattern:
 Write the view first, business logic second
+
 1. Write your static view, 
 2. Bind your controller to your view
 3. Write your service
-3. User events toggle methods on services
+4. User events toggle methods on services
 
 #### Ngrx pattern:
 Write the business logic first, then your views and components
+
 1. Write your models
 2. Write your events
 3. Write your reducers that select on events
@@ -69,14 +74,19 @@ NGRX abstrats a lot of that heavy lifting of rxjs for you.
 
 ###### 1. `ng new ngrxDemo`: Create a new angular cli project.
 
-###### 2. `npm i -S @ngrx/core @ngrx/store @ngrx/store-devtools @ngrx/effects`: Install dependancies for ngrx
+###### 2. Install dependancies for ngrx
 
-###### 3. In `app.module.ts` at the top:
+```
+npm i -S @ngrx/core @ngrx/store @ngrx/store-devtools @ngrx/effects @angular/material
+```
+
+In `app.module.ts` at the top:
 
 ```
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { MaterialModule } from '@angular/material';
 ```
 
 then for now just add in the store-devtools so you can pull it up:
@@ -85,7 +95,14 @@ then for now just add in the store-devtools so you can pull it up:
 imports: [
 	...
 	StoreDevtoolsModule.instrumentOnlyWithExtension(),
+	MaterialModule.forRoot()
 ]
+```
+
+and I'll want the default theme for angular material, so in `styles.css`, I'll add
+
+```
+@import '~@angular/material/core/theming/prebuilt/purple-green.css'';
 ```
 
 You'll also need to install the Redux Devtools Extension
@@ -95,13 +112,14 @@ Next, run `ng serve`: Start the client side app, and open browser to http://loca
 	- The State panel is what I use the most, but this has a lot of additional functionality
 	- Right now, it'll just show `undefined`.
 
-###### 4. Create the shared directory, and in that directory, create dirs for effects, models, reducers, and services.
+###### 3. Create the shared directory, and in that directory, create dirs for effects, models, reducers, and services.
 
 - In effects: `touch session.effects.ts`
 - In models: `touch user.interface.ts` and `touch session.interface.ts`
 - In reducers: `touch session.reducer.ts`
+- In services: `ng g s session`, then move the spec and service into the services dir, and add it as a provider to the module.
 
-###### 5. Next draft the user interface:
+###### 4. Next draft the user and session interfaces:
 
 ```
 export interface User {
@@ -125,9 +143,7 @@ export interface Session {
 
 Token is for authentication, and all the properties on the User interface are optional so they don't have to have a default property.  These data structures mirror the api models. I've found building these interfaces helps with the type safety that typescript provides.
 
-###### 6. Create the `SessionService` with `ng g s session` and move the service file and service.spec file into the services dir.
-
-###### 7. In `session.reducer.ts`, add:
+###### 5. In `session.reducer.ts`, add:
 
 ```
 import { ActionReducer, Action } from '@ngrx/store';
@@ -200,7 +216,7 @@ Object.assign takes 3 params: An empty object, the object you're copying, and op
 
 The last case is often the first thing you'll add when you write reducers where the default action is to return the state as it exists.  We're thinking that this app is goign to get larger and to make are reducer functions slim, we should use flat data structures.  Every time an action is dispatched, every reducer function get's called and runs through their own cases.  If the case matches, the state on that property of the store is changed, otherwise it just returns the state as it ccurrently exists.  Add on observables that can be subscribed to, and you get some great performance benifits.
 
-###### 8. Import the SessionReducer into the AppModule and provide the SessionReducer to the StoreModule:
+###### 6. Import the SessionReducer into the AppModule and provide the SessionReducer to the StoreModule:
 
 ```
 import { sessionReducer } from './shared/reducers/session.reducer';
@@ -216,7 +232,7 @@ import: [
 
 Make sure the StoreModule is above the StoreDevtoolsModule
 
-###### 9. So finally, lets access the store in `app.component`:
+###### 7. So finally, let's access the store in `app.component`:
 
 ```
 import { Component } from '@angular/core';
@@ -229,7 +245,6 @@ import { Store } from '@ngrx/store'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
   session$;
 
   constructor(private _store: Store<any>){
@@ -243,7 +258,9 @@ Here, we've brought in Store, declared the session property, and when an instanc
 
 If you wanted to display that data, you could change the token property in `defaultSession`, then in  your app component template, provide: `{{session.token | async}}`.  This isn't the only way to get the value, and you'll likely not be displaying properties of the store in smart components.
 
-###### 10. Now that our reducer is set up, let's demonstrate the features without using the backend. For that, we're going to need a router and some additional components: 
+###### 8. Add router and some components
+
+Now that our reducer is set up, let's demonstrate the features without using the backend. For that, we're going to need a router and some additional components: 
 - container components that the user could route to: home, registration, login, page-not-found
 - a navbar component to sit in the app component along with the router-outlet directive.
 
@@ -287,31 +304,13 @@ imports: [
 ]
 ```
 
-Next, we'll add the template for the navbar component so a user can click on a button for login and registration, and see those approapriate views render.  I'm going to bring in angular material at this point just make it look a little better.
+##### 9. Build the navbar
 
-```bash
-npm i -S @angular/material
-```
-
-app.module
-
-```
-import { MaterialModule } from '@angular/material';
-
-@NgModule({
-  imports: [
-		...
-		MaterialModule.forRoot()
-		],
-}) 
-```
-
-and I'll want the default theme, so I'll have to add `@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';` in the `styles.css`
-Now I'll write up the component tempate for the navbar with angular material components:
+Next, we'll add the template for the navbar component so a user can click on a button for login and registration, and see those approapriate views render. 
 
 ```
 <md-toolbar color="primary">
-	<a [routerLink]="['/']" md-button>SecretSanta</a>
+	<a [routerLink]="['/']" md-button>NgrxDemo</a>
 
   <!-- This fills the remaining space of the current row -->
   <span class="fill-remaining-space"></span>
@@ -353,7 +352,7 @@ EventEmitter: An instance of an event, basically sends up e (like from vanilla j
 ChangeDetectionStrategy: Briefly, any dumb components that have Inputs need this to be set to `onPush` so that the properties of that component are only changed when an event has changed that property from the store. For a small app, this isn't important because you don't care about performance, but when you application scales up, and you find yourself with a lot more event emitters, change detection that's contantly checking every bit of data in your app is expensive on performance.
 
 ```
-import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -361,15 +360,13 @@ import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy
   styleUrls: ['./navbar.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   @Input() user;
   @Output() onSignOut = new EventEmitter();
 
   constructor() {
   }
 
-  ngOnInit() {
-  }
 }
 ```
 
@@ -388,7 +385,10 @@ I've also added a little bit of css to spread out the buttons in the template:
 Finally, lets add the `navbar` component and `router-outlet` directive to our `app` component:
 
 ```
-<app-navbar [user]="(session$ | async)?.user" (onSignOut)="onSignOut($event)"></app-navbar>
+<app-navbar 
+	[user]="(session$ | async)?.user"
+	(onSignOut)="onSignOut($event)"
+></app-navbar>
 <div>
   <router-outlet></router-outlet>
 </div>
@@ -423,21 +423,246 @@ The `:host` psudo selector is targeting the app component template.
 
 Now you can click on any of those buttons, and you should see that the route changes.
 
-###### 11. Dynamic forms:
+###### 10. Dynamic forms:
 
-So I'm going to cheat a little bit. I don't want to write a bunch of forms.  I'd rather write one form, and be able to use that form with a set of questions that I'll provide to it. It keeps my app DRY and consistent.  Conveniently, I found  in the angular docs cookbook section a guide to implement just this.  I would definately encourage you to check out this section and change your instance of it to meet your needs, like I have done so it works with angular material.
+So I'm going to cheat a little bit. I don't want to write a bunch of forms.  I'd rather write one form, and be able to use that form with a set of questions that I'll provide to it. It keeps my app DRY and consistent.  Conveniently, I found in the angular docs cookbook section a guide to implement just this.  I would definately encourage you to check out this section and change your instance of it to meet your needs, like I have done so it works with angular material.
 
 This section isn't specific to ngrx, so I've added 
 
-- components: `dynamicFormComponent` and `DynamicFormQuestionComponent`, 
+- components: `DynamicFormComponent` and `DynamicFormQuestionComponent`, 
 - services: `QuestionService`, `QuestionControlService`
 - classes: `QuestionBase`, `QuestionTextbox`
+
+QuestionBase:
+
+```
+export class QuestionBase<T>{
+	value: T;
+	key: string;
+	label: string;
+	required: boolean;
+	order: number;
+	controlType: string;
+	placeholder: string;
+
+	constructor(options: {
+		value?: T,
+		key?: string,
+		label?: string,
+		required?: boolean,
+		order?: number,
+		controlType?: string,
+		placeholder?: string,
+	} = {}){
+		this.value = options.value;
+		this.key = options.key || '';
+		this.label = options.label || '';
+		this.required = !!options.required;
+		this.order = options.order === undefined ? 1 : options.order;
+		this.controlType = options.controlType || '';
+		this.placeholder = options.placeholder;
+	}
+}
+```
+
+TextboxQuestion:
+
+```
+import { QuestionBase } from './question-base';
+
+export class TextboxQuestion extends QuestionBase<string> {
+  controlType = 'textbox';
+  type: string;
+
+  constructor(options: {} = {}) {
+    super(options);
+    this.type = options['type'] || '';
+  }
+}
+```
+
+QuestionService:
+
+```
+import { Injectable }       from '@angular/core';
+
+import { QuestionBase }     from '../question-base';
+import { TextboxQuestion }  from '../question-textbox';
+
+@Injectable()
+export class QuestionService {
+  getRegistrationQuestions() {
+    let questions: QuestionBase<any>[] = [
+      new TextboxQuestion({
+        key: 'username',
+        label: 'Username',
+        required: true,
+        type:'text',
+        order: 1
+      }),
+      new TextboxQuestion({
+        key: 'email',
+        label: 'Email',
+        required: true,
+        type: 'text',
+        order: 2
+      }),
+      new TextboxQuestion({
+        key: 'password',
+        label: 'Password',
+        required: true,
+        type: "password",
+        order: 3
+      }),
+      new TextboxQuestion({
+        key: 'verify_password',
+        label: 'Verify Password',
+        required: true,
+        type: 'password',
+        order: 4
+      })
+    ];
+    return questions.sort((a, b) => a.order - b.order);
+  }
+
+  getLoginQuestions() {
+    let questions: QuestionBase<any>[] = [
+      new TextboxQuestion({
+        key: 'email',
+        label: 'Email',
+        required: true,
+        type: 'text',
+        order: 1
+      }),
+      new TextboxQuestion({
+        key: 'password',
+        label: 'Password',
+        required: true,
+        type: 'password',
+        order: 2
+      })
+    ];
+    return questions.sort((a, b) => a.order - b.order);
+  }
+}
+
+```
+
+QuestionControlService:
+
+```
+import { Injectable }   from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+import { QuestionBase } from '../question-base';
+
+@Injectable()
+export class QuestionControlService {
+  constructor() { }
+
+  toFormGroup(questions: QuestionBase<any>[] ) {
+    let group: any = {};
+
+    questions.forEach(question => {
+      group[question.key] = question.required ? new FormControl(question.value || '', Validators.required)
+                                              : new FormControl(question.value || '');
+    });
+    return new FormGroup(group);
+  }
+}
+
+```
+
+DynamicFormQuestionComponent:
+
+```
+import { Component, Input } from '@angular/core';
+import { FormGroup }        from '@angular/forms';
+import { QuestionBase }     from '../shared/question-base';
+
+@Component({
+  selector: 'df-question',
+  templateUrl: 'dynamic-form-question.component.html'
+})
+
+export class DynamicFormQuestionComponent {
+  @Input() question: QuestionBase<any>;
+  @Input() form: FormGroup;
+
+  get isValid() { return this.form.controls[this.question.key].valid; }
+}
+
+```
+
+DynamicFormQuestion template:
+
+```
+<div [formGroup]="form">
+  <div [ngSwitch]="question.controlType">
+    <md-input-container>
+      <input md-input *ngSwitchCase="'textbox'" 
+        placeholder="{{question.label}}" 
+        [formControlName]="question.key"
+        [id]="question.key" 
+        type="{{question.type}}"
+        required>
+    </md-input-container>
+  </div>
+</div>
+
+```
+
+
+DynamicFormComponent:
+
+```
+import { Component, Input, OnInit, EventEmitter, Output}  from '@angular/core';
+import { FormGroup} from '@angular/forms';
+
+import { QuestionBase }  from '../shared/question-base';
+import { QuestionControlService } from '../shared/services/question-control.service';
+
+@Component({
+  selector: 'dynamic-form',
+  templateUrl: 'dynamic-form.component.html',
+  providers: [ QuestionControlService ]
+})
+
+export class DynamicFormComponent implements OnInit {
+  @Input() questions: QuestionBase<any>[] = [];
+  @Output() onSubmit = new EventEmitter();
+  
+  form: FormGroup;
+
+  constructor(private qcs: QuestionControlService) {  }
+
+  ngOnInit() {
+    this.form = this.qcs.toFormGroup(this.questions);
+  }
+}
+```
+
+DynamicFormComponent template:
+
+```
+<div>
+  <form (ngSubmit)="onSubmit.emit(form.value)" [formGroup]="form">
+    <div *ngFor="let question of questions" class="form-row">
+      <df-question [question]="question" [form]="form"></df-question>
+    </div>
+    <div class="form-row">
+      <button md-raised-button type="submit" [disabled]="!form.valid">submit</button>
+    </div>
+  </form>
+</div>
+
+```
 
 In short, `QuestionService` will contain methods that return a list of questions for each form that we'll need: Questions for registration, and questions for logging in.  We'll build these forms in the `dynamic-form` component, and drop them in their respective smart component.
 
 We'll also need to import `ReactiveFormsModule` into our module from `@angular/forms`, and to add our `QuestionService` as a provider to our module.
 
-###### 12. Build the forms for registration and login:
+###### 11. Build the forms for registration and login:
 
 registration component template:
 
@@ -501,18 +726,239 @@ A couple things to try when you do this on your own:
 - log out to the console the payload to make sure the object you want to send is what you expect.
 - dispatch the success action to see the store change.  You should see a debugging message in the console, and the redux devtools should show the updated state.
 
-Now when you fill out  the form, the state will change, and you'll be redirected to the login.  For the sake of time, I'm going to do the same thing for the Login Component.
+Now when you fill out the form, the state will change, and you'll be redirected to the login. Now for the login component:
+
+```
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+
+import { QuestionService } from '../shared/services/question.service';
+import { SESSION_ACTIONS } from '../shared/reducers/session.reducer';
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
+})
+export class LoginComponent implements OnInit {
+  questions: any[];
+
+  constructor(
+    private questionService: QuestionService,
+    private _store: Store<any>,
+    private router: Router
+  ) {
+	  this.questions = questionService.getLoginQuestions();
+  }
+
+  ngOnInit() {
+  }
+
+  onSubmitLoginForm(payload){
+    this._store.dispatch({
+      type: SESSION_ACTIONS.LOGIN_USER.ATTEMPT,
+      payload: payload
+    })
+    setTimeout(() => this.router.navigate(['/']), 2000);
+  }
+
+}
+```
+
+login template:
+
+```
+<md-card>
+	<md-card-title>Login</md-card-title>
+	<md-card-content>
+		<dynamic-form 
+			[questions]="questions"
+			(onSubmit)="onSubmitLoginForm($event)"
+		></dynamic-form>
+	</md-card-content>
+</md-card>
+```
 
 -- Note: You'll probably notice that the password field isn't reflecting it's type.  That's a bug on angular material.  I played around with it for a bit on last Saturday and couldn't get it to work.  Probably need to create an issue.
 
-###### 13. Adding htmlwrapper service and api endpoint:
-For our services, we're going to user something I've written that abstracts away a lot of the repetition in making http requests.  This particular service works with my rest api for handling token based authentication and handling events with ngrx effects, which we'll do next.
+###### 12. Adding htmlwrapper service and api endpoint:
+For our services, we're going to use something I've written that abstracts away a lot of the repetition in making http requests.  This particular service works with my rest api for handling token based authentication and handling events with ngrx effects, which we'll do next.
+
+HttpWrapperService:
+
+```
+import { Injectable } from '@angular/core';
+import { Http, Headers, Response, RequestOptions } from '@angular/http';
+import { Observable } from 'rxjs/Observable'
+
+import { API_ENDPOINT } from '../api';
+import { ERROR_ACTIONS } from '../reducers/error.reducer';
+import { HttpParams } from '../models/httpParams.interface';
+
+@Injectable()
+export class HttpWrapperService {
+  /*
+    These are the methods that are used in the additional services, 
+    where otherwise they would require importing angular 2 http module.
+
+    This keeps the services DRY, easier to test, and scalable.
+
+  */
+
+  constructor(private http: Http) { }
+
+  private configRequest(uri: string, authRequired: boolean = false): {apiUrl: string, options: RequestOptions} {
+    let apiUrl = `${API_ENDPOINT()}/${uri}`;
+
+    let headers = authRequired ? 
+      new Headers({
+        'Content-Type': 'application/json',
+        'Authorization' : `token ${localStorage['Authorization']}`
+      }) : 
+      new Headers({'Content-Type': 'application/json'});
+    let options = new RequestOptions({ headers: headers });
+
+    return {apiUrl, options};
+  }
+
+  public delete(params: HttpParams){
+    let {apiUrl, options} = this.configRequest(params.uri, true)
+
+    return this.http.delete(apiUrl, options)
+      .map(res => ({
+        type: params.successActionType,
+        payload: res.json()[params.responseObject]
+      }))
+      .catch(res => Observable.of({
+        type: ERROR_ACTIONS.REPORT_ERROR,
+        payload: {
+          action_type: params.errorActionType,
+          message: res.json().error
+        }
+      }));
+  }
+
+  public get(params: HttpParams){
+    let {apiUrl, options} = this.configRequest(params.uri, params.auth)
+
+    return this.http.get(apiUrl, options)
+      .map(res => ({
+        type: params.successActionType,
+        payload: res.json()[params.responseObject]
+      }))
+      .catch(res => Observable.of({
+        type: ERROR_ACTIONS.REPORT_ERROR,
+        payload: {
+          action_type: params.errorActionType,
+          message: res.json()
+        }
+      }))
+  }
+
+  public post(params: HttpParams){
+
+    let {apiUrl, options} = this.configRequest(params.uri, params.auth)
+    
+    return this.http.post(apiUrl, params.payload, options)
+      .map(res => ({
+        type: params.successActionType,
+        payload: res.json()[params.responseObject]
+      }))
+      .catch(res => Observable.of({
+        type: ERROR_ACTIONS.REPORT_ERROR,
+        payload: {
+          action_type: params.errorActionType,
+          message: res.json().error
+        }
+      }));
+  }
+
+  put(params: HttpParams){
+    let {apiUrl, options} = this.configRequest(params.uri, true)
+
+    return this.http.put(apiUrl, params.payload, options)
+      .map(res => ({
+        type: params.successActionType,
+        payload: res.json()[params.responseObject]
+      }))
+      .catch(res => Observable.of({
+        type: ERROR_ACTIONS.REPORT_ERROR,
+        payload: {
+          action_type: params.errorActionType,
+          message: res.json().error
+        }
+      }));
+  }
+}
+```
 
 I've also added an error reducer, an error interface, a api endpoint constant, and a httpParams interface.
 
+error interface:
+
+```
+export interface Error {
+	action_type: string,
+	id: number,
+	message: string
+}
+```
+
+error reducer:
+
+```
+import { ActionReducer, Action} from '@ngrx/store';
+
+import { Error } from '../models/error.interface';
+
+export const ERROR_ACTIONS = {
+	REPORT_ERROR: 'REPORT_ERROR',
+	REMOVE_ERROR: 'REMOVE_ERROR'
+}
+
+export const errorReducer: ActionReducer<Error[]> = (state: Error[] = [], {type, payload}: Action) => {
+	switch(type){
+		case ERROR_ACTIONS.REPORT_ERROR:
+			let id = Math.floor(Math.random() * 1000);
+			payload.id = id;
+			return [...state, payload]
+		case ERROR_ACTIONS.REMOVE_ERROR:
+			return state.filter(error => error.id != payload.id);
+		default:
+			return state;
+	}
+}
+
+```
+
+api.ts
+
+```
+export const API_ENDPOINT = () => {
+	return document.URL.split('/')[2] == 'localhost:4200' 
+		? 
+		'http://127.0.0.1:8000/api/v1' 
+		: 
+		'todo: add production server'
+}
+```
+
+httpParams interface
+
+```
+export interface HttpParams {
+	auth?: boolean, // on true, then the token will be on the header. Optional (not needed for all post and get requests)
+	errorActionType: string, // the failure action, should look something like `ACTION_TYPES.ACTION_TYPE.FAILURE`
+	payload?: {}, // what you're sending on the http request, should be data from a form. Optional: not needed for get and delete requests
+	responseObject: string, // this should be a property on the success resposonse body object
+	successActionType: string, // If the http responce is a success, send this action type to the reducer, should be something like `ACTION_TYPES.ACTION_TYPE.SUCCESS`
+	uri: string, // the api endpoint
+}
+```
+
 In this case, we only really care about the post method. We have a private method `configRequest`, which returns our headers and api uri endpoint, and I've used destructuring to return the local variables I would need from the results of the `configRequest`.  We've also imported Angular Http, which returns an Observable.  On the http.post, there is a success response handled with rxjs `map` operator, and the error response is handled with rxjs `catch` operator. Both send back an observable, which is then handled in the reducer functions.  
 
-###### 14. Next we are going to write up the session service to handle the `attempt` actions.
+###### 13. Next we are going to write up the session service to handle the `success` and `failure` actions.
 
 ```
 import { Injectable } from '@angular/core';
@@ -572,7 +1018,8 @@ This service handles 3 types of requests:
 
 Each wires up an object, and returns a method to the http wrapper with that object as it's argument.
 
-###### 15. The last step to make this work is to add in ngrx effects. Create `session.effects.ts` in the `effects` directory:
+###### 14. The last step to make this work is to add in ngrx effects.
+session.effects:
 
 ```
 import { Injectable } from '@angular/core';
@@ -619,7 +1066,7 @@ imports: [
 ]
 ```
 
-###### 16. Let's try this out:
+Let's try this out:
 
 - Make sure the rest api is running as expected with postman:
 
@@ -630,12 +1077,60 @@ python app.py
 
 Register a user works! State has been updated, as you can see from the redux devtools, postman, and the ui has changed.
 
+##### 17 Persist the session
+
 To keep going: 
 - onInit in app.component, check if there's a token in localStorage.  If there is, dispatch an action to get the user.
 - Add a method on app.component to logout the user
+
+updated app.component:
+
+```
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store'
+
+import { SESSION_ACTIONS } from './shared/reducers/session.reducer';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent implements OnInit {
+  session$;
+
+  checkLocalStorage(){
+    if (localStorage['Authorization']) return this.getUser();
+  }
+
+  constructor(private _store: Store<any>){
+    this.session$ = _store.select('session');
+  }
+
+  getUser(){
+    this._store.dispatch({
+      type: SESSION_ACTIONS.GET_USER.ATTEMPT,
+      payload: {}
+    });
+  }
+
+  ngOnInit(){
+    this.checkLocalStorage();
+  }
+
+  onSignOut(){
+    this._store.dispatch({
+      type: SESSION_ACTIONS.LOGOUT_USER.ATTEMPT,
+      payload: {}
+    });
+  }
+}
+```
+
+Further enhancements for you to try:
 - add an dumb component, and subscribe to the error property in the store, pass that data up to the error component which shows any errors that occur and removes them with setTimeout
 - Add a success component that mirrors the error component.
-- Add in testing
+- Write unit tests
 - Add additional features to the specific app
 
 #### Resources:
