@@ -3,11 +3,54 @@
   <channel>
     <title>Nathan Brenner</title>
     <description>A sample of my work and thoughts</description>
-    <link>http://nathanBrenner.github.io//</link>
-    <atom:link href="http://nathanBrenner.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 11 Feb 2017 14:14:58 -0800</pubDate>
-    <lastBuildDate>Sat, 11 Feb 2017 14:14:58 -0800</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 09 Mar 2018 13:37:33 -0800</pubDate>
+    <lastBuildDate>Fri, 09 Mar 2018 13:37:33 -0800</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>2017 recap</title>
+        <description>&lt;p&gt;It’s been a while since I last wrote one of these (10 months) and I was listening to my favorite podcast this morning (Frontend Happy Hour) on my drive to work and I found myself reflecting on the last year.&lt;/p&gt;
+
+&lt;p&gt;2017 was a really good year for me. To understand, we have to start with context.  2016 ended with me unemployed, finances weren’t great but moving in the right direction, pdx had gotten a ton of snow, my furnace went out, I was in the army, and trump was elected.&lt;/p&gt;
+
+&lt;p&gt;Well..my tenure with the army ended in late december. I had hated it for the last three years, so I proptly stopped shaving and felt a huge sigh of relief. I had given up music and teaching 2 years ago and I was only giving minimal effort to play in the army band when most of what they had me doing was baritone sax in a rock band (could you make me want out any less?). There were also some spectacular personalities in that group that I was thrilled to never have to see again.  Needless to say, I bit my toungue a lot for the last 3 years. So 2017 meant no more of that horseshit, even though I had 2 years where they could call me back if say…hey some guy on twitter declared war on north korea.&lt;/p&gt;
+
+&lt;p&gt;My family went to Reno to see family for christmas and I lied about my current work, but I came back to pdx with a job interview. I actually got the job, through a recruter I had worked for. With that good news, I went snowboarding for 2 days (background check was taking forever).  The gig was on the otherside of town, it was short term (two months), and it paid significantly less than any other coding job I’ve had at that point.  But a friend of mine (who was also looking for a job, we’ll call him Bob to protect his innocense) had a friend (we’ll call him Mark) who just got a job at a startup and needed angular devs, so he hired Bob and Bob (being the good friend he was) told him immediately of me.  The interview process was my kind: Here’s the problem, we’re a startup but fully funded, and we can pay you (coincidentally more than the last gig I had) so I left the contract with 2 weeks notice.  It was a risk, I kept working my ass off at that gig for 2 weeks even though I thought it would be fine to leave them screwed because of my previous experiences. Ironically the pr didn’t pursue hiring someone else to replace me so he made his shitty situation worse and from what I was left to know he had to take on my work when I left.&lt;/p&gt;
+
+&lt;p&gt;The startup I joined was in a tiny office not too far from the other place I was working (which actually worked for the interview process) and was in constant remodeling while I was there. So the commute was bad (over 1.5 hour one way), but I was working with tools I knew (Angular). I showed up to 3 guys working on the front end of this app, and over the course of the following months I rewrote everything they did that was wrong (template based forms to start, and super bloated components). This isn’t so much about the awful code I inheirited, but the problems I solved from starting with existing code and getting it to work.  It started with user registration with Auth0 lock for authentication, along with the requirement for custom validation (reactive forms became a huge hit for me and I’ll never default to writing a form in angular in any other way). I worked with Bob on this for a bit, then he got switched to a related app. The boss put another dev on the backend (we’ll call this kid Mars).  He was young, had done some cs studying at a community college but had been around the longest. There was also a designer (Lewis).  Mars and Lewis worked for the most part next to my boss, so it was a few months of me working without being told what to work on before I got to know them. That actually worked for me.&lt;/p&gt;
+
+&lt;p&gt;Well, this is the good news part: I’m still working there.  We changed locations in September. My commute time dropped significantly. Parking was an issue, and there’s a lot of homeless people around, but the office is great: Huge amount of space around me, lots of natural light, and I can still hear most conversations between my boss and the owner.  The app I mostly maintain has paying users (like if you want to use the app, you have to pay to use it). It’s not profitable yet, but that’s coming.&lt;/p&gt;
+
+&lt;p&gt;My friend Bob left the company over 3 months ago.  We both had been frustrated with our boss. At one point, I was expected to do overtime and I drew the line in the sand with offers on the table. I confronted my boss, and we found room for agreement. I ended up working that weekend out of my own choice and the app moved forward. Bob however didn’t do this. Instead, he interviewed around, distanced himself from the team, and wrote a lot of shitty code.  He got a job offer and left…and I had to clean up his mess. That took roughly 3 months. It was miserable work. Lewis had also left (he didn’t get along with the boss either, but a shorter commute and huge pay raise influenced him too) so the designer wasn’t around (as if he ever gave me valuable feedback.  He spent most of his time designing another app while I was usually told to “do it like the other app”). We hired on two more devs. I found 2 guys, my boss interviewed them both and let them join, but only one stuck around. At that point, I decided I should probably watch over the development of stuff that I might have to take over if they leave. I was hired to manage and mentor other devs while writing maintainable code. I had given my friend a lot of room, and he ended up not asking and when he did I usually snapped at him because I was neck deep into the work I was doing. Lesson learned: I did my friend a disservice: He needed me to review his code for him, and I didnt’ take ownership of his code. Maybe I alienated him, and I definately grew the feeling like he was bad at his work.  He left for another start up from what I can tell, he would be the lead dev. I doubt he would be successful based on his past experience.&lt;/p&gt;
+
+&lt;p&gt;Back to those two guys I found: It’s really hard to find good devs. I wanted to find someone that could jump into this thing and fix my problems. I wanted them to be as willing to jump in as I had been and willing to not need feed back. Here’s the problem: Fix it. Do a better job that I would do so I can focus on other things.  Apperently, in this town, that makes you a senior level developer. I had been in several places where that was what I was expected to. I hadn’t been in places where there were code reviews. There were short deadlines with high expectations.  So if you want to be a dev, you need some resilience. One of those 2 stuck around for a bit, but he lacked experience and thought he was below writing good css and html.  The other wasn’t a team player and didn’t waste as much of my time.&lt;/p&gt;
+
+&lt;p&gt;My wife and I went to Hawaii for 2 weeks. It was the first time since the honeymoon that we took a real vacation. Her wonderful mother watched our son. We had a great time snorkeling, beach hoping, and eating good sushi. I left with the feeling that I couldn’t wait to come back.&lt;/p&gt;
+
+&lt;p&gt;Not long after I had come back, I finished the big refactor on the mess. This might be a good time to mention other accomplishments: Along with learning to write good reactive forms, I learned how to write unit tests for angular, I figured out abstract classes, and I have to say it again I had a job for more than 6 months with a paid vacation (and later a huge christmas bonus and holiday party). I was secretly working on a huge refactor that brough in ngrx to manage state, but my app was stable. When bugs resurfaced, I was able to fix them fast and I’m really proud of the work I’ve done on this app. Now I had also cleaned up this other app. We had another remote contractor that I was now also managing: I review his code every morning, and we meet on google hangouts briefly.  I started out strictly micromanaging him and that’s moved to less as he has proven himself. He’s been a huge help.&lt;/p&gt;
+
+&lt;p&gt;I also foolishly bought a 2017 Dodge Charger r/t.  It’s a badass car, I had been eyeing them for the past few years, and the commute was terrible with manual trasmission. I had conquered manual transmission, but was ready to go back to automatic. I bought the car in April, was able to afford it, and it’s been a lot of fun.&lt;/p&gt;
+
+&lt;p&gt;Finances have been great this year.  With two full time parents both making over 80k salary, we’ve paid off most our consumer debt. 2018 is looking like we might be making another tiny human, and if I can make more money with that addition, my wife might decide to work a little less (which I would love). We’ve got credit cards that we don’t have debt that’s passing on each month, and we’re deep in the green each month (which we were able to do things like Hawaii without blinking an eye). Thank you to employers that care about the work we do.&lt;/p&gt;
+
+&lt;p&gt;I can’t say enough good things about the people I work with.  We have a bunch of sales people that continue to recognize and respect the work I do, I’ve settled on how I feel about my boss and I actually like him more than not. The owner is great and I love that he’s so easy to work with. The guy drives a tesla and has a really interesting personality, and treats the people that work for him really well. He’s covered the cost for me to go to ng-conf next April, which I’m really excited about.&lt;/p&gt;
+
+&lt;p&gt;Occassionaly, I’ll look at other oppertunities. I interviewed at another company, but it was a huge waste of my time.  I had 3 job interviews in 2017 and I won 2 of them.  Next job offer I get, I’ll probably use it as leverage to get a raise, but to be honest, I’d rather make my company a lot of money before I ask for stuff like that.  If anything, it’d be great if my backend dev gets more. His year was tough, but he’s young and bouncing back.&lt;/p&gt;
+
+&lt;p&gt;What do I want for 2018? Potty training! My kid is amazing. He’s saying multiple word sequences, he’s full of smiles, laughs, and he’s the joy of my life.&lt;/p&gt;
+
+&lt;p&gt;Christmas was hard..what do you want when you have more than you ever wanted? We stayed in town, my wife couldn’t get the time off work. It was actually kinda nice to stay in town for christmas.&lt;/p&gt;
+
+&lt;p&gt;It would be great to see my company sky rocket over the next year. I know I’m being selfish, but I want to not have to job hunt at all this year. I could continue to rant, but this seems good enough for now. Thank you for such a wonderful year.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 11 Feb 2017 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2017-recap</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-recap</guid>
+        
+        
+      </item>
     
       <item>
         <title>Backbone Revisited</title>
@@ -23,26 +66,23 @@
 
 &lt;p&gt;First of all, don’t use id’s on html tags for css styles. For example:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#my-element {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#my-element {
 	styles ...
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Using id’s like that is short sighted, and prone to bugs later one.  In this case, there would be multiple themes later on. In the first case, you might have a set of divs that would look like squares.  Later on, the user might decide that they want those squares to look like circles or rectangles.  Giving those square divs an &lt;code class=&quot;highlighter-rouge&quot;&gt;id=square&lt;/code&gt; in their Backbone view is a bad idea. Furthermore, targeting an html node with multiple id’s doesn’t make your selector any more spectific.  The id is already unique.  Don’t clutter up the css by doing something like:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#parentDiv #firstChildDiv {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#parentDiv #firstChildDiv {
 	styles...
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;I refactored a lot of the css, and I started with reducing the additional targets first, so in the case above, I changed it to:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#firstChildDiv {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#firstChildDiv {
 	styles...
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Then I checked the browser, and if everything went well, I would switch the id to a class attribute. Even still, I might later refactor that again so that instead of assigning classes to elements by their role on the app, I would move the styles into classes that describe the styles in that class.  Those classes would become more flexible to use, and you end up having less styles in your css files.  It might seem off in the beginning, but think about things like buttons, where the look of a button on an app should be consistent.  So you don’t need button classes like &lt;code class=&quot;highlighter-rouge&quot;&gt;endBtn&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;startBtn&lt;/code&gt; which describe what their role and what they do.  It doesn’t describe their styles.  What they do will be defined in the javascript classes.&lt;/p&gt;
 
 &lt;p&gt;There was also one big huge long exhaustive css file.  I broke that down into where those styles would be found. For example, the root page might have a css file for it, then for each additional route might have it’s own styles.  You can’t avoid the cascading nature of css, and you’ll still have to think about which order those files are loaded into the dom. It’s more for the sanity of the dev that has to maintain the application as it grows.&lt;/p&gt;
@@ -57,9 +97,9 @@
 
 &lt;p&gt;In Backbone, you get Models, Collections (which should be a set of models), and Views (which you can have a view for a model, and a view for a collection). Models should not have nested data structures, but if they do (since nested data structures work so well for javascript and real life items), you can’t implement them like that in the model. For example, you should not have a model like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var person = Backbone.Model.extend({
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var person = Backbone.Model.extend({
 	defaults: {
-		name: &#39;Nate&#39;,
+		name: 'Nate',
 		cars: [
 			{
 				year: 2008,
@@ -70,15 +110,14 @@
 		]
 	}
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Cars should be it’s own separated Collection with a Car model.  This separates the concerns and behaviors of those models and their cooresponding views from eachother. It makes your application scalable. It’s easier to test.  Instead, write your person Model like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(function(){
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(function(){
 App.Models.Person = Backbone.Model.extend({
 	defaults: {
-		name: &#39;Nate&#39;,
+		name: 'Nate',
 		cars: []
 	}
 });
@@ -94,35 +133,33 @@ App.Collections.Cars = Backbone.Collection.extend({
 });
 
 })()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;There’s a lot there, and I would add that each of these would be in their own separate js file, all wrapped with an IIFE (Immediately Invocked Function Expression). &lt;code class=&quot;highlighter-rouge&quot;&gt;App&lt;/code&gt; is a property specified earlier with&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;window.App = { 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;window.App = { 
 	Models: {},
 	Collections: {},
 	Views: {}
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This keeps you from populating the global scope with a bunch of variables that could at some unknown point get changed (Sorry, this is es5. We only get lexical scoping, so you can change any declared variables at any point). The only time you should use &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; is within a function, so that the varible is closed within that function.&lt;/p&gt;
 
 &lt;p&gt;Alright, so now you are ready to create a view for the person, but how do you do that with the car model and cars collections. Like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;App.Views.Car = Backbone.View.extend({
-	tagName: &#39;li&#39;,
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;App.Views.Car = Backbone.View.extend({
+	tagName: 'li',
 	render: function(){
-		this.$el.html(this.model.get(&#39;year&#39;));
+		this.$el.html(this.model.get('year'));
 		return this;
 	},
 });
 
 App.Views.Cars = Backbone.View.extend({
-	tagName: &#39;ul&#39;,
+	tagName: 'ul',
 	initialize: function(){
-		this.collection.on(&#39;add&#39;, this.render);
+		this.collection.on('add', this.render);
 	},
 	render: function(){
 		this.collection.forEach(function(car){
@@ -139,15 +176,14 @@ App.Views.Person = Backbone.View.extend({
 	render: function(){
 		var cars = new App.Collection.Cars();
 		var carsView = new App.Views.Cars({collection: cars});
-		this.model.get(&#39;cars&#39;).forEach(function(car){
+		this.model.get('cars').forEach(function(car){
 			cars.add(car);
 		});
 		this.$el.html();
 		this.$el.append(carsView.render().el);
 	}
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;A Backbone Collection is not a Javascript Array.  It inheirts from it.  An a view to a collection is not a Javascript Array.  If you have nested data structures, separate each nested property into a Collection bound to a specific model.&lt;/p&gt;
 
@@ -160,8 +196,8 @@ App.Views.Person = Backbone.View.extend({
 &lt;p&gt;Bottom line: Stick with best practices for javascript and css.  Learn the fundamentals, ask for help, never stop learning, and look under the hood often.&lt;/p&gt;
 </description>
         <pubDate>Sat, 11 Feb 2017 00:00:00 -0800</pubDate>
-        <link>http://nathanBrenner.github.io//backbone-revisited</link>
-        <guid isPermaLink="true">http://nathanBrenner.github.io//backbone-revisited</guid>
+        <link>http://localhost:4000/backbone-revisited</link>
+        <guid isPermaLink="true">http://localhost:4000/backbone-revisited</guid>
         
         
       </item>
@@ -190,11 +226,13 @@ It’s python with Flask.
 Secret Santa but for now it’s a demo and reusable code for the first thing you should do if you need authentication/authorization&lt;/p&gt;
 
 &lt;h4 id=&quot;why&quot;&gt;Why?&lt;/h4&gt;
-&lt;p&gt;How do you manage state in an angular application?
-- share it between services?
-- NGRX is a solution to this problem
-What is state?
-- the data in your application, or in your components&lt;/p&gt;
+&lt;p&gt;How do you manage state in an angular application?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;share it between services?&lt;/li&gt;
+  &lt;li&gt;NGRX is a solution to this problem
+What is state?&lt;/li&gt;
+  &lt;li&gt;the data in your application, or in your components&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;what&quot;&gt;What?&lt;/h4&gt;
 &lt;p&gt;This is not your classic angular
@@ -247,38 +285,34 @@ NGRX abstrats a lot of that heavy lifting of rxjs for you.&lt;/p&gt;
 
 &lt;h4 id=&quot;steps&quot;&gt;steps&lt;/h4&gt;
 
-&lt;h6 id=&quot;ng-new-ngrxdemo-create-a-new-angular-cli-project&quot;&gt;1. &lt;code class=&quot;highlighter-rouge&quot;&gt;ng new ngrxDemo&lt;/code&gt;: Create a new angular cli project.&lt;/h6&gt;
+&lt;h6 id=&quot;1-ng-new-ngrxdemo-create-a-new-angular-cli-project&quot;&gt;1. &lt;code class=&quot;highlighter-rouge&quot;&gt;ng new ngrxDemo&lt;/code&gt;: Create a new angular cli project.&lt;/h6&gt;
 
-&lt;h6 id=&quot;install-dependancies-for-ngrx&quot;&gt;2. Install dependancies for ngrx&lt;/h6&gt;
+&lt;h6 id=&quot;2-install-dependancies-for-ngrx&quot;&gt;2. Install dependancies for ngrx&lt;/h6&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i -S @ngrx/core @ngrx/store @ngrx/store-devtools @ngrx/effects @angular/material
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i -S @ngrx/core @ngrx/store @ngrx/store-devtools @ngrx/effects @angular/material
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;app.module.ts&lt;/code&gt; at the top:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { StoreDevtoolsModule } from &#39;@ngrx/store-devtools&#39;;
-import { StoreModule } from &#39;@ngrx/store&#39;;
-import { EffectsModule } from &#39;@ngrx/effects&#39;;
-import { MaterialModule } from &#39;@angular/material&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { MaterialModule } from '@angular/material';
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;then for now just add in the store-devtools so you can pull it up:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;imports: [
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;imports: [
 	...
 	StoreDevtoolsModule.instrumentOnlyWithExtension(),
 	MaterialModule.forRoot()
 ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;and I’ll want the default theme for angular material, so in &lt;code class=&quot;highlighter-rouge&quot;&gt;styles.css&lt;/code&gt;, I’ll add&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@import &#39;~@angular/material/core/theming/prebuilt/purple-green.css&#39;&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@import '~@angular/material/core/theming/prebuilt/purple-green.css'';
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You’ll also need to install the Redux Devtools Extension&lt;/p&gt;
 
@@ -287,7 +321,7 @@ import { MaterialModule } from &#39;@angular/material&#39;;
 	- The State panel is what I use the most, but this has a lot of additional functionality
 	- Right now, it’ll just show &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h6 id=&quot;create-the-shared-directory-and-in-that-directory-create-dirs-for-effects-models-reducers-and-services&quot;&gt;3. Create the shared directory, and in that directory, create dirs for effects, models, reducers, and services.&lt;/h6&gt;
+&lt;h6 id=&quot;3-create-the-shared-directory-and-in-that-directory-create-dirs-for-effects-models-reducers-and-services&quot;&gt;3. Create the shared directory, and in that directory, create dirs for effects, models, reducers, and services.&lt;/h6&gt;
 
 &lt;ul&gt;
   &lt;li&gt;In effects: &lt;code class=&quot;highlighter-rouge&quot;&gt;touch session.effects.ts&lt;/code&gt;&lt;/li&gt;
@@ -296,82 +330,79 @@ import { MaterialModule } from &#39;@angular/material&#39;;
   &lt;li&gt;In services: &lt;code class=&quot;highlighter-rouge&quot;&gt;ng g s session&lt;/code&gt;, then move the spec and service into the services dir, and add it as a provider to the module.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h6 id=&quot;next-draft-the-user-and-session-interfaces&quot;&gt;4. Next draft the user and session interfaces:&lt;/h6&gt;
+&lt;h6 id=&quot;4-next-draft-the-user-and-session-interfaces&quot;&gt;4. Next draft the user and session interfaces:&lt;/h6&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export interface User {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export interface User {
 	email?: string;
 	id?: number;
 	password?: string;
 	username?: string;
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;and the session interface:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { User } from &#39;./user.interface&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { User } from './user.interface'
 
 export interface Session {
 	user: User;
 	token: string;
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Token is for authentication, and all the properties on the User interface are optional so they don’t have to have a default property.  These data structures mirror the api models. I’ve found building these interfaces helps with the type safety that typescript provides.&lt;/p&gt;
 
-&lt;h6 id=&quot;in-sessionreducerts-add&quot;&gt;5. In &lt;code class=&quot;highlighter-rouge&quot;&gt;session.reducer.ts&lt;/code&gt;, add:&lt;/h6&gt;
+&lt;h6 id=&quot;5-in-sessionreducerts-add&quot;&gt;5. In &lt;code class=&quot;highlighter-rouge&quot;&gt;session.reducer.ts&lt;/code&gt;, add:&lt;/h6&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { ActionReducer, Action } from &#39;@ngrx/store&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { ActionReducer, Action } from '@ngrx/store';
 
-import { Session } from &#39;../models/session.interface&#39;;
+import { Session } from '../models/session.interface';
 
 export const SESSION_ACTIONS = {
 	GET_USER: {
-		ATTEMPT: &#39;SESSION_GET_USER_ATTEMPT&#39;,
-		FAILURE: &#39;SESSION_GET_USER_FAILURE&#39;,
-		SUCCESS: &#39;SESSION_GET_USER_SUCCESS&#39;
+		ATTEMPT: 'SESSION_GET_USER_ATTEMPT',
+		FAILURE: 'SESSION_GET_USER_FAILURE',
+		SUCCESS: 'SESSION_GET_USER_SUCCESS'
 	},
 	LOGIN_USER: {
-		ATTEMPT: &#39;SESSION_LOGIN_USER_ATTEMPT&#39;,
-		FAILURE: &#39;SESSION_LOGIN_USER_FAILURE&#39;,
-		SUCCESS: &#39;SESSION_LOGIN_USER_SUCCESS&#39;
+		ATTEMPT: 'SESSION_LOGIN_USER_ATTEMPT',
+		FAILURE: 'SESSION_LOGIN_USER_FAILURE',
+		SUCCESS: 'SESSION_LOGIN_USER_SUCCESS'
 	},
 	LOGOUT_USER: {
-		ATTEMPT: &#39;SESSION_LOGOUT_USER_ATTEMPT&#39;
+		ATTEMPT: 'SESSION_LOGOUT_USER_ATTEMPT'
 	},
 	REGISTER_USER: {
-		ATTEMPT: &#39;SESSION_REGISTER_USER_ATTEMPT&#39;,
-		FAILURE: &#39;SESSION_REGISTER_USER_FAILURE&#39;,
-		SUCCESS: &#39;SESSION_REGISTER_USER_SUCCESS&#39;
+		ATTEMPT: 'SESSION_REGISTER_USER_ATTEMPT',
+		FAILURE: 'SESSION_REGISTER_USER_FAILURE',
+		SUCCESS: 'SESSION_REGISTER_USER_SUCCESS'
 	},
 }
 
 const defaultSession: Session = {
-	token: &#39;&#39;,
+	token: '',
 	user: {}
 }
 
 export const sessionReducer: ActionReducer&amp;lt;Session&amp;gt; = (state: Session = defaultSession, {type, payload}: Action) =&amp;gt; {
-	console.log(&#39;action&#39;, type, payload);
+	console.log('action', type, payload);
 	switch(type){
 		case SESSION_ACTIONS.GET_USER.SUCCESS:
 			return Object.assign({}, state, {user: payload});
 		case SESSION_ACTIONS.LOGIN_USER.SUCCESS:
-			localStorage.setItem(&#39;Authorization&#39;, payload.token);
+			localStorage.setItem('Authorization', payload.token);
 			return Object.assign({}, state, payload);
 		case SESSION_ACTIONS.LOGOUT_USER.ATTEMPT:
 			localStorage.clear();
 			return Object.assign({}, state, defaultSession);
 		case SESSION_ACTIONS.REGISTER_USER.SUCCESS:
-			localStorage.setItem(&#39;Authorization&#39;, payload.token);
+			localStorage.setItem('Authorization', payload.token);
 			return Object.assign({}, state, payload);
 		default:
 			return state;
 	}
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This is a lot of code, and I don’t write reducers like this normally. I typically start with one thing at a time, but for now this is fine.&lt;/p&gt;
 
@@ -393,9 +424,9 @@ Next, I declare the default session variable.&lt;/p&gt;
 
 &lt;p&gt;The last case is often the first thing you’ll add when you write reducers where the default action is to return the state as it exists.  We’re thinking that this app is goign to get larger and to make are reducer functions slim, we should use flat data structures.  Every time an action is dispatched, every reducer function get’s called and runs through their own cases.  If the case matches, the state on that property of the store is changed, otherwise it just returns the state as it ccurrently exists.  Add on observables that can be subscribed to, and you get some great performance benifits.&lt;/p&gt;
 
-&lt;h6 id=&quot;import-the-sessionreducer-into-the-appmodule-and-provide-the-sessionreducer-to-the-storemodule&quot;&gt;6. Import the SessionReducer into the AppModule and provide the SessionReducer to the StoreModule:&lt;/h6&gt;
+&lt;h6 id=&quot;6-import-the-sessionreducer-into-the-appmodule-and-provide-the-sessionreducer-to-the-storemodule&quot;&gt;6. Import the SessionReducer into the AppModule and provide the SessionReducer to the StoreModule:&lt;/h6&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { sessionReducer } from &#39;./shared/reducers/session.reducer&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { sessionReducer } from './shared/reducers/session.reducer';
 
 import: [
 	...
@@ -404,102 +435,99 @@ import: [
   }),
 	StoreDevtoolsModule.instrumentOnlyWithExtension(),
 ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Make sure the StoreModule is above the StoreDevtoolsModule&lt;/p&gt;
 
-&lt;h6 id=&quot;so-finally-lets-access-the-store-in-appcomponent&quot;&gt;7. So finally, let’s access the store in &lt;code class=&quot;highlighter-rouge&quot;&gt;app.component&lt;/code&gt;:&lt;/h6&gt;
+&lt;h6 id=&quot;7-so-finally-lets-access-the-store-in-appcomponent&quot;&gt;7. So finally, let’s access the store in &lt;code class=&quot;highlighter-rouge&quot;&gt;app.component&lt;/code&gt;:&lt;/h6&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component } from &#39;@angular/core&#39;;
-import { Store } from &#39;@ngrx/store&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component } from '@angular/core';
+import { Store } from '@ngrx/store'
 
 
 @Component({
-  selector: &#39;app-root&#39;,
-  templateUrl: &#39;./app.component.html&#39;,
-  styleUrls: [&#39;./app.component.css&#39;]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   session$;
 
   constructor(private _store: Store&amp;lt;any&amp;gt;){
-    this.session$ = _store.select(&#39;session&#39;);
+    this.session$ = _store.select('session');
   }
 
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Here, we’ve brought in Store, declared the session property, and when an instance of this class is created, the session propety is assigned with the value of the session from the state.  If you check the  Redux DevTools, it should now show the session object and if you open it up, it’ll have the default values we specified in the reducer params.&lt;/p&gt;
 
 &lt;p&gt;If you wanted to display that data, you could change the token property in &lt;code class=&quot;highlighter-rouge&quot;&gt;defaultSession&lt;/code&gt;, then in  your app component template, provide: ``.  This isn’t the only way to get the value, and you’ll likely not be displaying properties of the store in smart components.&lt;/p&gt;
 
-&lt;h6 id=&quot;add-router-and-some-components&quot;&gt;8. Add router and some components&lt;/h6&gt;
+&lt;h6 id=&quot;8-add-router-and-some-components&quot;&gt;8. Add router and some components&lt;/h6&gt;
 
-&lt;p&gt;Now that our reducer is set up, let’s demonstrate the features without using the backend. For that, we’re going to need a router and some additional components: 
-- container components that the user could route to: home, registration, login, page-not-found
-- a navbar component to sit in the app component along with the router-outlet directive.&lt;/p&gt;
+&lt;p&gt;Now that our reducer is set up, let’s demonstrate the features without using the backend. For that, we’re going to need a router and some additional components:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;container components that the user could route to: home, registration, login, page-not-found&lt;/li&gt;
+  &lt;li&gt;a navbar component to sit in the app component along with the router-outlet directive.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng g c navbar
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng g c navbar
 ng g c login
 ng g c registration
 ng g c home
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;I’ll create routes for each of the container components in &lt;code class=&quot;highlighter-rouge&quot;&gt;app.routing.ts&lt;/code&gt; and inject the router into the module.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { NgModule }             from &#39;@angular/core&#39;;
-import { RouterModule, Routes } from &#39;@angular/router&#39;;
-import { RegistrationComponent } from &#39;./registration/registration.component&#39;;
-import { LoginComponent } from &#39;./login/login.component&#39;;
-import { HomeComponent } from &#39;./home/home.component&#39;;
-import { PageNotFoundComponent } from &#39;./page-not-found/page-not-found.component&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { NgModule }             from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
 
-  { path: &#39;registration&#39;,  component: RegistrationComponent },
-  { path: &#39;login&#39;, component: LoginComponent },
-  { path: &#39;&#39;, component: HomeComponent },
-  { path: &#39;**&#39;, component: PageNotFoundComponent }
+  { path: 'registration',  component: RegistrationComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '', component: HomeComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;app.module&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;imports: [
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;imports: [
 	...
 	AppRoutingModule
 ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;build-the-navbar&quot;&gt;9. Build the navbar&lt;/h5&gt;
+&lt;h5 id=&quot;9-build-the-navbar&quot;&gt;9. Build the navbar&lt;/h5&gt;
 
 &lt;p&gt;Next, we’ll add the template for the navbar component so a user can click on a button for login and registration, and see those approapriate views render.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;md-toolbar color=&quot;primary&quot;&amp;gt;
-	&amp;lt;a [routerLink]=&quot;[&#39;/&#39;]&quot; md-button&amp;gt;NgrxDemo&amp;lt;/a&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;md-toolbar color=&quot;primary&quot;&amp;gt;
+	&amp;lt;a [routerLink]=&quot;['/']&quot; md-button&amp;gt;NgrxDemo&amp;lt;/a&amp;gt;
 
   &amp;lt;!-- This fills the remaining space of the current row --&amp;gt;
   &amp;lt;span class=&quot;fill-remaining-space&quot;&amp;gt;&amp;lt;/span&amp;gt;
 	&amp;lt;div *ngIf=&quot;!user.id&quot;&amp;gt;
 		&amp;lt;a 
 			md-raised-button 
-			[routerLink]=&quot;[&#39;/registration&#39;]&quot;
+			[routerLink]=&quot;['/registration']&quot;
 			color=&quot;accent&quot;
 			class=&quot;navBtn&quot;
 		&amp;gt;Registration&amp;lt;/a&amp;gt;
 		&amp;lt;a 
 			md-raised-button 
-			[routerLink]=&quot;[&#39;/login&#39;]&quot; 
+			[routerLink]=&quot;['/login']&quot; 
 			color=&quot;accent&quot;
 			class=&quot;navBtn&quot;
 		&amp;gt;Login&amp;lt;/a&amp;gt;
@@ -517,8 +545,7 @@ export class AppRoutingModule {}
 		&amp;lt;button md-menu-item (click)=&quot;onSignOut.emit()&quot;&amp;gt; Sign Out &amp;lt;/button&amp;gt;
 	&amp;lt;/md-menu&amp;gt;
 &amp;lt;/md-toolbar&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;I’ve added 4 sources of events: 3 which will change routes, and one that will emit an event &lt;code class=&quot;highlighter-rouge&quot;&gt;onSignOut&lt;/code&gt; when the button is clicked.  I’ve also specified that the registration sign in anchors should only appear if there’s a user id.  This is what makes the &lt;code class=&quot;highlighter-rouge&quot;&gt;navbar&lt;/code&gt; component a dumb component.  It doesn’t act on events and it doesn’t get data directly from the store.  It’s going get the data from it’s parent component and tell the parent component about the event emitted.&lt;/p&gt;
 
@@ -528,12 +555,12 @@ Output: Events that can be emitted from this component
 EventEmitter: An instance of an event, basically sends up e (like from vanilla javascript dom events), and any data that you want to send with it
 ChangeDetectionStrategy: Briefly, any dumb components that have Inputs need this to be set to &lt;code class=&quot;highlighter-rouge&quot;&gt;onPush&lt;/code&gt; so that the properties of that component are only changed when an event has changed that property from the store. For a small app, this isn’t important because you don’t care about performance, but when you application scales up, and you find yourself with a lot more event emitters, change detection that’s contantly checking every bit of data in your app is expensive on performance.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from &#39;@angular/core&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: &#39;app-navbar&#39;,
-  templateUrl: &#39;./navbar.component.html&#39;,
-  styleUrls: [&#39;./navbar.component.css&#39;],
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
@@ -544,63 +571,57 @@ export class NavbarComponent {
   }
 
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;I’ve also added a little bit of css to spread out the buttons in the template:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.fill-remaining-space {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.fill-remaining-space {
   flex: 1 1 auto;
 }
 
 .navBtn {
   margin-right: 1rem;
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Finally, lets add the &lt;code class=&quot;highlighter-rouge&quot;&gt;navbar&lt;/code&gt; component and &lt;code class=&quot;highlighter-rouge&quot;&gt;router-outlet&lt;/code&gt; directive to our &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; component:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;app-navbar 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;app-navbar 
 	[user]=&quot;(session$ | async)?.user&quot;
 	(onSignOut)=&quot;onSignOut($event)&quot;
 &amp;gt;&amp;lt;/app-navbar&amp;gt;
 &amp;lt;div&amp;gt;
   &amp;lt;router-outlet&amp;gt;&amp;lt;/router-outlet&amp;gt;
 &amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Here, I’ve assigned the &lt;code class=&quot;highlighter-rouge&quot;&gt;user&lt;/code&gt; property from the &lt;code class=&quot;highlighter-rouge&quot;&gt;navBar&lt;/code&gt; component to the &lt;code class=&quot;highlighter-rouge&quot;&gt;session$.user&lt;/code&gt; property on the &lt;code class=&quot;highlighter-rouge&quot;&gt;app.component&lt;/code&gt; with the asyn pipe to get the session.  The &lt;code class=&quot;highlighter-rouge&quot;&gt;?&lt;/code&gt; is the safe navigation operator, which is an angular way (and I guess it’s found in other languages) to guard against null and undefined values in the peroperty paths.  Without it, both Javascript and Angular throws a null reference error and the app crashes.  This is actually just something I figured out recently.  Alternatively, I could have subscribed to the store in the constructor like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_store.select(&#39;session&#39;).subscribe(session =&amp;gt; this.user = session.user);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_store.select('session').subscribe(session =&amp;gt; this.user = session.user);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;But that could become a problem if I don’t unsubscribe from the store when I stop using the component.  By using the &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; pipe and the safe navigation operator, I can avoid injecting the store directly into my components.  According to Rob Wormold, that’s a best practice in this case.&lt;/p&gt;
 
 &lt;p&gt;I’ve also assigned the &lt;code class=&quot;highlighter-rouge&quot;&gt;onSignOut&lt;/code&gt; event emitter from &lt;code class=&quot;highlighter-rouge&quot;&gt;navbar&lt;/code&gt; component to the &lt;code class=&quot;highlighter-rouge&quot;&gt;onSignOut&lt;/code&gt; method from the &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; component.  It takes a default argument &lt;code class=&quot;highlighter-rouge&quot;&gt;$event&lt;/code&gt;, which we’ll declare now, but leave alone since we can’t login or register yet, so you won’t be able to run this method.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;onSignOut(){
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;onSignOut(){
 	// todo
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Last for this step, in &lt;code class=&quot;highlighter-rouge&quot;&gt;app.component.css&lt;/code&gt; just to add center the view:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:host div{
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:host div{
 	max-width: 600px;
 	margin: 10px auto;
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;:host&lt;/code&gt; psudo selector is targeting the app component template.&lt;/p&gt;
 
 &lt;p&gt;Now you can click on any of those buttons, and you should see that the route changes.&lt;/p&gt;
 
-&lt;h6 id=&quot;dynamic-forms&quot;&gt;10. Dynamic forms:&lt;/h6&gt;
+&lt;h6 id=&quot;10-dynamic-forms&quot;&gt;10. Dynamic forms:&lt;/h6&gt;
 
 &lt;p&gt;So I’m going to cheat a little bit. I don’t want to write a bunch of forms.  I’d rather write one form, and be able to use that form with a set of questions that I’ll provide to it. It keeps my app DRY and consistent.  Conveniently, I found in the angular docs cookbook section a guide to implement just this.  I would definately encourage you to check out this section and change your instance of it to meet your needs, like I have done so it works with angular material.&lt;/p&gt;
 
@@ -614,7 +635,7 @@ export class NavbarComponent {
 
 &lt;p&gt;QuestionBase:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export class QuestionBase&amp;lt;T&amp;gt;{
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export class QuestionBase&amp;lt;T&amp;gt;{
 	value: T;
 	key: string;
 	label: string;
@@ -633,70 +654,68 @@ export class NavbarComponent {
 		placeholder?: string,
 	} = {}){
 		this.value = options.value;
-		this.key = options.key || &#39;&#39;;
-		this.label = options.label || &#39;&#39;;
+		this.key = options.key || '';
+		this.label = options.label || '';
 		this.required = !!options.required;
 		this.order = options.order === undefined ? 1 : options.order;
-		this.controlType = options.controlType || &#39;&#39;;
+		this.controlType = options.controlType || '';
 		this.placeholder = options.placeholder;
 	}
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;TextboxQuestion:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { QuestionBase } from &#39;./question-base&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { QuestionBase } from './question-base';
 
 export class TextboxQuestion extends QuestionBase&amp;lt;string&amp;gt; {
-  controlType = &#39;textbox&#39;;
+  controlType = 'textbox';
   type: string;
 
   constructor(options: {} = {}) {
     super(options);
-    this.type = options[&#39;type&#39;] || &#39;&#39;;
+    this.type = options['type'] || '';
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;QuestionService:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable }       from &#39;@angular/core&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable }       from '@angular/core';
 
-import { QuestionBase }     from &#39;../question-base&#39;;
-import { TextboxQuestion }  from &#39;../question-textbox&#39;;
+import { QuestionBase }     from '../question-base';
+import { TextboxQuestion }  from '../question-textbox';
 
 @Injectable()
 export class QuestionService {
   getRegistrationQuestions() {
     let questions: QuestionBase&amp;lt;any&amp;gt;[] = [
       new TextboxQuestion({
-        key: &#39;username&#39;,
-        label: &#39;Username&#39;,
+        key: 'username',
+        label: 'Username',
         required: true,
-        type:&#39;text&#39;,
+        type:'text',
         order: 1
       }),
       new TextboxQuestion({
-        key: &#39;email&#39;,
-        label: &#39;Email&#39;,
+        key: 'email',
+        label: 'Email',
         required: true,
-        type: &#39;text&#39;,
+        type: 'text',
         order: 2
       }),
       new TextboxQuestion({
-        key: &#39;password&#39;,
-        label: &#39;Password&#39;,
+        key: 'password',
+        label: 'Password',
         required: true,
         type: &quot;password&quot;,
         order: 3
       }),
       new TextboxQuestion({
-        key: &#39;verify_password&#39;,
-        label: &#39;Verify Password&#39;,
+        key: 'verify_password',
+        label: 'Verify Password',
         required: true,
-        type: &#39;password&#39;,
+        type: 'password',
         order: 4
       })
     ];
@@ -706,17 +725,17 @@ export class QuestionService {
   getLoginQuestions() {
     let questions: QuestionBase&amp;lt;any&amp;gt;[] = [
       new TextboxQuestion({
-        key: &#39;email&#39;,
-        label: &#39;Email&#39;,
+        key: 'email',
+        label: 'Email',
         required: true,
-        type: &#39;text&#39;,
+        type: 'text',
         order: 1
       }),
       new TextboxQuestion({
-        key: &#39;password&#39;,
-        label: &#39;Password&#39;,
+        key: 'password',
+        label: 'Password',
         required: true,
-        type: &#39;password&#39;,
+        type: 'password',
         order: 2
       })
     ];
@@ -724,15 +743,14 @@ export class QuestionService {
   }
 }
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;QuestionControlService:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable }   from &#39;@angular/core&#39;;
-import { FormControl, FormGroup, Validators } from &#39;@angular/forms&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable }   from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { QuestionBase } from &#39;../question-base&#39;;
+import { QuestionBase } from '../question-base';
 
 @Injectable()
 export class QuestionControlService {
@@ -742,25 +760,24 @@ export class QuestionControlService {
     let group: any = {};
 
     questions.forEach(question =&amp;gt; {
-      group[question.key] = question.required ? new FormControl(question.value || &#39;&#39;, Validators.required)
-                                              : new FormControl(question.value || &#39;&#39;);
+      group[question.key] = question.required ? new FormControl(question.value || '', Validators.required)
+                                              : new FormControl(question.value || '');
     });
     return new FormGroup(group);
   }
 }
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;DynamicFormQuestionComponent:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, Input } from &#39;@angular/core&#39;;
-import { FormGroup }        from &#39;@angular/forms&#39;;
-import { QuestionBase }     from &#39;../shared/question-base&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, Input } from '@angular/core';
+import { FormGroup }        from '@angular/forms';
+import { QuestionBase }     from '../shared/question-base';
 
 @Component({
-  selector: &#39;df-question&#39;,
-  templateUrl: &#39;dynamic-form-question.component.html&#39;
+  selector: 'df-question',
+  templateUrl: 'dynamic-form-question.component.html'
 })
 
 export class DynamicFormQuestionComponent {
@@ -770,15 +787,14 @@ export class DynamicFormQuestionComponent {
   get isValid() { return this.form.controls[this.question.key].valid; }
 }
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;DynamicFormQuestion template:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div [formGroup]=&quot;form&quot;&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div [formGroup]=&quot;form&quot;&amp;gt;
   &amp;lt;div [ngSwitch]=&quot;question.controlType&quot;&amp;gt;
     &amp;lt;md-input-container&amp;gt;
-      &amp;lt;input md-input *ngSwitchCase=&quot;&#39;textbox&#39;&quot; 
+      &amp;lt;input md-input *ngSwitchCase=&quot;'textbox'&quot; 
         placeholder=&quot;&quot; 
         [formControlName]=&quot;question.key&quot;
         [id]=&quot;question.key&quot; 
@@ -788,20 +804,19 @@ export class DynamicFormQuestionComponent {
   &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;DynamicFormComponent:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, Input, OnInit, EventEmitter, Output}  from &#39;@angular/core&#39;;
-import { FormGroup} from &#39;@angular/forms&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, Input, OnInit, EventEmitter, Output}  from '@angular/core';
+import { FormGroup} from '@angular/forms';
 
-import { QuestionBase }  from &#39;../shared/question-base&#39;;
-import { QuestionControlService } from &#39;../shared/services/question-control.service&#39;;
+import { QuestionBase }  from '../shared/question-base';
+import { QuestionControlService } from '../shared/services/question-control.service';
 
 @Component({
-  selector: &#39;dynamic-form&#39;,
-  templateUrl: &#39;dynamic-form.component.html&#39;,
+  selector: 'dynamic-form',
+  templateUrl: 'dynamic-form.component.html',
   providers: [ QuestionControlService ]
 })
 
@@ -817,12 +832,11 @@ export class DynamicFormComponent implements OnInit {
     this.form = this.qcs.toFormGroup(this.questions);
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;DynamicFormComponent template:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div&amp;gt;
   &amp;lt;form (ngSubmit)=&quot;onSubmit.emit(form.value)&quot; [formGroup]=&quot;form&quot;&amp;gt;
     &amp;lt;div *ngFor=&quot;let question of questions&quot; class=&quot;form-row&quot;&amp;gt;
       &amp;lt;df-question [question]=&quot;question&quot; [form]=&quot;form&quot;&amp;gt;&amp;lt;/df-question&amp;gt;
@@ -833,18 +847,17 @@ export class DynamicFormComponent implements OnInit {
   &amp;lt;/form&amp;gt;
 &amp;lt;/div&amp;gt;
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;In short, &lt;code class=&quot;highlighter-rouge&quot;&gt;QuestionService&lt;/code&gt; will contain methods that return a list of questions for each form that we’ll need: Questions for registration, and questions for logging in.  We’ll build these forms in the &lt;code class=&quot;highlighter-rouge&quot;&gt;dynamic-form&lt;/code&gt; component, and drop them in their respective smart component.&lt;/p&gt;
 
 &lt;p&gt;We’ll also need to import &lt;code class=&quot;highlighter-rouge&quot;&gt;ReactiveFormsModule&lt;/code&gt; into our module from &lt;code class=&quot;highlighter-rouge&quot;&gt;@angular/forms&lt;/code&gt;, and to add our &lt;code class=&quot;highlighter-rouge&quot;&gt;QuestionService&lt;/code&gt; as a provider to our module.&lt;/p&gt;
 
-&lt;h6 id=&quot;build-the-forms-for-registration-and-login&quot;&gt;11. Build the forms for registration and login:&lt;/h6&gt;
+&lt;h6 id=&quot;11-build-the-forms-for-registration-and-login&quot;&gt;11. Build the forms for registration and login:&lt;/h6&gt;
 
 &lt;p&gt;registration component template:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;md-card&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;md-card&amp;gt;
 	&amp;lt;md-card-title&amp;gt;Registration&amp;lt;/md-card-title&amp;gt;
 	&amp;lt;md-card-content&amp;gt;
 		&amp;lt;dynamic-form 
@@ -853,22 +866,21 @@ export class DynamicFormComponent implements OnInit {
 		&amp;gt;&amp;lt;/dynamic-form&amp;gt;
 	&amp;lt;/md-card-content&amp;gt;
 &amp;lt;/md-card&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;then in the component:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, OnInit } from &#39;@angular/core&#39;;
-import { Store } from &#39;@ngrx/store&#39;;
-import { Router } from &#39;@angular/router&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Router } from '@angular/router';
 
-import { QuestionService } from &#39;../shared/services/question.service&#39;;
-import { SESSION_ACTIONS } from &#39;../shared/reducers/session.reducer&#39;;
+import { QuestionService } from '../shared/services/question.service';
+import { SESSION_ACTIONS } from '../shared/reducers/session.reducer';
 
 @Component({
-  selector: &#39;app-registration&#39;,
-  templateUrl: &#39;./registration.component.html&#39;,
-  styleUrls: [&#39;./registration.component.css&#39;],
+  selector: 'app-registration',
+  templateUrl: './registration.component.html',
+  styleUrls: ['./registration.component.css'],
 })
 export class RegistrationComponent implements OnInit {
   questions: any[];
@@ -889,11 +901,10 @@ export class RegistrationComponent implements OnInit {
       type: SESSION_ACTIONS.REGISTER_USER.ATTEMPT,
       payload: payload
     });
-    setTimeout(() =&amp;gt; this.router.navigate([&#39;/&#39;]), 2000);
+    setTimeout(() =&amp;gt; this.router.navigate(['/']), 2000);
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Here, we’ve imported the Store so we can dispatch an action when the dynamic form has been submitted.  The form get’s it’s questions from the questionService.&lt;/p&gt;
 
@@ -908,16 +919,16 @@ export class RegistrationComponent implements OnInit {
 
 &lt;p&gt;Now when you fill out the form, the state will change, and you’ll be redirected to the login. Now for the login component:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, OnInit } from &#39;@angular/core&#39;;
-import { Router } from &#39;@angular/router&#39;;
-import { Store } from &#39;@ngrx/store&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
 
-import { QuestionService } from &#39;../shared/services/question.service&#39;;
-import { SESSION_ACTIONS } from &#39;../shared/reducers/session.reducer&#39;;
+import { QuestionService } from '../shared/services/question.service';
+import { SESSION_ACTIONS } from '../shared/reducers/session.reducer';
 @Component({
-  selector: &#39;app-login&#39;,
-  templateUrl: &#39;./login.component.html&#39;,
-  styleUrls: [&#39;./login.component.css&#39;],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
   questions: any[];
@@ -938,16 +949,15 @@ export class LoginComponent implements OnInit {
       type: SESSION_ACTIONS.LOGIN_USER.ATTEMPT,
       payload: payload
     })
-    setTimeout(() =&amp;gt; this.router.navigate([&#39;/&#39;]), 2000);
+    setTimeout(() =&amp;gt; this.router.navigate(['/']), 2000);
   }
 
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;login template:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;md-card&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;md-card&amp;gt;
 	&amp;lt;md-card-title&amp;gt;Login&amp;lt;/md-card-title&amp;gt;
 	&amp;lt;md-card-content&amp;gt;
 		&amp;lt;dynamic-form 
@@ -956,23 +966,22 @@ export class LoginComponent implements OnInit {
 		&amp;gt;&amp;lt;/dynamic-form&amp;gt;
 	&amp;lt;/md-card-content&amp;gt;
 &amp;lt;/md-card&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;– Note: You’ll probably notice that the password field isn’t reflecting it’s type.  That’s a bug on angular material.  I played around with it for a bit on last Saturday and couldn’t get it to work.  Probably need to create an issue.&lt;/p&gt;
 
-&lt;h6 id=&quot;adding-htmlwrapper-service-and-api-endpoint&quot;&gt;12. Adding htmlwrapper service and api endpoint:&lt;/h6&gt;
+&lt;h6 id=&quot;12-adding-htmlwrapper-service-and-api-endpoint&quot;&gt;12. Adding htmlwrapper service and api endpoint:&lt;/h6&gt;
 &lt;p&gt;For our services, we’re going to use something I’ve written that abstracts away a lot of the repetition in making http requests.  This particular service works with my rest api for handling token based authentication and handling events with ngrx effects, which we’ll do next.&lt;/p&gt;
 
 &lt;p&gt;HttpWrapperService:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable } from &#39;@angular/core&#39;;
-import { Http, Headers, Response, RequestOptions } from &#39;@angular/http&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable } from '@angular/core';
+import { Http, Headers, Response, RequestOptions } from '@angular/http';
+import { Observable } from 'rxjs/Observable'
 
-import { API_ENDPOINT } from &#39;../api&#39;;
-import { ERROR_ACTIONS } from &#39;../reducers/error.reducer&#39;;
-import { HttpParams } from &#39;../models/httpParams.interface&#39;;
+import { API_ENDPOINT } from '../api';
+import { ERROR_ACTIONS } from '../reducers/error.reducer';
+import { HttpParams } from '../models/httpParams.interface';
 
 @Injectable()
 export class HttpWrapperService {
@@ -991,10 +1000,10 @@ export class HttpWrapperService {
 
     let headers = authRequired ? 
       new Headers({
-        &#39;Content-Type&#39;: &#39;application/json&#39;,
-        &#39;Authorization&#39; : `token ${localStorage[&#39;Authorization&#39;]}`
+        'Content-Type': 'application/json',
+        'Authorization' : `token ${localStorage['Authorization']}`
       }) : 
-      new Headers({&#39;Content-Type&#39;: &#39;application/json&#39;});
+      new Headers({'Content-Type': 'application/json'});
     let options = new RequestOptions({ headers: headers });
 
     return {apiUrl, options};
@@ -1069,30 +1078,28 @@ export class HttpWrapperService {
       }));
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;I’ve also added an error reducer, an error interface, a api endpoint constant, and a httpParams interface.&lt;/p&gt;
 
 &lt;p&gt;error interface:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export interface Error {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export interface Error {
 	action_type: string,
 	id: number,
 	message: string
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;error reducer:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { ActionReducer, Action} from &#39;@ngrx/store&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { ActionReducer, Action} from '@ngrx/store';
 
-import { Error } from &#39;../models/error.interface&#39;;
+import { Error } from '../models/error.interface';
 
 export const ERROR_ACTIONS = {
-	REPORT_ERROR: &#39;REPORT_ERROR&#39;,
-	REMOVE_ERROR: &#39;REMOVE_ERROR&#39;
+	REPORT_ERROR: 'REPORT_ERROR',
+	REMOVE_ERROR: 'REMOVE_ERROR'
 }
 
 export const errorReducer: ActionReducer&amp;lt;Error[]&amp;gt; = (state: Error[] = [], {type, payload}: Action) =&amp;gt; {
@@ -1108,43 +1115,40 @@ export const errorReducer: ActionReducer&amp;lt;Error[]&amp;gt; = (state: Error[
 	}
 }
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;api.ts&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export const API_ENDPOINT = () =&amp;gt; {
-	return document.URL.split(&#39;/&#39;)[2] == &#39;localhost:4200&#39; 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export const API_ENDPOINT = () =&amp;gt; {
+	return document.URL.split('/')[2] == 'localhost:4200' 
 		? 
-		&#39;http://127.0.0.1:8000/api/v1&#39; 
+		'http://127.0.0.1:8000/api/v1' 
 		: 
-		&#39;todo: add production server&#39;
+		'todo: add production server'
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;httpParams interface&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export interface HttpParams {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export interface HttpParams {
 	auth?: boolean, // on true, then the token will be on the header. Optional (not needed for all post and get requests)
 	errorActionType: string, // the failure action, should look something like `ACTION_TYPES.ACTION_TYPE.FAILURE`
-	payload?: {}, // what you&#39;re sending on the http request, should be data from a form. Optional: not needed for get and delete requests
+	payload?: {}, // what you're sending on the http request, should be data from a form. Optional: not needed for get and delete requests
 	responseObject: string, // this should be a property on the success resposonse body object
 	successActionType: string, // If the http responce is a success, send this action type to the reducer, should be something like `ACTION_TYPES.ACTION_TYPE.SUCCESS`
 	uri: string, // the api endpoint
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;In this case, we only really care about the post method. We have a private method &lt;code class=&quot;highlighter-rouge&quot;&gt;configRequest&lt;/code&gt;, which returns our headers and api uri endpoint, and I’ve used destructuring to return the local variables I would need from the results of the &lt;code class=&quot;highlighter-rouge&quot;&gt;configRequest&lt;/code&gt;.  We’ve also imported Angular Http, which returns an Observable.  On the http.post, there is a success response handled with rxjs &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt; operator, and the error response is handled with rxjs &lt;code class=&quot;highlighter-rouge&quot;&gt;catch&lt;/code&gt; operator. Both send back an observable, which is then handled in the reducer functions.&lt;/p&gt;
 
-&lt;h6 id=&quot;next-we-are-going-to-write-up-the-session-service-to-handle-the-success-and-failure-actions&quot;&gt;13. Next we are going to write up the session service to handle the &lt;code class=&quot;highlighter-rouge&quot;&gt;success&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;failure&lt;/code&gt; actions.&lt;/h6&gt;
+&lt;h6 id=&quot;13-next-we-are-going-to-write-up-the-session-service-to-handle-the-success-and-failure-actions&quot;&gt;13. Next we are going to write up the session service to handle the &lt;code class=&quot;highlighter-rouge&quot;&gt;success&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;failure&lt;/code&gt; actions.&lt;/h6&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable } from &#39;@angular/core&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable } from '@angular/core';
 
-import { HttpWrapperService } from &#39;./http-wrapper.service&#39;;
-import { SESSION_ACTIONS } from &#39;../reducers/session.reducer&#39;;
-import { HttpParams } from &#39;../models/httpParams.interface&#39;;
+import { HttpWrapperService } from './http-wrapper.service';
+import { SESSION_ACTIONS } from '../reducers/session.reducer';
+import { HttpParams } from '../models/httpParams.interface';
 
 @Injectable()
 export class SessionService {
@@ -1155,9 +1159,9 @@ export class SessionService {
     let getParams: HttpParams = {
       auth: true,
       errorActionType: SESSION_ACTIONS.GET_USER.FAILURE,
-      responseObject: &#39;user&#39;,
+      responseObject: 'user',
       successActionType: SESSION_ACTIONS.GET_USER.SUCCESS,
-      uri: &#39;user&#39;
+      uri: 'user'
     }
     return this.httpWrapperService.get(getParams);
   }
@@ -1167,9 +1171,9 @@ export class SessionService {
       auth: false,
       errorActionType: SESSION_ACTIONS.LOGIN_USER.FAILURE,
       payload: payload,
-      responseObject: &#39;account&#39;,
+      responseObject: 'account',
       successActionType: SESSION_ACTIONS.LOGIN_USER.SUCCESS,
-      uri: &#39;user&#39;
+      uri: 'user'
     }
     return this.httpWrapperService.post(postParams);
   }
@@ -1179,16 +1183,15 @@ export class SessionService {
       auth: false,
       errorActionType: SESSION_ACTIONS.REGISTER_USER.FAILURE,
       payload: payload,
-      responseObject: &#39;account&#39;,
+      responseObject: 'account',
       successActionType: SESSION_ACTIONS.REGISTER_USER.SUCCESS,
-      uri: &#39;users&#39;
+      uri: 'users'
     }
     return this.httpWrapperService.post(postParams)
   }
 
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This service handles 3 types of requests:&lt;/p&gt;
 
@@ -1200,17 +1203,17 @@ export class SessionService {
 
 &lt;p&gt;Each wires up an object, and returns a method to the http wrapper with that object as it’s argument.&lt;/p&gt;
 
-&lt;h6 id=&quot;the-last-step-to-make-this-work-is-to-add-in-ngrx-effects&quot;&gt;14. The last step to make this work is to add in ngrx effects.&lt;/h6&gt;
+&lt;h6 id=&quot;14-the-last-step-to-make-this-work-is-to-add-in-ngrx-effects&quot;&gt;14. The last step to make this work is to add in ngrx effects.&lt;/h6&gt;
 &lt;p&gt;session.effects:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable } from &#39;@angular/core&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-import &#39;rxjs/add/operator/map&#39;;
-import &#39;rxjs/add/operator/switchMap&#39;;
-import { Actions, Effect } from &#39;@ngrx/effects&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
+import { Actions, Effect } from '@ngrx/effects';
 
-import { SessionService } from &#39;../services/session.service&#39;;
-import { SESSION_ACTIONS } from &#39;../reducers/session.reducer&#39;;
+import { SessionService } from '../services/session.service';
+import { SESSION_ACTIONS } from '../reducers/session.reducer';
 
 @Injectable()
 export class SessionEffects {
@@ -1235,18 +1238,16 @@ export class SessionEffects {
 		.map(action =&amp;gt; action.payload)
 		.switchMap(payload =&amp;gt; this.sessionService.registerUser(payload));
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;We need effects because we have to handle side effects.  When the user submits a form, we’re invoking the store to dispatch an &lt;code class=&quot;highlighter-rouge&quot;&gt;attempt&lt;/code&gt; action, which is basically an http requests.  So here, when the attempt action is fired, the approapriate effect uses &lt;code class=&quot;highlighter-rouge&quot;&gt;switchmap&lt;/code&gt; from ngrx to change streams and send that payload to the service.  Remember then, the service will update the state by changing the &lt;code class=&quot;highlighter-rouge&quot;&gt;session&lt;/code&gt; or the &lt;code class=&quot;highlighter-rouge&quot;&gt;error&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;To make this work, we’ll need to run our session effects in our module:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;imports: [
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;imports: [
 	EffectsModule.run(SessionEffects),
 ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Let’s try this out:&lt;/p&gt;
 
@@ -1254,40 +1255,41 @@ export class SessionEffects {
   &lt;li&gt;Make sure the rest api is running as expected with postman:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source env/bin/activate
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source env/bin/activate
 python app.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Register a user works! State has been updated, as you can see from the redux devtools, postman, and the ui has changed.&lt;/p&gt;
 
-&lt;h5 id=&quot;persist-the-session&quot;&gt;17 Persist the session&lt;/h5&gt;
+&lt;h5 id=&quot;17-persist-the-session&quot;&gt;17 Persist the session&lt;/h5&gt;
 
-&lt;p&gt;To keep going: 
-- onInit in app.component, check if there’s a token in localStorage.  If there is, dispatch an action to get the user.
-- Add a method on app.component to logout the user&lt;/p&gt;
+&lt;p&gt;To keep going:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;onInit in app.component, check if there’s a token in localStorage.  If there is, dispatch an action to get the user.&lt;/li&gt;
+  &lt;li&gt;Add a method on app.component to logout the user&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;updated app.component:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, OnInit } from &#39;@angular/core&#39;;
-import { Store } from &#39;@ngrx/store&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store'
 
-import { SESSION_ACTIONS } from &#39;./shared/reducers/session.reducer&#39;;
+import { SESSION_ACTIONS } from './shared/reducers/session.reducer';
 
 @Component({
-  selector: &#39;app-root&#39;,
-  templateUrl: &#39;./app.component.html&#39;,
-  styleUrls: [&#39;./app.component.css&#39;]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   session$;
 
   checkLocalStorage(){
-    if (localStorage[&#39;Authorization&#39;]) return this.getUser();
+    if (localStorage['Authorization']) return this.getUser();
   }
 
   constructor(private _store: Store&amp;lt;any&amp;gt;){
-    this.session$ = _store.select(&#39;session&#39;);
+    this.session$ = _store.select('session');
   }
 
   getUser(){
@@ -1308,14 +1310,15 @@ export class AppComponent implements OnInit {
     });
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Further enhancements for you to try:
-- add an dumb component, and subscribe to the error property in the store, pass that data up to the error component which shows any errors that occur and removes them with setTimeout
-- Add a success component that mirrors the error component.
-- Write unit tests
-- Add additional features to the specific app&lt;/p&gt;
+&lt;p&gt;Further enhancements for you to try:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;add an dumb component, and subscribe to the error property in the store, pass that data up to the error component which shows any errors that occur and removes them with setTimeout&lt;/li&gt;
+  &lt;li&gt;Add a success component that mirrors the error component.&lt;/li&gt;
+  &lt;li&gt;Write unit tests&lt;/li&gt;
+  &lt;li&gt;Add additional features to the specific app&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;resources&quot;&gt;Resources:&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/ngrx&quot;&gt;ngrx&lt;/a&gt;&lt;/p&gt;
@@ -1331,111 +1334,8 @@ export class AppComponent implements OnInit {
 &lt;p&gt;&lt;a href=&quot;https://angular.io/docs/ts/latest/cookbook/dynamic-form.html&quot;&gt;dynamic forms&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 21 Jan 2017 00:00:00 -0800</pubDate>
-        <link>http://nathanBrenner.github.io//ngrx-tutorial</link>
-        <guid isPermaLink="true">http://nathanBrenner.github.io//ngrx-tutorial</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>2016 Retrospective</title>
-        <description>&lt;p&gt;It’s been a while since I’ve written a blog for this site, and as I was putting my son to bed after a long christmas day, I started thinking of a few posts I should write, this being one of them.&lt;/p&gt;
-
-&lt;p&gt;Others to follow: 
-- Something about a large overview and opitions on Python and the frameworks I’ve used from the perspective of a node developer
-- A introductuion to ngrx store and effects.  More on both of these later.&lt;/p&gt;
-
-&lt;p&gt;For the sake of not offending someone, I’ll be reducing names.  If you want to know who it was, you can ask me or figure it out on my own.  PDX is a small place, and if you piss someone off, be ready for them to get their revenge on you.&lt;/p&gt;
-
-&lt;p&gt;2016 started off not so good for me: My wife had gone back to work, and I had more or less given up on the job hunt.  After months of looking and doing everything I could with no avail, it seemed best to just keep learning and enjoy being a stay-at-home dad.  At that time, my son was 4 months old, and we found a daily rhythm, which at this point is hard to remember, but went something like this: He’d sit in some rocker while I ate breakfast (after I gave him a bottle), I’d play guitar for him for a while, probably give him another bottle, he’d take a nap, I’d work on something (probably the ionic 1 app), he’d wake up like 3 hours later, we’d do nothing together for the rest of the day, I’d probably do some stuff around the house and maybe make dinner, and Olivia would come home to put him to bed.&lt;/p&gt;
-
-&lt;p&gt;There was some trigger in December that got me motivated to start looking again, and sometime in January, G posted on the pdx startup slack board job-board channel that he needed a junior to medium dev to do html email templates.  I responded something to the effect that I was definately capable.  A phone conversation followed, along with me digging into the best google search had for documentation on writing html email templates, then an interview that was cancelled on the day, but finally an interview.&lt;/p&gt;
-
-&lt;p&gt;This was a kinda crazy interview: It was a huge panel, but I picked up who I needed to talk to and who I needed to ignore: Mostly K, who I actually recognized from the code school.  At that time, she didn’t leave herself with a very good impression, but I knew that if I wanted to make it in this industry, I’d have to make it work with people even if they weren’t ideal to work with. Between her and G, they gave the impression that they valued my studies from the code school, and moved to make it work with me as a contractor.  Emails wans’t something I really wanted to do and there was a lot of bad reviews on this particular company, but I needed production experience. I figured I’d do the best I could and when it came time to leave, I’d be able to find work easier than before.&lt;/p&gt;
-
-&lt;p&gt;Debugging issues on email templates was hard but I enjoyed the challenge.  I got to know some of the querks between the different browsers, and often became frustrated with qa even though they made my work better. There were some challenging personalities to work with, and some really great, and I’d say in general, I really liked the people I worked with, I was diplomatic where there were differences in opinions, and I was professional.  When I didn’t have an email to work on, I studied node with node school, and my manager got me involved on maintaining an in house project.  It was an angular 1 app with php, and frankly it was written poorly but worked.  I had the time to refactor it so the php was used approapriately and the angular pieces were more module and easier to maintain.  I think I took a huge single file angular 1 controller and broke it into roughly 5 controllers with their own view, added in form validation, and stripped out all of the php from the templates. Lesson learned: If you’re going to use an opinionated js framework like Angular, let Angular do the work for you. Don’t use a server side language like php to do stuff the front-end should be doing. Second, spa’s only need a lightweight rest api.  The js does the heavy lifting.   Sure, have form validation in both places, but don’t use templating syntax for the server side stuff where html and javascript is sufficient.&lt;/p&gt;
-
-&lt;p&gt;Another project I took on was a ui library for email templates.  In the emails I worked on, there was a lot of duplicate code, and when I reused pieces that had been used on previous emails, the email would go through qa a lot faster because there would be fewer bugs.  There was at the time some css framework that had something like this, but it wasn’t a perfect solution, so I took the initiative with the support of my manager to start saving these component based css pieces of html with inline css into a directory.  This process led me to not only reuse these components, but to also refactor and improve the code I had previously written.  There was a point where I stopped doing all the css inline to using a separate css file, and using a build tool to move the css to inline within the template.  There’s tools that do this, and what I had invisioned was a cli tool where a developer could write an email with current html css standards, run a command on the cli to build it, and the css would be implemented into the email template such that you could write with &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt;’s and they would be convered to &lt;code class=&quot;highlighter-rouge&quot;&gt;table&lt;/code&gt; tags.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, I never got that far with the project.  My contract was ended in May, after 4 months.  A lot of the work I had been doing on emails had been moved to a cheeper solution overseas and I left in what I considered good terms.  I requested K to provide me with a recommendation on LinkedIn that was never provided, but all of the people I worked directly with were willing and were very helpful at getting me the next gig.&lt;/p&gt;
-
-&lt;p&gt;Before the html email gig, I had another conversation that started from something on pdx startup slack.  It turned into a lengthy phone conversation, where my son was chillin in his rocker peacefully for the over an hour conversation that seemed mostly cultural.  The guy came across like he cared, I told him I can produce but I lack experience, and he said he’d send me something to work on to see where I was at.  Well, he never did, but jump to June, and my old manager, G, is doing some work for him and his wife is working for him.  Well, I reached out to this guy again, time went by, and I was actually getting some serious looking leads.  I interviewed at Daimler and was really excited about it. It was for a front-end team, Angular 1, and there was a question about documentation.  I said something like “The code should speak for itself”, which wasn’t the right answer for this group.&lt;/p&gt;
-
-&lt;p&gt;I’ve thought a lot about that question since then: If you’re using an opinionated framework like Angular, you’ll be limited on how you do things, so for someone new to come in and maintain something, if they don’t know they framework, they need to read up on the framework.  Inline comments eat up space, and like I said in the interview, I compaired it to reading music: I’ve had to read music where there were circles around everytime a note was flat or sharp as defined by the key signature.  If you read the key signature and was diciplined to stay in that key, then those circles are distracting you from everything else that’s going on like paying attention to the conductor and reading what the composer wants you to read.  You don’t need to add a ton of stuff.  That’s not to say I never added stuff in, but when I did, it was very intentional.&lt;/p&gt;
-
-&lt;p&gt;Now with specific to coding, there are additional tools that solve this problem: Unit tests and for angular then you have Typescript.  I like them both, and still add in-line comments.  I’m weak on unit tests, but from every project I’ve worked on, I’ve used a tdd method.  I just don’t have the tests written.  So I’ll write a feature where I know what should happen, run the app, check the browser, and change course as needed.  Writing automated tests would be much better, but with the time I had, that’s what I was able to do and still deliver on time.  Clients don’t care about unit tests, and the saying goes if you know how to write them, then you’ll develop features much faster.  As far as typescript, I’m not the best at it, but it’s helped me in a lot of places later on, which I’ll go into.&lt;/p&gt;
-
-&lt;p&gt;So I answered a question in the way they didn’t like, and that kept me from getting that gig.  Lesson learned: For some devs (and this is because I worked with people that shared my opinion), inline documentation is probably a best practice, but again should be deliberate and conscise.&lt;/p&gt;
-
-&lt;p&gt;Regardless to that gig, shortly after, that guy I had talked to before the last gig reached out: He had an employee that wasn’t producing.  We went out for a beer, and it was my favorite type of interview as of yet: It was a conversation.  We talked about several things like my service with the military and culture related concerns but the job was mine. His guy wasn’t producing and his guy didn’t need the gig. The concern was with the client, like if they’d be ok with making the change.  He said this client has years of work for them, and he said a lot of what sounded like good things about the culture of the company: His background was a dev, the team was small and worked remotely but had an office at WeWork in Portland, the pay would be up to current standards, and everyone works hard together.  It was a python/angular consultant type shop and I’d have the oppertunity to do some stuff in python so if/when I picked up on python I could use it to make it stick.&lt;/p&gt;
-
-&lt;p&gt;Now, not sure if I would do this again: He told me he would meet with the client the next day and if the client was good with the change, then he’d hire me.  I knew he’d drive back to where he lived so I figured if he had good news for me, he’d let me know before he hit the road. Noon came and went, I was disappointed, and sent him a message that evening that sounded like “It must have not worked out, what a shame, good luck, maybe we can make it work later on”.  I had several leads, and it’s a gig economy.  Well, turns out he was looking at his book and he gave me the gig.  He put me on contract for less than I was doing at the email gig, but I was ok with it because it was on work that I wanted to do and the culture sounded like a good fit.&lt;/p&gt;
-
-&lt;p&gt;Onboarding was brief.  I jumped in and contributed/closed github issues and within a week, the client was telling the owner how happy he was with me. Things seemed to be looking good, I was moved to salary which came with a small pay increase.  I asked for my contract to be updated and I trusted my boss to do his job, but I never saw that contract update but things seemed to be going well so I didn’t want to rock the boad.&lt;/p&gt;
-
-&lt;p&gt;After working wiht the email gig, where it was an agency type environment, I was starting to itch to work in a SaaS environment where the quality of the code mattered more to the enduser than burn and churn.  A client has 3 things: time, money, and quality.  Pick 2.  Most of the time, it’s time and money.  Quality is subjective, and you’re devs should be able to write good code fast.&lt;/p&gt;
-
-&lt;p&gt;Another thing about working with clients: If they were great to work with, they wouldn’t need you.  They’re going to be weird, they’re going to be difficult, because if they weren’t then they wouldn’t need you.  Apply that to any one that needs you and compensates you with a paycheck.  They’re not your friend, even if they want you to think they’re a nice guy. I hate it, but I have been burned too much to not completely believe this.  Give me a job, let me stay there for over a year, have my back when I need it, and you’ll be an exception to the rule.  Sorry, I got this with working in education, the military, and tech is no different.&lt;/p&gt;
-
-&lt;p&gt;So this particular client started getting weird, and me and another guy were no longer needed.  I was doing angular 1 work for them on this aweful project, but it was the first big angular spa I had worked on so I got a lot of great experience.&lt;/p&gt;
-
-&lt;p&gt;After that project, my boss told me to build the ui on an inhouse app.  He gave me some ideas about what it was, and gave me the impression that I could use it as an oppertunity to learn how to use angular 2, which had just been officially 2.0.0 released.&lt;/p&gt;
-
-&lt;p&gt;I barely got into user auth with registration and login before I was put onto another client.  Paint this picture: I had 8 weeks to build this app.  I was responsible for the front-end, and there was another guy on the backend.  So I started with creating the project with the angular cli (like I had with the previous project) and started getting it up to speed with the inhouse project then hit a wall. For 1, I got a bunch of feedback from the client, like a 55ish page Word document describing the features in no particular order. Along with some guidance from my boss, like I should send a weekly status report for the first 4 weeks, then move onto direct meetings.  There was a face to face online meeting where the client basically met the devs, and there was a third guy in the mix that would just be the guy to fill in the gaps.&lt;/p&gt;
-
-&lt;p&gt;Throughout the project, the backend guy was dependant on what I wanted to do.  He wasn’t leading.  He was a senior dev of much more years of experience than I had.  That third guy was involved in additional projects, and frankly was able to give some helpful feedback but very little in contributing to code.  So this was the issue: This thing needed to be done, and I was going to deliver it on time above expectations.  Could I come through? I would get that question, and I would want to give an explaintion detailing the situation, but the people writing my paychecks just wanted a “yes” or “no” answer.  What happened to the support that you sold me on to work here?&lt;/p&gt;
-
-&lt;p&gt;The backend dev was great.  He was juggling other projects, he didn’t take the lead, but he wrote a great api and helped me when I needed.  Toward the end, he also added some front end stuff that I was running out of time with.  But to be clear, me, with less than a year of day to day professional software development was the lead developer on this project and was using tools that no one in this company could help me with.  Had I not delivered, then yes I should have gone with something else but that wasn’t the case.  Again, I repeate, I delivered on time above the expection of the client.&lt;/p&gt;
-
-&lt;p&gt;So what does “done” mean?  Does it mean you hit a date and you stop working on it? Does it mean the software was perfect from the developer standpoint? Like a full set of tests are written, it can’t break anywhere, and needs no future maintanance? If that’s what you want, then you give up time or money and that’s on the person that created/negotiate the contract.  No one on my team gave me a definition of what “done” meant.  No one told me what the date was when this contract ended until I pushed them for it after the 7th week. What “done” meant to me was that the features the client wanted was existing by the end of the 8th week.&lt;/p&gt;
-
-&lt;p&gt;So to take a break from this storm, there were some great things I learned, and a lot of it was from React.  It kinda comes down to rxjs: maintaining state and creating reusable components.  I was using typescript, angular 2, bootstrap 4, and a host of third party vendor components because I was strapped on time.  I picked up on some patterns that have blown my mind, and I’ll be giving a presentation on ngrx at the January PDX Angular meetup.&lt;/p&gt;
-
-&lt;p&gt;All during this process, I created the map on which features to work on. I created github issues for each week.  I set up the continous integration, and the github integration on slack.  I drafted weekly status reports to the client.  Midway throught the process another person in the company was added to be the person to handle the client.  Not sure what that person actually did aside from cater to the clients needs and give them those answers like “Yes, it will be done on time” with no level of detail on what “done” means.  I love having people that will do that job, but if I’m involved in that process at all, transparency means a lot to me.  And at the end of week 8, I was the one that demoed the app to the client.  My boss and the backend dev were on the call, but it was me, the junior dev, demonstrating what the app could do, what their money got them.  It was the mvp.  The client said he was happy with it.&lt;/p&gt;
-
-&lt;p&gt;After that meeting, I took care of some other issues in my life and didn’t look at my computer for that weekend. Prior to that, I was stressed out about getting features done each week, I was working weekends, I was putting this job ahead of my family.  This was not the culture this guy had told me about.  I asked for help, and when I got responses, they were like “I’ll try if I have time later” or “Maybe we should dump everything we have as we’re halfway through the project and use another javascript framework”.  There were bugs, because I was burn and churning, so I got back to work on Monday, and the client provided another Microsoft Word document with a list of things that should be addressed in no particular order but he did provide essentially labels that could be summed up to “must be done” “post mpv”, and “requires conversation”.  Well most were “must be done”.  Some were fairly easy, some not so much, and I very much enjoyed fixing those issues.&lt;/p&gt;
-
-&lt;p&gt;This was around Thanksgiving.  This company claimed for “unlimited paid time off”, and this was the test. I was going out of town for a couple days to visit family.  I had worked well more than what this client was paying for with weekends and days that were over 10 hours regularly.  There were also days where it came time for me to go pick up my son from day care and I was in the middle of a feature with a bug, and I couldn’t get back to that bug until later. Often this might mean waking up at 3 am unable to sleep because I had worked through the problem in my head and couldn’t think of anything else to be able to go back to sleep so I would go work, and that 10 hour day would turn into longer.  No time for being healthy like really even eating lunch or going to the gym.  I was working my ass off on this app, I had something to prove.  I would deliver on time above expectations.&lt;/p&gt;
-
-&lt;p&gt;So the question came up: Is the app going to be ready by the first of December (which appearently is when the client was no longer paying for this company to do the work).  Not something I wanted to answer in one word response, I was stressed out, and I didn’t need these conversations or to lie and set false expectations.  I would not say the app would be ready because there were issues that I did not know the time they would take to complete.  So I may have pissed off the person that was handling the client because I refused to cater to her single response answer, but I maintained control of development and I was transparent about what would need to be done. I said I’d be out of town, and would probably work more that I would like to.  The rest of the team, how convenient, said they’d be working through the holiday.&lt;/p&gt;
-
-&lt;p&gt;So yes, I worked a few hours on Thanksgiving and the days around it.  I knocked out the majority of the work well ahead of what I was fearing would take. December 1 came and I sent in my last github commit believing the app was delivered on time ahead of expectations of the client.&lt;/p&gt;
-
-&lt;p&gt;My boss, near that midnight point of the development, told me to go back to working on the in house app.  Sometime around that, he also propted a conversation with the team members about a retrospective, and in private he did the same thing.  To be clear, I asked for feadback.  During the development, in the couple of times he asked about the app, I asked for feedback and in those cases he said he didn’t really know because he hadn’t paid any attention to it.  2 weeks later he called me on a morning where I was close to finishing the app after requesting for feedback on what the api models meant, and he fired me.  It was an issue of culture.  There were things that had taken me longer than they should have.  With the needs of his company, they need someone more senior level.&lt;/p&gt;
-
-&lt;p&gt;Some interesting things about this.  First, let’s get the elephant out of the room.  The person that was handling the client was a friend.  Our families socialized outside of work.  She sarcastically insulted me about things like being boring because I wanted to talk to her about tech (coding) and about playing the clarinet in the military and I sarcastically insulted her about not being a develper, about being a saleman, and being canadian.  No harm no foul.  But she took something I said and lashed out out of the blue privately.  I immediately appologized, and I told this person how I would expect them to figure out how to get me fired from my job. Did that happen? I don’t know. Is it possible? Absolutely.  Was I wrong? Absolutely.  I should have never opened up to the people I work with and to never be sarcastic with them, particularlly online when the context is more vague.  Is it possible this person could keep me from getting a job in tech in Portland ever again? Absolutely.  Regardless, I recommend people to her and to use this company and act professionally about this company.  This will be the only place I publically mention this mostly because I doubt anyone will read this.&lt;/p&gt;
-
-&lt;p&gt;Second, this employer had shared some opinions in the past about what a senior developer is.  Like “What makes a developer a senior?”, as in that lable doesn’t mean anything.  I never really had a junior dev position where I could relax and rely on mentors to baby me through.  I’m actually in the middle of a project where I am mentoring someone. I’m very transparent, and using a lot of what I carry from being a teacher to help this person and this person is helping me on a project.  What I consider a senior developer now is based off of what I did on that project where this guy said I took longer than it should have. I never aggreed to be a project manager, even though I kinda liked those responsibilities, where I was directly communicating with the client, mapping out the big picture, and scaffolding features particuarlly that I had never written before.  Yes, managing state should not have taken me so long to figure out…but that had never been something I had done before. Using a framework that is a rewritten version with bagage from the previous framework…and not having any direct help…That’s a problem a senior handles. And I never said I was a senior dev when I pursued this job.&lt;/p&gt;
-
-&lt;p&gt;So the culture definately shifted.  I’ve got a ton of experience now from that project, and frankly from a year ago I have an incredible depth of experience.  I see a lot of jobs that say they want a senior dev with 5 years experience.  I also hear things like it only matters what you’ve done in the last 2 years.  Well, I’ve been writing code every day for the last 2 yaers.  I taught a lot of people how to write code, like at the code school, I’ve mentored friends that have been struggling to get jobs, I’ve taught myself a lot of design patterns and languages, and I’ve figured out how to be successful in both a corporate type role and in a start up type role.  Coming into 2017, I’m confident I’ll find a gig within the last month.  I have a lot to offer. I don’t know very many people with the resilency and work ethic that I have.  I’ve got some friends that are helping me out, and I’ve got some projects in the works.&lt;/p&gt;
-
-&lt;p&gt;Before I turn completely positive, who fires someone right around christmas? I’m finding that I have to lie to my friends and to professonals about the conditions on the end of my employment because A. It makes me look like I did something really bad or B. It makes them look aweful.  It was a frustrating gig, but I really like the people that I worked with, and I really wanted to stay there for a lot longer.  They’re publically looking for another developer to handle a python django project that I feel like I could have and should be on.  They sold me on culture, I bought into it, I asked for transparency and accepted when it wasn’t given even when I was very transparent. Of the django devs I know that are local, I’m telling them about this gig and that they should reach out.  My family sent that person who I was friends with a christmas card.  I’ve forgiven them, and at the same time I don’t know how to understand why they have decided to wrong me so.  It just reminds me that it’s a gig economy: I saw the writing on the wall. The culture was shifting, I should have been looking for a job for a while and maybe left them with that project halfway done because they could have done what they did.  I’m not even sure if I could do that to someone.&lt;/p&gt;
-
-&lt;p&gt;If you’ve read this far, and you’re thinking to employ me, you’re probably thinking I have a lot of baggage, and if that’s the case, that you’re unwilling to look at the whole picture, then I probably don’t want to work for you.  I don’t need you. You need me, to fix a problem you don’t want to solve.&lt;/p&gt;
-
-&lt;p&gt;My lesson learned: Be friendly but not friends with the people you work with that can get you hired or fired.&lt;/p&gt;
-
-&lt;p&gt;With that, I’m working on some things: I’ll be giving a presentation on ngrx at the January PDX Angular meetup.  I was inspired by a presentation at the typescript meetup where the presentation got into using ngrx in nativescript.  It hit me at a good time, and it was a very stiff learning curve.  It’s my intent to build a presentation that isn’t so stiff.&lt;/p&gt;
-
-&lt;p&gt;Ngrx is Redux with RxJS or Observables, and it empowers you to write Angular 2 applicatons in a React like style.  You can write Angular 2 with the patterns of Angular 1, but honestly it’s a lot better to use the reactive patterns, and in my honest opinion better than writing React. I’ve been looking at React and I’m not convinced, but if you want to pay me to write React, I’d be happy and excited.&lt;/p&gt;
-
-&lt;p&gt;So I’m going to code along with this presentation, which can be hard to pull off but I think I’ve got it figured out: Have a script, use a small but relevant example that shows the full power of Ngrx, and that example should be somehting you’ve already used several times. So I’m going to demo how to create a user registraton/login/logout with ngrx store and effects.  Some of the patterns I’ve picked up may not be 100% with what ngrx is about, but it’s worked for me and I intend to blow some peoples minds in a context that says “I’m not saying this is the only way, but it worked for me and it’s pretty amazing”.  I’ll use the angular cli, typescript, es6.  I’ll briefly explain things that I don’t intend to give much attention to like what “switchmap” operator in ngrx is, or what the &lt;code class=&quot;highlighter-rouge&quot;&gt;@Output&lt;/code&gt; decorator means.  I’ll show a pattern that works.  Maybe the lack of specificity and script will make me look more senior, but I feel senior for angular 2.  I want to be the idiot in the room, but I’m not convinced that there are very many people in pdx that understand angular 2 in this depth like I do.&lt;/p&gt;
-
-&lt;p&gt;So I needed a really simple api for this, because effects is often ignored when presentations on ngrx store are given and I want to show the full power of it.  I originally intended to let someone on my previous team to write one for me, then I thought about using what they had and that felt immoral and unethical.  I’ve been wanting to learn Flask, so that’s what I’ve been doing. Coincidentally, I found a juniorish dev out of the bay area that’s willing to learn more about rxjs and she’s doing to the front-end.&lt;/p&gt;
-
-&lt;p&gt;Honestly, I have a larger app in mind: Each christmas with my wife’s family, we do a secret santa thing for the adults. She has several siblings with their own spouse, so grandma assigns everyone a secret santa, and everyone provides lists, and mostly the women do the shopping (yes, I got my wife a gift and I ordered things that my person wanted from their list…but I do not do gift cards).  Well, grandma get’s a bunch of people’s names on slips of papers on a bucket and draws them out, and often has to redo them a bunch because spouses can’t have spouses.  And this sounds too perfect for an app.  On the way home last year, I glanced on the apple app store, and yes, there’s already these apps.  So if grandma could be convinced to use one and everyone else to buy in, it’d have to be something I made just for them, and it would make a solid full stack app for my portofolio.  After working on this crud app, a lot of the patterns are the same, and I see possibilities for additional features, like wouldn’t it be nice if a user could add items to their list and only their secret santa could see those items? How about adding messaging? Upload files like excel spreadsheet lists?  So there’s features that could be built, but then why not also make this a mobile app with Ionic or Typescript? There’s a lot of possibilities, but it all comes down to how much time I have, like how long can I stay unemployed.&lt;/p&gt;
-
-&lt;p&gt;A couple days ago, another dev said they wanted to learn more about rxjs and was looking for help on a project. Well, I’m not an rxjs expert, but I’m fairly comfortable with it. A conversation started, and I’ve got a junior that’s willing to work on the front end of this app and is willing to be open to my feedback. I’m writing the backend api, which is challenging but definately needed for my portfolio.  It seems to be coming together well.  Right now I have working endpoints for user registration and login, along with a get request to view all users. For now, it’s a very generic “login/register/logout” api that I’d like to split off to be by itself for reuse. I’ve been itching to bust out the front end, as it’s the holidays and people aren’t working (as they shouldn’t, but should be getting paid).  The front-end is coming along, I just created a separate slack channel with github integration so I can get pinged when this dev sends a pr.&lt;/p&gt;
-
-&lt;p&gt;That’s kinda it.  I also just got out of the army.  I ended my 6 years of service honerably even though I wanted to be out for about the last 3 years.  My son is very cute and makes me smile and laugh all the time.  Our furnace recently went out…coincidentally the day after the fireplaces were serviced, so we have a cord of wood outside and the house actually feels warm.  My parents are a year away from retiring, and I don’t know what they’ll do when that happens. I guess I’m betting they might just travel around in their rv until they get sick of it.  Hopefully they stay busy and are less negative. My sister seems to be doing well but the less I know the better.  Katie is getting near the end of her life due to the canser.  Christmas is never the same since my grandparents died and I kinda miss being home for christmas even though it feels like being in Reno with Olivia’s mom is the right thing to do.&lt;/p&gt;
-
-&lt;p&gt;I guess all I can hope for 2017 is that it goes as well as 2016.  I’m not as depressed about looking for work. My wife’s job is going well, her schedule is about to change so she works monday, tuesday, wednesday, Saturday.  I’ve got a 2 month vanilla js gig that I might find out I’ll get tomorrow or Tuesday.  It’d be great to get good enough at js from not having a framework to use and it’d be great to get back into a job when it’s so hard this time of year, but the pay is low and the commute is bad.  I hope the friends I have now stay friends and I gain some more.  It’d be really nice if we can pay off as much debt as we did this year.  I’m really excited to not have a 2 week army tour to do, and I’m a week into growing a beard. It was a good thing to serve in the military, but I should have never done it.  The economy seems to be doing well, and my house may be cleaner since my wife got me one of those robot vacumn cleaners.&lt;/p&gt;
-
-&lt;p&gt;Oh and I need to revampt this site.  I’ve been thinking about going with something as easy as a wordpress theme that looks more thought-out and just show off a couple projects, like secretSanta.  Not sure if I’ll keep the blogging. So I did the remote thing for 6 months, and the crazy paced startup for the last few months.  Lets see me with a coorporate gig that’s consistent and maybe even some people I don’t like but make it work for a good solid long time…like it would be great to have a job for a solid 12 months.  With all I learned in 2016, from writing es5, es6, python, php, lots of css and some sass, where will I be for 2018?&lt;/p&gt;
-</description>
-        <pubDate>Sun, 25 Dec 2016 00:00:00 -0800</pubDate>
-        <link>http://nathanBrenner.github.io//2016-retrospective</link>
-        <guid isPermaLink="true">http://nathanBrenner.github.io//2016-retrospective</guid>
+        <link>http://localhost:4000/ngrx-tutorial</link>
+        <guid isPermaLink="true">http://localhost:4000/ngrx-tutorial</guid>
         
         
       </item>
@@ -1448,7 +1348,7 @@ export class AppComponent implements OnInit {
 
 &lt;p&gt;I have a todo app with the following structure:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	node_modules
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	node_modules
 	todo
 		todo.html
 		todo.controller.js
@@ -1457,8 +1357,7 @@ export class AppComponent implements OnInit {
 	index.html
 	package.json
 	readme.md
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Index.html currently has a bunch of scripts in it (I didn’t bother with gulp on this case), and there’s a reference to &lt;code class=&quot;highlighter-rouge&quot;&gt;ui-view&lt;/code&gt; because I’m using angular ui-router.  There’s only one state, but this application was built the same way I would expect larger applications would be built.  That’s also why there’s a component type directory (todo) with it’s view and controller.&lt;/p&gt;
 
@@ -1473,11 +1372,11 @@ export class AppComponent implements OnInit {
 
 &lt;ol&gt;
   &lt;li&gt;Comment out the script dependencies in index.html&lt;/li&gt;
-  &lt;li&gt;add in: 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;html
-    &amp;lt;script src=&quot;/scripts/vendor.bundle.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-    &amp;lt;script src=&quot;/scripts/app.bundle.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;add in:
+    &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/scripts/vendor.bundle.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/scripts/app.bundle.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;touch webpack.config.js&lt;/code&gt; in root of the app
     &lt;ol&gt;
       &lt;li&gt;require webpack and path modules&lt;/li&gt;
@@ -1485,11 +1384,11 @@ export class AppComponent implements OnInit {
       &lt;li&gt;set &lt;code class=&quot;highlighter-rouge&quot;&gt;config.entry&lt;/code&gt; with two properties: app and vendor.  App should be set to the path to &lt;code class=&quot;highlighter-rouge&quot;&gt;app.module.js&lt;/code&gt;, and vendor should list all of your vendor dependancies, which you installed from npm (in this case, angular, angular-ui-router, angular-animate, ui-boostrap, angular-touch)&lt;/li&gt;
       &lt;li&gt;Set &lt;code class=&quot;highlighter-rouge&quot;&gt;config.output&lt;/code&gt; to property path to &lt;code class=&quot;highlighter-rouge&quot;&gt;__dirname + /scripts&lt;/code&gt; and property filename to &lt;code class=&quot;highlighter-rouge&quot;&gt;app.bundle.js&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;Add in this plugin:
- &lt;code class=&quot;highlighter-rouge&quot;&gt;
- plugins: [
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; plugins: [
  	new webpack.optimize.CommonsChunkPlugin(/* chunkName= */&quot;vendor&quot;, /* filename= */&quot;vendor.bundle.js&quot;)
  	]
-&lt;/code&gt;&lt;/li&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
       &lt;li&gt;Then set &lt;code class=&quot;highlighter-rouge&quot;&gt;module.exports = config&lt;/code&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
@@ -1502,8 +1401,8 @@ export class AppComponent implements OnInit {
 &lt;p&gt;This will get you started, and there’s a lot more to webpack than this.&lt;/p&gt;
 </description>
         <pubDate>Mon, 06 Jun 2016 00:00:00 -0700</pubDate>
-        <link>http://nathanBrenner.github.io//webpacking-ng-apps</link>
-        <guid isPermaLink="true">http://nathanBrenner.github.io//webpacking-ng-apps</guid>
+        <link>http://localhost:4000/webpacking-ng-apps</link>
+        <guid isPermaLink="true">http://localhost:4000/webpacking-ng-apps</guid>
         
         
       </item>
@@ -1542,8 +1441,8 @@ export class AppComponent implements OnInit {
 
 </description>
         <pubDate>Mon, 06 Jun 2016 00:00:00 -0700</pubDate>
-        <link>http://nathanBrenner.github.io//looking-for-next-contract</link>
-        <guid isPermaLink="true">http://nathanBrenner.github.io//looking-for-next-contract</guid>
+        <link>http://localhost:4000/looking-for-next-contract</link>
+        <guid isPermaLink="true">http://localhost:4000/looking-for-next-contract</guid>
         
         
       </item>
@@ -1616,8 +1515,8 @@ export class AppComponent implements OnInit {
 &lt;/ol&gt;
 </description>
         <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
-        <link>http://nathanBrenner.github.io//recipe-for-starting-mongod</link>
-        <guid isPermaLink="true">http://nathanBrenner.github.io//recipe-for-starting-mongod</guid>
+        <link>http://localhost:4000/recipe-for-starting-mongod</link>
+        <guid isPermaLink="true">http://localhost:4000/recipe-for-starting-mongod</guid>
         
         
       </item>
@@ -1655,8 +1554,8 @@ export class AppComponent implements OnInit {
 &lt;p&gt;All in all, this was a project I created so I could create more form-apps in the future without reinventing the wheel.  Using paper forms, like at the dmv or doctor’s offices, or at restraunts drives me nuts.  I’d love to walk down the street frommy house to the small-business sushi restraunt and offer them something like this so I can order sushi easier, and maybe they can see a roi.&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
-        <link>http://nathanBrenner.github.io//multipage-form</link>
-        <guid isPermaLink="true">http://nathanBrenner.github.io//multipage-form</guid>
+        <link>http://localhost:4000/multipage-form</link>
+        <guid isPermaLink="true">http://localhost:4000/multipage-form</guid>
         
         
       </item>
@@ -1673,25 +1572,22 @@ export class AppComponent implements OnInit {
 
 &lt;p&gt;For example, within an app, where you have a controller such as&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div ng-controller=&quot;mainController&quot;&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div ng-controller=&quot;mainController&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;change it to&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div ng-controller=&quot;mainController as vm&quot;&amp;gt;&amp;lt;/div&amp;gt;`
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div ng-controller=&quot;mainController as vm&quot;&amp;gt;&amp;lt;/div&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you declared your routing, such as with the &lt;code class=&quot;highlighter-rouge&quot;&gt;angular-ui-router&lt;/code&gt;, you might have&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$routeProvider.state( &quot;main&quot;, {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$routeProvider.state( &quot;main&quot;, {
 	url: &quot;/main&quot;,
 	templateUrl: &quot;./templates/main.html&quot;,
 	controller: &quot;mainController&quot;
 	});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Change the last line to &lt;code class=&quot;highlighter-rouge&quot;&gt;controller: mainController as vm&lt;/code&gt;.&lt;/p&gt;
 
@@ -1699,15 +1595,13 @@ export class AppComponent implements OnInit {
 
 &lt;p&gt;Within your views, every time you have a property, such as&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng-model = &quot;name&quot; 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng-model = &quot;name&quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;reference the property as part of vm, which in this case would look like&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng-model= &quot;vm.name&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng-model= &quot;vm.name&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;third&quot;&gt;Third&lt;/h4&gt;
 
@@ -1715,7 +1609,7 @@ export class AppComponent implements OnInit {
 
 &lt;p&gt;For example, given this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;angular.module(&#39;app&#39;).controller(&#39;MainController&#39;, MainController);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;angular.module('app').controller('MainController', MainController);
 
 function MainController($scope) {
 	$scope.numb = 5;
@@ -1723,12 +1617,11 @@ function MainController($scope) {
 		$scope.numb += 1;
 	}
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Change to:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;angular.module(&#39;app&#39;).controller(&#39;MainController&#39;, MainController);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;angular.module('app').controller('MainController', MainController);
 
 function MainController() {
 	var vm = this;
@@ -1736,8 +1629,7 @@ function MainController() {
 	vm.add = function(){
 		vm.numb += 1;
 	}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;There’s plenty of blogs about why you should get off the habit of using &lt;code class=&quot;highlighter-rouge&quot;&gt;$scope&lt;/code&gt;, and there’s justifications for using &lt;code class=&quot;highlighter-rouge&quot;&gt;ctlr&lt;/code&gt; in place of &lt;code class=&quot;highlighter-rouge&quot;&gt;vm&lt;/code&gt; for the controller as syntax.  Bottom line, it looks cleaner, it’s easier to use, and you don’t have to work with embedded scopes.&lt;/p&gt;
 
@@ -1745,8 +1637,8 @@ function MainController() {
 Also, if you’re learning angular 1, interested in learning angular2 and trying to see the connective glue between ng1 and ng2, or have some existing apps and you’re trying to find work but you keep getting told you’re code isn’t good enough, try refactoring some of it to these conventions: &lt;a href=&quot;https://github.com/johnpapa/angular-styleguide&quot;&gt;https://github.com/johnpapa/angular-styleguide&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 May 2016 00:00:00 -0700</pubDate>
-        <link>http://nathanBrenner.github.io//$scope-to-vm</link>
-        <guid isPermaLink="true">http://nathanBrenner.github.io//$scope-to-vm</guid>
+        <link>http://localhost:4000/$scope-to-vm</link>
+        <guid isPermaLink="true">http://localhost:4000/$scope-to-vm</guid>
         
         
       </item>
@@ -1782,14 +1674,14 @@ npm install -g tsd&lt;/p&gt;
  “start”: “npm run tsc:w”&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;touch tsconfig.json&lt;/code&gt;¸&lt;/li&gt;
   &lt;li&gt;Add in your compiler options, such as:&lt;br /&gt;
- &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-     &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;compilerOptions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-         &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;module&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;commonjs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-         &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;target&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;es5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-         &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;noImplicitAny&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-         &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;removeComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
- &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;{  
+     &quot;compilerOptions&quot;: {  
+         &quot;module&quot;: &quot;commonjs&quot;,
+         &quot;target&quot;: &quot;es5&quot;,  
+         &quot;noImplicitAny&quot;: true,  
+         &quot;removeComments&quot;: true  
+     }  
+ }&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tsd install express -S&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install express -S&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install -g expressworks&lt;/code&gt;&lt;/li&gt;
@@ -1851,8 +1743,8 @@ npm install -g tsd&lt;/p&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Sun, 17 Apr 2016 00:00:00 -0700</pubDate>
-        <link>http://nathanBrenner.github.io//TS_expressworks</link>
-        <guid isPermaLink="true">http://nathanBrenner.github.io//TS_expressworks</guid>
+        <link>http://localhost:4000/TS_expressworks</link>
+        <guid isPermaLink="true">http://localhost:4000/TS_expressworks</guid>
         
         
       </item>
@@ -1892,8 +1784,8 @@ npm install -g tsd&lt;/p&gt;
 &lt;p&gt;I got a lot out of this free course, and I would probably pay for it since it had the feedback.  If you want to take some time, I’d definately check it out.  They have courses specific to other languages as well.&lt;/p&gt;
 </description>
         <pubDate>Mon, 30 Nov 2015 00:00:00 -0800</pubDate>
-        <link>http://nathanBrenner.github.io//m101JS</link>
-        <guid isPermaLink="true">http://nathanBrenner.github.io//m101JS</guid>
+        <link>http://localhost:4000/m101JS</link>
+        <guid isPermaLink="true">http://localhost:4000/m101JS</guid>
         
         
       </item>

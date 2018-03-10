@@ -11,8 +11,8 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="canonical" href="http://nathanBrenner.github.io//backbone-revisited">
-  <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://nathanBrenner.github.io//feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/backbone-revisited">
+  <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://localhost:4000/feed.xml" />
 </head>
 
   <body>
@@ -98,26 +98,23 @@
 
 <p>First of all, don’t use id’s on html tags for css styles. For example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#my-element {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#my-element {
 	styles ...
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Using id’s like that is short sighted, and prone to bugs later one.  In this case, there would be multiple themes later on. In the first case, you might have a set of divs that would look like squares.  Later on, the user might decide that they want those squares to look like circles or rectangles.  Giving those square divs an <code class="highlighter-rouge">id=square</code> in their Backbone view is a bad idea. Furthermore, targeting an html node with multiple id’s doesn’t make your selector any more spectific.  The id is already unique.  Don’t clutter up the css by doing something like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#parentDiv #firstChildDiv {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#parentDiv #firstChildDiv {
 	styles...
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>I refactored a lot of the css, and I started with reducing the additional targets first, so in the case above, I changed it to:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#firstChildDiv {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#firstChildDiv {
 	styles...
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Then I checked the browser, and if everything went well, I would switch the id to a class attribute. Even still, I might later refactor that again so that instead of assigning classes to elements by their role on the app, I would move the styles into classes that describe the styles in that class.  Those classes would become more flexible to use, and you end up having less styles in your css files.  It might seem off in the beginning, but think about things like buttons, where the look of a button on an app should be consistent.  So you don’t need button classes like <code class="highlighter-rouge">endBtn</code>, and <code class="highlighter-rouge">startBtn</code> which describe what their role and what they do.  It doesn’t describe their styles.  What they do will be defined in the javascript classes.</p>
 
 <p>There was also one big huge long exhaustive css file.  I broke that down into where those styles would be found. For example, the root page might have a css file for it, then for each additional route might have it’s own styles.  You can’t avoid the cascading nature of css, and you’ll still have to think about which order those files are loaded into the dom. It’s more for the sanity of the dev that has to maintain the application as it grows.</p>
@@ -132,7 +129,7 @@
 
 <p>In Backbone, you get Models, Collections (which should be a set of models), and Views (which you can have a view for a model, and a view for a collection). Models should not have nested data structures, but if they do (since nested data structures work so well for javascript and real life items), you can’t implement them like that in the model. For example, you should not have a model like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var person = Backbone.Model.extend({
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var person = Backbone.Model.extend({
 	defaults: {
 		name: 'Nate',
 		cars: [
@@ -145,12 +142,11 @@
 		]
 	}
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Cars should be it’s own separated Collection with a Car model.  This separates the concerns and behaviors of those models and their cooresponding views from eachother. It makes your application scalable. It’s easier to test.  Instead, write your person Model like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(function(){
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(function(){
 App.Models.Person = Backbone.Model.extend({
 	defaults: {
 		name: 'Nate',
@@ -169,24 +165,22 @@ App.Collections.Cars = Backbone.Collection.extend({
 });
 
 })()
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>There’s a lot there, and I would add that each of these would be in their own separate js file, all wrapped with an IIFE (Immediately Invocked Function Expression). <code class="highlighter-rouge">App</code> is a property specified earlier with</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>window.App = { 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.App = { 
 	Models: {},
 	Collections: {},
 	Views: {}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This keeps you from populating the global scope with a bunch of variables that could at some unknown point get changed (Sorry, this is es5. We only get lexical scoping, so you can change any declared variables at any point). The only time you should use <code class="highlighter-rouge">var</code> is within a function, so that the varible is closed within that function.</p>
 
 <p>Alright, so now you are ready to create a view for the person, but how do you do that with the car model and cars collections. Like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>App.Views.Car = Backbone.View.extend({
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>App.Views.Car = Backbone.View.extend({
 	tagName: 'li',
 	render: function(){
 		this.$el.html(this.model.get('year'));
@@ -221,8 +215,7 @@ App.Views.Person = Backbone.View.extend({
 		this.$el.append(carsView.render().el);
 	}
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>A Backbone Collection is not a Javascript Array.  It inheirts from it.  An a view to a collection is not a Javascript Array.  If you have nested data structures, separate each nested property into a Collection bound to a specific model.</p>
 

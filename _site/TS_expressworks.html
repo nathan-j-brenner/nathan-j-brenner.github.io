@@ -11,8 +11,8 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="canonical" href="http://nathanBrenner.github.io//TS_expressworks">
-  <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://nathanBrenner.github.io//feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/TS_expressworks">
+  <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://localhost:4000/feed.xml" />
 </head>
 
   <body>
@@ -115,14 +115,14 @@ npm install -g tsd</p>
  “start”: “npm run tsc:w”</li>
   <li><code class="highlighter-rouge">touch tsconfig.json</code>¸</li>
   <li>Add in your compiler options, such as:<br />
- <code class="highlighter-rouge"><span class="p">{</span><span class="w">  
-     </span><span class="nt">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-         </span><span class="nt">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"commonjs"</span><span class="p">,</span><span class="w">
-         </span><span class="nt">"target"</span><span class="p">:</span><span class="w"> </span><span class="s2">"es5"</span><span class="p">,</span><span class="w">  
-         </span><span class="nt">"noImplicitAny"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">  
-         </span><span class="nt">"removeComments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">  
-     </span><span class="p">}</span><span class="w">  
- </span><span class="p">}</span></code></li>
+ <code class="highlighter-rouge">{  
+     "compilerOptions": {  
+         "module": "commonjs",
+         "target": "es5",  
+         "noImplicitAny": true,  
+         "removeComments": true  
+     }  
+ }</code></li>
   <li><code class="highlighter-rouge">tsd install express -S</code></li>
   <li><code class="highlighter-rouge">npm install express -S</code></li>
   <li><code class="highlighter-rouge">npm install -g expressworks</code></li>

@@ -11,8 +11,8 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="canonical" href="http://nathanBrenner.github.io//$scope-to-vm">
-  <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://nathanBrenner.github.io//feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/$scope-to-vm">
+  <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://localhost:4000/feed.xml" />
 </head>
 
   <body>
@@ -96,25 +96,22 @@
 
 <p>For example, within an app, where you have a controller such as</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div ng-controller="mainController"&gt;&lt;/div&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div ng-controller="mainController"&gt;&lt;/div&gt;
+</code></pre></div></div>
 
 <p>change it to</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div ng-controller="mainController as vm"&gt;&lt;/div&gt;`
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div ng-controller="mainController as vm"&gt;&lt;/div&gt;`
+</code></pre></div></div>
 
 <p>If you declared your routing, such as with the <code class="highlighter-rouge">angular-ui-router</code>, you might have</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$routeProvider.state( "main", {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$routeProvider.state( "main", {
 	url: "/main",
 	templateUrl: "./templates/main.html",
 	controller: "mainController"
 	});
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Change the last line to <code class="highlighter-rouge">controller: mainController as vm</code>.</p>
 
@@ -122,15 +119,13 @@
 
 <p>Within your views, every time you have a property, such as</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ng-model = "name" 
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ng-model = "name" 
+</code></pre></div></div>
 
 <p>reference the property as part of vm, which in this case would look like</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ng-model= "vm.name"
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ng-model= "vm.name"
+</code></pre></div></div>
 
 <h4 id="third">Third</h4>
 
@@ -138,7 +133,7 @@
 
 <p>For example, given this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>angular.module('app').controller('MainController', MainController);
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>angular.module('app').controller('MainController', MainController);
 
 function MainController($scope) {
 	$scope.numb = 5;
@@ -146,12 +141,11 @@ function MainController($scope) {
 		$scope.numb += 1;
 	}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Change to:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>angular.module('app').controller('MainController', MainController);
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>angular.module('app').controller('MainController', MainController);
 
 function MainController() {
 	var vm = this;
@@ -159,8 +153,7 @@ function MainController() {
 	vm.add = function(){
 		vm.numb += 1;
 	}
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>There’s plenty of blogs about why you should get off the habit of using <code class="highlighter-rouge">$scope</code>, and there’s justifications for using <code class="highlighter-rouge">ctlr</code> in place of <code class="highlighter-rouge">vm</code> for the controller as syntax.  Bottom line, it looks cleaner, it’s easier to use, and you don’t have to work with embedded scopes.</p>
 

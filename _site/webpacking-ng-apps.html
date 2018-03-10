@@ -11,8 +11,8 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="canonical" href="http://nathanBrenner.github.io//webpacking-ng-apps">
-  <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://nathanBrenner.github.io//feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/webpacking-ng-apps">
+  <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://localhost:4000/feed.xml" />
 </head>
 
   <body>
@@ -92,7 +92,7 @@
 
 <p>I have a todo app with the following structure:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>	node_modules
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	node_modules
 	todo
 		todo.html
 		todo.controller.js
@@ -101,8 +101,7 @@
 	index.html
 	package.json
 	readme.md
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Index.html currently has a bunch of scripts in it (I didn’t bother with gulp on this case), and there’s a reference to <code class="highlighter-rouge">ui-view</code> because I’m using angular ui-router.  There’s only one state, but this application was built the same way I would expect larger applications would be built.  That’s also why there’s a component type directory (todo) with it’s view and controller.</p>
 
@@ -117,11 +116,11 @@
 
 <ol>
   <li>Comment out the script dependencies in index.html</li>
-  <li>add in: 
-<code class="highlighter-rouge">html
-    &lt;script src="/scripts/vendor.bundle.js"&gt;&lt;/script&gt;
-    &lt;script src="/scripts/app.bundle.js"&gt;&lt;/script&gt;
-</code></li>
+  <li>add in:
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/scripts/vendor.bundle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/scripts/app.bundle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>    </div>
+  </li>
   <li><code class="highlighter-rouge">touch webpack.config.js</code> in root of the app
     <ol>
       <li>require webpack and path modules</li>
@@ -129,11 +128,11 @@
       <li>set <code class="highlighter-rouge">config.entry</code> with two properties: app and vendor.  App should be set to the path to <code class="highlighter-rouge">app.module.js</code>, and vendor should list all of your vendor dependancies, which you installed from npm (in this case, angular, angular-ui-router, angular-animate, ui-boostrap, angular-touch)</li>
       <li>Set <code class="highlighter-rouge">config.output</code> to property path to <code class="highlighter-rouge">__dirname + /scripts</code> and property filename to <code class="highlighter-rouge">app.bundle.js</code></li>
       <li>Add in this plugin:
- <code class="highlighter-rouge">
- plugins: [
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> plugins: [
  	new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
  	]
-</code></li>
+</code></pre></div>        </div>
+      </li>
       <li>Then set <code class="highlighter-rouge">module.exports = config</code></li>
     </ol>
   </li>
