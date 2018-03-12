@@ -1,54 +1,27 @@
 ---
 layout: default
 ---
+<h1>This is not the site you're looking for</h1>
+<h3>
+  Redirecting to <a href="http://www.nathanbrenner.com">nathanbrenner.com</a> after <span id="countdown">5</span> seconds
+</h3>
+<script>
+  var seconds = 5;
 
-<div class="home">
+  function countdown() {
+    seconds = seconds - 1;
 
-  <h1 class="page-heading">Welcome</h1>
-
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-      <li class="post__item">
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <div class="post_meta">
-          <b class="post__author">{{ post.author }}</b>
-          <b class="post__sep">.</b>
-          <b class="post__date">{{ post.date | date: "%b %-d, %Y "}}</b>
-        </div>
-
-        {{ post.excerpt }}
-
-        <a class="btn--default" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
-
-      </li>
-    {% endfor %}
-  </ul>
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-      <span>&laquo; Prev</span>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <em>{{ page }}</em>
-      {% elsif page == 1 %}
-        <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
-      <span>Next &raquo;</span>
-    {% endif %}
-  </div>
-  {% endif %}
-
-</div>
+    if (seconds < 0) {
+      // Chnage your redirection link here
+      location.assign("http://www.nathanbrenner.com")
+    } else {
+      // Update remaining seconds
+      document.getElementById("countdown").innerHTML = seconds;
+      // Count down using javascript
+      window.setTimeout("countdown()", 1000);
+    }
+  }
+  
+  // Run countdown function
+  countdown();
+</script>

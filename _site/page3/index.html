@@ -78,110 +78,30 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1>This is not the site you're looking for</h1>
+<h3>
+  Redirecting to <a href="http://www.nathanbrenner.com">nathanbrenner.com</a> after <span id="countdown">5</span> seconds
+</h3>
+<script>
+  var seconds = 5;
 
-  <h1 class="page-heading">Welcome</h1>
+  function countdown() {
+    seconds = seconds - 1;
 
-  <ul class="post-list">
-    
-      <li class="post__item">
-        <h2>
-          <a class="post-link" href="/multipage-form">Multi-step Forms</a>
-        </h2>
-        <div class="post_meta">
-          <b class="post__author">Nathan</b>
-          <b class="post__sep">.</b>
-          <b class="post__date">May 8, 2016 </b>
-        </div>
-
-        <p>How do you create a form where you can navigate to multiple pages, and are able to submit the data only once?</p>
-
-
-
-        <a class="btn--default" href="/multipage-form">Read more</a>
-
-      </li>
-    
-      <li class="post__item">
-        <h2>
-          <a class="post-link" href="/$scope-to-vm">Refactoring from $scope to vm in ng1.x</a>
-        </h2>
-        <div class="post_meta">
-          <b class="post__author">Nathan</b>
-          <b class="post__sep">.</b>
-          <b class="post__date">May 8, 2016 </b>
-        </div>
-
-        <p>Using <code class="highlighter-rouge">$scope</code> brings on some issues, which is evident as it’s been taken out of Angular2.  With your existing Angular 1.x apps, one of the ways you can refactor is to strip out all instances of <code class="highlighter-rouge">$scope</code>.</p>
-
-
-
-        <a class="btn--default" href="/$scope-to-vm">Read more</a>
-
-      </li>
-    
-      <li class="post__item">
-        <h2>
-          <a class="post-link" href="/TS_expressworks">ExpressWorks with Typescript</a>
-        </h2>
-        <div class="post_meta">
-          <b class="post__author">Nathan</b>
-          <b class="post__sep">.</b>
-          <b class="post__date">Apr 17, 2016 </b>
-        </div>
-
-        <p>Typescript is a superset of Javascript. It’s a transpiler for es6 to es5 and offers typechecking, which you don’t get with Babel.  However, there’s some configuration and some weird terminology. It’s easy for me to forget some of this stuff, so I like to use the node school workshops as an oppertunity to expand my understanding, which is a bonus: I get to learn the content in the workshops, and I get to learn and practice es6.</p>
-
-
-
-        <a class="btn--default" href="/TS_expressworks">Read more</a>
-
-      </li>
-    
-  </ul>
+    if (seconds < 0) {
+      // Chnage your redirection link here
+      location.assign("http://www.nathanbrenner.com")
+    } else {
+      // Update remaining seconds
+      document.getElementById("countdown").innerHTML = seconds;
+      // Count down using javascript
+      window.setTimeout("countdown()", 1000);
+    }
+  }
   
-  <div class="pagination">
-    
-      <a href="/page2">&laquo; Prev</a>
-    
-
-    
-      
-        <a href="/index.html">1</a>
-      
-    
-      
-        <a href="/page2">2</a>
-      
-    
-      
-        <em>3</em>
-      
-    
-      
-        <a href="/page4">4</a>
-      
-    
-      
-        <a href="/page5">5</a>
-      
-    
-      
-        <a href="/page6">6</a>
-      
-    
-      
-        <a href="/page7">7</a>
-      
-    
-
-    
-      <a href="/page4">Next &raquo;</a>
-    
-  </div>
-  
-
-</div>
+  // Run countdown function
+  countdown();
+</script>
 
       </div>
     </div>

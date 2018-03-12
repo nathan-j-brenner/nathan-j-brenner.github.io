@@ -5,9 +5,46 @@
     <description>A sample of my work and thoughts</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Mar 2018 13:37:33 -0800</pubDate>
-    <lastBuildDate>Fri, 09 Mar 2018 13:37:33 -0800</lastBuildDate>
+    <pubDate>Sun, 11 Mar 2018 20:22:06 -0700</pubDate>
+    <lastBuildDate>Sun, 11 Mar 2018 20:22:06 -0700</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Last post</title>
+        <description>&lt;p&gt;This will be the last blog I publish for this site.&lt;/p&gt;
+
+&lt;p&gt;I’ve replaced this site with &lt;a href=&quot;www.nathanbrenner.com&quot;&gt;nathanbrenner.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;From the start of this project, I wasn’t ever excited about how it looked. I never had any vision on some general theme, so it’s always looked pretty boring. Occassionally, I would go on a rant in a blog, or add some educational content based off of something else I was doing at the time.&lt;/p&gt;
+
+&lt;p&gt;I never really wanted to maintain or regularly publish blogs. I don’t really want to teach to a large audience or be anything like a thought leader. I like writing code, occassionally helping others write code, build cool stuff for the web, and keep a private life.&lt;/p&gt;
+
+&lt;p&gt;There were some other problems with this site. I built it right out of code school in hope it would get me work, so I put every student project up on github and created an angularjs app on the portfolio section of this site, which I haven’t maintained. That page had a lot of half written apps that could probably be deleted.&lt;/p&gt;
+
+&lt;p&gt;Also, the resume on this site was difficult to update with the Word version that recruiters only seemed to care about.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;www.nathanbrenner.com&quot;&gt;nathanbrenner.com&lt;/a&gt; is a very simple single page portfolio. I got a theme from the open source, and I categered it to my own in a couple hours. It’s there to get people to contact me. It’s got 3 refurals (which are the same on my linkedIn profile), 3 past or current projects, a brief description and a picture of me, and how to contact me. That’s it.&lt;/p&gt;
+
+&lt;p&gt;I also got over my fear of launching. I bought a domain name from godaddy, created an aws account, uploaded the files to s3, added a cloudfront distribution as a cdn, and connected route53 to the domain name. Some of this I had learned at my last gig, but it shows I can actually do stuff on aws.&lt;/p&gt;
+
+&lt;p&gt;It needs some work though. The theme I pulled was using npm to manage jquery, a jquery plugin for scrolling, and bootstrap 4, all of which can be provided with a cdn. It’s also using gulp to minify the script and compile the sass. I don’t think any of that is really necessary.&lt;/p&gt;
+
+&lt;p&gt;It could be cool to break up the long index.html with some react components, and add in a simple webpack config.&lt;/p&gt;
+
+&lt;p&gt;I also want to automate the build with a script on a cicd, just so when I push up changes, s3 get’s updated and the live site get’s updated automatically.&lt;/p&gt;
+
+&lt;p&gt;These tasks a lot easier to maintain than some big jekyll site.&lt;/p&gt;
+
+&lt;p&gt;One last thing, the resume available on this site will no longer be the current version. I realized about a week ago that thing had gotten way bloated. There’s probably a half page for each job. I’ve reduced that to 2, and the most relevant content is near the top of the first page. I can tell you about the rest if you want, but you’ll just have to ask me. I think a resume should exist for the purpose of looking at for no more than 10 seconds to decide if you want talk to me, or to pass.&lt;/p&gt;
+
+&lt;p&gt;I’m not taking this site down, because maybe I’ll use it for something else later, but I’m not refuring to it as my portfolio any longer. I suppose you could consider it my junior developer portfolio.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 10 Mar 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/last-post</link>
+        <guid isPermaLink="true">http://localhost:4000/last-post</guid>
+        
+        
+      </item>
     
       <item>
         <title>2017 recap</title>
@@ -1745,47 +1782,6 @@ npm install -g tsd&lt;/p&gt;
         <pubDate>Sun, 17 Apr 2016 00:00:00 -0700</pubDate>
         <link>http://localhost:4000/TS_expressworks</link>
         <guid isPermaLink="true">http://localhost:4000/TS_expressworks</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Takeaways from Mongo University</title>
-        <description>&lt;p&gt;Over the last 7 weeks, I worked through the MongoDB course for Node.js developers.  This is a free course offered online, and I learned a lot more than I expected.&lt;/p&gt;
-
-&lt;p&gt;Before I started the course, I knew that MongoDB was a NoSQL database system.  SQL databases, such as MySQL and PostgreSQL, use tables much like how Microsoft Excel appears, to represent and maintain persistent data.  MongoDB doesn’t use that table system, and instead builds records based on JSON, or javasript Obect Notation. I could start a mongoD and mongo shell on my computer, and I had used Orchestrate on some projects. Orchestrate.io is a cloud based database system similar to Mongo, and is fairly easy to use. More of my time with databases had been spent with Postgresql, so I could insert data into a document, and configure a schema.&lt;/p&gt;
-
-&lt;p&gt;What I was hopeing to get out of the course was to become much more familiar and comfortable with crud operations.  CRUD are the operations for databases.  Create, Read, Update, Delete: Create a new record, query that record, make changes to that record, and remove that record from the database.  I really wanted to have a strong understanding on how to do something like create a user login, and over the period of the course I realized that I wanted to know more about Node.js and writing backend code.&lt;/p&gt;
-
-&lt;p&gt;Each week, at 9am on Tuesday, a slew of videos (ranging from 1 minute long to 12 minutes long) with short quizzes, and a few homework assignments (between 3 and 5) were made available on their learning management system.  The videos were on youtube, and there was a discussion view for students to post questions.  With most of the homework, there was evidence if the answer would be valid, and all the quizz answers were explained in detail.  On the final week, 10 questions were posted .  Throughout the course, some of the assessment was multiple choice, some used MongoProc (which ran tests on your database), and some required an answer or a validation code.&lt;/p&gt;
-
-&lt;p&gt;The first week was introduction.  Topics covered were installation, starting the MongoD instance, the Mongo shell, and an introducion to the Node Express server.&lt;/p&gt;
-
-&lt;p&gt;The second week covered CRUD.  With MongoDB, a query is called by the db.collection followed by an opperation.  From the shell, db is already specified since you are already in a database, which you can specify.  Collections are a group of records, or documents for Mongo.  A query searched through a collection and returns the documents that meet the query.  Documents can be Read with the find or findOne method, which works basically the same as the delete, or for Mongo the remove method.  Create (or the insert method for mongo) also works similar to the read method.  Updates a little more complicated, since a single update will remove the document and replace it with the fields that you specify.  To avoid this, the update query takes two parameters: the document you’re querying, followed by the $set operator with the fields you want to change.  That’s CRUD in a nutshell.&lt;/p&gt;
-
-&lt;p&gt;The third week covered schema design principals. Mongo has been considered schema-less, which means multiple documents in the same collection don’t necessarily have to have the same columns like a sql db would.  Documents are javascript objects, so the properties of a document retain whatever values as desired, even embedded documents, such as arrays or other objects.  For example, in a collection that maintains blog posts, a single post can have an embedded property for comments made to that array with objects that contain properties such as the author of that comment on that post, the date the comment was made, and the contents of the post.  A lot has to be considered for the design of a schema.  Since schema’s don’t have to match, it’s usually best if they don’t match for a specific reason.&lt;/p&gt;
-
-&lt;p&gt;Week 4 covered performance.  This has to do with the time it takes for a query to return a given object or set of obects.  The time spent on a query, as indicated by how many documents the query looks at, can be reduced if indexes are approapriately used.  Every document has an _id field, and if not specified with one, is provided with one.  That field is indexed, meaning it’s sorted in a specific way.  Other indexes can be created, and should resemble the types of queries the end user might make.&lt;/p&gt;
-
-&lt;p&gt;Week 5 covered the aggregation pipeline.  Aggregation finds information relevate to the entire collection, such as the average grade a class has over a group of classes. The pipeline resembles more chaining, which in this case are objects with query opperators built on top of eachother.&lt;/p&gt;
-
-&lt;p&gt;Week 6 covered application engineering, such as replication and sharding.  These are concerns for working with a large database system in the event that a database goes down and how collections recover from those failures.&lt;/p&gt;
-
-&lt;p&gt;In the 7th week, along with the final exam, there was content on Mongoose.  Mongoose is an ODB, and Object-Record-Mapper, which provides a layer on top from Mongo and Node and has some added functionality. These videos quickly walked through some code on how to crewate the same blog that the earlier weeks had done without the additional layer.&lt;/p&gt;
-
-&lt;p&gt;Since this course was for node developers, so there was code examples represented in an application, and I was really happy I had worked with node before because there were some huge leaps in what the homework expected students to do.  The quizzes that went with the vides checked for understanding at a very basic level, and the final examp mirrored the homework questions.  As for the discussion, I wish I had gotten more out of it.  I’m a fan of collaboration, so when I get stuck on a problem for a while, I’d like to be able to seek help without getting the answer.  If I get the answer without a lot of stuggle on my own, I’ll probably forget what I learned. But some help is necessary.  There was some collaboration in the discussion board, but the Mongo Unversity doesn’t want any code sharing, and the ta often came across defensive instead of helpful.  Still, the course was very interesting, and it kept my engagement even on the topics like indexes, sharding, and agggregation where I didn’t feel like I had somewhere directly to apply what I had learned outside of the course.&lt;/p&gt;
-
-&lt;p&gt;For now, I want to get better at working with node.  I’m working through a course on &lt;a href=&quot;https://www.edx.org/course/introduction-mongodb-using-mean-stack-mongodbx-m101x&quot;&gt;MEAN&lt;/a&gt;, which I hope to get a better understanding of how angular connects with node. This is a little ironic, since I’m working on an app with another developer and I’ve figured out where this happens.  Data is stored on the database, which is accessed from a service that connects to the backend api.&lt;/p&gt;
-
-&lt;p&gt;Also, since I’ve expanded my understanding of NoSQL, I’m interested in SQL.  Codecademy has a tutorial on the subject, which I’ll probably work through soon. I’d also like to read &lt;a href=&quot;http://www.amazon.com/MongoDB-Definitive-Guide-Kristina-Chodorow/dp/1449344682/ref=sr_1_1?ie=UTF8&amp;amp;qid=1448932247&amp;amp;sr=8-1&amp;amp;keywords=mongodb&quot;&gt;MongoDB: The Definitive Guide&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I also recently found a new learning source. &lt;a href=&quot;http://www.freecodecamp.com/&quot;&gt;Free Code Camp&lt;/a&gt; has a fairly extensive sequence on stuff I should know, so I started working through it.  I’m finding gaps in my learning and doing a lot of review.  It’s keeping me busy since I can’t be as aggresive about looking for work now that I’m watching my son all day.  If a job comes my way, I’d love to work all day.  Until then, it’s not so bad raising him.  Thanksgiving was a couple days ago.  I took a few days off from the computer and visited family in Las Vegas.&lt;/p&gt;
-
-&lt;p&gt;I got a lot out of this free course, and I would probably pay for it since it had the feedback.  If you want to take some time, I’d definately check it out.  They have courses specific to other languages as well.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 30 Nov 2015 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/m101JS</link>
-        <guid isPermaLink="true">http://localhost:4000/m101JS</guid>
         
         
       </item>

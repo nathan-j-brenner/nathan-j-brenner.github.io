@@ -78,110 +78,30 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1>This is not the site you're looking for</h1>
+<h3>
+  Redirecting to <a href="http://www.nathanbrenner.com">nathanbrenner.com</a> after <span id="countdown">5</span> seconds
+</h3>
+<script>
+  var seconds = 5;
 
-  <h1 class="page-heading">Welcome</h1>
+  function countdown() {
+    seconds = seconds - 1;
 
-  <ul class="post-list">
-    
-      <li class="post__item">
-        <h2>
-          <a class="post-link" href="/distractions">Sleeping with bugs</a>
-        </h2>
-        <div class="post_meta">
-          <b class="post__author">Nathan</b>
-          <b class="post__sep">.</b>
-          <b class="post__date">Sep 6, 2015 </b>
-        </div>
-
-        <p>Hey, it’s Labor Day Weekend.  My parents from Vegas are visiting, and it’s their first time to see their other grandchild.</p>
-
-
-
-        <a class="btn--default" href="/distractions">Read more</a>
-
-      </li>
-    
-      <li class="post__item">
-        <h2>
-          <a class="post-link" href="/flatlanders">The Flatlanders have a store...</a>
-        </h2>
-        <div class="post_meta">
-          <b class="post__author">Nathan</b>
-          <b class="post__sep">.</b>
-          <b class="post__date">Sep 5, 2015 </b>
-        </div>
-
-        <p>A few weeks ago, I started exploring Angular. Angular is a model-view-controller.  I had worked with Backbone.js, which is another mvc.</p>
-
-
-
-        <a class="btn--default" href="/flatlanders">Read more</a>
-
-      </li>
-    
-      <li class="post__item">
-        <h2>
-          <a class="post-link" href="/pdx-tech-crawl">PDX TechCrawl 2015</a>
-        </h2>
-        <div class="post_meta">
-          <b class="post__author">Nathan</b>
-          <b class="post__sep">.</b>
-          <b class="post__date">Aug 20, 2015 </b>
-        </div>
-
-        <p>This was the fourth annual event of this type, and I was really impressed with it.  This event maxed out on it’s reservation space, which was a mere 1,129 people, and I’m sure there were more that ended up showing up for the kick-off.</p>
-
-
-
-        <a class="btn--default" href="/pdx-tech-crawl">Read more</a>
-
-      </li>
-    
-  </ul>
+    if (seconds < 0) {
+      // Chnage your redirection link here
+      location.assign("http://www.nathanbrenner.com")
+    } else {
+      // Update remaining seconds
+      document.getElementById("countdown").innerHTML = seconds;
+      // Count down using javascript
+      window.setTimeout("countdown()", 1000);
+    }
+  }
   
-  <div class="pagination">
-    
-      <a href="/page5">&laquo; Prev</a>
-    
-
-    
-      
-        <a href="/index.html">1</a>
-      
-    
-      
-        <a href="/page2">2</a>
-      
-    
-      
-        <a href="/page3">3</a>
-      
-    
-      
-        <a href="/page4">4</a>
-      
-    
-      
-        <a href="/page5">5</a>
-      
-    
-      
-        <em>6</em>
-      
-    
-      
-        <a href="/page7">7</a>
-      
-    
-
-    
-      <a href="/page7">Next &raquo;</a>
-    
-  </div>
-  
-
-</div>
+  // Run countdown function
+  countdown();
+</script>
 
       </div>
     </div>

@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Nathan Brenner</title>
-  <meta name="description" content="A sample of my work and thoughts">
+  <title>Last post</title>
+  <meta name="description" content="This will be the last blog I publish for this site.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="canonical" href="http://localhost:4000/page4/">
+  <link rel="canonical" href="http://localhost:4000/last-post">
   <link rel="alternate" type="application/rss+xml" title="Nathan Brenner" href="http://localhost:4000/feed.xml" />
 </head>
 
@@ -78,30 +78,59 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1>This is not the site you're looking for</h1>
-<h3>
-  Redirecting to <a href="http://www.nathanbrenner.com">nathanbrenner.com</a> after <span id="countdown">5</span> seconds
-</h3>
-<script>
-  var seconds = 5;
+        <div class="post">
 
-  function countdown() {
-    seconds = seconds - 1;
+  <header class="post-header">
+    <h1 class="post-title">Last post</h1>
+    <p class="post-meta">Mar 10, 2018 • Nathan</p>
+  </header>
 
-    if (seconds < 0) {
-      // Chnage your redirection link here
-      location.assign("http://www.nathanbrenner.com")
-    } else {
-      // Update remaining seconds
-      document.getElementById("countdown").innerHTML = seconds;
-      // Count down using javascript
-      window.setTimeout("countdown()", 1000);
-    }
-  }
+  <article class="post-content">
+    <p>This will be the last blog I publish for this site.</p>
+
+<p>I’ve replaced this site with <a href="www.nathanbrenner.com">nathanbrenner.com</a></p>
+
+<p>From the start of this project, I wasn’t ever excited about how it looked. I never had any vision on some general theme, so it’s always looked pretty boring. Occassionally, I would go on a rant in a blog, or add some educational content based off of something else I was doing at the time.</p>
+
+<p>I never really wanted to maintain or regularly publish blogs. I don’t really want to teach to a large audience or be anything like a thought leader. I like writing code, occassionally helping others write code, build cool stuff for the web, and keep a private life.</p>
+
+<p>There were some other problems with this site. I built it right out of code school in hope it would get me work, so I put every student project up on github and created an angularjs app on the portfolio section of this site, which I haven’t maintained. That page had a lot of half written apps that could probably be deleted.</p>
+
+<p>Also, the resume on this site was difficult to update with the Word version that recruiters only seemed to care about.</p>
+
+<p><a href="www.nathanbrenner.com">nathanbrenner.com</a> is a very simple single page portfolio. I got a theme from the open source, and I categered it to my own in a couple hours. It’s there to get people to contact me. It’s got 3 refurals (which are the same on my linkedIn profile), 3 past or current projects, a brief description and a picture of me, and how to contact me. That’s it.</p>
+
+<p>I also got over my fear of launching. I bought a domain name from godaddy, created an aws account, uploaded the files to s3, added a cloudfront distribution as a cdn, and connected route53 to the domain name. Some of this I had learned at my last gig, but it shows I can actually do stuff on aws.</p>
+
+<p>It needs some work though. The theme I pulled was using npm to manage jquery, a jquery plugin for scrolling, and bootstrap 4, all of which can be provided with a cdn. It’s also using gulp to minify the script and compile the sass. I don’t think any of that is really necessary.</p>
+
+<p>It could be cool to break up the long index.html with some react components, and add in a simple webpack config.</p>
+
+<p>I also want to automate the build with a script on a cicd, just so when I push up changes, s3 get’s updated and the live site get’s updated automatically.</p>
+
+<p>These tasks a lot easier to maintain than some big jekyll site.</p>
+
+<p>One last thing, the resume available on this site will no longer be the current version. I realized about a week ago that thing had gotten way bloated. There’s probably a half page for each job. I’ve reduced that to 2, and the most relevant content is near the top of the first page. I can tell you about the rest if you want, but you’ll just have to ask me. I think a resume should exist for the purpose of looking at for no more than 10 seconds to decide if you want talk to me, or to pass.</p>
+
+<p>I’m not taking this site down, because maybe I’ll use it for something else later, but I’m not refuring to it as my portfolio any longer. I suppose you could consider it my junior developer portfolio.</p>
+
+  </article>
   
-  // Run countdown function
-  countdown();
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'jekyllsample';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
 
       </div>
     </div>
